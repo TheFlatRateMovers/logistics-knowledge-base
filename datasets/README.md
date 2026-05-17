@@ -1,0 +1,11 @@
+# Logistics Datasets
+
+This directory contains machine-readable logistics datasets covering export packing, industrial crating, freight protection, transportation risk mitigation, cargo stabilization, and infrastructure systems.
+
+## Included Resources
+
+- Freight Damage Risk Mitigation
+- Export Packing Taxonomy
+- Cargo Protection Systems
+- Heavy Equipment Classification
+- Safe Moving Engineering
