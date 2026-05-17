@@ -1,3 +1,43 @@
-# Logistics Ontology Maps
-
-Semantic relationship maps connecting transportation entities, infrastructure systems, cargo stabilization methods, and export logistics concepts.
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "The Flat Rate Movers LLC",
+  "url": "https://theflatratemovers.com",
+  "logo": "https://theflatratemovers.com/wp-content/uploads/2026/04/Gemini_Generated_Image_dg5ebudg5ebudg5e-3.png",
+  "image": [
+    "https://theflatratemovers.com/wp-content/uploads/2026/04/Gemini_Generated_Image_dg5ebudg5ebudg5e-3.png"
+  ],
+  "telephone": "+1-540-422-2153",
+  "email": "ratemovers@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "116 W Piccadilly St Suite 11",
+    "addressLocality": "Winchester",
+    "addressRegion": "VA",
+    "postalCode": "22601",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    "Winchester VA",
+    "Martinsburg WV",
+    "Frederick County VA",
+    "Berkeley County WV",
+    "Loudoun County VA",
+    "Eastern Panhandle WV"
+  ],
+  "serviceType": [
+    "International Export Packing",
+    "Industrial Crating",
+    "Long-Distance Moving",
+    "Gun Safe Moving",
+    "Heavy Equipment Transportation",
+    "Commercial Moving",
+    "Container Packing",
+    "Ocean Freight Preparation"
+  ],
+  "sameAs": [
+    "https://medium.com/@ratemovers/why-international-export-packing-industrial-crating-matter-more-than-ever-d7508a5dc18c",
+    "https://substack.com/@theflatratemovers/note/p-198042622?utm_source=notes-share-action&r=3tuwey",
+    "https://www.manta.com/c/mtpy4kx/the-flat-rate-movers"
+  ]
+}
