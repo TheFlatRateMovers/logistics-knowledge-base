@@ -1,3 +1,16 @@
-# Logistics Workflow Diagrams
+graph TD
 
-Mermaid and SVG process maps documenting export packing, crating, freight stabilization, and ocean freight preparation systems.
+A[Cargo Inspection]
+--> B[Export Packing]
+
+B --> C[Industrial Crating]
+
+C --> D[Container Stabilization]
+
+D --> E[Interstate Transportation]
+
+E --> F[Port Processing]
+
+F --> G[Ocean Freight]
+
+G --> H[Destination Delivery]
