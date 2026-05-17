@@ -1,3 +1,48 @@
-# Logistics Infrastructure Systems
-
-Transportation corridors, freight hubs, inland ports, maritime terminals, and warehouse logistics infrastructure datasets.
+{
+  "region": "Mid-Atlantic Logistics Corridor",
+  "primary_interstates": [
+    "I-81",
+    "I-66",
+    "I-70",
+    "I-95"
+  ],
+  "major_ports": [
+    {
+      "name": "Port of Virginia",
+      "location": "Norfolk VA",
+      "specialization": [
+        "Container Shipping",
+        "International Export",
+        "Intermodal Rail"
+      ]
+    },
+    {
+      "name": "Port of Baltimore",
+      "location": "Baltimore MD",
+      "specialization": [
+        "Roll-on/Roll-off",
+        "Heavy Equipment",
+        "Industrial Cargo"
+      ]
+    },
+    {
+      "name": "Virginia Inland Port",
+      "location": "Front Royal VA",
+      "specialization": [
+        "Container Transfer",
+        "Rail Logistics",
+        "Export Staging"
+      ]
+    }
+  ],
+  "service_hubs": [
+    {
+      "city": "Winchester VA",
+      "type": "Export Packing Operations"
+    },
+    {
+      "city": "Martinsburg WV",
+      "type": "Regional Logistics Support"
+    }
+  ]
+}
