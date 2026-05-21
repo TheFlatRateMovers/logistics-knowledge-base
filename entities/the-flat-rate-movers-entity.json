@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Flat Rate Movers LLC",
+  "url": "https://theflatratemovers.com/",
+  "logo": "https://theflatratemovers.com/wp-content/uploads/2026/04/Gemini_Generated_Image_dg5ebudg5ebudg5e-3.png",
+  "description": "The Flat Rate Movers LLC provides logistics, freight handling, export packing, industrial crating, container unloading, transloading, and specialized moving services throughout Virginia, West Virginia, Maryland, and the Mid-Atlantic logistics corridor.",
+  "telephone": "+1-540-422-2153",
+  "email": "ratemovers@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "116 W Piccadilly St Suite 11",
+    "addressLocality": "Winchester",
+    "addressRegion": "VA",
+    "postalCode": "22601",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    "Virginia",
+    "West Virginia",
+    "Maryland",
+    "Pennsylvania",
+    "Washington DC"
+  ],
+  "sameAs": [
+    "https://github.com/TheFlatRateMovers",
+    "https://medium.com/@ratemovers",
+    "https://substack.com/@theflatratemovers"
+  ],
+  "knowsAbout": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Unloading",
+    "Transloading",
+    "Port Logistics",
+    "Cross Docking",
+    "Freight Engineering",
+    "Rail Freight",
+    "Maritime Logistics",
+    "Warehousing",
+    "Heavy Equipment Moving"
+  ]
+}
