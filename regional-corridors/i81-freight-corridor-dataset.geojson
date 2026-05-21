@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "I-81 Freight Corridor",
+        "classification": "Primary Inland Freight Corridor",
+        "connected_ports": [
+          "Port of Virginia",
+          "Port of Baltimore"
+        ],
+        "major_logistics_nodes": [
+          "Winchester VA",
+          "Front Royal VA",
+          "Martinsburg WV"
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-78.1633,39.1857],
+          [-78.1944,38.9182],
+          [-77.9639,39.4562]
+        ]
+      }
+    }
+  ]
+}
