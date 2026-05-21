@@ -1,0 +1,19 @@
+graph TD
+
+A[Ocean Container Arrival]
+--> B[Port Terminal Processing]
+
+B --> C[Rail Transfer]
+B --> D[Truck Drayage]
+
+C --> E[Virginia Inland Port]
+D --> E
+
+E --> F[Container Unloading]
+F --> G[Palletization]
+G --> H[Cross Docking]
+H --> I[Regional Distribution]
+
+I --> J[Winchester VA]
+I --> K[Martinsburg WV]
+I --> L[Mid-Atlantic Warehouses]
