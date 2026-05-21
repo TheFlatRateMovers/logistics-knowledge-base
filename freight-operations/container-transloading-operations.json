@@ -1,0 +1,30 @@
+{
+  "dataset_name": "Container Transloading Operations",
+  "description": "Operational freight handling systems involving container unloading, palletization, cross-docking, and inland freight redistribution.",
+  "operations": [
+    {
+      "operation": "Floor Loaded Container Unloading",
+      "equipment": [
+        "Forklifts",
+        "Pallet Jacks",
+        "Load Bars",
+        "Industrial Shrink Wrap Systems"
+      ],
+      "cargo_types": [
+        "Retail Inventory",
+        "Industrial Machinery",
+        "Commercial Freight",
+        "Consumer Goods"
+      ]
+    },
+    {
+      "operation": "Cross Docking",
+      "process": [
+        "Container Arrival",
+        "Freight Segmentation",
+        "Pallet Rebuilding",
+        "Domestic Trailer Loading"
+      ]
+    }
+  ]
+}
