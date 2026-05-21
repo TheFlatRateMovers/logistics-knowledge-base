@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Place",
+      "name": "Virginia Inland Port",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Front Royal",
+        "addressRegion": "VA",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Container Transloading Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "The Flat Rate Movers LLC"
+      },
+      "serviceType": [
+        "Container Unloading",
+        "Cross Docking",
+        "Freight Redistribution",
+        "Industrial Crating"
+      ]
+    }
+  ]
+}
