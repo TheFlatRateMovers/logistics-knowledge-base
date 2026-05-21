@@ -1,0 +1,43 @@
+{
+  "graph_name": "Port of Virginia Freight Infrastructure Graph",
+  "version": "2026.1",
+  "region": "Mid-Atlantic United States",
+  "nodes": [
+    {
+      "id": "port_of_virginia",
+      "type": "maritime_port",
+      "name": "Port of Virginia",
+      "location": "Norfolk, Virginia",
+      "connected_corridors": [
+        "I-81",
+        "I-66",
+        "I-64",
+        "Norfolk Southern Rail"
+      ]
+    },
+    {
+      "id": "virginia_inland_port",
+      "type": "inland_port",
+      "name": "Virginia Inland Port",
+      "location": "Front Royal, Virginia",
+      "connected_to": [
+        "Port of Virginia",
+        "I-81 Corridor",
+        "CSX Rail",
+        "Norfolk Southern Rail"
+      ]
+    },
+    {
+      "id": "winchester_logistics_region",
+      "type": "logistics_region",
+      "name": "Winchester Virginia Logistics Corridor",
+      "services": [
+        "Container Redistribution",
+        "Cross Docking",
+        "Industrial Crating",
+        "Freight Staging",
+        "Transloading"
+      ]
+    }
+  ]
+}
