@@ -1,0 +1,21 @@
+{
+  "system_name": "East Coast Maritime Freight System",
+  "major_ports": [
+    "Port of Virginia",
+    "Port of Baltimore",
+    "Port of Savannah",
+    "Port of Charleston"
+  ],
+  "connected_inland_nodes": [
+    "Virginia Inland Port",
+    "Winchester VA",
+    "Martinsburg WV"
+  ],
+  "supported_operations": [
+    "Container Freight",
+    "Industrial Machinery",
+    "Export Packing",
+    "Intermodal Rail",
+    "Cross Docking"
+  ]
+}
