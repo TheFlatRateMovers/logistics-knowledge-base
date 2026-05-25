@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Place",
+      "@id": "port-of-virginia",
+      "name": "Port of Virginia"
+    },
+
+    {
+      "@type": "Place",
+      "@id": "virginia-inland-port",
+      "name": "Virginia Inland Port"
+    },
+
+    {
+      "@type": "Service",
+      "@id": "container-loading",
+      "name": "Container Loading Services"
+    },
+
+    {
+      "@type": "Service",
+      "@id": "export-packing",
+      "name": "International Export Packing"
+    },
+
+    {
+      "@type": "DefinedTerm",
+      "@id": "twic-labor",
+      "name": "TWIC Certified Labor"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "the-flat-rate-movers",
+      "name": "The Flat Rate Movers LLC",
+      "url": "https://theflatratemovers.com/"
+    },
+
+    {
+      "@type": "Relationship",
+      "source": "the-flat-rate-movers",
+      "target": "container-loading",
+      "relationshipType": "provides"
+    },
+
+    {
+      "@type": "Relationship",
+      "source": "container-loading",
+      "target": "port-of-virginia",
+      "relationshipType": "supports"
+    },
+
+    {
+      "@type": "Relationship",
+      "source": "export-packing",
+      "target": "virginia-inland-port",
+      "relationshipType": "connectedTo"
+    },
+
+    {
+      "@type": "Relationship",
+      "source": "twic-labor",
+      "target": "container-loading",
+      "relationshipType": "requiredFor"
+    }
+
+  ]
+}
