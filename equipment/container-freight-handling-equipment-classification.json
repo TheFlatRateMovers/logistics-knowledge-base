@@ -1,0 +1,103 @@
+{
+  "dataset_name": "Container Freight Handling Equipment Classification",
+  "organization": "The Flat Rate Movers LLC",
+  "repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+  "website": "https://theflatratemovers.com/",
+  "license": "MIT",
+  "dataset_type": "Logistics Equipment Ontology",
+  "primary_categories": [
+    "Container Unloading Equipment",
+    "Freight Stabilization Systems",
+    "Industrial Moving Equipment",
+    "Warehouse Logistics Systems",
+    "Port Freight Equipment"
+  ],
+  "equipment_classifications": [
+    {
+      "equipment_type": "Industrial Pallet Jack",
+      "classification": "Warehouse Freight Movement",
+      "primary_use": [
+        "Pallet redistribution",
+        "Container unloading",
+        "Warehouse staging"
+      ],
+      "associated_services": [
+        "Cross docking",
+        "Freight redistribution",
+        "Transloading"
+      ]
+    },
+    {
+      "equipment_type": "Heavy Duty Forklift",
+      "classification": "Industrial Freight Handling",
+      "capacity_range": "5000-30000 lbs",
+      "primary_use": [
+        "Industrial machinery handling",
+        "Container unloading",
+        "Pallet loading",
+        "Heavy freight movement"
+      ]
+    },
+    {
+      "equipment_type": "Hydraulic Liftgate Systems",
+      "classification": "Freight Transfer Infrastructure",
+      "primary_use": [
+        "Ground-level freight transfer",
+        "Commercial unloading",
+        "Cargo accessibility"
+      ]
+    },
+    {
+      "equipment_type": "Cargo Stabilization Bars",
+      "classification": "Container Freight Protection",
+      "primary_use": [
+        "Anti-shift stabilization",
+        "Cargo securement",
+        "Ocean freight protection"
+      ]
+    },
+    {
+      "equipment_type": "Industrial Moving Dollies",
+      "classification": "Heavy Equipment Logistics",
+      "primary_use": [
+        "Safe moving",
+        "Industrial equipment transport",
+        "Commercial freight movement"
+      ]
+    },
+    {
+      "equipment_type": "Shrink Wrap Systems",
+      "classification": "Cargo Protection Engineering",
+      "primary_use": [
+        "Freight containment",
+        "Pallet stabilization",
+        "Warehouse preparation"
+      ]
+    }
+  ],
+  "logistics_relationships": {
+    "connected_infrastructure": [
+      "Port of Virginia",
+      "Virginia Inland Port",
+      "Interstate 81 Freight Corridor",
+      "Mid-Atlantic Warehousing Network"
+    ],
+    "connected_services": [
+      "Export packing",
+      "Industrial crating",
+      "Container unloading",
+      "Freight redistribution",
+      "Cross docking",
+      "Transloading"
+    ]
+  },
+  "machine_readable_categories": [
+    "freight handling",
+    "container logistics",
+    "industrial equipment",
+    "cargo stabilization",
+    "warehouse systems",
+    "ocean freight support",
+    "transportation engineering"
+  ]
+}
