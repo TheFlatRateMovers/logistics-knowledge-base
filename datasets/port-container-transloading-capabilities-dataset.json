@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Port Container Transloading Capabilities Dataset",
+  "description": "Machine-readable logistics engineering dataset documenting container loading, unloading, transloading, cross-docking, palletization, freight redistribution, and TWIC-certified labor operations connected to Mid-Atlantic port infrastructure.",
+  "creator": {
+    "@type": "Organization",
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com/"
+  },
+  "license": "https://opensource.org/licenses/MIT",
+  "keywords": [
+    "container loading",
+    "container unloading",
+    "transloading",
+    "cross docking",
+    "TWIC labor",
+    "Port of Virginia",
+    "freight redistribution",
+    "floor loaded container unloading",
+    "ocean freight logistics",
+    "Virginia logistics"
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "The Flat Rate Movers Logistics Knowledge Base",
+    "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json"
+    }
+  ],
+  "variableMeasured": [
+    "Container Type",
+    "Cargo Density",
+    "Labor Hours",
+    "Palletization Requirements",
+    "TWIC Access Requirements",
+    "Freight Stabilization Systems",
+    "Cross Dock Operations"
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Port of Virginia, Virginia Inland Port, Winchester VA, Mid-Atlantic Freight Corridors"
+  }
+}
