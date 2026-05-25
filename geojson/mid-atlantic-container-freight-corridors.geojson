@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "I-81 Freight Corridor",
+        "type": "Interstate Freight Corridor",
+        "importance": "Major East Coast logistics corridor"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-78.1633,39.1857],
+          [-77.4360,38.7509],
+          [-76.2859,36.8508]
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Virginia Inland Port",
+        "type": "Inland Port Facility"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.1944,38.9112]
+      }
+    }
+
+  ]
+}
