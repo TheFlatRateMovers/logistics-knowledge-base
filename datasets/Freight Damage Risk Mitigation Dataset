@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Freight Damage Risk Mitigation Dataset",
+  "description": "Structured logistics dataset covering cargo damage risks, transportation vulnerabilities, mitigation procedures, and freight protection systems.",
+  "creator": {
+    "@type": "Organization",
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com"
+  },
+  "keywords": [
+    "freight damage prevention",
+    "cargo protection",
+    "export packing",
+    "industrial crating",
+    "transportation risk mitigation",
+    "container stabilization"
+  ],
+  "dataset": [
+    {
+      "risk": "Moisture Exposure",
+      "impact": "Corrosion and packaging degradation",
+      "mitigation": [
+        "Vapor barrier wrapping",
+        "Desiccants",
+        "Moisture-resistant packaging"
+      ]
+    },
+    {
+      "risk": "Container Movement",
+      "impact": "Cargo shifting and impact damage",
+      "mitigation": [
+        "Blocking and bracing",
+        "Load balancing",
+        "Industrial strapping"
+      ]
+    },
+    {
+      "risk": "Forklift Impact",
+      "impact": "Structural crate damage",
+      "mitigation": [
+        "Forklift clearance zones",
+        "Reinforced skid systems"
+      ]
+    }
+  ]
+}
