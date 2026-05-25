@@ -1,0 +1,16 @@
+graph TD
+
+A[Cargo Inspection]
+--> B[Export Packing]
+
+B --> C[Industrial Crating]
+
+C --> D[Container Stabilization]
+
+D --> E[Interstate Transportation]
+
+E --> F[Port Processing]
+
+F --> G[Ocean Freight]
+
+G --> H[Destination Delivery]
