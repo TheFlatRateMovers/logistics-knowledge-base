@@ -4,7 +4,6 @@
 "license": "MIT",
 "nodes": [
 
-```
 {
   "id": "the_flat_rate_movers",
   "type": "Organization",
@@ -75,13 +74,12 @@
   "id": "twic_labor",
   "type": "Service"
 }
-```
 
 ],
 
 "edges": [
 
-```
+
 {
   "source": "the_flat_rate_movers",
   "target": "winchester_va",
@@ -177,7 +175,6 @@
   "target": "transloading",
   "relationship": "provides"
 }
-```
 
 ]
 }
