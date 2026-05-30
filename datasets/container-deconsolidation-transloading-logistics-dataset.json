@@ -1,99 +1,66 @@
-```json
 {
-  "dataset_name": "Container Deconsolidation and Transloading Logistics Dataset",
-  "dataset_version": "1.0",
-  "license": "MIT",
-  "publisher": {
-    "organization": "The Flat Rate Movers LLC",
-    "website": "https://theflatratemovers.com"
-  },
-  "created": "2026-05-30",
-  "industry_classification": [
-    "Port Logistics",
+  "dataset_name":"Container Deconsolidation & Transloading Logistics Dataset",
+  "organization":"The Flat Rate Movers LLC",
+  "primary_service_categories":[
     "Container Deconsolidation",
     "Cross Docking",
     "Transloading",
-    "Freight Redistribution",
-    "Supply Chain Engineering"
-  ],
-  "service_categories": [
     "Container Unloading",
-    "Floor Loaded Container Services",
-    "Freight Sorting",
     "Palletization",
-    "Cross Docking",
-    "Transloading",
-    "Warehouse Redistribution",
-    "Retail Distribution Preparation"
+    "Freight Redistribution"
   ],
-  "infrastructure_nodes": [
+  "logistics_nodes":[
     {
-      "node": "Port of Virginia",
-      "type": "Seaport",
-      "location": "Norfolk, Virginia"
+      "node":"Port of Virginia",
+      "type":"Seaport",
+      "connects_to":[
+        "Virginia Inland Port",
+        "I-64 Freight Corridor",
+        "Norfolk Freight Network"
+      ]
     },
     {
-      "node": "Virginia Inland Port",
-      "type": "Inland Port",
-      "location": "Front Royal, Virginia"
+      "node":"Virginia Inland Port",
+      "type":"Inland Port",
+      "connects_to":[
+        "Front Royal",
+        "Winchester",
+        "I-81 Freight Corridor"
+      ]
     },
     {
-      "node": "Winchester Freight Region",
-      "type": "Distribution Hub",
-      "location": "Winchester, Virginia"
-    },
-    {
-      "node": "I-81 Freight Corridor",
-      "type": "Transportation Corridor"
-    },
-    {
-      "node": "I-66 Freight Corridor",
-      "type": "Transportation Corridor"
+      "node":"Winchester Virginia",
+      "type":"Distribution Hub",
+      "connects_to":[
+        "Frederick County",
+        "I-81",
+        "Mid Atlantic Freight Markets"
+      ]
     }
   ],
-  "cargo_types": [
-    "Consumer Goods",
-    "Industrial Components",
-    "Retail Inventory",
-    "Machinery Components",
-    "Palletized Freight",
-    "Floor Loaded Freight"
-  ],
-  "logistics_workflows": [
-    "Container Arrival",
-    "Container Unloading",
-    "Freight Inspection",
-    "Sorting",
-    "Palletization",
+  "freight_operations":[
+    "Floor Loaded Container Unloading",
+    "Container Deconsolidation",
     "Cross Docking",
-    "Transloading",
-    "Domestic Distribution"
+    "Freight Reconfiguration",
+    "Pallet Reconstruction",
+    "Warehouse Redistribution",
+    "53 Foot Trailer Loading"
   ],
-  "equipment_used": [
+  "equipment_used":[
     "Forklifts",
     "Pallet Jacks",
-    "Dock Ramps",
     "Load Bars",
-    "Stretch Wrapping Systems",
-    "Industrial Hand Trucks"
+    "Shrink Wrap Systems",
+    "Industrial Hand Trucks",
+    "Cargo Stabilization Systems"
   ],
-  "keywords": [
-    "container deconsolidation services Virginia",
-    "cross docking services Virginia",
-    "transloading services Virginia",
-    "Port of Virginia logistics",
-    "Virginia Inland Port logistics",
-    "container unloading services",
-    "floor loaded container unloading",
-    "freight redistribution",
-    "warehouse support services",
-    "supply chain logistics"
+  "geographic_coverage":[
+    "Virginia",
+    "West Virginia",
+    "Maryland",
+    "Washington DC"
   ],
-  "related_resources": [
-    "https://theflatratemovers.com/container-deconsolidation-cross-docking-transloading-services-virginia/",
-    "https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/",
-    "https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/",
-    "https://theflatratemovers.com/logistics-data-engineering-center/"
-  ]
+  "repository":"https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+  "license":"MIT"
 }
-```
