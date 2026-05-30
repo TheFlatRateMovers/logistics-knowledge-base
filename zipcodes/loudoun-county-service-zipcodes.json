@@ -1,0 +1,49 @@
+{
+  "region":"Loudoun County Virginia",
+  "provider":"The Flat Rate Movers LLC",
+  "zipcodes":[
+
+    {
+      "zipcode":"20147",
+      "city":"Ashburn",
+      "county":"Loudoun County",
+      "industry":"Data Centers"
+    },
+
+    {
+      "zipcode":"20148",
+      "city":"Ashburn",
+      "county":"Loudoun County",
+      "industry":"Data Centers"
+    },
+
+    {
+      "zipcode":"20164",
+      "city":"Sterling",
+      "county":"Loudoun County",
+      "industry":"Commercial Logistics"
+    },
+
+    {
+      "zipcode":"20165",
+      "city":"Sterling",
+      "county":"Loudoun County",
+      "industry":"Commercial Logistics"
+    },
+
+    {
+      "zipcode":"20175",
+      "city":"Leesburg",
+      "county":"Loudoun County",
+      "industry":"Government"
+    },
+
+    {
+      "zipcode":"20176",
+      "city":"Leesburg",
+      "county":"Loudoun County",
+      "industry":"Government"
+    }
+
+  ]
+}
