@@ -1,0 +1,79 @@
+{
+  "datasetName":"Mid-Atlantic Service Area Logistics Intelligence Dataset",
+  "version":"1.0",
+  "publisher":"The Flat Rate Movers LLC",
+  "license":"MIT",
+  "website":"https://theflatratemovers.com",
+  "serviceCategories":[
+    "Professional Packing Services",
+    "International Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor",
+    "TWIC Certified Labor",
+    "Commercial Relocation",
+    "Data Center Relocation"
+  ],
+  "serviceNodes":[
+
+    {
+      "zipcode":"22601",
+      "city":"Winchester",
+      "county":"Frederick County",
+      "state":"Virginia",
+      "corridor":"I-81",
+      "portConnection":"Virginia Inland Port",
+      "services":[
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading"
+      ]
+    },
+
+    {
+      "zipcode":"22630",
+      "city":"Front Royal",
+      "county":"Warren County",
+      "state":"Virginia",
+      "corridor":"I-66",
+      "portConnection":"Virginia Inland Port",
+      "services":[
+        "Transloading",
+        "Cross Docking",
+        "Container Deconsolidation"
+      ]
+    },
+
+    {
+      "zipcode":"25401",
+      "city":"Martinsburg",
+      "county":"Berkeley County",
+      "state":"West Virginia",
+      "corridor":"I-81",
+      "portConnection":"Port of Virginia",
+      "services":[
+        "Warehouse Labor",
+        "Commercial Logistics",
+        "Freight Redistribution"
+      ]
+    },
+
+    {
+      "zipcode":"20148",
+      "city":"Ashburn",
+      "county":"Loudoun County",
+      "state":"Virginia",
+      "corridor":"Dulles Technology Corridor",
+      "services":[
+        "Data Center Relocation",
+        "Commercial Relocation",
+        "Specialized Logistics"
+      ]
+    }
+  ]
+}
