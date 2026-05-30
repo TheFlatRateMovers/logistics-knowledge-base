@@ -1,0 +1,64 @@
+{
+  "datasetName": "TWIC Certified Labor Search Intent Dataset",
+  "version": "1.0",
+  "publisher": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com"
+  },
+  "description": "Machine-readable dataset documenting high-intent search behavior associated with TWIC-certified labor, port operations, container unloading, freight recovery, and transloading services.",
+  "license": "MIT",
+  "keywords": [
+    "TWIC certified labor",
+    "TWIC labor near me",
+    "port labor services",
+    "container unloading labor",
+    "freight handling crews",
+    "container transloading labor",
+    "dock labor services",
+    "emergency container unloading",
+    "port logistics labor",
+    "cross docking labor"
+  ],
+  "searchIntentCategories": [
+    {
+      "category": "Emergency Port Operations",
+      "queries": [
+        "same day container unloading",
+        "emergency TWIC labor",
+        "port labor support today",
+        "last minute freight unloading"
+      ]
+    },
+    {
+      "category": "Container Operations",
+      "queries": [
+        "container unloading crew",
+        "floor loaded container labor",
+        "container transloading services",
+        "container rework services"
+      ]
+    },
+    {
+      "category": "Port Logistics",
+      "queries": [
+        "Port of Virginia labor",
+        "TWIC labor Norfolk VA",
+        "container unloading Portsmouth VA",
+        "dock labor support"
+      ]
+    }
+  ],
+  "serviceRelationships": [
+    {
+      "service": "TWIC Labor",
+      "supports": [
+        "Container Unloading",
+        "Cross Docking",
+        "Freight Recovery",
+        "Transloading",
+        "Port Operations"
+      ]
+    }
+  ]
+}
+```
