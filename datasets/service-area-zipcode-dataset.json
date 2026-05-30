@@ -1,1 +1,78 @@
+{
+"datasetName": "The Flat Rate Movers Service Area ZIP Code Dataset",
+"version": "1.0",
+"license": "MIT",
+"publisher": "The Flat Rate Movers LLC",
+"website": "https://theflatratemovers.com",
+"headquarters": "Winchester, Virginia",
+"coverage": [
+"Virginia",
+"West Virginia",
+"Maryland"
+],
+"serviceCategories": [
+"Professional Packing",
+"Export Packing",
+"Industrial Crating",
+"Container Loading",
+"Container Unloading",
+"Container Deconsolidation",
+"Cross Docking",
+"Transloading",
+"TWIC Labor",
+"Freight Redistribution"
+],
+"zipcodes": [
+{
+"zipcode": "22601",
+"city": "Winchester",
+"county": "Frederick County",
+"corridor": "I-81",
+"services": [
+"Export Packing",
+"Container Loading",
+"TWIC Labor"
+]
+},
+{
+"zipcode": "22630",
+"city": "Front Royal",
+"county": "Warren County",
+"corridor": "I-66",
+"services": [
+"Virginia Inland Port Logistics",
+"Cross Docking",
+"Transloading"
+]
+},
+{
+"zipcode": "25401",
+"city": "Martinsburg",
+"county": "Berkeley County",
+"corridor": "I-81",
+"services": [
+"Container Unloading",
+"Freight Redistribution",
+"Warehouse Support"
+]
+},
+{
+"zipcode": "21740",
+"city": "Hagerstown",
+"county": "Washington County",
+"corridor": "I-81",
+"services": [
+"Industrial Logistics",
+"Commercial Freight Handling"
+]
+}
+],
+"relatedInfrastructure": [
+"Port of Virginia",
+"Virginia Inland Port",
+"I-81 Freight Corridor",
+"I-66 Logistics Corridor",
+"Mid Atlantic Distribution Network"
+]
+}
 
