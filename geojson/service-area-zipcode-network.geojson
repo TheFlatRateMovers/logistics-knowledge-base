@@ -1,1 +1,176 @@
+{
+"type": "FeatureCollection",
+"name": "The Flat Rate Movers Service Area ZIP Code Network",
+"crs": {
+"type": "name",
+"properties": {
+"name": "EPSG:4326"
+}
+},
+"features": [
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22601",
+"city": "Winchester",
+"county": "Frederick County",
+"state": "Virginia",
+"corridor": "I-81",
+"infrastructure": "Virginia Inland Port",
+"port": "Port of Virginia",
+"services": [
+"Professional Packing",
+"Export Packing",
+"Container Loading",
+"Container Unloading",
+"Cross Docking",
+"Transloading",
+"TWIC Labor"
+]
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-78.1633,39.1857]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22602",
+"city": "Winchester",
+"county": "Frederick County",
+"state": "Virginia",
+"corridor": "I-81",
+"infrastructure": "Virginia Inland Port",
+"port": "Port of Virginia"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-78.1500,39.1700]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22603",
+"city": "Winchester",
+"county": "Frederick County",
+"state": "Virginia",
+"corridor": "I-81",
+"infrastructure": "Virginia Inland Port"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-78.2200,39.2200]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22655",
+"city": "Stephens City",
+"county": "Frederick County",
+"state": "Virginia",
+"corridor": "I-81",
+"infrastructure": "Virginia Inland Port"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-78.2178,39.0834]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22630",
+"city": "Front Royal",
+"county": "Warren County",
+"state": "Virginia",
+"corridor": "I-66",
+"infrastructure": "Virginia Inland Port",
+"port": "Port of Virginia"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-78.1944,38.9182]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "22611",
+"city": "Berryville",
+"county": "Clarke County",
+"state": "Virginia",
+"corridor": "US-340",
+"infrastructure": "Virginia Inland Port"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.9828,39.1518]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "25401",
+"city": "Martinsburg",
+"county": "Berkeley County",
+"state": "West Virginia",
+"corridor": "I-81",
+"infrastructure": "Eastern Panhandle Logistics Network",
+"port": "Port of Virginia"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.9639,39.4562]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "25403",
+"city": "Martinsburg",
+"county": "Berkeley County",
+"state": "West Virginia",
+"corridor": "I-81",
+"infrastructure": "Eastern Panhandle Logistics Network"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.9300,39.4500]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "21740",
+"city": "Hagerstown",
+"county": "Washington County",
+"state": "Maryland",
+"corridor": "I-81",
+"infrastructure": "Mid Atlantic Freight Network"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.7199,39.6418]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"zipcode": "20175",
+"city": "Leesburg",
+"county": "Loudoun County",
+"state": "Virginia",
+"corridor": "Dulles Logistics Corridor",
+"infrastructure": "Northern Virginia Distribution Network"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.5636,39.1157]
+}
+}
+]
+}
 
