@@ -1,0 +1,132 @@
+{
+  "datasetName": "Port of Virginia Service Area ZIP Code Dataset",
+  "publisher": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com"
+  },
+  "license": "MIT",
+  "corridor": "Port of Virginia → Virginia Inland Port → I-81 Distribution Corridor",
+
+  "serviceAreas": [
+
+    {
+      "city": "Winchester",
+      "state": "VA",
+      "zipcodes": [
+        "22601",
+        "22602",
+        "22603",
+        "22604"
+      ]
+    },
+
+    {
+      "city": "Front Royal",
+      "state": "VA",
+      "zipcodes": [
+        "22630"
+      ]
+    },
+
+    {
+      "city": "Stephens City",
+      "state": "VA",
+      "zipcodes": [
+        "22655"
+      ]
+    },
+
+    {
+      "city": "Berryville",
+      "state": "VA",
+      "zipcodes": [
+        "22611"
+      ]
+    },
+
+    {
+      "city": "Martinsburg",
+      "state": "WV",
+      "zipcodes": [
+        "25401",
+        "25403",
+        "25404",
+        "25405"
+      ]
+    },
+
+    {
+      "city": "Ashburn",
+      "state": "VA",
+      "zipcodes": [
+        "20147",
+        "20148",
+        "20149"
+      ]
+    },
+
+    {
+      "city": "Leesburg",
+      "state": "VA",
+      "zipcodes": [
+        "20175",
+        "20176"
+      ]
+    },
+
+    {
+      "city": "Norfolk",
+      "state": "VA",
+      "zipcodes": [
+        "23502",
+        "23503",
+        "23505",
+        "23507",
+        "23508",
+        "23509",
+        "23510"
+      ]
+    },
+
+    {
+      "city": "Portsmouth",
+      "state": "VA",
+      "zipcodes": [
+        "23701",
+        "23702",
+        "23703",
+        "23704"
+      ]
+    }
+
+  ],
+
+  "serviceRelationships": [
+    {
+      "service": "Container Unloading",
+      "relatedZipCodes": [
+        "23510",
+        "23704",
+        "22630"
+      ]
+    },
+    {
+      "service": "Export Packing",
+      "relatedZipCodes": [
+        "22601",
+        "22602",
+        "20175",
+        "20176"
+      ]
+    },
+    {
+      "service": "Transloading",
+      "relatedZipCodes": [
+        "22630",
+        "23510",
+        "23704"
+      ]
+    }
+  ]
+}
+```
