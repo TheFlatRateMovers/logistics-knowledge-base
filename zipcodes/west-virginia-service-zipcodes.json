@@ -1,0 +1,63 @@
+{
+  "region":"Eastern Panhandle West Virginia",
+  "provider":"The Flat Rate Movers LLC",
+  "zipcodes":[
+
+    {
+      "zipcode":"25401",
+      "city":"Martinsburg",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25403",
+      "city":"Martinsburg",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25404",
+      "city":"Martinsburg",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25405",
+      "city":"Martinsburg",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25413",
+      "city":"Bunker Hill",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25427",
+      "city":"Hedgesville",
+      "county":"Berkeley County",
+      "corridor":"WV Route 9"
+    },
+
+    {
+      "zipcode":"25428",
+      "city":"Inwood",
+      "county":"Berkeley County",
+      "corridor":"I-81"
+    },
+
+    {
+      "zipcode":"25430",
+      "city":"Kearneysville",
+      "county":"Jefferson County",
+      "corridor":"Route 340"
+    }
+
+  ]
+}
