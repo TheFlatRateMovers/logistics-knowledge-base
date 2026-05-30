@@ -1,0 +1,120 @@
+{
+  "@context": {
+    "name": "http://schema.org/name",
+    "description": "http://schema.org/description",
+    "service": "http://schema.org/Service",
+    "location": "http://schema.org/Place",
+    "relationship": "http://schema.org/relatedTo"
+  },
+
+  "ontologyName": "Specialized Logistics Service Ontology",
+
+  "organization": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com"
+  },
+
+  "entities": [
+
+    {
+      "id": "export_packing",
+      "type": "Service",
+      "name": "International Export Packing",
+      "relatedTo": [
+        "industrial_crating",
+        "container_loading",
+        "ispm15_compliance",
+        "ocean_freight"
+      ]
+    },
+
+    {
+      "id": "industrial_crating",
+      "type": "Service",
+      "name": "Industrial Crating",
+      "relatedTo": [
+        "export_packing",
+        "machinery_protection",
+        "container_loading"
+      ]
+    },
+
+    {
+      "id": "container_loading",
+      "type": "Service",
+      "name": "Container Loading",
+      "relatedTo": [
+        "container_unloading",
+        "transloading",
+        "cross_docking"
+      ]
+    },
+
+    {
+      "id": "container_unloading",
+      "type": "Service",
+      "name": "Container Unloading",
+      "relatedTo": [
+        "freight_recovery",
+        "cross_docking",
+        "warehouse_operations"
+      ]
+    },
+
+    {
+      "id": "transloading",
+      "type": "Service",
+      "name": "Freight Transloading",
+      "relatedTo": [
+        "cross_docking",
+        "warehouse_distribution",
+        "container_unloading"
+      ]
+    },
+
+    {
+      "id": "twic_labor",
+      "type": "LaborCategory",
+      "name": "TWIC Certified Labor",
+      "relatedTo": [
+        "port_operations",
+        "container_unloading",
+        "cargo_recovery"
+      ]
+    },
+
+    {
+      "id": "port_of_virginia",
+      "type": "Infrastructure",
+      "name": "Port of Virginia",
+      "relatedTo": [
+        "ocean_freight",
+        "container_logistics",
+        "twic_labor"
+      ]
+    },
+
+    {
+      "id": "virginia_inland_port",
+      "type": "Infrastructure",
+      "name": "Virginia Inland Port",
+      "relatedTo": [
+        "rail_freight",
+        "container_distribution",
+        "i81_corridor"
+      ]
+    },
+
+    {
+      "id": "i81_corridor",
+      "type": "TransportationCorridor",
+      "name": "Interstate 81 Freight Corridor",
+      "relatedTo": [
+        "warehouse_distribution",
+        "regional_logistics",
+        "freight_movement"
+      ]
+    }
+
+  ]
+}
