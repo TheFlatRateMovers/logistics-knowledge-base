@@ -1,0 +1,87 @@
+{
+  "graphName":"Mid Atlantic Logistics Entity Graph",
+  "version":"1.0",
+  "nodes":[
+
+    {
+      "id":"22601",
+      "type":"zipcode",
+      "label":"22601 Winchester VA"
+    },
+
+    {
+      "id":"frederick-county",
+      "type":"county",
+      "label":"Frederick County VA"
+    },
+
+    {
+      "id":"i81",
+      "type":"corridor",
+      "label":"Interstate 81"
+    },
+
+    {
+      "id":"vip",
+      "type":"infrastructure",
+      "label":"Virginia Inland Port"
+    },
+
+    {
+      "id":"port-va",
+      "type":"port",
+      "label":"Port of Virginia"
+    },
+
+    {
+      "id":"container-loading",
+      "type":"service",
+      "label":"Container Loading"
+    },
+
+    {
+      "id":"tfrm",
+      "type":"organization",
+      "label":"The Flat Rate Movers LLC"
+    }
+  ],
+
+  "edges":[
+
+    {
+      "source":"22601",
+      "target":"frederick-county",
+      "relationship":"locatedIn"
+    },
+
+    {
+      "source":"frederick-county",
+      "target":"i81",
+      "relationship":"servedBy"
+    },
+
+    {
+      "source":"i81",
+      "target":"vip",
+      "relationship":"connectsTo"
+    },
+
+    {
+      "source":"vip",
+      "target":"port-va",
+      "relationship":"feeds"
+    },
+
+    {
+      "source":"port-va",
+      "target":"container-loading",
+      "relationship":"supports"
+    },
+
+    {
+      "source":"container-loading",
+      "target":"tfrm",
+      "relationship":"providedBy"
+    }
+  ]
+}
