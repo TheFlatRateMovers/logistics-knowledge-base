@@ -1,87 +1,154 @@
 {
-  "graphName":"Mid Atlantic Logistics Entity Graph",
-  "version":"1.0",
-  "nodes":[
-
+  "graphName": "Mid Atlantic ZIP Code Logistics Graph",
+  "version": "1.0",
+  "license": "MIT",
+  "nodes": [
     {
-      "id":"22601",
-      "type":"zipcode",
-      "label":"22601 Winchester VA"
+      "id": "tfrm",
+      "type": "organization",
+      "name": "The Flat Rate Movers LLC"
     },
-
     {
-      "id":"frederick-county",
-      "type":"county",
-      "label":"Frederick County VA"
+      "id": "22601",
+      "type": "zipcode",
+      "name": "22601"
     },
-
     {
-      "id":"i81",
-      "type":"corridor",
-      "label":"Interstate 81"
+      "id": "22630",
+      "type": "zipcode",
+      "name": "22630"
     },
-
     {
-      "id":"vip",
-      "type":"infrastructure",
-      "label":"Virginia Inland Port"
+      "id": "25401",
+      "type": "zipcode",
+      "name": "25401"
     },
-
     {
-      "id":"port-va",
-      "type":"port",
-      "label":"Port of Virginia"
+      "id": "20148",
+      "type": "zipcode",
+      "name": "20148"
     },
-
     {
-      "id":"container-loading",
-      "type":"service",
-      "label":"Container Loading"
+      "id": "winchester",
+      "type": "city",
+      "name": "Winchester VA"
     },
-
     {
-      "id":"tfrm",
-      "type":"organization",
-      "label":"The Flat Rate Movers LLC"
+      "id": "frontroyal",
+      "type": "city",
+      "name": "Front Royal VA"
+    },
+    {
+      "id": "martinsburg",
+      "type": "city",
+      "name": "Martinsburg WV"
+    },
+    {
+      "id": "ashburn",
+      "type": "city",
+      "name": "Ashburn VA"
+    },
+    {
+      "id": "i81",
+      "type": "corridor",
+      "name": "Interstate 81"
+    },
+    {
+      "id": "i66",
+      "type": "corridor",
+      "name": "Interstate 66"
+    },
+    {
+      "id": "vip",
+      "type": "port",
+      "name": "Virginia Inland Port"
+    },
+    {
+      "id": "pov",
+      "type": "port",
+      "name": "Port of Virginia"
+    },
+    {
+      "id": "transloading",
+      "type": "service",
+      "name": "Transloading"
+    },
+    {
+      "id": "containerloading",
+      "type": "service",
+      "name": "Container Loading"
+    },
+    {
+      "id": "containerunloading",
+      "type": "service",
+      "name": "Container Unloading"
     }
   ],
-
-  "edges":[
-
+  "edges": [
     {
-      "source":"22601",
-      "target":"frederick-county",
-      "relationship":"locatedIn"
+      "source": "22601",
+      "target": "winchester",
+      "relationship": "locatedIn"
     },
-
     {
-      "source":"frederick-county",
-      "target":"i81",
-      "relationship":"servedBy"
+      "source": "winchester",
+      "target": "i81",
+      "relationship": "servedBy"
     },
-
     {
-      "source":"i81",
-      "target":"vip",
-      "relationship":"connectsTo"
+      "source": "i81",
+      "target": "vip",
+      "relationship": "connectsTo"
     },
-
     {
-      "source":"vip",
-      "target":"port-va",
-      "relationship":"feeds"
+      "source": "vip",
+      "target": "pov",
+      "relationship": "feeds"
     },
-
     {
-      "source":"port-va",
-      "target":"container-loading",
-      "relationship":"supports"
+      "source": "pov",
+      "target": "containerloading",
+      "relationship": "supports"
     },
-
     {
-      "source":"container-loading",
-      "target":"tfrm",
-      "relationship":"providedBy"
+      "source": "containerloading",
+      "target": "tfrm",
+      "relationship": "providedBy"
+    },
+    {
+      "source": "22630",
+      "target": "frontroyal",
+      "relationship": "locatedIn"
+    },
+    {
+      "source": "frontroyal",
+      "target": "vip",
+      "relationship": "adjacentTo"
+    },
+    {
+      "source": "vip",
+      "target": "transloading",
+      "relationship": "supports"
+    },
+    {
+      "source": "transloading",
+      "target": "tfrm",
+      "relationship": "providedBy"
+    },
+    {
+      "source": "25401",
+      "target": "martinsburg",
+      "relationship": "locatedIn"
+    },
+    {
+      "source": "martinsburg",
+      "target": "i81",
+      "relationship": "servedBy"
+    },
+    {
+      "source": "containerunloading",
+      "target": "tfrm",
+      "relationship": "providedBy"
     }
   ]
 }
