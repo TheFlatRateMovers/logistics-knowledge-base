@@ -1,0 +1,131 @@
+{
+  "region":"Northern Shenandoah Valley Virginia",
+  "provider":"The Flat Rate Movers LLC",
+  "serviceTypes":[
+    "Moving Services",
+    "Professional Packing",
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "Freight Redistribution"
+  ],
+  "zipcodes":[
+
+    {
+      "zipcode":"22601",
+      "city":"Winchester",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port",
+        "Port of Virginia"
+      ]
+    },
+
+    {
+      "zipcode":"22602",
+      "city":"Winchester",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port",
+        "Port of Virginia"
+      ]
+    },
+
+    {
+      "zipcode":"22603",
+      "city":"Winchester",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port",
+        "Port of Virginia"
+      ]
+    },
+
+    {
+      "zipcode":"22604",
+      "city":"Winchester",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22611",
+      "city":"Berryville",
+      "county":"Clarke County",
+      "corridor":"Route 7",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22620",
+      "city":"Boyce",
+      "county":"Clarke County",
+      "corridor":"Route 340",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22624",
+      "city":"Clear Brook",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22630",
+      "city":"Front Royal",
+      "county":"Warren County",
+      "corridor":"I-66",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22645",
+      "city":"Middletown",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22655",
+      "city":"Stephens City",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "zipcode":"22656",
+      "city":"Stephenson",
+      "county":"Frederick County",
+      "corridor":"I-81",
+      "nearestInfrastructure":[
+        "Virginia Inland Port"
+      ]
+    }
+
+  ]
+}
