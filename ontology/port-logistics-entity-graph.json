@@ -1,0 +1,68 @@
+{
+  "graphName": "Port Logistics Entity Graph",
+  "organization": "The Flat Rate Movers LLC",
+  "entities": [
+
+    {
+      "id": "port_of_virginia",
+      "type": "Port",
+      "name": "Port of Virginia",
+      "connectsTo": [
+        "virginia_inland_port",
+        "container_unloading",
+        "container_loading",
+        "transloading"
+      ]
+    },
+
+    {
+      "id": "virginia_inland_port",
+      "type": "InlandPort",
+      "name": "Virginia Inland Port",
+      "connectsTo": [
+        "rail_freight",
+        "i81_corridor",
+        "winchester_distribution"
+      ]
+    },
+
+    {
+      "id": "twic_labor",
+      "type": "LaborForce",
+      "name": "TWIC Certified Labor",
+      "connectsTo": [
+        "port_operations",
+        "container_recovery",
+        "transloading"
+      ]
+    },
+
+    {
+      "id": "export_packing",
+      "type": "Service",
+      "name": "International Export Packing",
+      "connectsTo": [
+        "industrial_crating",
+        "container_loading",
+        "ocean_freight"
+      ]
+    },
+
+    {
+      "id": "the_flat_rate_movers",
+      "type": "Organization",
+      "name": "The Flat Rate Movers LLC",
+      "provides": [
+        "export_packing",
+        "industrial_crating",
+        "container_loading",
+        "container_unloading",
+        "transloading",
+        "cross_docking",
+        "twic_labor"
+      ]
+    }
+
+  ]
+}
+```
