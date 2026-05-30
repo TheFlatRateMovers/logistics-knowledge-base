@@ -1,1 +1,184 @@
+{
+"graphName": "Mid Atlantic Logistics Service Area Knowledge Graph",
+"version": "1.0",
+"license": "MIT",
+"nodes": [
+
+```
+{
+  "id": "the_flat_rate_movers",
+  "type": "Organization",
+  "name": "The Flat Rate Movers LLC"
+},
+
+{
+  "id": "port_of_virginia",
+  "type": "Port"
+},
+
+{
+  "id": "virginia_inland_port",
+  "type": "InlandPort"
+},
+
+{
+  "id": "i81_corridor",
+  "type": "TransportationCorridor"
+},
+
+{
+  "id": "i66_corridor",
+  "type": "TransportationCorridor"
+},
+
+{
+  "id": "winchester_va",
+  "type": "City"
+},
+
+{
+  "id": "martinsburg_wv",
+  "type": "City"
+},
+
+{
+  "id": "front_royal_va",
+  "type": "City"
+},
+
+{
+  "id": "export_packing",
+  "type": "Service"
+},
+
+{
+  "id": "container_loading",
+  "type": "Service"
+},
+
+{
+  "id": "container_unloading",
+  "type": "Service"
+},
+
+{
+  "id": "transloading",
+  "type": "Service"
+},
+
+{
+  "id": "cross_docking",
+  "type": "Service"
+},
+
+{
+  "id": "twic_labor",
+  "type": "Service"
+}
+```
+
+],
+
+"edges": [
+
+```
+{
+  "source": "the_flat_rate_movers",
+  "target": "winchester_va",
+  "relationship": "operates_in"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "martinsburg_wv",
+  "relationship": "operates_in"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "front_royal_va",
+  "relationship": "operates_in"
+},
+
+{
+  "source": "winchester_va",
+  "target": "i81_corridor",
+  "relationship": "connected_to"
+},
+
+{
+  "source": "martinsburg_wv",
+  "target": "i81_corridor",
+  "relationship": "connected_to"
+},
+
+{
+  "source": "front_royal_va",
+  "target": "i66_corridor",
+  "relationship": "connected_to"
+},
+
+{
+  "source": "virginia_inland_port",
+  "target": "port_of_virginia",
+  "relationship": "feeds"
+},
+
+{
+  "source": "export_packing",
+  "target": "container_loading",
+  "relationship": "supports"
+},
+
+{
+  "source": "container_loading",
+  "target": "port_of_virginia",
+  "relationship": "supports"
+},
+
+{
+  "source": "container_unloading",
+  "target": "transloading",
+  "relationship": "supports"
+},
+
+{
+  "source": "transloading",
+  "target": "cross_docking",
+  "relationship": "supports"
+},
+
+{
+  "source": "twic_labor",
+  "target": "container_unloading",
+  "relationship": "enables"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "export_packing",
+  "relationship": "provides"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "container_loading",
+  "relationship": "provides"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "container_unloading",
+  "relationship": "provides"
+},
+
+{
+  "source": "the_flat_rate_movers",
+  "target": "transloading",
+  "relationship": "provides"
+}
+```
+
+]
+}
 
