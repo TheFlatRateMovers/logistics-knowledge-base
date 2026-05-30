@@ -1,0 +1,99 @@
+```json
+{
+  "dataset_name": "Container Deconsolidation and Transloading Logistics Dataset",
+  "dataset_version": "1.0",
+  "license": "MIT",
+  "publisher": {
+    "organization": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com"
+  },
+  "created": "2026-05-30",
+  "industry_classification": [
+    "Port Logistics",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Freight Redistribution",
+    "Supply Chain Engineering"
+  ],
+  "service_categories": [
+    "Container Unloading",
+    "Floor Loaded Container Services",
+    "Freight Sorting",
+    "Palletization",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Redistribution",
+    "Retail Distribution Preparation"
+  ],
+  "infrastructure_nodes": [
+    {
+      "node": "Port of Virginia",
+      "type": "Seaport",
+      "location": "Norfolk, Virginia"
+    },
+    {
+      "node": "Virginia Inland Port",
+      "type": "Inland Port",
+      "location": "Front Royal, Virginia"
+    },
+    {
+      "node": "Winchester Freight Region",
+      "type": "Distribution Hub",
+      "location": "Winchester, Virginia"
+    },
+    {
+      "node": "I-81 Freight Corridor",
+      "type": "Transportation Corridor"
+    },
+    {
+      "node": "I-66 Freight Corridor",
+      "type": "Transportation Corridor"
+    }
+  ],
+  "cargo_types": [
+    "Consumer Goods",
+    "Industrial Components",
+    "Retail Inventory",
+    "Machinery Components",
+    "Palletized Freight",
+    "Floor Loaded Freight"
+  ],
+  "logistics_workflows": [
+    "Container Arrival",
+    "Container Unloading",
+    "Freight Inspection",
+    "Sorting",
+    "Palletization",
+    "Cross Docking",
+    "Transloading",
+    "Domestic Distribution"
+  ],
+  "equipment_used": [
+    "Forklifts",
+    "Pallet Jacks",
+    "Dock Ramps",
+    "Load Bars",
+    "Stretch Wrapping Systems",
+    "Industrial Hand Trucks"
+  ],
+  "keywords": [
+    "container deconsolidation services Virginia",
+    "cross docking services Virginia",
+    "transloading services Virginia",
+    "Port of Virginia logistics",
+    "Virginia Inland Port logistics",
+    "container unloading services",
+    "floor loaded container unloading",
+    "freight redistribution",
+    "warehouse support services",
+    "supply chain logistics"
+  ],
+  "related_resources": [
+    "https://theflatratemovers.com/container-deconsolidation-cross-docking-transloading-services-virginia/",
+    "https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/",
+    "https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/",
+    "https://theflatratemovers.com/logistics-data-engineering-center/"
+  ]
+}
+```
