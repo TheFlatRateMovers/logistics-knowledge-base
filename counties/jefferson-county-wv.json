@@ -1,0 +1,34 @@
+{
+  "county": "Jefferson County WV",
+  "state": "West Virginia",
+  "countySeat": "Charles Town",
+  "region": "Eastern Panhandle",
+  "cities": [
+    "Charles Town",
+    "Ranson",
+    "Harpers Ferry",
+    "Shepherdstown"
+  ],
+  "zipCodes": [
+    "25414",
+    "25425",
+    "25443"
+  ],
+  "corridors": [
+    "WV-9",
+    "US-340"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "Freight Stabilization"
+  ]
+}
