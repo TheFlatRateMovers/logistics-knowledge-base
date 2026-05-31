@@ -1,0 +1,34 @@
+{
+  "county": "Washington County MD",
+  "state": "Maryland",
+  "countySeat": "Hagerstown",
+  "region": "Western Maryland",
+  "cities": [
+    "Hagerstown",
+    "Williamsport",
+    "Boonsboro",
+    "Smithsburg"
+  ],
+  "zipCodes": [
+    "21740",
+    "21742",
+    "21746"
+  ],
+  "corridors": [
+    "I-81",
+    "I-70"
+  ],
+  "ports": [
+    "Port of Baltimore",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Container Loading",
+    "Container Unloading",
+    "Export Packing",
+    "Industrial Crating",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor"
+  ]
+}
