@@ -1,0 +1,55 @@
+{
+  "networkName":"TWIC Certified Labor Demand Network",
+
+  "service":"TWIC Specialized Labor",
+
+  "highIntentSearches":[
+    "TWIC labor near me",
+    "TWIC certified labor Virginia",
+    "port labor services",
+    "container unloading labor",
+    "dock labor support",
+    "container rework crews",
+    "freight recovery labor",
+    "port logistics labor",
+    "container stripping crews",
+    "demurrage recovery services"
+  ],
+
+  "portNodes":[
+
+    {
+      "port":"Port of Virginia",
+      "serviceNeeds":[
+        "Container Unloading",
+        "Container Rework",
+        "Freight Recovery",
+        "Cross Docking",
+        "Transloading"
+      ]
+    },
+
+    {
+      "port":"Virginia Inland Port",
+      "serviceNeeds":[
+        "Container Loading",
+        "Container Unloading",
+        "Freight Redistribution",
+        "Warehouse Labor"
+      ]
+    }
+  ],
+
+  "regionalCoverage":[
+    "Winchester VA",
+    "Martinsburg WV",
+    "Front Royal VA",
+    "Loudoun County VA",
+    "Hagerstown MD",
+    "Frederick MD"
+  ],
+
+  "relatedCaseStudies":[
+    "emergency-port-demurrage-recovery-twic-labor-case-study.md"
+  ]
+}
