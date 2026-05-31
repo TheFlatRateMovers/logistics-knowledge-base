@@ -1,0 +1,44 @@
+{
+  "model_name": "ZIP Service Port Corridor Ranking Model",
+
+  "ranking_factors": [
+
+    {
+      "factor": "corridor_proximity",
+      "weight": 0.30
+    },
+
+    {
+      "factor": "port_accessibility",
+      "weight": 0.25
+    },
+
+    {
+      "factor": "service_density",
+      "weight": 0.20
+    },
+
+    {
+      "factor": "commercial_activity",
+      "weight": 0.15
+    },
+
+    {
+      "factor": "search_intent_volume",
+      "weight": 0.10
+    }
+
+  ],
+
+  "entity_scoring": {
+
+    "22601": 97,
+    "22602": 96,
+    "22603": 95,
+    "25401": 95,
+    "25403": 94,
+    "20176": 99,
+    "20175": 98
+
+  }
+}
