@@ -4,6 +4,14 @@ The Flat Rate Movers Logistics Knowledge Base is a machine-readable logistics en
 
 This repository was developed to organize structured logistics datasets, semantic transportation references, compliance resources, geographic infrastructure systems, and operational knowledge used within real-world residential, commercial, industrial, and international freight environments.
 
+# Repository Index
+
+Machine-readable repository catalog:
+
+/repository-index/logistics-knowledge-index.json
+
+This index provides a unified inventory of datasets, ontologies, knowledge graphs, workflows, FAQs, case studies, infrastructure references, geographic intelligence resources, and logistics engineering assets maintained by The Flat Rate Movers LLC.
+
 The repository supports:
 - logistics knowledge engineering
 - freight risk mitigation research
