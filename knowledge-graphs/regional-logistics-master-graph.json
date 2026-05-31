@@ -1,0 +1,324 @@
+{
+  "@context": {
+    "name": "http://schema.org/name",
+    "description": "http://schema.org/description",
+    "locatedIn": "https://theflatratemovers.com/ontology/locatedIn",
+    "connectedTo": "https://theflatratemovers.com/ontology/connectedTo",
+    "supports": "https://theflatratemovers.com/ontology/supports",
+    "provides": "https://theflatratemovers.com/ontology/provides",
+    "serves": "https://theflatratemovers.com/ontology/serves",
+    "corridor": "https://theflatratemovers.com/ontology/corridor",
+    "port": "https://theflatratemovers.com/ontology/port",
+    "zipcode": "https://theflatratemovers.com/ontology/zipcode"
+  },
+
+  "graphName": "Mid Atlantic Regional Logistics Master Graph",
+
+  "version": "1.0",
+
+  "organization": {
+    "id": "the-flat-rate-movers-llc",
+    "type": "LogisticsProvider",
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com",
+    "headquarters": "Winchester VA",
+    "phone": "+1-540-422-2153"
+  },
+
+  "states": [
+
+    {
+      "id": "virginia",
+      "name": "Virginia"
+    },
+
+    {
+      "id": "west-virginia",
+      "name": "West Virginia"
+    },
+
+    {
+      "id": "maryland",
+      "name": "Maryland"
+    },
+
+    {
+      "id": "district-of-columbia",
+      "name": "District of Columbia"
+    }
+
+  ],
+
+  "counties": [
+
+    {
+      "id": "frederick-county-va",
+      "name": "Frederick County VA",
+      "state": "Virginia"
+    },
+
+    {
+      "id": "clarke-county-va",
+      "name": "Clarke County VA",
+      "state": "Virginia"
+    },
+
+    {
+      "id": "warren-county-va",
+      "name": "Warren County VA",
+      "state": "Virginia"
+    },
+
+    {
+      "id": "loudoun-county-va",
+      "name": "Loudoun County VA",
+      "state": "Virginia"
+    },
+
+    {
+      "id": "berkeley-county-wv",
+      "name": "Berkeley County WV",
+      "state": "West Virginia"
+    },
+
+    {
+      "id": "jefferson-county-wv",
+      "name": "Jefferson County WV",
+      "state": "West Virginia"
+    },
+
+    {
+      "id": "morgan-county-wv",
+      "name": "Morgan County WV",
+      "state": "West Virginia"
+    }
+
+  ],
+
+  "cities": [
+
+    {
+      "id": "winchester-va",
+      "name": "Winchester",
+      "county": "Frederick County VA"
+    },
+
+    {
+      "id": "stephens-city-va",
+      "name": "Stephens City",
+      "county": "Frederick County VA"
+    },
+
+    {
+      "id": "berryville-va",
+      "name": "Berryville",
+      "county": "Clarke County VA"
+    },
+
+    {
+      "id": "front-royal-va",
+      "name": "Front Royal",
+      "county": "Warren County VA"
+    },
+
+    {
+      "id": "leesburg-va",
+      "name": "Leesburg",
+      "county": "Loudoun County VA"
+    },
+
+    {
+      "id": "ashburn-va",
+      "name": "Ashburn",
+      "county": "Loudoun County VA"
+    },
+
+    {
+      "id": "martinsburg-wv",
+      "name": "Martinsburg",
+      "county": "Berkeley County WV"
+    },
+
+    {
+      "id": "charles-town-wv",
+      "name": "Charles Town",
+      "county": "Jefferson County WV"
+    },
+
+    {
+      "id": "berkeley-springs-wv",
+      "name": "Berkeley Springs",
+      "county": "Morgan County WV"
+    }
+
+  ],
+
+  "corridors": [
+
+    {
+      "id": "i81-corridor",
+      "name": "Interstate 81 Freight Corridor"
+    },
+
+    {
+      "id": "i66-corridor",
+      "name": "Interstate 66 Freight Corridor"
+    },
+
+    {
+      "id": "i70-corridor",
+      "name": "Interstate 70 Freight Corridor"
+    },
+
+    {
+      "id": "i95-corridor",
+      "name": "Interstate 95 Freight Corridor"
+    }
+
+  ],
+
+  "ports": [
+
+    {
+      "id": "port-of-virginia",
+      "name": "Port of Virginia",
+      "location": "Norfolk Virginia"
+    },
+
+    {
+      "id": "virginia-inland-port",
+      "name": "Virginia Inland Port",
+      "location": "Front Royal Virginia"
+    },
+
+    {
+      "id": "port-of-baltimore",
+      "name": "Port of Baltimore",
+      "location": "Baltimore Maryland"
+    }
+
+  ],
+
+  "services": [
+
+    {
+      "id": "export-packing",
+      "name": "International Export Packing"
+    },
+
+    {
+      "id": "industrial-crating",
+      "name": "Industrial Crating"
+    },
+
+    {
+      "id": "container-loading",
+      "name": "Container Loading"
+    },
+
+    {
+      "id": "container-unloading",
+      "name": "Container Unloading"
+    },
+
+    {
+      "id": "container-deconsolidation",
+      "name": "Container Deconsolidation"
+    },
+
+    {
+      "id": "cross-docking",
+      "name": "Cross Docking"
+    },
+
+    {
+      "id": "transloading",
+      "name": "Transloading"
+    },
+
+    {
+      "id": "specialized-labor",
+      "name": "TWIC Certified Logistics Labor"
+    },
+
+    {
+      "id": "freight-stabilization",
+      "name": "Freight Stabilization"
+    },
+
+    {
+      "id": "warehouse-support",
+      "name": "Warehouse Logistics Support"
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+      "from": "winchester-va",
+      "to": "i81-corridor",
+      "relationship": "connectedTo"
+    },
+
+    {
+      "from": "martinsburg-wv",
+      "to": "i81-corridor",
+      "relationship": "connectedTo"
+    },
+
+    {
+      "from": "front-royal-va",
+      "to": "virginia-inland-port",
+      "relationship": "connectedTo"
+    },
+
+    {
+      "from": "virginia-inland-port",
+      "to": "port-of-virginia",
+      "relationship": "connectedTo"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "export-packing",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "industrial-crating",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "container-loading",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "container-unloading",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "transloading",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "cross-docking",
+      "relationship": "provides"
+    },
+
+    {
+      "from": "the-flat-rate-movers-llc",
+      "to": "specialized-labor",
+      "relationship": "provides"
+    }
+  ]
+}
