@@ -1,0 +1,35 @@
+{
+  "county": "Frederick County MD",
+  "state": "Maryland",
+  "countySeat": "Frederick",
+  "region": "Central Maryland",
+  "cities": [
+    "Frederick",
+    "Urbana",
+    "Walkersville",
+    "Middletown"
+  ],
+  "zipCodes": [
+    "21701",
+    "21702",
+    "21703",
+    "21704",
+    "21705"
+  ],
+  "corridors": [
+    "I-70",
+    "I-270"
+  ],
+  "ports": [
+    "Port of Baltimore",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Commercial Logistics"
+  ]
+}
