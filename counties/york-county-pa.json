@@ -1,0 +1,30 @@
+{
+  "county": "York County PA",
+  "state": "Pennsylvania",
+  "countySeat": "York",
+  "region": "South Central Pennsylvania",
+  "cities": [
+    "York",
+    "Hanover",
+    "Red Lion"
+  ],
+  "zipCodes": [
+    "17401",
+    "17402",
+    "17403",
+    "17331"
+  ],
+  "corridors": [
+    "I-83"
+  ],
+  "ports": [
+    "Port of Baltimore"
+  ],
+  "services": [
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading"
+  ]
+}
