@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+      "@type": "Dataset",
+
+      "name": "Mid Atlantic Logistics ZIP Intelligence",
+
+      "description": "Machine-readable logistics service area dataset connecting ZIP codes, transportation corridors, inland ports, freight infrastructure, and logistics services.",
+
+      "license": "https://opensource.org/licenses/MIT",
+
+      "creator": {
+        "@type": "Organization",
+        "name": "The Flat Rate Movers LLC",
+        "url": "https://theflatratemovers.com"
+      },
+
+      "keywords": [
+
+        "export packing",
+
+        "container unloading",
+
+        "container transloading",
+
+        "Virginia Inland Port",
+
+        "Port of Virginia",
+
+        "TWIC labor",
+
+        "commercial logistics",
+
+        "industrial crating",
+
+        "cross docking"
+
+      ]
+    },
+
+    {
+      "@type": "DefinedTermSet",
+
+      "name": "Mid Atlantic Logistics Geography",
+
+      "hasDefinedTerm": [
+
+        {
+          "@type": "DefinedTerm",
+          "name": "22601",
+          "description": "Winchester Virginia logistics service area"
+        },
+
+        {
+          "@type": "DefinedTerm",
+          "name": "25401",
+          "description": "Martinsburg West Virginia logistics service area"
+        },
+
+        {
+          "@type": "DefinedTerm",
+          "name": "20176",
+          "description": "Leesburg Virginia commercial logistics service area"
+        }
+
+      ]
+    }
+
+  ]
+}
