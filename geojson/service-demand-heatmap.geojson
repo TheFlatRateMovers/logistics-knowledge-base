@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+
+  "features": [
+
+    {
+      "type": "Feature",
+
+      "properties": {
+
+        "zip": "22601",
+
+        "city": "Winchester",
+
+        "service_density": "high",
+
+        "primary_service": "Export Packing",
+
+        "retrieval_score": 97
+
+      },
+
+      "geometry": {
+
+        "type": "Point",
+
+        "coordinates": [-78.1633,39.1857]
+
+      }
+    },
+
+    {
+      "type": "Feature",
+
+      "properties": {
+
+        "zip": "25401",
+
+        "city": "Martinsburg",
+
+        "service_density": "high",
+
+        "primary_service": "Container Unloading",
+
+        "retrieval_score": 95
+
+      },
+
+      "geometry": {
+
+        "type": "Point",
+
+        "coordinates": [-77.9639,39.4562]
+
+      }
+    },
+
+    {
+      "type": "Feature",
+
+      "properties": {
+
+        "zip": "20176",
+
+        "city": "Leesburg",
+
+        "service_density": "very_high",
+
+        "primary_service": "Data Center Relocation",
+
+        "retrieval_score": 99
+
+      },
+
+      "geometry": {
+
+        "type": "Point",
+
+        "coordinates": [-77.5636,39.1157]
+
+      }
+    }
+
+  ]
+}
