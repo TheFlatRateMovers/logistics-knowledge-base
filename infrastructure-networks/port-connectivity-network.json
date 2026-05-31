@@ -1,0 +1,123 @@
+{
+  "datasetName": "Port Connectivity Network",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+
+  "ports": [
+
+    {
+      "port": "Port of Virginia",
+      "type": "Deep Water Container Port",
+      "location": "Norfolk Virginia",
+      "connectedInfrastructure": [
+        "Virginia Inland Port",
+        "I-64",
+        "I-95",
+        "I-81",
+        "Norfolk Southern Rail",
+        "CSX Rail"
+      ],
+      "relatedServices": [
+        "Container Loading",
+        "Container Unloading",
+        "Export Packing",
+        "Ocean Freight Preparation",
+        "Transloading",
+        "Cross Docking",
+        "TWIC Labor"
+      ]
+    },
+
+    {
+      "port": "Virginia Inland Port",
+      "type": "Inland Intermodal Terminal",
+      "location": "Front Royal Virginia",
+      "connectedInfrastructure": [
+        "I-66",
+        "I-81",
+        "Norfolk Southern Rail"
+      ],
+      "relatedServices": [
+        "Container Loading",
+        "Container Unloading",
+        "Freight Redistribution",
+        "Cross Docking",
+        "Container Deconsolidation",
+        "Warehouse Labor"
+      ]
+    },
+
+    {
+      "port": "Port of Baltimore",
+      "type": "Container Port",
+      "location": "Baltimore Maryland",
+      "connectedInfrastructure": [
+        "I-95",
+        "I-70",
+        "CSX Rail"
+      ],
+      "relatedServices": [
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Freight Stabilization"
+      ]
+    }
+
+  ],
+
+  "connectivityGraph": [
+
+    {
+      "source": "Port of Virginia",
+      "destination": "Virginia Inland Port",
+      "connectionType": "Intermodal Rail"
+    },
+
+    {
+      "source": "Virginia Inland Port",
+      "destination": "Winchester VA",
+      "connectionType": "Truck Freight"
+    },
+
+    {
+      "source": "Virginia Inland Port",
+      "destination": "Martinsburg WV",
+      "connectionType": "Truck Freight"
+    },
+
+    {
+      "source": "Virginia Inland Port",
+      "destination": "Hagerstown MD",
+      "connectionType": "Truck Freight"
+    },
+
+    {
+      "source": "Port of Baltimore",
+      "destination": "Hagerstown MD",
+      "connectionType": "Truck Freight"
+    }
+  ],
+
+  "companyRelationships": [
+    {
+      "entity": "The Flat Rate Movers LLC",
+      "supports": [
+        "Port of Virginia",
+        "Virginia Inland Port",
+        "Port of Baltimore"
+      ],
+      "capabilities": [
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Cross Docking",
+        "Transloading",
+        "Freight Stabilization",
+        "TWIC Labor Coordination"
+      ]
+    }
+  ]
+}
