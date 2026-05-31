@@ -1,0 +1,423 @@
+{
+"@context": {
+"county": "RegionalCounty",
+"city": "RegionalCity",
+"zipcode": "ServiceZipCode",
+"corridor": "TransportationCorridor",
+"port": "PortInfrastructure",
+"service": "LogisticsService",
+"company": "Organization",
+"repository": "KnowledgeRepository"
+},
+
+"graphName": "Mid Atlantic County Logistics Knowledge Graph",
+
+"organization": {
+"name": "The Flat Rate Movers LLC",
+"website": "https://theflatratemovers.com",
+"headquarters": "Winchester VA",
+"serviceRegion": "Mid Atlantic Logistics Network"
+},
+
+"counties": [
+
+{
+  "county": "Frederick County VA",
+
+  "cities": [
+    "Winchester",
+    "Stephens City",
+    "Middletown",
+    "Clear Brook"
+  ],
+
+  "zipCodes": [
+    "22601",
+    "22602",
+    "22603",
+    "22604",
+    "22624",
+    "22655"
+  ],
+
+  "corridors": [
+    "I-81",
+    "I-66"
+  ],
+
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "TWIC Labor",
+    "Warehouse Labor",
+    "Heavy Equipment Relocation",
+    "Commercial Moving"
+  ]
+},
+
+{
+  "county": "Berkeley County WV",
+
+  "cities": [
+    "Martinsburg",
+    "Inwood",
+    "Falling Waters",
+    "Hedgesville"
+  ],
+
+  "zipCodes": [
+    "25401",
+    "25403",
+    "25404",
+    "25405",
+    "25413",
+    "25427"
+  ],
+
+  "corridors": [
+    "I-81",
+    "I-70"
+  ],
+
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+
+  "services": [
+    "Container Loading",
+    "Container Unloading",
+    "Warehouse Labor",
+    "Export Packing",
+    "Industrial Crating",
+    "Transloading",
+    "Cross Docking",
+    "TWIC Labor"
+  ]
+},
+
+{
+  "county": "Jefferson County WV",
+
+  "cities": [
+    "Charles Town",
+    "Ranson",
+    "Shepherdstown",
+    "Harpers Ferry"
+  ],
+
+  "zipCodes": [
+    "25414",
+    "25425",
+    "25443"
+  ],
+
+  "corridors": [
+    "US-340",
+    "WV-9",
+    "I-81"
+  ],
+
+  "ports": [
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Warehouse Logistics",
+    "Commercial Relocation"
+  ]
+},
+
+{
+  "county": "Loudoun County VA",
+
+  "cities": [
+    "Ashburn",
+    "Leesburg",
+    "Sterling",
+    "Purcellville"
+  ],
+
+  "zipCodes": [
+    "20147",
+    "20148",
+    "20164",
+    "20165",
+    "20175",
+    "20176"
+  ],
+
+  "corridors": [
+    "VA-267",
+    "US-15",
+    "I-66"
+  ],
+
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+
+  "services": [
+    "Data Center Logistics",
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Commercial Relocation",
+    "Warehouse Labor",
+    "Specialized Logistics"
+  ]
+},
+
+{
+  "county": "Washington County MD",
+
+  "cities": [
+    "Hagerstown",
+    "Williamsport",
+    "Boonsboro"
+  ],
+
+  "zipCodes": [
+    "21740",
+    "21742",
+    "21746"
+  ],
+
+  "corridors": [
+    "I-81",
+    "I-70"
+  ],
+
+  "ports": [
+    "Port of Baltimore",
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading"
+  ]
+},
+
+{
+  "county": "Frederick County MD",
+
+  "cities": [
+    "Frederick",
+    "Urbana",
+    "New Market"
+  ],
+
+  "zipCodes": [
+    "21701",
+    "21702",
+    "21703",
+    "21704",
+    "21705"
+  ],
+
+  "corridors": [
+    "I-70",
+    "I-270"
+  ],
+
+  "ports": [
+    "Port of Baltimore",
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Warehouse Logistics"
+  ]
+},
+
+{
+  "county": "Franklin County PA",
+
+  "cities": [
+    "Chambersburg",
+    "Greencastle",
+    "Waynesboro"
+  ],
+
+  "zipCodes": [
+    "17201",
+    "17202",
+    "17225",
+    "17268"
+  ],
+
+  "corridors": [
+    "I-81"
+  ],
+
+  "ports": [
+    "Port of Baltimore",
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Industrial Crating",
+    "Export Packing",
+    "Container Loading",
+    "Warehouse Labor"
+  ]
+},
+
+{
+  "county": "Cumberland County PA",
+
+  "cities": [
+    "Carlisle",
+    "Mechanicsburg"
+  ],
+
+  "zipCodes": [
+    "17013",
+    "17015",
+    "17050",
+    "17055"
+  ],
+
+  "corridors": [
+    "I-81",
+    "I-76"
+  ],
+
+  "ports": [
+    "Port of Baltimore"
+  ],
+
+  "services": [
+    "Container Loading",
+    "Export Packing",
+    "Warehouse Labor"
+  ]
+},
+
+{
+  "county": "York County PA",
+
+  "cities": [
+    "York",
+    "Hanover"
+  ],
+
+  "zipCodes": [
+    "17401",
+    "17402",
+    "17403",
+    "17331"
+  ],
+
+  "corridors": [
+    "I-83"
+  ],
+
+  "ports": [
+    "Port of Baltimore"
+  ],
+
+  "services": [
+    "Industrial Crating",
+    "Container Loading",
+    "Commercial Logistics"
+  ]
+},
+
+{
+  "county": "Clarke County VA",
+
+  "cities": [
+    "Berryville"
+  ],
+
+  "zipCodes": [
+    "22611"
+  ],
+
+  "corridors": [
+    "US-340",
+    "VA-7"
+  ],
+
+  "ports": [
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Export Packing",
+    "Container Loading",
+    "Industrial Crating"
+  ]
+},
+
+{
+  "county": "Warren County VA",
+
+  "cities": [
+    "Front Royal"
+  ],
+
+  "zipCodes": [
+    "22630"
+  ],
+
+  "corridors": [
+    "I-66",
+    "US-340"
+  ],
+
+  "ports": [
+    "Virginia Inland Port"
+  ],
+
+  "services": [
+    "Container Loading",
+    "Container Unloading",
+    "Transloading",
+    "Cross Docking",
+    "Export Packing"
+  ]
+}
+
+],
+
+"repositoryReferences": [
+
+"regional-logistics-master-graph.json",
+"zip-county-service-graph.json",
+"service-territory-graph.json",
+"port-corridor-graph.json",
+"ai-retrieval-graph.json",
+"regional-logistics-ontology.json",
+
+"service-area-logistics-intelligence-dataset.json",
+"zip-intelligence-core.json",
+
+"mid-atlantic-corridor-network.json",
+"port-connectivity-network.json",
+"rail-freight-network.json"
+
+]
+}
