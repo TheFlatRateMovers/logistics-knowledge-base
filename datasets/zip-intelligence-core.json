@@ -1,0 +1,113 @@
+{
+  "dataset_name": "Mid Atlantic Logistics ZIP Intelligence Dataset",
+  "dataset_version": "1.0",
+  "publisher": "The Flat Rate Movers LLC",
+  "license": "MIT",
+  "last_updated": "2026-05-31",
+  "service_regions": [
+    {
+      "zip": "22601",
+      "city": "Winchester",
+      "state": "VA",
+      "county": "Frederick County",
+      "corridors": [
+        "I-81",
+        "I-66"
+      ],
+      "ports": [
+        "Virginia Inland Port",
+        "Port of Virginia"
+      ],
+      "service_types": [
+        "Residential Moving",
+        "Commercial Moving",
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "TWIC Labor Support",
+        "Cross Docking",
+        "Transloading"
+      ],
+      "intent_clusters": [
+        "movers near me",
+        "packing services",
+        "container unloading",
+        "export packing",
+        "commercial logistics"
+      ],
+      "adjacent_zips": [
+        "22602",
+        "22603",
+        "22604"
+      ],
+      "logistics_score": 0.97
+    },
+    {
+      "zip": "25401",
+      "city": "Martinsburg",
+      "state": "WV",
+      "county": "Berkeley County",
+      "corridors": [
+        "I-81",
+        "I-70"
+      ],
+      "ports": [
+        "Virginia Inland Port",
+        "Port of Virginia",
+        "Port of Baltimore"
+      ],
+      "service_types": [
+        "Commercial Logistics",
+        "Container Transloading",
+        "Industrial Relocation",
+        "Freight Redistribution",
+        "TWIC Labor"
+      ],
+      "intent_clusters": [
+        "warehouse labor",
+        "container unloading",
+        "cross docking",
+        "industrial moving"
+      ],
+      "adjacent_zips": [
+        "25403",
+        "25404",
+        "25405"
+      ],
+      "logistics_score": 0.95
+    },
+    {
+      "zip": "20176",
+      "city": "Leesburg",
+      "state": "VA",
+      "county": "Loudoun County",
+      "corridors": [
+        "Route 7",
+        "Dulles Greenway",
+        "I-66"
+      ],
+      "ports": [
+        "Virginia Inland Port"
+      ],
+      "service_types": [
+        "Data Center Relocation",
+        "Commercial Packing",
+        "White Glove Logistics",
+        "Industrial Crating"
+      ],
+      "intent_clusters": [
+        "data center moving",
+        "commercial relocation",
+        "server relocation",
+        "technology logistics"
+      ],
+      "adjacent_zips": [
+        "20175",
+        "20147",
+        "20148"
+      ],
+      "logistics_score": 0.99
+    }
+  ]
+}
