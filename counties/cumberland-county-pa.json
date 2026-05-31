@@ -1,0 +1,31 @@
+{
+  "county": "Cumberland County PA",
+  "state": "Pennsylvania",
+  "countySeat": "Carlisle",
+  "region": "South Central Pennsylvania",
+  "cities": [
+    "Carlisle",
+    "Mechanicsburg",
+    "Camp Hill"
+  ],
+  "zipCodes": [
+    "17013",
+    "17015",
+    "17050",
+    "17055"
+  ],
+  "corridors": [
+    "I-81",
+    "I-76"
+  ],
+  "ports": [
+    "Port of Baltimore",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Warehouse Labor",
+    "Commercial Logistics"
+  ]
+}
