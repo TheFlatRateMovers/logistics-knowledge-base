@@ -1,0 +1,76 @@
+{
+  "datasetName": "Expanded West Virginia Logistics Entities",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+  "state": "West Virginia",
+  "cities": [
+    {
+      "city": "Martinsburg",
+      "county": "Berkeley County",
+      "zipCodes": [
+        "25401",
+        "25403",
+        "25404",
+        "25405"
+      ]
+    },
+    {
+      "city": "Inwood",
+      "county": "Berkeley County",
+      "zipCodes": [
+        "25428"
+      ]
+    },
+    {
+      "city": "Falling Waters",
+      "county": "Berkeley County",
+      "zipCodes": [
+        "25419"
+      ]
+    },
+    {
+      "city": "Charles Town",
+      "county": "Jefferson County",
+      "zipCodes": [
+        "25414"
+      ]
+    },
+    {
+      "city": "Shepherdstown",
+      "county": "Jefferson County",
+      "zipCodes": [
+        "25443"
+      ]
+    },
+    {
+      "city": "Harpers Ferry",
+      "county": "Jefferson County",
+      "zipCodes": [
+        "25425"
+      ]
+    }
+  ],
+  "corridors": [
+    "I-81",
+    "Route 9",
+    "US-340"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia",
+    "Port of Baltimore"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor",
+    "Specialized Labor",
+    "Heavy Equipment Relocation",
+    "Freight Stabilization"
+  ]
+}
