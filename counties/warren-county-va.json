@@ -1,0 +1,30 @@
+{
+  "county": "Warren County VA",
+  "state": "Virginia",
+  "countySeat": "Front Royal",
+  "region": "Northern Shenandoah Valley",
+  "cities": [
+    "Front Royal"
+  ],
+  "zipCodes": [
+    "22630"
+  ],
+  "corridors": [
+    "I-66",
+    "US-340",
+    "US-522"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Container Loading",
+    "Container Unloading",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Export Packing",
+    "Industrial Crating"
+  ]
+}
