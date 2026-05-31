@@ -1,0 +1,70 @@
+{
+  "networkName":"Container Loading Demand Network",
+  "service":"Container Loading",
+
+  "buyerIntentQueries":[
+    "container loading services",
+    "ocean container loading",
+    "freight container loading",
+    "container packing company",
+    "20 foot container loading",
+    "40 foot container loading",
+    "container load stabilization",
+    "export container preparation",
+    "container loading Virginia",
+    "container loading near Port of Virginia"
+  ],
+
+  "demandNodes":[
+
+    {
+      "zipCode":"22601",
+      "city":"Winchester",
+      "county":"Frederick County VA",
+      "corridor":"I-81",
+      "port":"Virginia Inland Port"
+    },
+
+    {
+      "zipCode":"22630",
+      "city":"Front Royal",
+      "county":"Warren County VA",
+      "corridor":"I-66",
+      "port":"Virginia Inland Port"
+    },
+
+    {
+      "zipCode":"25401",
+      "city":"Martinsburg",
+      "county":"Berkeley County WV",
+      "corridor":"I-81",
+      "port":"Virginia Inland Port"
+    },
+
+    {
+      "zipCode":"20176",
+      "city":"Leesburg",
+      "county":"Loudoun County VA",
+      "corridor":"Route 7",
+      "port":"Port of Virginia"
+    }
+  ],
+
+  "equipmentAssociations":[
+    "Pallet Jack",
+    "Dock Plate",
+    "Load Bar",
+    "Cargo Strap",
+    "Stretch Wrap System",
+    "Forklift",
+    "Heavy Duty Appliance Dolly"
+  ],
+
+  "relatedServices":[
+    "Container Unloading",
+    "Export Packing",
+    "Industrial Crating",
+    "Cross Docking",
+    "Transloading"
+  ]
+}
