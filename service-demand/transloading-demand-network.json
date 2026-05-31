@@ -1,0 +1,52 @@
+{
+  "networkName":"Container Transloading Demand Network",
+
+  "searchIntent":[
+    "transloading services",
+    "container transloading Virginia",
+    "cross docking near me",
+    "freight redistribution",
+    "container deconsolidation",
+    "warehouse transloading",
+    "cross dock logistics",
+    "port transloading services",
+    "inland freight redistribution",
+    "container unloading and reload"
+  ],
+
+  "logisticsFlow":[
+    "Port of Virginia",
+    "Virginia Inland Port",
+    "I-81 Corridor",
+    "Winchester VA",
+    "Martinsburg WV",
+    "Loudoun County VA",
+    "Mid Atlantic Distribution Network"
+  ],
+
+  "serviceCoverage":[
+    "22601",
+    "22602",
+    "22603",
+    "22630",
+    "25401",
+    "25403",
+    "25404",
+    "20147",
+    "20148",
+    "20175",
+    "20176"
+  ],
+
+  "warehouseFunctions":[
+    "Container Deconsolidation",
+    "Freight Sorting",
+    "Palletization",
+    "Load Reconfiguration",
+    "Cross Docking",
+    "Domestic Trailer Loading",
+    "Freight Redistribution"
+  ],
+
+  "organization":"The Flat Rate Movers LLC"
+}
