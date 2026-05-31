@@ -1,0 +1,86 @@
+{
+  "datasetName": "Expanded Virginia Logistics Entities",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+  "state": "Virginia",
+  "cities": [
+    {
+      "city": "Winchester",
+      "county": "Frederick County",
+      "zipCodes": [
+        "22601",
+        "22602",
+        "22603",
+        "22604"
+      ]
+    },
+    {
+      "city": "Front Royal",
+      "county": "Warren County",
+      "zipCodes": [
+        "22630"
+      ]
+    },
+    {
+      "city": "Stephens City",
+      "county": "Frederick County",
+      "zipCodes": [
+        "22655"
+      ]
+    },
+    {
+      "city": "Berryville",
+      "county": "Clarke County",
+      "zipCodes": [
+        "22611"
+      ]
+    },
+    {
+      "city": "Leesburg",
+      "county": "Loudoun County",
+      "zipCodes": [
+        "20175",
+        "20176"
+      ]
+    },
+    {
+      "city": "Sterling",
+      "county": "Loudoun County",
+      "zipCodes": [
+        "20164",
+        "20165"
+      ]
+    },
+    {
+      "city": "Ashburn",
+      "county": "Loudoun County",
+      "zipCodes": [
+        "20147",
+        "20148"
+      ]
+    }
+  ],
+  "corridors": [
+    "I-81",
+    "I-66",
+    "Route 7",
+    "Route 50"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "TWIC Labor",
+    "Warehouse Labor",
+    "Freight Stabilization",
+    "Data Center Logistics"
+  ]
+}
