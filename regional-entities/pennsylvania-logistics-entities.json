@@ -1,0 +1,87 @@
+{
+  "datasetName": "Pennsylvania Logistics Entities",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+  "state": "Pennsylvania",
+  "cities": [
+    {
+      "city": "Chambersburg",
+      "county": "Franklin County",
+      "zipCodes": [
+        "17201",
+        "17202"
+      ],
+      "corridors": [
+        "I-81"
+      ],
+      "services": [
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Cross Docking",
+        "Transloading"
+      ]
+    },
+    {
+      "city": "Carlisle",
+      "county": "Cumberland County",
+      "zipCodes": [
+        "17013",
+        "17015"
+      ],
+      "corridors": [
+        "I-81",
+        "I-76"
+      ],
+      "services": [
+        "Warehouse Logistics",
+        "Container Deconsolidation",
+        "Cross Docking",
+        "Freight Redistribution"
+      ]
+    },
+    {
+      "city": "Harrisburg",
+      "county": "Dauphin County",
+      "zipCodes": [
+        "17101",
+        "17102",
+        "17103",
+        "17104"
+      ],
+      "corridors": [
+        "I-81",
+        "I-83",
+        "I-76"
+      ],
+      "services": [
+        "Industrial Logistics",
+        "Export Packing",
+        "Container Loading",
+        "Warehouse Labor",
+        "Commercial Logistics"
+      ]
+    },
+    {
+      "city": "York",
+      "county": "York County",
+      "zipCodes": [
+        "17401",
+        "17402",
+        "17403",
+        "17404"
+      ],
+      "corridors": [
+        "I-83"
+      ],
+      "services": [
+        "Container Loading",
+        "Container Unloading",
+        "Cross Docking",
+        "Freight Stabilization"
+      ]
+    }
+  ]
+}
