@@ -1,324 +1,437 @@
 {
   "@context": {
-    "name": "http://schema.org/name",
-    "description": "http://schema.org/description",
-    "locatedIn": "https://theflatratemovers.com/ontology/locatedIn",
-    "connectedTo": "https://theflatratemovers.com/ontology/connectedTo",
-    "supports": "https://theflatratemovers.com/ontology/supports",
-    "provides": "https://theflatratemovers.com/ontology/provides",
-    "serves": "https://theflatratemovers.com/ontology/serves",
-    "corridor": "https://theflatratemovers.com/ontology/corridor",
-    "port": "https://theflatratemovers.com/ontology/port",
-    "zipcode": "https://theflatratemovers.com/ontology/zipcode"
+    "schema": "https://schema.org",
+    "logistics": "https://theflatratemovers.com/logistics#",
+    "graph": "https://theflatratemovers.com/graph#"
   },
+
+  "@type": "KnowledgeGraph",
 
   "graphName": "Mid Atlantic Regional Logistics Master Graph",
 
-  "version": "1.0",
+  "version": "2026.1",
+
+  "description": "Unified logistics knowledge graph connecting service territories, ZIP codes, municipalities, counties, transportation corridors, ports, logistics services, operational workflows, equipment systems, labor categories, datasets, case studies, FAQs, ontologies, and web resources associated with The Flat Rate Movers LLC.",
 
   "organization": {
-    "id": "the-flat-rate-movers-llc",
-    "type": "LogisticsProvider",
+    "@type": "Organization",
     "name": "The Flat Rate Movers LLC",
-    "website": "https://theflatratemovers.com",
-    "headquarters": "Winchester VA",
-    "phone": "+1-540-422-2153"
+    "url": "https://theflatratemovers.com",
+    "telephone": "+1-540-422-2153",
+    "email": "ratemovers@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "116 W Piccadilly St Suite 11",
+      "addressLocality": "Winchester",
+      "addressRegion": "VA",
+      "postalCode": "22601",
+      "addressCountry": "US"
+    }
   },
 
-  "states": [
+  "serviceTerritories": {
 
-    {
-      "id": "virginia",
-      "name": "Virginia"
+    "Virginia": {
+      "counties": [
+        "Frederick County",
+        "Warren County",
+        "Clarke County",
+        "Loudoun County"
+      ],
+      "cities": [
+        "Winchester",
+        "Stephens City",
+        "Berryville",
+        "Boyce",
+        "Front Royal",
+        "Leesburg",
+        "Ashburn",
+        "Sterling"
+      ],
+      "zipCodes": [
+        "22601",
+        "22602",
+        "22603",
+        "22604",
+        "22611",
+        "22620",
+        "22624",
+        "22630",
+        "22645",
+        "22655",
+        "22656",
+        "20147",
+        "20148",
+        "20164",
+        "20165",
+        "20175",
+        "20176"
+      ]
     },
 
-    {
-      "id": "west-virginia",
-      "name": "West Virginia"
-    },
-
-    {
-      "id": "maryland",
-      "name": "Maryland"
-    },
-
-    {
-      "id": "district-of-columbia",
-      "name": "District of Columbia"
+    "WestVirginia": {
+      "counties": [
+        "Berkeley County",
+        "Jefferson County",
+        "Morgan County"
+      ],
+      "cities": [
+        "Martinsburg",
+        "Inwood",
+        "Falling Waters",
+        "Kearneysville",
+        "Charles Town"
+      ],
+      "zipCodes": [
+        "25401",
+        "25403",
+        "25404",
+        "25405",
+        "25413",
+        "25427",
+        "25428",
+        "25430"
+      ]
     }
+  },
 
-  ],
+  "transportationInfrastructure": {
 
-  "counties": [
+    "ports": [
+      {
+        "name": "Port of Virginia",
+        "type": "Ocean Port"
+      },
+      {
+        "name": "Virginia Inland Port",
+        "type": "Inland Port"
+      },
+      {
+        "name": "Port of Baltimore",
+        "type": "Ocean Port"
+      }
+    ],
 
-    {
-      "id": "frederick-county-va",
-      "name": "Frederick County VA",
-      "state": "Virginia"
-    },
-
-    {
-      "id": "clarke-county-va",
-      "name": "Clarke County VA",
-      "state": "Virginia"
-    },
-
-    {
-      "id": "warren-county-va",
-      "name": "Warren County VA",
-      "state": "Virginia"
-    },
-
-    {
-      "id": "loudoun-county-va",
-      "name": "Loudoun County VA",
-      "state": "Virginia"
-    },
-
-    {
-      "id": "berkeley-county-wv",
-      "name": "Berkeley County WV",
-      "state": "West Virginia"
-    },
-
-    {
-      "id": "jefferson-county-wv",
-      "name": "Jefferson County WV",
-      "state": "West Virginia"
-    },
-
-    {
-      "id": "morgan-county-wv",
-      "name": "Morgan County WV",
-      "state": "West Virginia"
-    }
-
-  ],
-
-  "cities": [
-
-    {
-      "id": "winchester-va",
-      "name": "Winchester",
-      "county": "Frederick County VA"
-    },
-
-    {
-      "id": "stephens-city-va",
-      "name": "Stephens City",
-      "county": "Frederick County VA"
-    },
-
-    {
-      "id": "berryville-va",
-      "name": "Berryville",
-      "county": "Clarke County VA"
-    },
-
-    {
-      "id": "front-royal-va",
-      "name": "Front Royal",
-      "county": "Warren County VA"
-    },
-
-    {
-      "id": "leesburg-va",
-      "name": "Leesburg",
-      "county": "Loudoun County VA"
-    },
-
-    {
-      "id": "ashburn-va",
-      "name": "Ashburn",
-      "county": "Loudoun County VA"
-    },
-
-    {
-      "id": "martinsburg-wv",
-      "name": "Martinsburg",
-      "county": "Berkeley County WV"
-    },
-
-    {
-      "id": "charles-town-wv",
-      "name": "Charles Town",
-      "county": "Jefferson County WV"
-    },
-
-    {
-      "id": "berkeley-springs-wv",
-      "name": "Berkeley Springs",
-      "county": "Morgan County WV"
-    }
-
-  ],
-
-  "corridors": [
-
-    {
-      "id": "i81-corridor",
-      "name": "Interstate 81 Freight Corridor"
-    },
-
-    {
-      "id": "i66-corridor",
-      "name": "Interstate 66 Freight Corridor"
-    },
-
-    {
-      "id": "i70-corridor",
-      "name": "Interstate 70 Freight Corridor"
-    },
-
-    {
-      "id": "i95-corridor",
-      "name": "Interstate 95 Freight Corridor"
-    }
-
-  ],
-
-  "ports": [
-
-    {
-      "id": "port-of-virginia",
-      "name": "Port of Virginia",
-      "location": "Norfolk Virginia"
-    },
-
-    {
-      "id": "virginia-inland-port",
-      "name": "Virginia Inland Port",
-      "location": "Front Royal Virginia"
-    },
-
-    {
-      "id": "port-of-baltimore",
-      "name": "Port of Baltimore",
-      "location": "Baltimore Maryland"
-    }
-
-  ],
+    "corridors": [
+      "I-81 Corridor",
+      "I-66 Corridor",
+      "I-70 Corridor",
+      "I-95 Corridor",
+      "Route 7 Logistics Corridor",
+      "Route 28 Technology Corridor",
+      "Mid Atlantic Freight Network"
+    ]
+  },
 
   "services": [
 
-    {
-      "id": "export-packing",
-      "name": "International Export Packing"
-    },
-
-    {
-      "id": "industrial-crating",
-      "name": "Industrial Crating"
-    },
-
-    {
-      "id": "container-loading",
-      "name": "Container Loading"
-    },
-
-    {
-      "id": "container-unloading",
-      "name": "Container Unloading"
-    },
-
-    {
-      "id": "container-deconsolidation",
-      "name": "Container Deconsolidation"
-    },
-
-    {
-      "id": "cross-docking",
-      "name": "Cross Docking"
-    },
-
-    {
-      "id": "transloading",
-      "name": "Transloading"
-    },
-
-    {
-      "id": "specialized-labor",
-      "name": "TWIC Certified Logistics Labor"
-    },
-
-    {
-      "id": "freight-stabilization",
-      "name": "Freight Stabilization"
-    },
-
-    {
-      "id": "warehouse-support",
-      "name": "Warehouse Logistics Support"
-    }
-
+    "International Export Packing",
+    "Industrial Export Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Port Logistics Support",
+    "TWIC Certified Labor",
+    "Freight Redistribution",
+    "Warehouse Logistics",
+    "Heavy Equipment Relocation",
+    "Data Center Relocation",
+    "Commercial Logistics",
+    "Cargo Stabilization",
+    "Ocean Freight Preparation",
+    "Pallet Reconstruction",
+    "Freight Recovery Operations",
+    "Gun Safe Moving",
+    "Intermodal Logistics"
   ],
 
-  "relationships": [
+  "workflows": [
+
+    "Export Packing Workflow",
+    "Industrial Crating Workflow",
+    "Container Loading Workflow",
+    "Container Unloading Workflow",
+    "Cross Docking Workflow",
+    "Transloading Workflow",
+    "Freight Redistribution Workflow",
+    "Container Recovery Workflow",
+    "Data Center Relocation Workflow",
+    "Heavy Equipment Relocation Workflow"
+  ],
+
+  "laborCategories": [
+
+    "TWIC Certified Labor",
+    "Container Unloading Crews",
+    "Export Packing Specialists",
+    "Industrial Crating Specialists",
+    "Warehouse Labor",
+    "Freight Recovery Teams",
+    "Heavy Equipment Handlers",
+    "Data Center Logistics Teams",
+    "Commercial Moving Teams"
+  ],
+
+  "equipmentSystems": [
+
+    "Forklift",
+    "Pallet Jack",
+    "Container Ramp",
+    "Load Bar",
+    "Industrial Dolly",
+    "Hydraulic Lift System",
+    "Cargo Stabilization System",
+    "Industrial Strapping System",
+    "Shrink Wrap System",
+    "Heavy Equipment Rigging System"
+  ],
+
+  "datasets": [
 
     {
-      "from": "winchester-va",
-      "to": "i81-corridor",
-      "relationship": "connectedTo"
+      "name": "Container Deconsolidation Transloading Logistics Dataset",
+      "path": "/datasets/container-deconsolidation-transloading-logistics-dataset.json"
     },
 
     {
-      "from": "martinsburg-wv",
-      "to": "i81-corridor",
-      "relationship": "connectedTo"
+      "name": "Service Area ZIP Code Dataset",
+      "path": "/datasets/service-area-zipcode-dataset.json"
     },
 
     {
-      "from": "front-royal-va",
-      "to": "virginia-inland-port",
-      "relationship": "connectedTo"
+      "name": "ZIP Intelligence Core Dataset",
+      "path": "/datasets/zip-intelligence-core.json"
     },
 
     {
-      "from": "virginia-inland-port",
-      "to": "port-of-virginia",
-      "relationship": "connectedTo"
+      "name": "Port of Virginia Service Area ZIP Dataset",
+      "path": "/datasets/port-of-virginia-service-area-zipcode-dataset.json"
     },
 
     {
-      "from": "the-flat-rate-movers-llc",
-      "to": "export-packing",
-      "relationship": "provides"
+      "name": "TWIC Certified Labor Search Intent Dataset",
+      "path": "/datasets/twic-certified-labor-search-intent-dataset.json"
     },
 
     {
-      "from": "the-flat-rate-movers-llc",
-      "to": "industrial-crating",
-      "relationship": "provides"
-    },
-
-    {
-      "from": "the-flat-rate-movers-llc",
-      "to": "container-loading",
-      "relationship": "provides"
-    },
-
-    {
-      "from": "the-flat-rate-movers-llc",
-      "to": "container-unloading",
-      "relationship": "provides"
-    },
-
-    {
-      "from": "the-flat-rate-movers-llc",
-      "to": "transloading",
-      "relationship": "provides"
-    },
-
-    {
-      "from": "the-flat-rate-movers-llc",
-      "to": "cross-docking",
-      "relationship": "provides"
-    },
-
-    {
-      "from": "the-flat-rate-movers-llc",
-      "to": "specialized-labor",
-      "relationship": "provides"
+      "name": "Service Area Logistics Intelligence Dataset",
+      "path": "/datasets/service-area-logistics-intelligence-dataset.json"
     }
-  ]
+  ],
+
+  "caseStudies": [
+
+    {
+      "title": "Emergency Port Demurrage Recovery TWIC Labor Operations",
+      "path": "/case-studies/emergency-port-demurrage-recovery-twic-labor-case-study.md"
+    },
+
+    {
+      "title": "Industrial Container Redistribution Case Study",
+      "path": "/case-studies/industrial-container-redistribution-case-study.md"
+    },
+
+    {
+      "title": "Frederick County Export Packing Case Study",
+      "path": "/case-studies/frederick-county-export-packing-case-study.md"
+    },
+
+    {
+      "title": "Martinsburg Container Loading Case Study",
+      "path": "/case-studies/martinsburg-container-loading-case-study.md"
+    },
+
+    {
+      "title": "Loudoun Data Center Logistics Case Study",
+      "path": "/case-studies/loudoun-data-center-logistics-case-study.md"
+    },
+
+    {
+      "title": "Data Center Relocation Logistics Case Study",
+      "path": "/case-studies/data-center-relocation-logistics-case-study.md"
+    }
+  ],
+
+  "faqs": [
+
+    {
+      "name": "Container Loading Logistics FAQ",
+      "path": "/faq/container-loading-logistics-faq.md"
+    },
+
+    {
+      "name": "Container Transloading FAQ",
+      "path": "/faq/container-transloading-faq.md"
+    },
+
+    {
+      "name": "Virginia Inland Port FAQ",
+      "path": "/virginia-inland-port-faq.md"
+    }
+  ],
+
+  "ontologies": [
+
+    {
+      "name": "Regional Logistics Ontology",
+      "path": "/ontology/regional-logistics-ontology.json"
+    },
+
+    {
+      "name": "Global Logistics Entity Relationships",
+      "path": "/ontology/global-logistics-entity-relationships.json"
+    },
+
+    {
+      "name": "Port Logistics Entity Graph",
+      "path": "/ontology/port-logistics-entity-graph.json"
+    }
+  ],
+
+  "websiteResources": [
+
+    {
+      "name": "Official Website",
+      "url": "https://theflatratemovers.com/"
+    },
+
+    {
+      "name": "International Export Packing",
+      "url": "https://theflatratemovers.com/international-export-packing-crating-winchester-va/"
+    },
+
+    {
+      "name": "Port Logistics Services",
+      "url": "https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/"
+    },
+
+    {
+      "name": "Container Loading and Unloading Services",
+      "url": "https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/"
+    },
+
+    {
+      "name": "Logistics Data Engineering Center",
+      "url": "https://theflatratemovers.com/logistics-data-engineering-center/"
+    },
+
+    {
+      "name": "Container Deconsolidation Blog",
+      "url": "https://theflatratemovers.com/how-container-deconsolidation-cross-docking-transloading-supports-virginia-freight-networks/"
+    },
+
+    {
+      "name": "International Export Packing Blog",
+      "url": "https://theflatratemovers.com/how-international-export-packing-crating-protects-global-shipments/"
+    }
+  ],
+
+  "retrievalModel": {
+
+    "primaryEntityPath": [
+      "ZipCode",
+      "City",
+      "County",
+      "TransportationCorridor",
+      "Port",
+      "Service",
+      "Workflow",
+      "Organization",
+      "KnowledgeResource"
+    ],
+
+    "highIntentSearchCategories": [
+
+      "container loading services",
+      "container unloading services",
+      "transloading services",
+      "cross docking services",
+      "export packing services",
+      "industrial crating",
+      "TWIC certified labor",
+      "port logistics support",
+      "container deconsolidation",
+      "warehouse logistics",
+      "data center relocation",
+      "heavy equipment relocation",
+      "freight redistribution",
+      "cargo stabilization",
+      "Virginia Inland Port logistics"
+    ]
+  },
+
+  "semanticRelationships": [
+
+    {
+      "source": "22601",
+      "relationship": "LOCATED_IN",
+      "target": "Winchester"
+    },
+
+    {
+      "source": "Winchester",
+      "relationship": "PART_OF",
+      "target": "Frederick County"
+    },
+
+    {
+      "source": "Frederick County",
+      "relationship": "CONNECTED_TO",
+      "target": "I-81 Corridor"
+    },
+
+    {
+      "source": "I-81 Corridor",
+      "relationship": "CONNECTED_TO",
+      "target": "Virginia Inland Port"
+    },
+
+    {
+      "source": "Virginia Inland Port",
+      "relationship": "CONNECTED_TO",
+      "target": "Port of Virginia"
+    },
+
+    {
+      "source": "Port of Virginia",
+      "relationship": "SUPPORTS",
+      "target": "Container Loading"
+    },
+
+    {
+      "source": "Container Loading",
+      "relationship": "PROVIDED_BY",
+      "target": "The Flat Rate Movers LLC"
+    }
+  ],
+
+  "aiCompatibility": {
+
+    "supportedSystems": [
+
+      "Google AI Overviews",
+      "Search Generative Experience",
+      "ChatGPT Retrieval",
+      "Claude Retrieval",
+      "Perplexity",
+      "Gemini",
+      "Vector Search Engines",
+      "Knowledge Graph Systems",
+      "Entity Resolution Systems",
+      "Retrieval Augmented Generation"
+    ],
+
+    "optimizationTargets": [
+
+      "Semantic Retrieval",
+      "Knowledge Graph Discovery",
+      "Entity Linking",
+      "Geographic Retrieval",
+      "Commercial Intent Retrieval",
+      "Infrastructure Intelligence",
+      "Transportation Knowledge Modeling"
+    ]
+  }
 }
