@@ -1,0 +1,124 @@
+{
+  "datasetName": "Maryland Logistics Entities",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+  "primaryRegion": "Western Maryland Freight Network",
+  "state": "Maryland",
+  "entityType": "Regional Logistics Entity Dataset",
+  "cities": [
+    {
+      "city": "Hagerstown",
+      "county": "Washington County",
+      "state": "MD",
+      "zipCodes": [
+        "21740",
+        "21742",
+        "21746"
+      ],
+      "corridors": [
+        "I-81",
+        "I-70"
+      ],
+      "ports": [
+        "Port of Virginia",
+        "Virginia Inland Port",
+        "Port of Baltimore"
+      ],
+      "services": [
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Container Deconsolidation",
+        "Cross Docking",
+        "Transloading",
+        "Warehouse Labor",
+        "Freight Stabilization",
+        "Commercial Logistics",
+        "Specialized Labor",
+        "Heavy Equipment Relocation"
+      ]
+    },
+    {
+      "city": "Frederick",
+      "county": "Frederick County",
+      "state": "MD",
+      "zipCodes": [
+        "21701",
+        "21702",
+        "21703",
+        "21704",
+        "21705"
+      ],
+      "corridors": [
+        "I-70",
+        "I-270"
+      ],
+      "ports": [
+        "Port of Virginia",
+        "Virginia Inland Port",
+        "Port of Baltimore"
+      ],
+      "services": [
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Cross Docking",
+        "Transloading",
+        "Warehouse Labor",
+        "Commercial Logistics",
+        "Freight Redistribution",
+        "Data Center Logistics"
+      ]
+    },
+    {
+      "city": "Cumberland",
+      "county": "Allegany County",
+      "state": "MD",
+      "zipCodes": [
+        "21502"
+      ],
+      "corridors": [
+        "I-68"
+      ],
+      "ports": [
+        "Port of Virginia",
+        "Port of Baltimore"
+      ],
+      "services": [
+        "Industrial Crating",
+        "Export Packing",
+        "Heavy Equipment Logistics",
+        "Container Loading",
+        "Warehouse Labor",
+        "Freight Stabilization"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "entity": "Hagerstown",
+      "connectsTo": [
+        "Winchester VA",
+        "Martinsburg WV",
+        "Virginia Inland Port"
+      ]
+    },
+    {
+      "entity": "Frederick MD",
+      "connectsTo": [
+        "Loudoun County VA",
+        "Port of Virginia"
+      ]
+    },
+    {
+      "entity": "Cumberland MD",
+      "connectsTo": [
+        "I-68 Freight Corridor",
+        "Port of Baltimore"
+      ]
+    }
+  ]
+}
