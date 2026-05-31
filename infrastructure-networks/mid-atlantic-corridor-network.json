@@ -1,0 +1,137 @@
+{
+  "datasetName": "Mid Atlantic Corridor Network",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+  "datasetType": "Transportation Infrastructure Graph",
+  "description": "Machine-readable freight corridor network connecting Mid-Atlantic logistics hubs, inland ports, interstate transportation systems, and logistics service territories.",
+
+  "corridors": [
+    {
+      "corridor": "I-81 Freight Corridor",
+      "type": "Interstate Freight Corridor",
+      "states": [
+        "Virginia",
+        "West Virginia",
+        "Maryland",
+        "Pennsylvania"
+      ],
+      "majorNodes": [
+        "Winchester VA",
+        "Martinsburg WV",
+        "Hagerstown MD",
+        "Chambersburg PA",
+        "Carlisle PA",
+        "Harrisburg PA"
+      ],
+      "connectedPorts": [
+        "Virginia Inland Port",
+        "Port of Virginia",
+        "Port of Baltimore"
+      ],
+      "services": [
+        "Export Packing",
+        "Industrial Crating",
+        "Container Loading",
+        "Container Unloading",
+        "Cross Docking",
+        "Transloading",
+        "Warehouse Labor",
+        "Freight Redistribution"
+      ]
+    },
+
+    {
+      "corridor": "I-66 Logistics Corridor",
+      "type": "Port Access Corridor",
+      "states": [
+        "Virginia"
+      ],
+      "majorNodes": [
+        "Front Royal VA",
+        "Virginia Inland Port",
+        "Loudoun County VA",
+        "Northern Virginia"
+      ],
+      "connectedPorts": [
+        "Virginia Inland Port",
+        "Port of Virginia"
+      ],
+      "services": [
+        "Container Loading",
+        "Export Packing",
+        "Freight Stabilization",
+        "Port Logistics"
+      ]
+    },
+
+    {
+      "corridor": "I-70 Freight Corridor",
+      "type": "Regional Freight Corridor",
+      "states": [
+        "Maryland",
+        "Pennsylvania"
+      ],
+      "majorNodes": [
+        "Frederick MD",
+        "Hagerstown MD"
+      ],
+      "connectedPorts": [
+        "Port of Baltimore",
+        "Port of Virginia"
+      ],
+      "services": [
+        "Container Transloading",
+        "Warehouse Distribution",
+        "Commercial Logistics"
+      ]
+    },
+
+    {
+      "corridor": "I-95 Atlantic Freight Corridor",
+      "type": "National Freight Corridor",
+      "states": [
+        "Virginia",
+        "Maryland",
+        "Pennsylvania"
+      ],
+      "majorNodes": [
+        "Norfolk VA",
+        "Richmond VA",
+        "Baltimore MD"
+      ],
+      "connectedPorts": [
+        "Port of Virginia",
+        "Port of Baltimore"
+      ]
+    }
+  ],
+
+  "relationships": [
+    {
+      "source": "Port of Virginia",
+      "target": "Virginia Inland Port",
+      "relationship": "feeds"
+    },
+    {
+      "source": "Virginia Inland Port",
+      "target": "I-81 Freight Corridor",
+      "relationship": "connectsTo"
+    },
+    {
+      "source": "I-81 Freight Corridor",
+      "target": "Martinsburg WV",
+      "relationship": "serves"
+    },
+    {
+      "source": "I-81 Freight Corridor",
+      "target": "Winchester VA",
+      "relationship": "serves"
+    },
+    {
+      "source": "Winchester VA",
+      "target": "The Flat Rate Movers LLC",
+      "relationship": "headquarteredIn"
+    }
+  ]
+}
