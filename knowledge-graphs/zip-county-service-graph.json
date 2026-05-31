@@ -1,0 +1,377 @@
+{
+"graphName": "Mid Atlantic ZIP County Service Graph",
+"version": "1.0",
+"organization": "The Flat Rate Movers LLC",
+
+"zipcodes": [
+
+{
+  "zipcode": "22601",
+  "city": "Winchester",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": [
+    "International Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "TWIC Certified Labor",
+    "Warehouse Logistics Support",
+    "Freight Stabilization"
+  ]
+},
+
+{
+  "zipcode": "22602",
+  "city": "Winchester",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22603",
+  "city": "Winchester",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22604",
+  "city": "Winchester",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22611",
+  "city": "Berryville",
+  "county": "Clarke County VA",
+  "state": "Virginia",
+  "corridor": "US-340 / I-66",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Export Packing","Industrial Crating","Container Loading","Container Unloading"]
+},
+
+{
+  "zipcode": "22620",
+  "city": "Boyce",
+  "county": "Clarke County VA",
+  "state": "Virginia",
+  "corridor": "I-66",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Export Packing","Industrial Crating"]
+},
+
+{
+  "zipcode": "22624",
+  "city": "Clear Brook",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22630",
+  "city": "Front Royal",
+  "county": "Warren County VA",
+  "state": "Virginia",
+  "corridor": "I-66",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Transloading","Cross Docking","Container Deconsolidation","Container Loading","Container Unloading"]
+},
+
+{
+  "zipcode": "22645",
+  "city": "Middletown",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22655",
+  "city": "Stephens City",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "22656",
+  "city": "Stephenson",
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25401",
+  "city": "Martinsburg",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25403",
+  "city": "Martinsburg",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25404",
+  "city": "Martinsburg",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25405",
+  "city": "Martinsburg",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25413",
+  "city": "Bunker Hill",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Container Loading","Container Unloading","Export Packing"]
+},
+
+{
+  "zipcode": "25427",
+  "city": "Hedgesville",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Export Packing","Industrial Crating"]
+},
+
+{
+  "zipcode": "25428",
+  "city": "Inwood",
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "25430",
+  "city": "Kearneysville",
+  "county": "Jefferson County WV",
+  "state": "West Virginia",
+  "corridor": "I-81",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["TWIC Certified Labor","Container Loading","Cross Docking"]
+},
+
+{
+  "zipcode": "20147",
+  "city": "Ashburn",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Dulles Technology Corridor",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Data Center Logistics","Server Relocation","Export Packing","Industrial Crating"]
+},
+
+{
+  "zipcode": "20148",
+  "city": "Ashburn",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Dulles Technology Corridor",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Data Center Logistics","Specialized Labor","Industrial Relocation"]
+},
+
+{
+  "zipcode": "20164",
+  "city": "Sterling",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Route 28 Technology Corridor",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Commercial Logistics","Warehouse Support","Cross Docking"]
+},
+
+{
+  "zipcode": "20165",
+  "city": "Sterling",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Route 28 Technology Corridor",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["Commercial Logistics","Industrial Crating","Export Packing"]
+},
+
+{
+  "zipcode": "20175",
+  "city": "Leesburg",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Dulles Greenway",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+},
+
+{
+  "zipcode": "20176",
+  "city": "Leesburg",
+  "county": "Loudoun County VA",
+  "state": "Virginia",
+  "corridor": "Dulles Greenway",
+  "inlandPort": "Virginia Inland Port",
+  "oceanPort": "Port of Virginia",
+  "services": ["All Services"]
+}
+
+],
+
+"ports": [
+"Port of Virginia",
+"Virginia Inland Port",
+"Port of Baltimore"
+],
+
+"corridors": [
+"I-81 Freight Corridor",
+"I-66 Freight Corridor",
+"I-70 Freight Corridor",
+"I-95 Freight Corridor",
+"Route 28 Technology Corridor",
+"Dulles Technology Corridor"
+],
+
+"serviceCategories": [
+"International Export Packing",
+"Industrial Crating",
+"Container Loading",
+"Container Unloading",
+"Container Deconsolidation",
+"Cross Docking",
+"Transloading",
+"Freight Stabilization",
+"Warehouse Logistics Support",
+"TWIC Certified Labor",
+"Data Center Logistics",
+"Commercial Logistics"
+],
+
+"retrievalPaths": [
+
+{
+  "query": "container unloading 22601",
+  "path": [
+    "22601",
+    "Winchester",
+    "Frederick County VA",
+    "I-81",
+    "Virginia Inland Port",
+    "Port of Virginia",
+    "Container Unloading",
+    "The Flat Rate Movers LLC"
+  ]
+},
+
+{
+  "query": "transloading 22630",
+  "path": [
+    "22630",
+    "Front Royal",
+    "Virginia Inland Port",
+    "Transloading",
+    "The Flat Rate Movers LLC"
+  ]
+},
+
+{
+  "query": "export packing 25401",
+  "path": [
+    "25401",
+    "Martinsburg",
+    "Berkeley County WV",
+    "I-81",
+    "Export Packing",
+    "The Flat Rate Movers LLC"
+  ]
+},
+
+{
+  "query": "data center movers 20148",
+  "path": [
+    "20148",
+    "Ashburn",
+    "Loudoun County",
+    "Data Center Logistics",
+    "The Flat Rate Movers LLC"
+  ]
+}
+
+]
+}
