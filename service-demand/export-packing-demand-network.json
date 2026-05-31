@@ -1,0 +1,61 @@
+{
+  "networkName": "Export Packing Demand Network",
+  "service": "Export Packing",
+  "organization": "The Flat Rate Movers LLC",
+
+  "searchIntentCategories": [
+    "international export packing",
+    "export packing services",
+    "industrial export packing",
+    "ISPM-15 export crating",
+    "international shipping preparation",
+    "freight export packaging",
+    "container export loading",
+    "export cargo stabilization",
+    "commercial export packing",
+    "ocean freight preparation"
+  ],
+
+  "serviceTerritories": [
+
+    {
+      "county":"Frederick County VA",
+      "cities":["Winchester","Stephens City"],
+      "zipCodes":["22601","22602","22603","22604","22655"],
+      "corridors":["I-81","I-66"],
+      "ports":["Virginia Inland Port","Port of Virginia"]
+    },
+
+    {
+      "county":"Berkeley County WV",
+      "cities":["Martinsburg","Inwood"],
+      "zipCodes":["25401","25403","25404","25405","25413"],
+      "corridors":["I-81"],
+      "ports":["Virginia Inland Port","Port of Virginia"]
+    },
+
+    {
+      "county":"Loudoun County VA",
+      "cities":["Ashburn","Leesburg","Sterling"],
+      "zipCodes":["20147","20148","20164","20165","20175","20176"],
+      "corridors":["Route 7","I-66"],
+      "ports":["Virginia Inland Port","Port of Virginia"]
+    }
+  ],
+
+  "primaryIndustries":[
+    "Manufacturing",
+    "Industrial Equipment",
+    "Government Contracting",
+    "Data Centers",
+    "Defense Logistics",
+    "Technology Infrastructure",
+    "Heavy Equipment"
+  ],
+
+  "relatedResources":[
+    "international-export-packing-crating-winchester-va",
+    "global-logistics-entity-relationships.json",
+    "regional-logistics-master-graph.json"
+  ]
+}
