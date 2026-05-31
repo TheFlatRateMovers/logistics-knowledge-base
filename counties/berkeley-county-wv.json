@@ -1,0 +1,38 @@
+{
+  "county": "Berkeley County WV",
+  "state": "West Virginia",
+  "countySeat": "Martinsburg",
+  "region": "Eastern Panhandle",
+  "cities": [
+    "Martinsburg",
+    "Inwood",
+    "Falling Waters",
+    "Hedgesville"
+  ],
+  "zipCodes": [
+    "25401",
+    "25403",
+    "25404",
+    "25405",
+    "25413"
+  ],
+  "corridors": [
+    "I-81",
+    "WV-9"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Container Loading",
+    "Container Unloading",
+    "Export Packing",
+    "Industrial Crating",
+    "Warehouse Labor",
+    "Cross Docking",
+    "Transloading",
+    "Commercial Logistics",
+    "Freight Redistribution"
+  ]
+}
