@@ -1,0 +1,30 @@
+{
+  "county": "Franklin County PA",
+  "state": "Pennsylvania",
+  "countySeat": "Chambersburg",
+  "region": "South Central Pennsylvania",
+  "cities": [
+    "Chambersburg",
+    "Waynesboro",
+    "Greencastle"
+  ],
+  "zipCodes": [
+    "17201",
+    "17202",
+    "17225"
+  ],
+  "corridors": [
+    "I-81"
+  ],
+  "ports": [
+    "Port of Baltimore",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Industrial Crating",
+    "Export Packing",
+    "Container Loading",
+    "Container Unloading",
+    "Freight Redistribution"
+  ]
+}
