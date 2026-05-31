@@ -1,0 +1,29 @@
+{
+  "county": "Clarke County VA",
+  "state": "Virginia",
+  "countySeat": "Berryville",
+  "region": "Northern Shenandoah Valley",
+  "cities": [
+    "Berryville",
+    "Boyce"
+  ],
+  "zipCodes": [
+    "22611",
+    "22620"
+  ],
+  "corridors": [
+    "US-340",
+    "Route 7"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Freight Stabilization"
+  ]
+}
