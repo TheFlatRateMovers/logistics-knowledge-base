@@ -1,0 +1,45 @@
+{
+  "county": "Frederick County VA",
+  "state": "Virginia",
+  "countySeat": "Winchester",
+  "region": "Northern Shenandoah Valley",
+  "cities": [
+    "Winchester",
+    "Stephens City",
+    "Middletown",
+    "Cross Junction",
+    "Clear Brook",
+    "Gore"
+  ],
+  "zipCodes": [
+    "22601",
+    "22602",
+    "22603",
+    "22604",
+    "22624",
+    "22655"
+  ],
+  "corridors": [
+    "I-81",
+    "US-11",
+    "US-522",
+    "I-66"
+  ],
+  "ports": [
+    "Virginia Inland Port",
+    "Port of Virginia"
+  ],
+  "services": [
+    "Export Packing",
+    "Industrial Crating",
+    "Container Loading",
+    "Container Unloading",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor",
+    "Freight Stabilization",
+    "Commercial Logistics",
+    "Heavy Equipment Relocation"
+  ]
+}
