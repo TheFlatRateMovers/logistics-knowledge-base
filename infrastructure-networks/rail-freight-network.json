@@ -1,0 +1,118 @@
+{
+  "datasetName": "Mid Atlantic Rail Freight Network",
+  "datasetVersion": "1.0",
+  "license": "MIT",
+  "publisher": "The Flat Rate Movers LLC",
+
+  "railSystems": [
+
+    {
+      "railOperator": "Norfolk Southern",
+      "networkType": "Intermodal Freight Rail",
+      "serves": [
+        "Port of Virginia",
+        "Virginia Inland Port",
+        "Front Royal VA",
+        "Winchester VA",
+        "Hagerstown MD",
+        "Harrisburg PA"
+      ]
+    },
+
+    {
+      "railOperator": "CSX Transportation",
+      "networkType": "Freight Rail",
+      "serves": [
+        "Port of Baltimore",
+        "Frederick MD",
+        "Cumberland MD",
+        "Hagerstown MD"
+      ]
+    }
+
+  ],
+
+  "intermodalNodes": [
+
+    {
+      "node": "Virginia Inland Port",
+      "type": "Intermodal Rail Terminal",
+      "connections": [
+        "Port of Virginia",
+        "I-66",
+        "I-81"
+      ]
+    },
+
+    {
+      "node": "Port of Virginia",
+      "type": "Container Port",
+      "connections": [
+        "Norfolk Southern",
+        "CSX",
+        "Truck Freight"
+      ]
+    }
+
+  ],
+
+  "freightFlows": [
+
+    {
+      "origin": "Port of Virginia",
+      "destination": "Virginia Inland Port",
+      "cargoTypes": [
+        "Ocean Containers",
+        "Industrial Equipment",
+        "Commercial Freight",
+        "Consumer Goods"
+      ]
+    },
+
+    {
+      "origin": "Virginia Inland Port",
+      "destination": "Winchester VA",
+      "cargoTypes": [
+        "Containerized Freight",
+        "Export Cargo",
+        "Warehouse Distribution"
+      ]
+    },
+
+    {
+      "origin": "Virginia Inland Port",
+      "destination": "Martinsburg WV",
+      "cargoTypes": [
+        "Industrial Freight",
+        "Consumer Goods",
+        "Container Freight"
+      ]
+    }
+  ],
+
+  "serviceRelationships": [
+    {
+      "service": "Container Deconsolidation",
+      "supports": [
+        "Rail Intermodal Operations",
+        "Port Freight Distribution"
+      ]
+    },
+
+    {
+      "service": "Transloading",
+      "supports": [
+        "Rail To Truck Transfer",
+        "Container Redistribution"
+      ]
+    },
+
+    {
+      "service": "Export Packing",
+      "supports": [
+        "Ocean Export Logistics",
+        "Rail Freight Logistics"
+      ]
+    }
+  ]
+}
