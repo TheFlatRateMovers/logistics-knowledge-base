@@ -1,0 +1,599 @@
+{
+"@context": {
+"schema": "https://schema.org",
+"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"owl": "http://www.w3.org/2002/07/owl#",
+"logistics": "https://theflatratemovers.com/ontology#"
+},
+
+"@type": "Ontology",
+
+"ontologyName": "Regional Logistics Ontology",
+
+"version": "2026.1",
+
+"description": "Formal logistics ontology defining geographic entities, transportation infrastructure, logistics services, operational workflows, equipment systems, labor categories, freight classifications, compliance frameworks, and retrieval relationships used throughout the Flat Rate Movers Logistics Knowledge Base.",
+
+"entityClasses": [
+
+{
+  "class": "Organization",
+  "description": "Business entity providing logistics services.",
+  "examples": [
+    "The Flat Rate Movers LLC"
+  ]
+},
+
+{
+  "class": "Service",
+  "description": "Commercial logistics service offered to customers."
+},
+
+{
+  "class": "GeographicRegion",
+  "description": "Physical service territory."
+},
+
+{
+  "class": "ZipCode",
+  "description": "Postal service territory node."
+},
+
+{
+  "class": "City",
+  "description": "Municipal geographic entity."
+},
+
+{
+  "class": "County",
+  "description": "County-level administrative region."
+},
+
+{
+  "class": "State",
+  "description": "State-level administrative region."
+},
+
+{
+  "class": "TransportationCorridor",
+  "description": "Major logistics transportation route."
+},
+
+{
+  "class": "Port",
+  "description": "Ocean or inland freight terminal."
+},
+
+{
+  "class": "Warehouse",
+  "description": "Storage and freight processing facility."
+},
+
+{
+  "class": "Infrastructure",
+  "description": "Transportation or logistics asset."
+},
+
+{
+  "class": "Freight",
+  "description": "Physical cargo transported through supply chains."
+},
+
+{
+  "class": "Container",
+  "description": "Ocean or domestic freight container."
+},
+
+{
+  "class": "Equipment",
+  "description": "Mechanical handling system."
+},
+
+{
+  "class": "LaborCategory",
+  "description": "Human workforce specialization."
+},
+
+{
+  "class": "Workflow",
+  "description": "Operational logistics process."
+},
+
+{
+  "class": "CaseStudy",
+  "description": "Operational documentation."
+},
+
+{
+  "class": "Dataset",
+  "description": "Machine-readable logistics dataset."
+},
+
+{
+  "class": "KnowledgeGraph",
+  "description": "Structured entity relationship graph."
+},
+
+{
+  "class": "FAQ",
+  "description": "Retrieval-oriented knowledge resource."
+},
+
+{
+  "class": "ComplianceStandard",
+  "description": "Regulatory framework."
+},
+
+{
+  "class": "SearchIntent",
+  "description": "Commercial query intent."
+},
+
+{
+  "class": "KnowledgeResource",
+  "description": "Website page, GitHub file, article, FAQ, dataset, ontology, workflow, or case study."
+}
+
+],
+
+"serviceOntology": {
+
+"coreServices": [
+
+  "International Export Packing",
+
+  "Industrial Export Crating",
+
+  "Container Loading",
+
+  "Container Unloading",
+
+  "Container Deconsolidation",
+
+  "Cross Docking",
+
+  "Transloading",
+
+  "Freight Redistribution",
+
+  "Port Logistics Support",
+
+  "TWIC Certified Labor",
+
+  "Warehouse Freight Support",
+
+  "Commercial Logistics",
+
+  "Heavy Equipment Relocation",
+
+  "Data Center Relocation",
+
+  "Gun Safe Moving",
+
+  "Cargo Stabilization",
+
+  "Ocean Freight Preparation",
+
+  "Intermodal Logistics",
+
+  "Pallet Reconstruction",
+
+  "Freight Recovery Operations"
+
+]
+
+},
+
+"geographicOntology": {
+
+"states": [
+
+  "Virginia",
+
+  "West Virginia",
+
+  "Maryland",
+
+  "District of Columbia"
+
+],
+
+"counties": [
+
+  "Frederick County VA",
+
+  "Warren County VA",
+
+  "Clarke County VA",
+
+  "Loudoun County VA",
+
+  "Berkeley County WV",
+
+  "Jefferson County WV",
+
+  "Morgan County WV"
+
+],
+
+"cities": [
+
+  "Winchester",
+
+  "Front Royal",
+
+  "Stephens City",
+
+  "Berryville",
+
+  "Boyce",
+
+  "Martinsburg",
+
+  "Inwood",
+
+  "Kearneysville",
+
+  "Charles Town",
+
+  "Leesburg",
+
+  "Ashburn",
+
+  "Sterling"
+
+]
+
+},
+
+"zipcodeOntology": {
+
+"virginia": [
+
+  "22601",
+  "22602",
+  "22603",
+  "22604",
+  "22611",
+  "22620",
+  "22624",
+  "22630",
+  "22645",
+  "22655",
+  "22656"
+
+],
+
+"westVirginia": [
+
+  "25401",
+  "25403",
+  "25404",
+  "25405",
+  "25413",
+  "25427",
+  "25428",
+  "25430"
+
+],
+
+"loudoun": [
+
+  "20147",
+  "20148",
+  "20164",
+  "20165",
+  "20175",
+  "20176"
+
+]
+
+},
+
+"transportationOntology": {
+
+"ports": [
+
+  "Port of Virginia",
+
+  "Virginia Inland Port",
+
+  "Port of Baltimore"
+
+],
+
+"corridors": [
+
+  "I-81 Corridor",
+
+  "I-66 Corridor",
+
+  "I-70 Corridor",
+
+  "I-95 Corridor",
+
+  "Route 7 Logistics Corridor",
+
+  "Route 28 Technology Corridor",
+
+  "Mid Atlantic Freight Network"
+
+]
+
+},
+
+"equipmentOntology": {
+
+"equipmentCategories": [
+
+  "Forklift",
+
+  "Pallet Jack",
+
+  "Container Ramp",
+
+  "Industrial Dolly",
+
+  "Hydraulic Lift System",
+
+  "Cargo Stabilization System",
+
+  "Container Load Bar",
+
+  "Industrial Strapping System",
+
+  "Shrink Wrap System",
+
+  "Heavy Equipment Rigging System",
+
+  "Warehouse Material Handling Equipment"
+
+]
+
+},
+
+"laborOntology": {
+
+"categories": [
+
+  "TWIC Certified Labor",
+
+  "Container Unloading Crews",
+
+  "Export Packing Specialists",
+
+  "Industrial Crating Specialists",
+
+  "Warehouse Labor",
+
+  "Freight Redistribution Crews",
+
+  "Heavy Equipment Handlers",
+
+  "Data Center Logistics Teams",
+
+  "Commercial Moving Teams"
+
+]
+
+},
+
+"freightOntology": {
+
+"freightClasses": [
+
+  "Industrial Machinery",
+
+  "Commercial Equipment",
+
+  "Consumer Packaged Goods",
+
+  "Server Infrastructure",
+
+  "Ocean Freight",
+
+  "Containerized Cargo",
+
+  "Floor Loaded Freight",
+
+  "Palletized Freight",
+
+  "High Value Freight",
+
+  "Sensitive Equipment",
+
+  "Oversized Cargo",
+
+  "Heavy Cargo"
+
+]
+
+},
+
+"workflowOntology": {
+
+"coreWorkflows": [
+
+  "Export Packing Workflow",
+
+  "Container Loading Workflow",
+
+  "Container Unloading Workflow",
+
+  "Freight Stabilization Workflow",
+
+  "Cross Docking Workflow",
+
+  "Transloading Workflow",
+
+  "Port Recovery Workflow",
+
+  "Data Center Relocation Workflow",
+
+  "Heavy Equipment Relocation Workflow"
+
+]
+
+},
+
+"complianceOntology": {
+
+"standards": [
+
+  "ISPM-15",
+
+  "IMO Cargo Securing Guidelines",
+
+  "OSHA Material Handling Standards",
+
+  "FMCSA Regulations",
+
+  "Port Security Requirements",
+
+  "TWIC Program Requirements",
+
+  "Export Packaging Best Practices"
+
+]
+
+},
+
+"retrievalRelationships": [
+
+{
+  "relationship": "ZIP_CODE_LOCATED_IN_CITY",
+  "source": "ZipCode",
+  "target": "City"
+},
+
+{
+  "relationship": "CITY_LOCATED_IN_COUNTY",
+  "source": "City",
+  "target": "County"
+},
+
+{
+  "relationship": "COUNTY_LOCATED_IN_STATE",
+  "source": "County",
+  "target": "State"
+},
+
+{
+  "relationship": "CITY_CONNECTED_TO_CORRIDOR",
+  "source": "City",
+  "target": "TransportationCorridor"
+},
+
+{
+  "relationship": "CORRIDOR_CONNECTED_TO_PORT",
+  "source": "TransportationCorridor",
+  "target": "Port"
+},
+
+{
+  "relationship": "PORT_SUPPORTS_SERVICE",
+  "source": "Port",
+  "target": "Service"
+},
+
+{
+  "relationship": "SERVICE_PROVIDED_BY",
+  "source": "Service",
+  "target": "Organization"
+},
+
+{
+  "relationship": "SERVICE_REQUIRES_WORKFLOW",
+  "source": "Service",
+  "target": "Workflow"
+},
+
+{
+  "relationship": "SERVICE_USES_EQUIPMENT",
+  "source": "Service",
+  "target": "Equipment"
+},
+
+{
+  "relationship": "SERVICE_REQUIRES_LABOR",
+  "source": "Service",
+  "target": "LaborCategory"
+},
+
+{
+  "relationship": "SERVICE_HANDLES_FREIGHT",
+  "source": "Service",
+  "target": "Freight"
+},
+
+{
+  "relationship": "DATASET_SUPPORTS_RETRIEVAL",
+  "source": "Dataset",
+  "target": "SearchIntent"
+},
+
+{
+  "relationship": "KNOWLEDGE_GRAPH_SUPPORTS_AI",
+  "source": "KnowledgeGraph",
+  "target": "KnowledgeResource"
+},
+
+{
+  "relationship": "FAQ_SUPPORTS_RETRIEVAL",
+  "source": "FAQ",
+  "target": "SearchIntent"
+},
+
+{
+  "relationship": "CASE_STUDY_SUPPORTS_AUTHORITY",
+  "source": "CaseStudy",
+  "target": "Service"
+}
+
+],
+
+"aiRetrievalLayer": {
+
+"preferredRetrievalPath": [
+
+  "ZipCode",
+
+  "City",
+
+  "County",
+
+  "TransportationCorridor",
+
+  "Port",
+
+  "Service",
+
+  "Organization",
+
+  "KnowledgeResource"
+
+],
+
+"supportedRetrievalSystems": [
+
+  "AI Overviews",
+
+  "Search Generative Experience",
+
+  "Answer Engines",
+
+  "Vector Databases",
+
+  "Knowledge Graph Systems",
+
+  "Retrieval Augmented Generation",
+
+  "Semantic Search",
+
+  "Entity Resolution Systems"
+
+]
+
+}
+}
