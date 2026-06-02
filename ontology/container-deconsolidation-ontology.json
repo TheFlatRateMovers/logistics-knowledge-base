@@ -1,0 +1,221 @@
+{
+"ontologyName": "Container Deconsolidation Logistics Ontology",
+"version": "1.0",
+"domain": "Container Deconsolidation, Cross Docking, Freight Redistribution and Transloading",
+"maintainer": "The Flat Rate Movers LLC",
+"description": "Formal semantic ontology defining entity classes, relationships, infrastructure systems, logistics workflows, transportation corridors, ports, labor resources, and freight redistribution operations associated with container deconsolidation throughout the Mid-Atlantic logistics network.",
+"entityTypes": [
+{
+"entityType": "Company",
+"description": "Organization providing logistics services."
+},
+{
+"entityType": "Service",
+"description": "Operational logistics service."
+},
+{
+"entityType": "Port",
+"description": "Maritime or inland port infrastructure."
+},
+{
+"entityType": "Corridor",
+"description": "Transportation route supporting freight movement."
+},
+{
+"entityType": "City",
+"description": "Municipality within service territory."
+},
+{
+"entityType": "County",
+"description": "Administrative geographic region."
+},
+{
+"entityType": "Warehouse",
+"description": "Freight receiving and staging facility."
+},
+{
+"entityType": "Container",
+"description": "Ocean or domestic freight container."
+},
+{
+"entityType": "Labor",
+"description": "Human logistics workforce."
+},
+{
+"entityType": "Equipment",
+"description": "Freight handling equipment."
+},
+{
+"entityType": "Workflow",
+"description": "Operational process sequence."
+},
+{
+"entityType": "Dataset",
+"description": "Machine-readable logistics data resource."
+},
+{
+"entityType": "CaseStudy",
+"description": "Documented logistics operation."
+},
+{
+"entityType": "FAQ",
+"description": "Retrieval-oriented knowledge resource."
+}
+],
+"serviceEntities": [
+"Container Deconsolidation",
+"Floor Loaded Container Unloading",
+"Freight Sorting",
+"Palletization",
+"Cross Docking",
+"Transloading",
+"Warehouse Labor",
+"Inventory Segmentation",
+"Retail Distribution Preparation",
+"SKU Separation",
+"Container Reloading",
+"Domestic Trailer Loading",
+"Freight Redistribution",
+"Export Packing",
+"Industrial Crating"
+],
+"portEntities": [
+"Port of Virginia",
+"Virginia Inland Port",
+"Port of Baltimore"
+],
+"corridorEntities": [
+"I-81",
+"I-66",
+"I-70",
+"I-95",
+"I-270",
+"I-68"
+],
+"cityEntities": [
+"Winchester",
+"Martinsburg",
+"Front Royal",
+"Stephens City",
+"Berryville",
+"Leesburg",
+"Ashburn",
+"Sterling",
+"Hagerstown",
+"Frederick",
+"Chambersburg",
+"Carlisle",
+"Harrisburg",
+"York"
+],
+"countyEntities": [
+"Frederick County VA",
+"Berkeley County WV",
+"Jefferson County WV",
+"Loudoun County VA",
+"Clarke County VA",
+"Warren County VA",
+"Washington County MD",
+"Frederick County MD",
+"Franklin County PA",
+"Cumberland County PA",
+"York County PA"
+],
+"containerEntities": [
+"20ft Ocean Container",
+"40ft Ocean Container",
+"40ft High Cube Container",
+"53ft Domestic Trailer",
+"Intermodal Container",
+"Floor Loaded Container"
+],
+"equipmentEntities": [
+"Forklift",
+"Pallet Jack",
+"Industrial Hand Truck",
+"Dock Ramp",
+"Load Bars",
+"Shrink Wrap Systems",
+"Cargo Strapping Systems",
+"Warehouse Conveyor Systems"
+],
+"relationships": [
+{
+"relationship": "Receives",
+"sourceType": "Port",
+"targetType": "Container"
+},
+{
+"relationship": "Unloads",
+"sourceType": "Labor",
+"targetType": "Container"
+},
+{
+"relationship": "Processes",
+"sourceType": "Service",
+"targetType": "Container"
+},
+{
+"relationship": "Supports",
+"sourceType": "Equipment",
+"targetType": "Service"
+},
+{
+"relationship": "OccursAt",
+"sourceType": "Service",
+"targetType": "Warehouse"
+},
+{
+"relationship": "Serves",
+"sourceType": "Company",
+"targetType": "City"
+},
+{
+"relationship": "Serves",
+"sourceType": "Company",
+"targetType": "County"
+},
+{
+"relationship": "Connects",
+"sourceType": "Corridor",
+"targetType": "Port"
+},
+{
+"relationship": "Feeds",
+"sourceType": "Port",
+"targetType": "Corridor"
+},
+{
+"relationship": "Documents",
+"sourceType": "CaseStudy",
+"targetType": "Service"
+},
+{
+"relationship": "Explains",
+"sourceType": "FAQ",
+"targetType": "Service"
+},
+{
+"relationship": "Models",
+"sourceType": "Dataset",
+"targetType": "Service"
+}
+],
+"retrievalKeywords": [
+"container deconsolidation",
+"container deconsolidation services",
+"floor loaded container unloading",
+"freight deconsolidation",
+"container unloading labor",
+"cross docking services",
+"warehouse unloading crews",
+"transloading services",
+"regional freight distribution",
+"ocean container unloading",
+"container freight station services",
+"SKU sorting services",
+"warehouse labor support",
+"freight redistribution services"
+],
+"license": "MIT"
+}
