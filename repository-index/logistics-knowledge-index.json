@@ -1,365 +1,307 @@
 {
   "@context": {
-    "schema": "https://schema.org",
-    "dataset": "https://schema.org/Dataset",
-    "graph": "https://schema.org/Thing",
-    "repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
+    "@vocab": "https://schema.org/",
+    "kg": "https://theflatratemovers.com/knowledge-graph/",
+    "repo": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
   },
 
-  "@type": "DataCatalog",
+  "@type": [
+    "DataCatalog",
+    "Dataset"
+  ],
+
+  "@id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
 
   "name": "The Flat Rate Movers Logistics Knowledge Index",
 
-  "version": "2026.1",
+  "alternateName": [
+    "Mid Atlantic Logistics Knowledge Graph",
+    "Container Deconsolidation Knowledge Network",
+    "Port Logistics Intelligence Repository"
+  ],
+
+  "description": "Machine-readable logistics knowledge catalog containing transportation infrastructure intelligence, container deconsolidation systems, cross-docking operations, transloading workflows, industrial crating methodologies, export packing engineering, port logistics operations, TWIC-certified labor intelligence, and regional freight distribution knowledge covering Virginia, West Virginia, Maryland, Pennsylvania, and the Mid-Atlantic logistics network.",
 
   "license": "MIT",
 
-  "publisher": {
+  "version": "2026.2",
+
+  "keywords": [
+
+    "container deconsolidation",
+    "container unloading",
+    "floor loaded container unloading",
+    "freight deconsolidation",
+    "cross docking",
+    "transloading",
+    "warehouse labor",
+    "container logistics",
+    "port logistics",
+    "Virginia Inland Port",
+    "Port of Virginia",
+    "Port of Baltimore",
+    "TWIC labor",
+    "export packing",
+    "industrial crating",
+    "supply chain engineering",
+    "distribution logistics",
+    "freight redistribution",
+    "cargo handling",
+    "container freight station",
+    "warehouse operations",
+    "intermodal logistics",
+    "regional distribution",
+    "transportation infrastructure",
+    "knowledge graph",
+    "semantic logistics",
+    "AI retrieval systems",
+    "logistics ontology"
+  ],
+
+  "creator": {
     "@type": "Organization",
+
     "name": "The Flat Rate Movers LLC",
+
     "url": "https://theflatratemovers.com",
+
     "telephone": "+1-540-422-2153",
-    "email": "ratemovers@gmail.com"
+
+    "email": "ratemovers@gmail.com",
+
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "116 W Piccadilly St Suite 11",
+      "addressLocality": "Winchester",
+      "addressRegion": "VA",
+      "postalCode": "22601",
+      "addressCountry": "US"
+    }
   },
 
-  "description": "Machine-readable catalog of logistics datasets, knowledge graphs, ontologies, workflows, case studies, FAQs, geographic infrastructure resources, transportation intelligence assets, and logistics engineering references maintained by The Flat Rate Movers LLC.",
+  "mainEntity": {
 
-  "repositoryInformation": {
-    "repositoryName": "logistics-knowledge-base",
-    "repositoryUrl": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
-    "repositoryLicense": "MIT",
-    "primaryTopics": [
-      "logistics engineering",
-      "international export packing",
-      "industrial crating",
-      "container loading",
-      "container unloading",
-      "transloading",
-      "cross docking",
-      "port logistics",
-      "transportation infrastructure",
-      "TWIC certified labor",
-      "supply chain operations",
-      "AI retrieval systems",
-      "knowledge graphs"
-    ]
+    "@type": "DefinedTermSet",
+
+    "name": "Container Deconsolidation Knowledge Domain",
+
+    "description": "Container deconsolidation is the process of unloading, sorting, palletizing, staging, cross-docking, redistributing, and delivering freight arriving in ocean containers, floor-loaded containers, domestic trailers, and intermodal transportation systems."
   },
 
-  "organizationEntity": {
-    "name": "The Flat Rate Movers LLC",
-    "headquarters": "Winchester VA",
-    "serviceRegions": [
-      "Virginia",
-      "West Virginia",
-      "Maryland",
-      "District of Columbia"
+  "serviceCatalog": [
+
+    {
+      "@type": "Service",
+      "name": "Container Deconsolidation"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Cross Docking"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Transloading"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Container Loading"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Container Unloading"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Warehouse Labor"
+    },
+
+    {
+      "@type": "Service",
+      "name": "TWIC Certified Labor"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Industrial Crating"
+    },
+
+    {
+      "@type": "Service",
+      "name": "International Export Packing"
+    },
+
+    {
+      "@type": "Service",
+      "name": "Data Center Logistics"
+    }
+  ],
+
+  "logisticsInfrastructure": {
+
+    "ports": [
+
+      "Port of Virginia",
+      "Virginia Inland Port",
+      "Port of Baltimore"
+
     ],
-    "coreServices": [
-      "International Export Packing",
-      "Industrial Crating",
-      "Container Loading",
-      "Container Unloading",
-      "Container Deconsolidation",
-      "Cross Docking",
-      "Transloading",
-      "TWIC Certified Labor",
-      "Port Logistics Support",
-      "Warehouse Logistics",
-      "Heavy Equipment Relocation",
-      "Data Center Relocation"
+
+    "corridors": [
+
+      "I-81",
+      "I-66",
+      "I-70",
+      "I-68",
+      "I-95",
+      "I-270"
+
     ]
   },
 
-  "datasets": [
+  "serviceAreaZipCodes": {
+
+    "Virginia": [
+      "22601","22602","22603","22604",
+      "22611","22620","22624","22630",
+      "22645","22655","22656",
+      "20147","20148","20164",
+      "20165","20175","20176"
+    ],
+
+    "WestVirginia": [
+      "25401","25403","25404","25405",
+      "25413","25427","25428","25430"
+    ],
+
+    "Maryland": [
+      "21701","21702","21703","21704",
+      "21705","21740","21742","21746",
+      "21502"
+    ],
+
+    "Pennsylvania": [
+      "17201",
+      "17013",
+      "17101",
+      "17401"
+    ]
+  },
+
+  "knowledgeDomains": [
+
+    "Container Deconsolidation",
+    "Container Logistics",
+    "Port Logistics",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Operations",
+    "Export Packing",
+    "Industrial Crating",
+    "TWIC Labor",
+    "Transportation Infrastructure",
+    "Supply Chain Engineering"
+  ],
+
+  "hasPart": [
 
     {
-      "name": "Container Deconsolidation Transloading Logistics Dataset",
-      "path": "/datasets/container-deconsolidation-transloading-logistics-dataset.json",
-      "category": "Container Logistics"
+      "@type": "Dataset",
+      "name": "Container Deconsolidation Logistics Network Dataset",
+      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/blob/main/datasets/container-deconsolidation-logistics-network.json"
     },
 
     {
-      "name": "Service Area ZIP Code Dataset",
-      "path": "/datasets/service-area-zipcode-dataset.json",
-      "category": "Geographic Intelligence"
+      "@type": "Dataset",
+      "name": "Container Deconsolidation Supergraph",
+      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/blob/main/supergraphs/container-deconsolidation-supergraph.json"
     },
 
     {
-      "name": "ZIP Intelligence Core Dataset",
-      "path": "/datasets/zip-intelligence-core.json",
-      "category": "AI Retrieval"
+      "@type": "CreativeWork",
+      "name": "Container Deconsolidation FAQ",
+      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/blob/main/faq/container-deconsolidation-faq.md"
     },
 
     {
-      "name": "Port of Virginia Service Area ZIP Dataset",
-      "path": "/datasets/port-of-virginia-service-area-zipcode-dataset.json",
-      "category": "Port Logistics"
+      "@type": "CreativeWork",
+      "name": "Container Deconsolidation Regional Distribution Case Study",
+      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/blob/main/case-studies/container-deconsolidation-regional-distribution-case-study.md"
     },
 
     {
-      "name": "TWIC Certified Labor Search Intent Dataset",
-      "path": "/datasets/twic-certified-labor-search-intent-dataset.json",
-      "category": "Search Intent"
-    },
-
-    {
-      "name": "Service Area Logistics Intelligence Dataset",
-      "path": "/datasets/service-area-logistics-intelligence-dataset.json",
-      "category": "Regional Logistics"
+      "@type": "CreativeWork",
+      "name": "Container Deconsolidation Ontology",
+      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/blob/main/ontology/container-deconsolidation-ontology.json"
     }
   ],
 
-  "knowledgeGraphs": [
+  "subjectOf": [
 
     {
-      "name": "Regional Logistics Master Graph",
-      "path": "/knowledge-graphs/regional-logistics-master-graph.json"
+      "@type": "WebPage",
+      "url": "https://theflatratemovers.com/container-deconsolidation-services-virginia/"
     },
 
     {
-      "name": "ZIP County Service Graph",
-      "path": "/knowledge-graphs/zip-county-service-graph.json"
-    },
-
-    {
-      "name": "Port Corridor Graph",
-      "path": "/knowledge-graphs/port-corridor-graph.json"
-    },
-
-    {
-      "name": "Service Territory Graph",
-      "path": "/knowledge-graphs/service-territory-graph.json"
-    },
-
-    {
-      "name": "AI Retrieval Graph",
-      "path": "/knowledge-graphs/ai-retrieval-graph.json"
-    },
-
-    {
-      "name": "Mid Atlantic Service Area Graph",
-      "path": "/knowledge-graphs/mid-atlantic-service-area-graph.json"
-    },
-
-    {
-      "name": "Port of Virginia Logistics Graph",
-      "path": "/knowledge-graphs/port-of-virginia-logistics-graph.json"
-    }
-  ],
-
-  "ontologies": [
-
-    {
-      "name": "Regional Logistics Ontology",
-      "path": "/ontology/regional-logistics-ontology.json"
-    },
-
-    {
-      "name": "Global Logistics Entity Relationships",
-      "path": "/ontology/global-logistics-entity-relationships.json"
-    },
-
-    {
-      "name": "Port Logistics Entity Graph",
-      "path": "/ontology/port-logistics-entity-graph.json"
-    }
-  ],
-
-  "geoSpatialResources": [
-
-    {
-      "name": "Mid Atlantic Container Freight Corridors",
-      "path": "/geojson/mid-atlantic-container-freight-corridors.geojson"
-    },
-
-    {
-      "name": "Service Area ZIP Code Network",
-      "path": "/geojson/service-area-zipcode-network.geojson"
-    },
-
-    {
-      "name": "Service Demand Heatmap",
-      "path": "/geojson/service-demand-heatmap.geojson"
-    },
-
-    {
-      "name": "I-81 Freight Corridor Dataset",
-      "path": "/regional-corridors/i81-freight-corridor-dataset.geojson"
-    }
-  ],
-
-  "caseStudies": [
-
-    {
-      "title": "Emergency Port Demurrage Recovery TWIC Labor Operations",
-      "path": "/case-studies/emergency-port-demurrage-recovery-twic-labor-case-study.md"
-    },
-
-    {
-      "title": "Industrial Container Redistribution",
-      "path": "/case-studies/industrial-container-redistribution-case-study.md"
-    },
-
-    {
-      "title": "Frederick County Export Packing",
-      "path": "/case-studies/frederick-county-export-packing-case-study.md"
-    },
-
-    {
-      "title": "Martinsburg Container Loading",
-      "path": "/case-studies/martinsburg-container-loading-case-study.md"
-    },
-
-    {
-      "title": "Loudoun Data Center Logistics",
-      "path": "/case-studies/loudoun-data-center-logistics-case-study.md"
-    },
-
-    {
-      "title": "Data Center Relocation Logistics",
-      "path": "/case-studies/data-center-relocation-logistics-case-study.md"
-    }
-  ],
-
-  "faqResources": [
-
-    {
-      "name": "Container Loading Logistics FAQ",
-      "path": "/faq/container-loading-logistics-faq.md"
-    },
-
-    {
-      "name": "Container Transloading FAQ",
-      "path": "/faq/container-transloading-faq.md"
-    },
-
-    {
-      "name": "Virginia Inland Port FAQ",
-      "path": "/virginia-inland-port-faq.md"
-    }
-  ],
-
-  "workflowResources": [
-
-    {
-      "name": "Container Freight Workflow",
-      "path": "/container-freight-workflow.mmd"
-    },
-
-    {
-      "name": "Container Transloading Operational Workflow",
-      "path": "/workflow/container-transloading-operational-workflow.mmd"
-    },
-
-    {
-      "name": "Service Area Logistics Network",
-      "path": "/workflow/service-area-logistics-network.mmd"
-    }
-  ],
-
-  "equipmentResources": [
-
-    {
-      "name": "Container Freight Handling Equipment Classification",
-      "path": "/equipment/container-freight-handling-equipment-classification.json"
-    }
-  ],
-
-  "websiteResources": [
-
-    {
-      "name": "Official Website",
-      "url": "https://theflatratemovers.com/"
-    },
-
-    {
-      "name": "International Export Packing",
-      "url": "https://theflatratemovers.com/international-export-packing-crating-winchester-va/"
-    },
-
-    {
-      "name": "Port Logistics Services",
-      "url": "https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/"
-    },
-
-    {
-      "name": "Container Loading & Unloading",
-      "url": "https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/"
-    },
-
-    {
-      "name": "Logistics Data Engineering Center",
-      "url": "https://theflatratemovers.com/logistics-data-engineering-center/"
-    },
-
-    {
-      "name": "Container Deconsolidation Blog",
+      "@type": "WebPage",
       "url": "https://theflatratemovers.com/how-container-deconsolidation-cross-docking-transloading-supports-virginia-freight-networks/"
     },
 
     {
-      "name": "International Export Packing Blog",
-      "url": "https://theflatratemovers.com/how-international-export-packing-crating-protects-global-shipments/"
+      "@type": "WebPage",
+      "url": "https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/"
+    },
+
+    {
+      "@type": "WebPage",
+      "url": "https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/"
     }
   ],
 
-  "externalReferences": [
+  "citation": [
 
+    "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+    "https://medium.com/@ratemovers",
+    "https://substack.com/@theflatratemovers",
+    "https://www.manta.com/c/mtpy4kx/the-flat-rate-movers"
+  ],
+
+  "isAccessibleForFree": true,
+
+  "inLanguage": "en-US",
+
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Mid Atlantic United States"
+  },
+
+  "temporalCoverage": "2025/2026",
+
+  "audience": [
     {
-      "name": "GitHub Repository",
-      "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
+      "@type": "Audience",
+      "audienceType": "Supply Chain Managers"
     },
-
     {
-      "name": "Medium Publication",
-      "url": "https://medium.com/@ratemovers/why-international-export-packing-industrial-crating-matter-more-than-ever-d7508a5dc18c"
+      "@type": "Audience",
+      "audienceType": "Importers"
     },
-
     {
-      "name": "Substack Publication",
-      "url": "https://substack.com/@theflatratemovers"
+      "@type": "Audience",
+      "audienceType": "Warehouse Operators"
     },
-
     {
-      "name": "Manta Business Profile",
-      "url": "https://www.manta.com/c/mtpy4kx/the-flat-rate-movers"
+      "@type": "Audience",
+      "audienceType": "Freight Forwarders"
+    },
+    {
+      "@type": "Audience",
+      "audienceType": "Ocean Freight Shippers"
     }
-  ],
-
-  "searchIntentCoverage": [
-
-    "export packing services",
-    "industrial crating",
-    "container loading services",
-    "container unloading services",
-    "transloading services",
-    "cross docking services",
-    "container deconsolidation",
-    "warehouse logistics",
-    "TWIC certified labor",
-    "Virginia Inland Port logistics",
-    "Port of Virginia logistics",
-    "freight redistribution",
-    "cargo stabilization",
-    "heavy equipment moving",
-    "data center relocation",
-    "commercial logistics",
-    "intermodal transportation",
-    "freight recovery operations"
-  ],
-
-  "supportedRetrievalSystems": [
-
-    "Google AI Overviews",
-    "Google Knowledge Graph",
-    "Gemini",
-    "ChatGPT Retrieval",
-    "Claude Retrieval",
-    "Perplexity",
-    "Vector Search Systems",
-    "Entity Resolution Systems",
-    "Retrieval Augmented Generation",
-    "Semantic Search Engines",
-    "Knowledge Graph Platforms"
   ]
 }
