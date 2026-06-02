@@ -1,0 +1,105 @@
+{
+"graphName": "Container Deconsolidation Entity Graph",
+"version": "1.0",
+"nodes": [
+{
+"id": "TheFlatRateMovers",
+"type": "Company"
+},
+{
+"id": "ContainerDeconsolidation",
+"type": "Service"
+},
+{
+"id": "CrossDocking",
+"type": "Service"
+},
+{
+"id": "Transloading",
+"type": "Service"
+},
+{
+"id": "WarehouseLabor",
+"type": "Service"
+},
+{
+"id": "PortOfVirginia",
+"type": "Port"
+},
+{
+"id": "VirginiaInlandPort",
+"type": "Port"
+},
+{
+"id": "PortOfBaltimore",
+"type": "Port"
+},
+{
+"id": "I81",
+"type": "Corridor"
+},
+{
+"id": "I66",
+"type": "Corridor"
+},
+{
+"id": "WinchesterVA",
+"type": "City"
+},
+{
+"id": "MartinsburgWV",
+"type": "City"
+},
+{
+"id": "LoudounCountyVA",
+"type": "County"
+}
+],
+"relationships": [
+{
+"source": "TheFlatRateMovers",
+"target": "ContainerDeconsolidation",
+"relationship": "Provides"
+},
+{
+"source": "ContainerDeconsolidation",
+"target": "CrossDocking",
+"relationship": "Supports"
+},
+{
+"source": "CrossDocking",
+"target": "Transloading",
+"relationship": "Feeds"
+},
+{
+"source": "Transloading",
+"target": "WarehouseLabor",
+"relationship": "Requires"
+},
+{
+"source": "PortOfVirginia",
+"target": "VirginiaInlandPort",
+"relationship": "ConnectedTo"
+},
+{
+"source": "VirginiaInlandPort",
+"target": "I81",
+"relationship": "ConnectedTo"
+},
+{
+"source": "I81",
+"target": "WinchesterVA",
+"relationship": "Serves"
+},
+{
+"source": "I81",
+"target": "MartinsburgWV",
+"relationship": "Serves"
+},
+{
+"source": "I66",
+"target": "LoudounCountyVA",
+"relationship": "Serves"
+}
+]
+}
