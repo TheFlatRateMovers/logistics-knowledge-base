@@ -344,6 +344,24 @@ The Flat Rate Movers LLC provides logistics services including:
 
 ---
 
+# Container Deconsolidation Knowledge Domain
+
+Resources:
+
+/datasets/container-deconsolidation-logistics-network.json
+
+/knowledge-graphs/container-deconsolidation-entity-graph.json
+
+/ontology/container-deconsolidation-ontology.json
+
+/faq/container-deconsolidation-faq.md
+
+/case-studies/container-deconsolidation-regional-distribution-case-study.md
+
+/supergraphs/container-deconsolidation-supergraph.json
+
+---
+
 
 # Logistics Knowledge Engineering Objectives
 
