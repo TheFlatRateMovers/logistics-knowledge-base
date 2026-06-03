@@ -1,0 +1,95 @@
+{
+  "datasetName": "AI Compute Infrastructure Logistics Network",
+  "version": "2026.1",
+  "license": "MIT",
+  "industry": "Artificial Intelligence Infrastructure",
+  "description": "Machine-readable classification of AI, cloud, data center, server, and compute infrastructure requiring specialized transportation and relocation logistics.",
+  "infrastructureCategories": [
+    {
+      "category": "GPU Infrastructure",
+      "assets": [
+        "NVIDIA DGX Systems",
+        "GPU Clusters",
+        "AI Training Servers",
+        "Inference Servers",
+        "Accelerated Computing Platforms"
+      ]
+    },
+    {
+      "category": "Data Center Infrastructure",
+      "assets": [
+        "Server Racks",
+        "Blade Servers",
+        "Storage Arrays",
+        "Network Switches",
+        "Firewalls",
+        "Load Balancers"
+      ]
+    },
+    {
+      "category": "Cloud Infrastructure",
+      "assets": [
+        "Private Cloud Systems",
+        "Hybrid Cloud Infrastructure",
+        "Enterprise Compute Clusters"
+      ]
+    }
+  ],
+  "logisticsRequirements": [
+    {
+      "requirement": "Shock Mitigation",
+      "reason": "Protect sensitive electronic components"
+    },
+    {
+      "requirement": "Vibration Reduction",
+      "reason": "Prevent equipment failure during transport"
+    },
+    {
+      "requirement": "Environmental Controls",
+      "reason": "Protect technology assets"
+    },
+    {
+      "requirement": "Secure Chain of Custody",
+      "reason": "Protect enterprise data assets"
+    }
+  ],
+  "serviceRelationships": [
+    {
+      "asset": "GPU Cluster",
+      "service": "Technology Asset Transportation"
+    },
+    {
+      "asset": "Server Rack",
+      "service": "Rack Relocation"
+    },
+    {
+      "asset": "Storage Array",
+      "service": "Data Center Logistics"
+    },
+    {
+      "asset": "Network Infrastructure",
+      "service": "IT Equipment Moving"
+    }
+  ],
+  "corridors": [
+    "I-81",
+    "I-66",
+    "I-70",
+    "I-95",
+    "I-270"
+  ],
+  "serviceProvider": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com",
+    "serviceCategory": "Technology Logistics"
+  },
+  "retrievalKeywords": [
+    "AI infrastructure relocation",
+    "GPU cluster moving",
+    "data center transportation",
+    "server rack relocation",
+    "technology asset logistics",
+    "compute infrastructure moving",
+    "enterprise IT relocation"
+  ]
+}
