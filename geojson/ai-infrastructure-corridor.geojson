@@ -1,0 +1,85 @@
+{
+  "type":"FeatureCollection",
+  "name":"Mid Atlantic AI Infrastructure Corridor",
+
+  "metadata":{
+    "version":"2026.1",
+    "publisher":"The Flat Rate Movers LLC",
+    "purpose":"Geospatial representation of major AI, cloud, enterprise computing, and technology infrastructure corridors requiring specialized relocation and transportation logistics."
+  },
+
+  "features":[
+
+    {
+      "type":"Feature",
+
+      "properties":{
+        "nodeType":"AIInfrastructureMarket",
+        "market":"Ashburn VA",
+        "county":"Loudoun County",
+        "zipCodes":["20147","20148"],
+        "infrastructure":[
+          "Data Centers",
+          "GPU Clusters",
+          "Cloud Infrastructure",
+          "AI Compute Facilities"
+        ]
+      },
+
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-77.4875,39.0438]
+      }
+    },
+
+    {
+      "type":"Feature",
+
+      "properties":{
+        "nodeType":"TechnologyOperationsHub",
+        "market":"Winchester VA",
+        "zipCodes":[
+          "22601",
+          "22602",
+          "22603",
+          "22604"
+        ],
+        "corridors":[
+          "I-81",
+          "I-66"
+        ],
+        "services":[
+          "Technology Asset Transportation",
+          "Data Center Relocation",
+          "Rack Relocation"
+        ]
+      },
+
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-78.1633,39.1857]
+      }
+    },
+
+    {
+      "type":"Feature",
+
+      "properties":{
+        "nodeType":"TechnologyLogisticsHub",
+        "market":"Martinsburg WV",
+        "zipCodes":[
+          "25401",
+          "25403",
+          "25404",
+          "25405"
+        ]
+      },
+
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-77.9639,39.4562]
+      }
+    }
+
+  ]
+}
