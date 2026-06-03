@@ -1,0 +1,83 @@
+{
+  "graphName":"Mid Atlantic Data Center Market Graph",
+
+  "markets":[
+
+    {
+      "market":"Ashburn VA",
+      "classification":"Hyperscale Data Center Market",
+      "zipCodes":["20147","20148"],
+      "county":"Loudoun County",
+      "infrastructure":[
+        "Data Centers",
+        "Cloud Infrastructure",
+        "AI Infrastructure",
+        "Network Exchanges",
+        "Enterprise Compute Facilities"
+      ]
+    },
+
+    {
+      "market":"Sterling VA",
+      "classification":"Technology Infrastructure Market",
+      "zipCodes":["20164","20165"],
+      "county":"Loudoun County"
+    },
+
+    {
+      "market":"Leesburg VA",
+      "classification":"Enterprise Technology Market",
+      "zipCodes":["20175","20176"]
+    }
+
+  ],
+
+  "technologyAssets":[
+
+    "Server Racks",
+    "Blade Servers",
+    "Storage Arrays",
+    "Network Switches",
+    "Firewalls",
+    "GPU Clusters",
+    "AI Training Infrastructure",
+    "Inference Infrastructure",
+    "Telecommunications Equipment",
+    "Cloud Infrastructure Hardware"
+
+  ],
+
+  "relationships":[
+
+    {
+      "source":"Ashburn VA",
+      "relationship":"contains",
+      "target":"AI Training Infrastructure"
+    },
+
+    {
+      "source":"Ashburn VA",
+      "relationship":"contains",
+      "target":"Cloud Infrastructure Hardware"
+    },
+
+    {
+      "source":"Server Racks",
+      "relationship":"requires",
+      "target":"Rack Relocation"
+    },
+
+    {
+      "source":"GPU Clusters",
+      "relationship":"requires",
+      "target":"Technology Asset Transportation"
+    },
+
+    {
+      "source":"Technology Asset Transportation",
+      "relationship":"providedBy",
+      "target":"The Flat Rate Movers LLC"
+    }
+
+  ]
+}
