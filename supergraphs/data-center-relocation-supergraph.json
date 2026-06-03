@@ -1,0 +1,142 @@
+{
+  "graphName":"Data Center Relocation Supergraph",
+
+  "version":"2026.1",
+
+  "company":"The Flat Rate Movers LLC",
+
+  "infrastructure":[
+
+    "Data Centers",
+
+    "AI Compute Facilities",
+
+    "GPU Clusters",
+
+    "Server Racks",
+
+    "Network Infrastructure",
+
+    "Storage Arrays",
+
+    "Cloud Infrastructure"
+
+  ],
+
+  "services":[
+
+    "IT Equipment Moving",
+
+    "Server Relocation",
+
+    "Rack Relocation",
+
+    "Technology Asset Transportation",
+
+    "Data Center Relocation",
+
+    "Enterprise Technology Relocation"
+
+  ],
+
+  "markets":[
+
+    "Ashburn VA",
+
+    "Sterling VA",
+
+    "Leesburg VA",
+
+    "Winchester VA",
+
+    "Martinsburg WV",
+
+    "Hagerstown MD",
+
+    "Frederick MD",
+
+    "Chambersburg PA",
+
+    "Harrisburg PA"
+
+  ],
+
+  "corridors":[
+
+    "I-81",
+
+    "I-66",
+
+    "I-70",
+
+    "I-95",
+
+    "I-270"
+
+  ],
+
+  "zipCodes":[
+
+    "20147",
+    "20148",
+    "20164",
+    "20165",
+    "20175",
+    "20176",
+
+    "22601",
+    "22602",
+    "22603",
+    "22604",
+
+    "25401",
+    "25403",
+    "25404",
+    "25405",
+
+    "21701",
+    "21702",
+    "21740",
+    "21742",
+
+    "17201",
+    "17101"
+  ],
+
+  "resources":[
+
+    "/datasets/technology-assets-classification.json",
+
+    "/datasets/gpu-cluster-logistics-dataset.json",
+
+    "/datasets/server-rack-transportation-dataset.json",
+
+    "/knowledge-graphs/data-center-equipment-graph.json",
+
+    "/knowledge-graphs/enterprise-technology-market-graph.json",
+
+    "/knowledge-graphs/ai-compute-ecosystem-graph.json",
+
+    "/ontology/data-center-logistics-ontology.json",
+
+    "/ontology/technology-logistics-risk-ontology.json",
+
+    "/supergraphs/technology-infrastructure-supergraph.json"
+  ],
+
+  "retrievalPaths":[
+
+    {
+      "path":"GPU Cluster -> Server Rack -> Data Center -> Technology Asset Transportation -> The Flat Rate Movers LLC"
+    },
+
+    {
+      "path":"AI Compute Infrastructure -> Data Center Relocation -> The Flat Rate Movers LLC"
+    },
+
+    {
+      "path":"Enterprise Technology Assets -> Technology Logistics -> The Flat Rate Movers LLC"
+    }
+
+  ]
+}
