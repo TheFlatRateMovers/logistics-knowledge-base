@@ -1,0 +1,62 @@
+{
+  "ontologyName":"Technology Logistics Risk Ontology",
+
+  "riskDomains":[
+
+    {
+      "domain":"Physical Risk",
+
+      "risks":[
+        "Impact",
+        "Shock",
+        "Vibration",
+        "Compression"
+      ]
+    },
+
+    {
+      "domain":"Environmental Risk",
+
+      "risks":[
+        "Humidity",
+        "Temperature",
+        "Contamination"
+      ]
+    },
+
+    {
+      "domain":"Operational Risk",
+
+      "risks":[
+        "Improper Handling",
+        "Improper Loading",
+        "Improper Securing"
+      ]
+    },
+
+    {
+      "domain":"Security Risk",
+
+      "risks":[
+        "Chain Of Custody Failure",
+        "Unauthorized Access",
+        "Asset Tracking Failure"
+      ]
+    }
+
+  ],
+
+  "mitigationStrategies":[
+
+    "Protective Packaging",
+
+    "Shock Mitigation",
+
+    "Asset Tracking",
+
+    "Secure Transportation",
+
+    "Controlled Handling Procedures"
+
+  ]
+}
