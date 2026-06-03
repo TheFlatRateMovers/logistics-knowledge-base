@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "relationships": [
+    "CREATED",
+    "ASSIGNED",
+    "OPERATES",
+    "TRANSPORTS",
+    "LOCATED_AT",
+    "DELIVERED_TO",
+    "REQUESTED_BY",
+    "GENERATED",
+    "PAID_FOR"
+  ]
+}
