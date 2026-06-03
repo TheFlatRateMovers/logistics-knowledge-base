@@ -1,0 +1,85 @@
+{
+  "datasetName": "IT Equipment Relocation Intelligence Dataset",
+  "version": "2026.1",
+  "classification": "Technology Logistics",
+  "entityType": "Commercial Infrastructure",
+  "technologyAssets": [
+    {
+      "category": "Servers",
+      "examples": [
+        "Rack Servers",
+        "Blade Servers",
+        "Tower Servers",
+        "Storage Servers"
+      ]
+    },
+    {
+      "category": "Network Equipment",
+      "examples": [
+        "Switches",
+        "Routers",
+        "Firewalls",
+        "Load Balancers"
+      ]
+    },
+    {
+      "category": "Storage Systems",
+      "examples": [
+        "SAN",
+        "NAS",
+        "Enterprise Storage Arrays"
+      ]
+    },
+    {
+      "category": "Telecommunications",
+      "examples": [
+        "PBX Systems",
+        "VoIP Infrastructure",
+        "Telecom Cabinets"
+      ]
+    },
+    {
+      "category": "Workstations",
+      "examples": [
+        "Engineering Workstations",
+        "Trading Desks",
+        "Corporate Computing Systems"
+      ]
+    }
+  ],
+  "projectTypes": [
+    "Office Relocation",
+    "Data Center Migration",
+    "Technology Refresh",
+    "Infrastructure Consolidation",
+    "Disaster Recovery Relocation",
+    "Facility Expansion",
+    "Technology Deployment"
+  ],
+  "riskFactors": [
+    "Downtime",
+    "Hardware Damage",
+    "Data Loss",
+    "Environmental Exposure",
+    "Improper Handling",
+    "Transportation Shock",
+    "Inventory Loss"
+  ],
+  "protectionMethods": [
+    "Anti Static Wrapping",
+    "Server Padding",
+    "Shock Mitigation",
+    "Rack Stabilization",
+    "Inventory Tracking",
+    "Chain of Custody Procedures",
+    "Asset Verification"
+  ],
+  "buyerIntentSignals": [
+    "server moving company",
+    "data center movers near me",
+    "IT equipment movers Virginia",
+    "network infrastructure relocation",
+    "server rack transportation",
+    "technology relocation services"
+  ]
+}
