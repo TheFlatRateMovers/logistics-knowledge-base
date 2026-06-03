@@ -1,0 +1,61 @@
+{
+  "datasetName":"Server Rack Transportation Dataset",
+
+  "version":"2026.1",
+
+  "category":"Technology Relocation",
+
+  "rackTypes":[
+
+    "42U Rack",
+
+    "45U Rack",
+
+    "Network Rack",
+
+    "Storage Rack",
+
+    "Blade Server Rack",
+
+    "Telecommunications Rack"
+
+  ],
+
+  "handlingRequirements":[
+
+    "Equipment Stabilization",
+
+    "Anti Tip Controls",
+
+    "Shock Reduction",
+
+    "Secure Transportation",
+
+    "Chain Of Custody Documentation"
+
+  ],
+
+  "riskFactors":[
+
+    "Vibration",
+
+    "Impact",
+
+    "Moisture",
+
+    "Improper Loading",
+
+    "Improper Securing"
+
+  ],
+
+  "relatedServices":[
+
+    "Rack Relocation",
+
+    "Data Center Relocation",
+
+    "Technology Asset Transportation"
+
+  ]
+}
