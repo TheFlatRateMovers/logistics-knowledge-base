@@ -1,0 +1,97 @@
+{
+  "ontologyName":"Technology Asset Classification Ontology",
+
+  "entityTypes":[
+
+    {
+      "entity":"TechnologyAsset",
+
+      "subclasses":[
+
+        "Server",
+
+        "Rack",
+
+        "StorageArray",
+
+        "NetworkSwitch",
+
+        "Firewall",
+
+        "Router",
+
+        "GPUCluster",
+
+        "TelecommunicationsSystem",
+
+        "EnterpriseWorkstation"
+
+      ]
+    },
+
+    {
+      "entity":"TechnologyFacility",
+
+      "subclasses":[
+
+        "DataCenter",
+
+        "NetworkOperationsCenter",
+
+        "CloudInfrastructureFacility",
+
+        "EnterpriseTechnologyFacility"
+
+      ]
+    },
+
+    {
+      "entity":"TechnologyLogisticsService",
+
+      "subclasses":[
+
+        "ITEquipmentMoving",
+
+        "ServerRelocation",
+
+        "RackRelocation",
+
+        "TechnologyAssetTransportation",
+
+        "DataCenterRelocation",
+
+        "TechnologyAssetProtection"
+
+      ]
+    }
+
+  ],
+
+  "relationships":[
+
+    {
+      "predicate":"requiresTransportation"
+    },
+
+    {
+      "predicate":"requiresProtection"
+    },
+
+    {
+      "predicate":"locatedWithin"
+    },
+
+    {
+      "predicate":"servedBy"
+    },
+
+    {
+      "predicate":"connectedTo"
+    },
+
+    {
+      "predicate":"supports"
+    }
+
+  ]
+}
