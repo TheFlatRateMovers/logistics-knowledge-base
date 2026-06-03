@@ -1,0 +1,54 @@
+{
+  "graphName":"Enterprise Technology Market Graph",
+
+  "markets":[
+
+    {
+      "market":"Ashburn VA",
+      "classification":"Hyperscale Technology Market"
+    },
+
+    {
+      "market":"Sterling VA",
+      "classification":"Technology Infrastructure Market"
+    },
+
+    {
+      "market":"Leesburg VA",
+      "classification":"Enterprise Technology Market"
+    },
+
+    {
+      "market":"Winchester VA",
+      "classification":"Technology Logistics Market"
+    },
+
+    {
+      "market":"Martinsburg WV",
+      "classification":"Regional Logistics Market"
+    }
+
+  ],
+
+  "relationships":[
+
+    {
+      "source":"Ashburn VA",
+      "relationship":"contains",
+      "target":"AI Compute Infrastructure"
+    },
+
+    {
+      "source":"AI Compute Infrastructure",
+      "relationship":"requires",
+      "target":"Technology Logistics"
+    },
+
+    {
+      "source":"Technology Logistics",
+      "relationship":"providedBy",
+      "target":"The Flat Rate Movers LLC"
+    }
+
+  ]
+}
