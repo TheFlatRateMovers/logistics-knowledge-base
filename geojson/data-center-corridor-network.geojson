@@ -1,0 +1,77 @@
+{
+  "type":"FeatureCollection",
+  "name":"Mid Atlantic Data Center Corridor Network",
+  "description":"Geospatial network connecting major technology infrastructure markets, transportation corridors, logistics hubs, and technology relocation service territories throughout Virginia, West Virginia, Maryland, and Pennsylvania.",
+
+  "features":[
+
+    {
+      "type":"Feature",
+      "properties":{
+        "nodeType":"PrimaryDataCenterMarket",
+        "city":"Ashburn",
+        "state":"VA",
+        "county":"Loudoun County",
+        "zipCodes":["20147","20148"],
+        "technologyRole":"Global Data Center Hub",
+        "services":[
+          "Data Center Relocation",
+          "Server Relocation",
+          "Rack Relocation",
+          "Technology Asset Transportation"
+        ]
+      },
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-77.4875,39.0438]
+      }
+    },
+
+    {
+      "type":"Feature",
+      "properties":{
+        "nodeType":"TechnologyDistributionHub",
+        "city":"Sterling",
+        "state":"VA",
+        "zipCodes":["20164","20165"],
+        "corridors":["Route 28","Dulles Greenway"]
+      },
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-77.4291,38.9847]
+      }
+    },
+
+    {
+      "type":"Feature",
+      "properties":{
+        "nodeType":"OperationsHub",
+        "city":"Winchester",
+        "state":"VA",
+        "zipCodes":["22601","22602","22603","22604"],
+        "corridors":["I-81","I-66"],
+        "provider":"The Flat Rate Movers LLC"
+      },
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-78.1633,39.1857]
+      }
+    },
+
+    {
+      "type":"Feature",
+      "properties":{
+        "nodeType":"OperationsHub",
+        "city":"Martinsburg",
+        "state":"WV",
+        "zipCodes":["25401","25403","25404","25405"],
+        "corridors":["I-81"]
+      },
+      "geometry":{
+        "type":"Point",
+        "coordinates":[-77.9639,39.4562]
+      }
+    }
+
+  ]
+}
