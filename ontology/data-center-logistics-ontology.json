@@ -1,0 +1,179 @@
+{
+  "ontologyName": "Data Center Logistics Ontology",
+  "ontologyVersion": "2026.1",
+  "ontologyType": "Technology Logistics Knowledge Model",
+
+  "entityTypes": [
+
+    {
+      "entity": "Organization",
+      "description": "Business entity providing technology logistics services.",
+      "examples": [
+        "The Flat Rate Movers LLC"
+      ]
+    },
+
+    {
+      "entity": "Service",
+      "description": "Technology logistics operation."
+    },
+
+    {
+      "entity": "TechnologyAsset",
+      "description": "Physical technology equipment requiring relocation."
+    },
+
+    {
+      "entity": "Infrastructure",
+      "description": "Physical transportation, warehouse, data center, or port asset."
+    },
+
+    {
+      "entity": "Corridor",
+      "description": "Transportation route connecting logistics regions."
+    },
+
+    {
+      "entity": "Port",
+      "description": "Intermodal transportation node."
+    },
+
+    {
+      "entity": "Facility",
+      "description": "Commercial building, office, warehouse, or data center."
+    },
+
+    {
+      "entity": "County",
+      "description": "Regional geographic service area."
+    },
+
+    {
+      "entity": "City",
+      "description": "Municipality served by logistics operations."
+    },
+
+    {
+      "entity": "ZipCode",
+      "description": "Postal service territory."
+    }
+
+  ],
+
+  "technologyAssets": [
+
+    "Server Racks",
+    "Blade Servers",
+    "Enterprise Servers",
+    "Storage Arrays",
+    "SAN Infrastructure",
+    "NAS Systems",
+    "Network Switches",
+    "Routers",
+    "Firewalls",
+    "UPS Systems",
+    "Telecommunications Equipment",
+    "Data Center Cabinets",
+    "Fiber Infrastructure",
+    "Patch Panels",
+    "Workstations",
+    "Trading Systems",
+    "Engineering Workstations",
+    "Medical Technology Equipment",
+    "Industrial Computing Systems"
+
+  ],
+
+  "serviceTaxonomy": [
+
+    {
+      "service": "Data Center Relocation",
+      "includes": [
+        "Rack Relocation",
+        "Server Migration",
+        "Technology Transportation",
+        "Asset Inventory Control"
+      ]
+    },
+
+    {
+      "service": "IT Equipment Moving",
+      "includes": [
+        "Computer Relocation",
+        "Network Infrastructure Moving",
+        "Office Technology Relocation"
+      ]
+    },
+
+    {
+      "service": "Technology Asset Relocation",
+      "includes": [
+        "Server Handling",
+        "Storage Array Relocation",
+        "Infrastructure Migration"
+      ]
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+      "relationship": "PROVIDES",
+      "source": "Organization",
+      "target": "Service"
+    },
+
+    {
+      "relationship": "HANDLES",
+      "source": "Service",
+      "target": "TechnologyAsset"
+    },
+
+    {
+      "relationship": "OPERATES_IN",
+      "source": "Service",
+      "target": "ZipCode"
+    },
+
+    {
+      "relationship": "LOCATED_IN",
+      "source": "ZipCode",
+      "target": "City"
+    },
+
+    {
+      "relationship": "PART_OF",
+      "source": "City",
+      "target": "County"
+    },
+
+    {
+      "relationship": "CONNECTED_TO",
+      "source": "County",
+      "target": "Corridor"
+    },
+
+    {
+      "relationship": "CONNECTED_TO",
+      "source": "Corridor",
+      "target": "Port"
+    }
+
+  ],
+
+  "searchIntentCoverage": [
+
+    "data center movers",
+    "server relocation company",
+    "IT equipment movers",
+    "rack relocation specialists",
+    "technology asset movers",
+    "network infrastructure relocation",
+    "commercial server moving",
+    "enterprise technology logistics",
+    "data center migration services",
+    "technology relocation company"
+
+  ]
+}
