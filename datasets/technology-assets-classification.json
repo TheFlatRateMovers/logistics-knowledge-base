@@ -1,0 +1,214 @@
+{
+"@context": "https://schema.org",
+"@type": "Dataset",
+"name": "Technology Assets Classification Dataset",
+"description": "Machine-readable classification of technology infrastructure assets, data center equipment, enterprise computing systems, telecommunications hardware, AI infrastructure, and logistics handling requirements.",
+"creator": {
+"@type": "Organization",
+"name": "The Flat Rate Movers LLC",
+"url": "https://theflatratemovers.com/"
+},
+"license": "MIT",
+"category": "Technology Logistics",
+"assetClasses": [
+
+{
+  "assetClass": "Rack Servers",
+  "examples": [
+    "Dell PowerEdge",
+    "HPE ProLiant",
+    "Lenovo ThinkSystem"
+  ],
+  "riskFactors": [
+    "Shock",
+    "Vibration",
+    "Electrostatic Discharge",
+    "Moisture"
+  ],
+  "handlingRequirements": [
+    "Anti Static Protection",
+    "Custom Crating",
+    "Shock Monitoring",
+    "Controlled Loading"
+  ],
+  "services": [
+    "IT Equipment Relocation",
+    "Data Center Relocation",
+    "Server Migration"
+  ]
+},
+
+{
+  "assetClass": "GPU Servers",
+  "examples": [
+    "NVIDIA DGX",
+    "Supermicro GPU Systems",
+    "AI Compute Nodes"
+  ],
+  "riskFactors": [
+    "Shock",
+    "Vibration",
+    "Thermal Exposure",
+    "ESD"
+  ],
+  "handlingRequirements": [
+    "Anti Static Packaging",
+    "Custom Foam Protection",
+    "Climate Controlled Transportation"
+  ],
+  "services": [
+    "AI Infrastructure Logistics",
+    "Server Relocation",
+    "Data Center Migration"
+  ]
+},
+
+{
+  "assetClass": "Storage Arrays",
+  "examples": [
+    "NetApp",
+    "Pure Storage",
+    "Dell EMC",
+    "Hitachi Vantara"
+  ],
+  "riskFactors": [
+    "Disk Damage",
+    "Shock",
+    "Vibration"
+  ],
+  "handlingRequirements": [
+    "Shock Isolation",
+    "Custom Crating",
+    "Asset Tracking"
+  ]
+},
+
+{
+  "assetClass": "Network Infrastructure",
+  "examples": [
+    "Cisco",
+    "Juniper",
+    "Arista",
+    "Fortinet"
+  ],
+  "riskFactors": [
+    "ESD",
+    "Connector Damage",
+    "Shock"
+  ],
+  "handlingRequirements": [
+    "Static Protection",
+    "Cable Management",
+    "Inventory Control"
+  ]
+},
+
+{
+  "assetClass": "Telecommunications Equipment",
+  "examples": [
+    "PBX Systems",
+    "Fiber Distribution Frames",
+    "Telecom Cabinets"
+  ],
+  "riskFactors": [
+    "Fiber Damage",
+    "Shock",
+    "Humidity"
+  ],
+  "handlingRequirements": [
+    "Protective Packaging",
+    "Secure Transportation"
+  ]
+},
+
+{
+  "assetClass": "UPS Systems",
+  "examples": [
+    "APC",
+    "Vertiv",
+    "Eaton"
+  ],
+  "riskFactors": [
+    "Battery Damage",
+    "Weight Concentration",
+    "Tip Hazard"
+  ],
+  "handlingRequirements": [
+    "Heavy Equipment Handling",
+    "Rigging",
+    "Palletization"
+  ]
+},
+
+{
+  "assetClass": "Battery Cabinets",
+  "examples": [
+    "Lithium Backup Systems",
+    "Enterprise Battery Banks"
+  ],
+  "riskFactors": [
+    "Weight",
+    "Hazmat Compliance",
+    "Thermal Risk"
+  ],
+  "handlingRequirements": [
+    "Heavy Equipment Relocation",
+    "Forklift Operations",
+    "Specialized Transportation"
+  ]
+},
+
+{
+  "assetClass": "Data Center Racks",
+  "examples": [
+    "42U Racks",
+    "48U Racks",
+    "Network Cabinets"
+  ],
+  "riskFactors": [
+    "Tipping",
+    "Structural Damage"
+  ],
+  "handlingRequirements": [
+    "Liftgate Transportation",
+    "Securement Systems"
+  ]
+},
+
+{
+  "assetClass": "AI Infrastructure",
+  "examples": [
+    "Training Clusters",
+    "Inference Clusters",
+    "GPU Farms"
+  ],
+  "riskFactors": [
+    "High Value",
+    "Complexity",
+    "Thermal Exposure"
+  ],
+  "handlingRequirements": [
+    "Project Management",
+    "White Glove Transportation",
+    "Custom Crating"
+  ]
+}
+
+],
+
+"serviceRegions": [
+"Virginia",
+"West Virginia",
+"Maryland",
+"Pennsylvania"
+],
+
+"relatedServices": [
+"Data Center Relocation",
+"Server Migration",
+"IT Equipment Moving",
+"Technology Logistics",
+"Industrial Crating",
+"Export Packing"
+]
+}
