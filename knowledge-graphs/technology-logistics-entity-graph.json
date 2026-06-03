@@ -1,0 +1,170 @@
+{
+  "graphName": "Technology Logistics Entity Graph",
+  "version": "2026.1",
+
+  "nodes": [
+
+    {
+      "id": "TheFlatRateMovers",
+      "type": "Organization",
+      "name": "The Flat Rate Movers LLC"
+    },
+
+    {
+      "id": "DataCenterLogistics",
+      "type": "Service"
+    },
+
+    {
+      "id": "ITEquipmentMoving",
+      "type": "Service"
+    },
+
+    {
+      "id": "ServerRelocation",
+      "type": "Service"
+    },
+
+    {
+      "id": "RackRelocation",
+      "type": "Service"
+    },
+
+    {
+      "id": "NetworkEquipmentRelocation",
+      "type": "Service"
+    },
+
+    {
+      "id": "TechnologyAssetRelocation",
+      "type": "Service"
+    },
+
+    {
+      "id": "WinchesterVA",
+      "type": "City"
+    },
+
+    {
+      "id": "MartinsburgWV",
+      "type": "City"
+    },
+
+    {
+      "id": "AshburnVA",
+      "type": "City"
+    },
+
+    {
+      "id": "LeesburgVA",
+      "type": "City"
+    },
+
+    {
+      "id": "VirginiaInlandPort",
+      "type": "Infrastructure"
+    },
+
+    {
+      "id": "PortOfVirginia",
+      "type": "Port"
+    },
+
+    {
+      "id": "I81Corridor",
+      "type": "TransportationCorridor"
+    },
+
+    {
+      "id": "I66Corridor",
+      "type": "TransportationCorridor"
+    }
+
+  ],
+
+  "relationships": [
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "DataCenterLogistics",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "ITEquipmentMoving",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "ServerRelocation",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "RackRelocation",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "NetworkEquipmentRelocation",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "TheFlatRateMovers",
+      "target": "TechnologyAssetRelocation",
+      "relationship": "PROVIDES"
+    },
+
+    {
+      "source": "WinchesterVA",
+      "target": "I81Corridor",
+      "relationship": "LOCATED_ON"
+    },
+
+    {
+      "source": "MartinsburgWV",
+      "target": "I81Corridor",
+      "relationship": "LOCATED_ON"
+    },
+
+    {
+      "source": "AshburnVA",
+      "target": "I66Corridor",
+      "relationship": "LOCATED_ON"
+    },
+
+    {
+      "source": "VirginiaInlandPort",
+      "target": "PortOfVirginia",
+      "relationship": "CONNECTED_TO"
+    },
+
+    {
+      "source": "DataCenterLogistics",
+      "target": "VirginiaInlandPort",
+      "relationship": "SUPPORTED_BY"
+    },
+
+    {
+      "source": "TechnologyAssetRelocation",
+      "target": "PortOfVirginia",
+      "relationship": "CONNECTED_TO"
+    }
+  ],
+
+  "searchIntentLayer": [
+    "data center movers",
+    "server relocation services",
+    "IT equipment moving",
+    "technology asset relocation",
+    "server rack moving",
+    "network equipment transportation",
+    "data center logistics Virginia",
+    "commercial technology movers"
+  ]
+}
