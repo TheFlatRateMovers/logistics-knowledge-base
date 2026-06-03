@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "event_types": [
+    "JOB_CREATED",
+    "PRICE_QUOTED",
+    "VEHICLE_ASSIGNED",
+    "CREW_ASSIGNED",
+    "PICKUP_STARTED",
+    "PICKUP_COMPLETED",
+    "IN_TRANSIT",
+    "ARRIVED_DESTINATION",
+    "DELIVERY_COMPLETED",
+    "DELAY_REPORTED",
+    "DAMAGE_REPORTED",
+    "INVOICE_GENERATED",
+    "PAYMENT_RECEIVED"
+  ]
+}
