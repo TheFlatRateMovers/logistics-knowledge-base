@@ -1,0 +1,311 @@
+{
+"@context": "https://schema.org",
+"@type": "Dataset",
+"name": "Data Center Equipment Graph",
+"description": "Knowledge graph connecting technology assets, facilities, logistics services, transportation corridors, and regional infrastructure throughout the Mid-Atlantic.",
+"nodes": [
+
+{
+  "id": "TheFlatRateMovers",
+  "type": "Organization",
+  "name": "The Flat Rate Movers LLC"
+},
+
+{
+  "id": "Ashburn",
+  "type": "City"
+},
+
+{
+  "id": "Sterling",
+  "type": "City"
+},
+
+{
+  "id": "Leesburg",
+  "type": "City"
+},
+
+{
+  "id": "Winchester",
+  "type": "City"
+},
+
+{
+  "id": "Martinsburg",
+  "type": "City"
+},
+
+{
+  "id": "LoudounCounty",
+  "type": "County"
+},
+
+{
+  "id": "FrederickCountyVA",
+  "type": "County"
+},
+
+{
+  "id": "BerkeleyCountyWV",
+  "type": "County"
+},
+
+{
+  "id": "I66",
+  "type": "Corridor"
+},
+
+{
+  "id": "I81",
+  "type": "Corridor"
+},
+
+{
+  "id": "PortOfVirginia",
+  "type": "Port"
+},
+
+{
+  "id": "VirginiaInlandPort",
+  "type": "Port"
+},
+
+{
+  "id": "DataCenter",
+  "type": "Facility"
+},
+
+{
+  "id": "ServerRoom",
+  "type": "Facility"
+},
+
+{
+  "id": "RackServer",
+  "type": "Asset"
+},
+
+{
+  "id": "GPUServer",
+  "type": "Asset"
+},
+
+{
+  "id": "StorageArray",
+  "type": "Asset"
+},
+
+{
+  "id": "NetworkSwitch",
+  "type": "Asset"
+},
+
+{
+  "id": "Router",
+  "type": "Asset"
+},
+
+{
+  "id": "Firewall",
+  "type": "Asset"
+},
+
+{
+  "id": "UPS",
+  "type": "Asset"
+},
+
+{
+  "id": "BatteryCabinet",
+  "type": "Asset"
+},
+
+{
+  "id": "DataCenterRelocation",
+  "type": "Service"
+},
+
+{
+  "id": "ITEquipmentMoving",
+  "type": "Service"
+},
+
+{
+  "id": "ServerMigration",
+  "type": "Service"
+},
+
+{
+  "id": "IndustrialCrating",
+  "type": "Service"
+}
+
+],
+
+"relationships": [
+
+{
+  "source": "RackServer",
+  "relationship": "LOCATED_IN",
+  "target": "DataCenter"
+},
+
+{
+  "source": "GPUServer",
+  "relationship": "LOCATED_IN",
+  "target": "DataCenter"
+},
+
+{
+  "source": "StorageArray",
+  "relationship": "LOCATED_IN",
+  "target": "DataCenter"
+},
+
+{
+  "source": "NetworkSwitch",
+  "relationship": "CONNECTED_TO",
+  "target": "ServerRoom"
+},
+
+{
+  "source": "UPS",
+  "relationship": "SUPPORTS",
+  "target": "DataCenter"
+},
+
+{
+  "source": "BatteryCabinet",
+  "relationship": "SUPPORTED_BY",
+  "target": "UPS"
+},
+
+{
+  "source": "DataCenter",
+  "relationship": "LOCATED_IN",
+  "target": "Ashburn"
+},
+
+{
+  "source": "DataCenter",
+  "relationship": "LOCATED_IN",
+  "target": "Sterling"
+},
+
+{
+  "source": "DataCenter",
+  "relationship": "LOCATED_IN",
+  "target": "Leesburg"
+},
+
+{
+  "source": "Ashburn",
+  "relationship": "PART_OF",
+  "target": "LoudounCounty"
+},
+
+{
+  "source": "Sterling",
+  "relationship": "PART_OF",
+  "target": "LoudounCounty"
+},
+
+{
+  "source": "Leesburg",
+  "relationship": "PART_OF",
+  "target": "LoudounCounty"
+},
+
+{
+  "source": "Winchester",
+  "relationship": "PART_OF",
+  "target": "FrederickCountyVA"
+},
+
+{
+  "source": "Martinsburg",
+  "relationship": "PART_OF",
+  "target": "BerkeleyCountyWV"
+},
+
+{
+  "source": "LoudounCounty",
+  "relationship": "CONNECTED_TO",
+  "target": "I66"
+},
+
+{
+  "source": "FrederickCountyVA",
+  "relationship": "CONNECTED_TO",
+  "target": "I81"
+},
+
+{
+  "source": "BerkeleyCountyWV",
+  "relationship": "CONNECTED_TO",
+  "target": "I81"
+},
+
+{
+  "source": "I66",
+  "relationship": "CONNECTED_TO",
+  "target": "VirginiaInlandPort"
+},
+
+{
+  "source": "I81",
+  "relationship": "CONNECTED_TO",
+  "target": "VirginiaInlandPort"
+},
+
+{
+  "source": "VirginiaInlandPort",
+  "relationship": "CONNECTED_TO",
+  "target": "PortOfVirginia"
+},
+
+{
+  "source": "TheFlatRateMovers",
+  "relationship": "PROVIDES",
+  "target": "DataCenterRelocation"
+},
+
+{
+  "source": "TheFlatRateMovers",
+  "relationship": "PROVIDES",
+  "target": "ITEquipmentMoving"
+},
+
+{
+  "source": "TheFlatRateMovers",
+  "relationship": "PROVIDES",
+  "target": "ServerMigration"
+},
+
+{
+  "source": "TheFlatRateMovers",
+  "relationship": "PROVIDES",
+  "target": "IndustrialCrating"
+},
+
+{
+  "source": "DataCenterRelocation",
+  "relationship": "REQUIRES",
+  "target": "RackServer"
+},
+
+{
+  "source": "DataCenterRelocation",
+  "relationship": "REQUIRES",
+  "target": "GPUServer"
+},
+
+{
+  "source": "DataCenterRelocation",
+  "relationship": "REQUIRES",
+  "target": "StorageArray"
+}
+
+]
+}
