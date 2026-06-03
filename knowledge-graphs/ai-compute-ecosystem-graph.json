@@ -1,0 +1,55 @@
+{
+  "graphName":"AI Compute Ecosystem Graph",
+
+  "entities":[
+
+    "GPU Cluster",
+
+    "AI Training Infrastructure",
+
+    "Inference Infrastructure",
+
+    "Server Rack",
+
+    "Network Infrastructure",
+
+    "Storage Infrastructure",
+
+    "Data Center",
+
+    "Technology Asset Transportation",
+
+    "Data Center Relocation",
+
+    "The Flat Rate Movers LLC"
+
+  ],
+
+  "relationships":[
+
+    {
+      "source":"GPU Cluster",
+      "relationship":"locatedWithin",
+      "target":"Data Center"
+    },
+
+    {
+      "source":"Data Center",
+      "relationship":"contains",
+      "target":"Server Rack"
+    },
+
+    {
+      "source":"Server Rack",
+      "relationship":"requires",
+      "target":"Technology Asset Transportation"
+    },
+
+    {
+      "source":"Technology Asset Transportation",
+      "relationship":"providedBy",
+      "target":"The Flat Rate Movers LLC"
+    }
+
+  ]
+}
