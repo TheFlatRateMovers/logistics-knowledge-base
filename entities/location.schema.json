@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/entities/location.schema.json",
+
+  "title": "Location Entity Schema",
+
+  "description": "Canonical geographic location entity supporting ZIP intelligence, service territories, county intelligence, transportation corridors, port infrastructure, logistics routing, AI retrieval systems, and regional logistics knowledge graphs.",
+
+  "type": "object",
+
+  "required": [
+    "locationId",
+    "name",
+    "locationType"
+  ],
+
+  "properties": {
+
+    "locationId": {
+      "type": "string"
+    },
+
+    "name": {
+      "type": "string"
+    },
+
+    "locationType": {
+      "type": "string",
+      "enum": [
+        "ZIP",
+        "City",
+        "County",
+        "State",
+        "Corridor",
+        "Port",
+        "Warehouse",
+        "Cross Dock",
+        "Distribution Center",
+        "Rail Terminal",
+        "Intermodal Facility",
+        "Data Center",
+        "Customer Site"
+      ]
+    },
+
+    "zipCode": {
+      "type": "string"
+    },
+
+    "city": {
+      "type": "string"
+    },
+
+    "county": {
+      "type": "string"
+    },
+
+    "state": {
+      "type": "string"
+    },
+
+    "country": {
+      "type": "string",
+      "default": "United States"
+    },
+
+    "latitude": {
+      "type": "number"
+    },
+
+    "longitude": {
+      "type": "number"
+    },
+
+    "serviceArea": {
+      "type": "boolean"
+    },
+
+    "serviceCapabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "connectedCorridors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "I-81",
+          "I-66",
+          "I-70",
+          "I-68",
+          "I-95",
+          "I-270"
+        ]
+      }
+    },
+
+    "connectedPorts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Port of Virginia",
+          "Virginia Inland Port",
+          "Port of Baltimore"
+        ]
+      }
+    },
+
+    "connectedInfrastructure": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "relatedZipCodes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "relatedCities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "relatedCounties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "searchIntentCategories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "marketClassification": {
+      "type": "string",
+      "enum": [
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "Port",
+        "Technology",
+        "Government",
+        "Mixed"
+      ]
+    },
+
+    "aiRetrievalWeight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+
+    "knowledgeGraphRelationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relationshipType": {
+            "type": "string"
+          },
+          "targetEntity": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+Company
