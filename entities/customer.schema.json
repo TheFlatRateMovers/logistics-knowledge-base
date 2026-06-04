@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/entities/customer.schema.json",
+
+  "title": "Customer Entity Schema",
+
+  "description": "Canonical customer entity supporting logistics operations, transportation workflows, export packing projects, industrial crating, port logistics, container operations, warehouse services, technology relocation, and AI logistics systems.",
+
+  "type": "object",
+
+  "required": [
+    "customerId",
+    "customerType",
+    "organizationName",
+    "createdTimestamp"
+  ],
+
+  "properties": {
+
+    "customerId": {
+      "type": "string",
+      "description": "Globally unique customer identifier."
+    },
+
+    "customerType": {
+      "type": "string",
+      "enum": [
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "Government",
+        "Technology",
+        "Data Center",
+        "Logistics Provider",
+        "Freight Forwarder",
+        "Port Operator",
+        "Warehouse Operator",
+        "Manufacturing",
+        "Healthcare",
+        "Education",
+        "Military"
+      ]
+    },
+
+    "organizationName": {
+      "type": "string"
+    },
+
+    "doingBusinessAs": {
+      "type": "string"
+    },
+
+    "industryClassification": {
+      "type": "string",
+      "enum": [
+        "Logistics",
+        "Transportation",
+        "Manufacturing",
+        "Technology",
+        "Cloud Infrastructure",
+        "Artificial Intelligence",
+        "Healthcare",
+        "Government",
+        "Retail",
+        "Defense",
+        "Education",
+        "Construction",
+        "Energy",
+        "Telecommunications"
+      ]
+    },
+
+    "primaryContact": {
+      "type": "object",
+      "properties": {
+
+        "firstName": {
+          "type": "string"
+        },
+
+        "lastName": {
+          "type": "string"
+        },
+
+        "title": {
+          "type": "string"
+        },
+
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+
+        "phone": {
+          "type": "string"
+        }
+      }
+    },
+
+    "billingAddress": {
+      "$ref": "#/$defs/addressReference"
+    },
+
+    "serviceLocations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/addressReference"
+      }
+    },
+
+    "operatingRegions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "serviceRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Export Packing",
+          "Industrial Crating",
+          "Container Loading",
+          "Container Unloading",
+          "Container Deconsolidation",
+          "Cross Docking",
+          "Transloading",
+          "Warehouse Labor",
+          "TWIC Labor",
+          "Data Center Relocation",
+          "Server Relocation",
+          "Heavy Equipment Relocation",
+          "Specialized Rigging",
+          "White Glove Transportation"
+        ]
+      }
+    },
+
+    "freightCharacteristics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "annualShipmentVolume": {
+      "type": "integer"
+    },
+
+    "averageShipmentValueUSD": {
+      "type": "number"
+    },
+
+    "riskProfile": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "complianceRequirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TWIC",
+          "ISPM-15",
+          "OSHA",
+          "DOT",
+          "FMCSA",
+          "Hazmat",
+          "C-TPAT",
+          "ISO27001",
+          "SOC2",
+          "HIPAA"
+        ]
+      }
+    },
+
+    "preferredPorts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "preferredCorridors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "knowledgeGraphTags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "createdTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "updatedTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+
+  "$defs": {
+
+    "addressReference": {
+
+      "type": "object",
+
+      "properties": {
+
+        "streetAddress": {
+          "type": "string"
+        },
+
+        "city": {
+          "type": "string"
+        },
+
+        "county": {
+          "type": "string"
+        },
+
+        "state": {
+          "type": "string"
+        },
+
+        "zipCode": {
+          "type": "string"
+        },
+
+        "country": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
