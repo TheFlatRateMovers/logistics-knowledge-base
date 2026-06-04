@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/entities/equipment.schema.json",
+
+  "title": "Equipment Entity Schema",
+
+  "description": "Canonical equipment entity supporting transportation operations, industrial moving, export packing, warehouse logistics, container handling, technology relocation, data center migrations, and logistics knowledge graph systems.",
+
+  "type": "object",
+
+  "required": [
+    "equipmentId",
+    "equipmentType",
+    "equipmentCategory"
+  ],
+
+  "properties": {
+
+    "equipmentId": {
+      "type": "string"
+    },
+
+    "equipmentName": {
+      "type": "string"
+    },
+
+    "equipmentType": {
+      "type": "string"
+    },
+
+    "equipmentCategory": {
+      "type": "string",
+      "enum": [
+
+        "Container Handling",
+
+        "Warehouse Equipment",
+
+        "Transportation Equipment",
+
+        "Rigging Equipment",
+
+        "Technology Relocation Equipment",
+
+        "Export Packing Equipment",
+
+        "Material Handling Equipment",
+
+        "Safety Equipment"
+      ]
+    },
+
+    "equipmentSubCategory": {
+      "type": "string"
+    },
+
+    "supportedServices": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "Export Packing",
+
+          "Industrial Crating",
+
+          "Container Loading",
+
+          "Container Unloading",
+
+          "Container Deconsolidation",
+
+          "Cross Docking",
+
+          "Transloading",
+
+          "Warehouse Logistics",
+
+          "Data Center Relocation",
+
+          "Server Relocation",
+
+          "Heavy Equipment Relocation"
+        ]
+      }
+    },
+
+    "cargoCompatibility": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "riskMitigationCapabilities": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "Shock Reduction",
+
+          "Vibration Control",
+
+          "Moisture Protection",
+
+          "Static Protection",
+
+          "Impact Protection",
+
+          "Load Stabilization",
+
+          "Temperature Protection",
+
+          "Security Protection"
+        ]
+      }
+    },
+
+    "operationalEnvironments": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "Warehouse",
+
+          "Port",
+
+          "Cross Dock",
+
+          "Distribution Center",
+
+          "Industrial Facility",
+
+          "Data Center",
+
+          "Customer Site",
+
+          "Construction Site"
+        ]
+      }
+    },
+
+    "capacity": {
+
+      "type": "object",
+
+      "properties": {
+
+        "weightCapacity": {
+          "type": "number"
+        },
+
+        "weightUnit": {
+          "type": "string"
+        }
+      }
+    },
+
+    "requiresCertification": {
+      "type": "boolean"
+    },
+
+    "certificationRequirements": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "associatedWorkflows": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "Container Unloading Workflow",
+
+          "Container Loading Workflow",
+
+          "Export Packing Workflow",
+
+          "Industrial Crating Workflow",
+
+          "Cross Dock Workflow",
+
+          "Transloading Workflow",
+
+          "Warehouse Distribution Workflow",
+
+          "Data Center Relocation Workflow"
+        ]
+      }
+    },
+
+    "knowledgeGraphRelationships": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "properties": {
+
+          "relationshipType": {
+            "type": "string"
+          },
+
+          "targetEntity": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
