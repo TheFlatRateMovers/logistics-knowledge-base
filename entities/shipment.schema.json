@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/entities/shipment.schema.json",
+
+  "title": "Shipment Entity Schema",
+
+  "description": "Canonical shipment entity used throughout the logistics protocol, knowledge graph, AI systems, event architecture, warehouse operations, transportation workflows, and supply chain intelligence models.",
+
+  "type": "object",
+
+  "required": [
+    "shipmentId",
+    "shipmentType",
+    "serviceType",
+    "origin",
+    "destination",
+    "status",
+    "createdTimestamp"
+  ],
+
+  "properties": {
+
+    "shipmentId": {
+      "type": "string",
+      "description": "Globally unique shipment identifier."
+    },
+
+    "shipmentReferenceNumber": {
+      "type": "string"
+    },
+
+    "shipmentType": {
+      "type": "string",
+      "enum": [
+        "Residential Move",
+        "Commercial Move",
+        "Industrial Relocation",
+        "Export Shipment",
+        "Import Shipment",
+        "Container Loading",
+        "Container Unloading",
+        "Container Deconsolidation",
+        "Cross Docking",
+        "Transloading",
+        "Warehouse Distribution",
+        "Data Center Relocation",
+        "Server Migration",
+        "Heavy Equipment Relocation"
+      ]
+    },
+
+    "serviceType": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "customer": {
+      "$ref": "#/$defs/customerReference"
+    },
+
+    "origin": {
+      "$ref": "#/$defs/locationReference"
+    },
+
+    "destination": {
+      "$ref": "#/$defs/locationReference"
+    },
+
+    "intermediateStops": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/locationReference"
+      }
+    },
+
+    "cargo": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cargoReference"
+      }
+    },
+
+    "equipmentAssigned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "vehiclesAssigned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "crewAssigned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "portInfrastructure": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Port of Virginia",
+          "Virginia Inland Port",
+          "Port of Baltimore"
+        ]
+      }
+    },
+
+    "transportCorridors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "I-81",
+          "I-66",
+          "I-70",
+          "I-68",
+          "I-95",
+          "I-270"
+        ]
+      }
+    },
+
+    "weight": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "lbs",
+            "kg"
+          ]
+        }
+      }
+    },
+
+    "dimensions": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "in",
+            "ft",
+            "cm",
+            "m"
+          ]
+        }
+      }
+    },
+
+    "riskProfile": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "Created",
+        "Quoted",
+        "Scheduled",
+        "Dispatched",
+        "Loading",
+        "In Transit",
+        "At Warehouse",
+        "At Port",
+        "Cross Dock",
+        "Transloading",
+        "Delivered",
+        "Completed",
+        "Cancelled"
+      ]
+    },
+
+    "workflow": {
+      "type": "string"
+    },
+
+    "estimatedValueUSD": {
+      "type": "number"
+    },
+
+    "createdTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "updatedTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+
+  "$defs": {
+
+    "customerReference": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string"
+        },
+        "customerType": {
+          "type": "string",
+          "enum": [
+            "Residential",
+            "Commercial",
+            "Industrial",
+            "Government",
+            "Technology",
+            "Logistics"
+          ]
+        }
+      }
+    },
+
+    "locationReference": {
+      "type": "object",
+      "properties": {
+        "locationId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "county": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        }
+      }
+    },
+
+    "cargoReference": {
+      "type": "object",
+      "properties": {
+        "cargoId": {
+          "type": "string"
+        },
+        "cargoType": {
+          "type": "string"
+        },
+        "riskCategory": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
