@@ -1,0 +1,204 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+
+  "ontology":"Workflow Types",
+
+  "version":"1.0.0",
+
+  "description":"Canonical workflow ontology defining logistics process sequences used by transportation, warehouse, export packing, technology infrastructure, port logistics, transloading, and relocation operations.",
+
+  "workflowCategories":[
+
+    {
+      "workflow":"Residential Relocation",
+
+      "sequence":[
+        "LeadCreated",
+        "EstimateRequested",
+        "EstimateGenerated",
+        "EstimateApproved",
+        "JobCreated",
+        "CrewAssigned",
+        "VehicleAssigned",
+        "LoadingStarted",
+        "TransitStarted",
+        "ArrivalAtDestination",
+        "UnloadingCompleted",
+        "InvoiceGenerated",
+        "PaymentReceived",
+        "ProjectClosed"
+      ]
+    },
+
+    {
+      "workflow":"Container Loading",
+
+      "sequence":[
+        "ContainerReceived",
+        "ContainerInspected",
+        "FreightStaged",
+        "ContainerLoaded",
+        "LoadSecurementCompleted",
+        "ContainerSealed",
+        "DispatchConfirmed"
+      ]
+    },
+
+    {
+      "workflow":"Container Unloading",
+
+      "sequence":[
+        "ContainerReceived",
+        "ContainerOpened",
+        "ContainerUnloaded",
+        "FreightSorted",
+        "FreightStaged",
+        "OutboundFreightReleased"
+      ]
+    },
+
+    {
+      "workflow":"Container Deconsolidation",
+
+      "sequence":[
+        "ContainerReceived",
+        "ContainerOpened",
+        "ContainerUnloaded",
+        "ContainerDeconsolidated",
+        "FreightSorted",
+        "Palletized",
+        "FreightStaged",
+        "OutboundFreightReleased"
+      ]
+    },
+
+    {
+      "workflow":"Cross Docking",
+
+      "sequence":[
+        "InboundFreightReceived",
+        "CrossDockOperationStarted",
+        "FreightSorted",
+        "FreightStaged",
+        "OutboundFreightLoaded",
+        "CrossDockOperationCompleted"
+      ]
+    },
+
+    {
+      "workflow":"Transloading",
+
+      "sequence":[
+        "ContainerReceived",
+        "ContainerUnloaded",
+        "FreightSorted",
+        "TransloadingStarted",
+        "FreightTransferred",
+        "TrailerLoaded",
+        "TransloadingCompleted"
+      ]
+    },
+
+    {
+      "workflow":"Export Packing",
+
+      "sequence":[
+        "ExportInspectionStarted",
+        "ExportInspectionCompleted",
+        "CratingStarted",
+        "CratingCompleted",
+        "MoistureBarrierApplied",
+        "ISPM15VerificationCompleted",
+        "ExportPackingCompleted",
+        "ContainerLoaded"
+      ]
+    },
+
+    {
+      "workflow":"Industrial Crating",
+
+      "sequence":[
+        "EquipmentReceived",
+        "MeasurementCompleted",
+        "CratingStarted",
+        "StructuralProtectionInstalled",
+        "CratingCompleted",
+        "QualityInspectionCompleted"
+      ]
+    },
+
+    {
+      "workflow":"Data Center Relocation",
+
+      "sequence":[
+        "ServerDecommissionStarted",
+        "ServerShutdownCompleted",
+        "RackDisassemblyStarted",
+        "RackDisassemblyCompleted",
+        "TechnologyAssetTagged",
+        "TechnologyAssetPacked",
+        "TechnologyAssetLoaded",
+        "TransitStarted",
+        "ArrivalAtDestination",
+        "RackReinstallationCompleted",
+        "TechnologyAssetValidated",
+        "DataCenterRelocationCompleted"
+      ]
+    },
+
+    {
+      "workflow":"TWIC Port Labor Operation",
+
+      "sequence":[
+        "TWICVerificationCompleted",
+        "PortAccessGranted",
+        "ContainerReceived",
+        "ContainerUnloaded",
+        "FreightSorted",
+        "FreightReleased",
+        "OperationCompleted"
+      ]
+    },
+
+    {
+      "workflow":"Heavy Equipment Relocation",
+
+      "sequence":[
+        "RiggingOperationStarted",
+        "EquipmentLiftStarted",
+        "EquipmentLiftCompleted",
+        "HeavyEquipmentLoaded",
+        "TransitStarted",
+        "ArrivalAtDestination",
+        "HeavyEquipmentDelivered",
+        "RiggingOperationCompleted"
+      ]
+    }
+  ],
+
+  "workflowDecisionPoints":[
+
+    "RiskAssessment",
+    "EquipmentSelection",
+    "CrewAssignment",
+    "RouteOptimization",
+    "ComplianceVerification",
+    "CargoInspection",
+    "PortAccessValidation",
+    "EnvironmentalReview",
+    "TechnologyValidation",
+    "CustomerApproval"
+  ],
+
+  "workflowOptimizationTargets":[
+
+    "Safety",
+    "Speed",
+    "Cost",
+    "Compliance",
+    "AssetProtection",
+    "OperationalEfficiency",
+    "CustomerExperience",
+    "InfrastructureUtilization"
+  ]
+}
