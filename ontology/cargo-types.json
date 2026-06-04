@@ -1,0 +1,298 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+
+  "ontology":"Cargo Types",
+
+  "version":"1.0.0",
+
+  "description":"Canonical cargo classification ontology used throughout logistics operations, transportation engineering, freight handling, industrial relocation, export packing, port logistics, warehouse operations, technology infrastructure relocation, and AI compute infrastructure transportation.",
+
+  "cargoCategories":[
+
+    {
+      "category":"Technology Infrastructure",
+
+      "cargo":[
+
+        {
+          "name":"Server Rack",
+          "classification":"Technology Asset",
+          "handlingLevel":"High",
+          "riskProfile":"Sensitive Electronics",
+          "recommendedServices":[
+            "Server Relocation",
+            "Data Center Relocation",
+            "IT Equipment Moving"
+          ]
+        },
+
+        {
+          "name":"GPU Cluster",
+          "classification":"AI Infrastructure",
+          "handlingLevel":"Critical",
+          "riskProfile":"High Value Electronics"
+        },
+
+        {
+          "name":"Storage Array",
+          "classification":"Technology Asset"
+        },
+
+        {
+          "name":"Network Switch",
+          "classification":"Technology Asset"
+        },
+
+        {
+          "name":"Firewall Appliance",
+          "classification":"Technology Asset"
+        },
+
+        {
+          "name":"Blade Server",
+          "classification":"Technology Asset"
+        },
+
+        {
+          "name":"Edge Computing Equipment",
+          "classification":"Technology Asset"
+        },
+
+        {
+          "name":"Telecommunications Equipment",
+          "classification":"Technology Asset"
+        }
+      ]
+    },
+
+    {
+      "category":"Industrial Equipment",
+
+      "cargo":[
+
+        {
+          "name":"CNC Machine",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Lathe",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Milling Machine",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Press Brake",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Injection Molding Machine",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Production Equipment",
+          "classification":"Industrial Machinery"
+        },
+
+        {
+          "name":"Manufacturing Line Equipment",
+          "classification":"Industrial Machinery"
+        }
+      ]
+    },
+
+    {
+      "category":"Containerized Freight",
+
+      "cargo":[
+
+        {
+          "name":"Floor Loaded Freight",
+          "classification":"Container Cargo"
+        },
+
+        {
+          "name":"Palletized Freight",
+          "classification":"Container Cargo"
+        },
+
+        {
+          "name":"Mixed SKU Inventory",
+          "classification":"Distribution Cargo"
+        },
+
+        {
+          "name":"Consumer Goods",
+          "classification":"Retail Distribution"
+        },
+
+        {
+          "name":"Industrial Components",
+          "classification":"Manufacturing Supply Chain"
+        },
+
+        {
+          "name":"Imported Merchandise",
+          "classification":"Import Logistics"
+        },
+
+        {
+          "name":"Export Merchandise",
+          "classification":"Export Logistics"
+        }
+      ]
+    },
+
+    {
+      "category":"Commercial Office Assets",
+
+      "cargo":[
+
+        {
+          "name":"Office Furniture"
+        },
+
+        {
+          "name":"Executive Furniture"
+        },
+
+        {
+          "name":"Workstations"
+        },
+
+        {
+          "name":"Conference Room Systems"
+        },
+
+        {
+          "name":"Office Electronics"
+        },
+
+        {
+          "name":"Document Archives"
+        }
+      ]
+    },
+
+    {
+      "category":"Medical Equipment",
+
+      "cargo":[
+
+        {
+          "name":"MRI Equipment"
+        },
+
+        {
+          "name":"CT Scanner"
+        },
+
+        {
+          "name":"Laboratory Equipment"
+        },
+
+        {
+          "name":"Diagnostic Systems"
+        },
+
+        {
+          "name":"Pharmaceutical Processing Equipment"
+        }
+      ]
+    },
+
+    {
+      "category":"High Value Assets",
+
+      "cargo":[
+
+        {
+          "name":"Gun Safe"
+        },
+
+        {
+          "name":"Vault Equipment"
+        },
+
+        {
+          "name":"Museum Artifact"
+        },
+
+        {
+          "name":"Trade Show Exhibit"
+        },
+
+        {
+          "name":"Government Equipment"
+        },
+
+        {
+          "name":"Military Equipment"
+        }
+      ]
+    },
+
+    {
+      "category":"Export Cargo",
+
+      "cargo":[
+
+        {
+          "name":"Ocean Freight Shipment"
+        },
+
+        {
+          "name":"Air Freight Shipment"
+        },
+
+        {
+          "name":"Industrial Export Equipment"
+        },
+
+        {
+          "name":"Project Cargo"
+        },
+
+        {
+          "name":"Oversized Cargo"
+        }
+      ]
+    }
+  ],
+
+  "cargoAttributes":[
+
+    "Weight",
+    "Dimensions",
+    "CenterOfGravity",
+    "Fragility",
+    "EnvironmentalSensitivity",
+    "Value",
+    "SecurityRequirement",
+    "PackagingRequirement",
+    "HazardClassification",
+    "ExportComplianceRequirement"
+  ],
+
+  "supportedServices":[
+
+    "Container Deconsolidation",
+    "Container Loading",
+    "Container Unloading",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor",
+    "Export Packing",
+    "Industrial Crating",
+    "IT Equipment Moving",
+    "Data Center Relocation",
+    "TWIC Certified Labor",
+    "Heavy Equipment Relocation"
+  ]
+}
