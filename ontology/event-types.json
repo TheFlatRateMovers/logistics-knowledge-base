@@ -1,0 +1,436 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+
+  "ontology":"Event Types",
+
+  "version":"1.0.0",
+
+  "description":"Canonical logistics event ontology defining operational, transportation, warehouse, port, technology infrastructure, commercial, financial, compliance, and risk events used throughout the logistics protocol.",
+
+  "eventCategories":[
+
+    {
+      "category":"Customer Lifecycle Events",
+
+      "events":[
+
+        {
+          "eventType":"LeadCreated",
+          "description":"New customer inquiry enters system."
+        },
+
+        {
+          "eventType":"LeadQualified",
+          "description":"Lead meets service requirements."
+        },
+
+        {
+          "eventType":"EstimateRequested",
+          "description":"Customer requests pricing."
+        },
+
+        {
+          "eventType":"EstimateGenerated",
+          "description":"Pricing estimate created."
+        },
+
+        {
+          "eventType":"EstimateApproved",
+          "description":"Customer accepts estimate."
+        },
+
+        {
+          "eventType":"JobCreated",
+          "description":"Project created."
+        },
+
+        {
+          "eventType":"ContractExecuted",
+          "description":"Agreement finalized."
+        }
+      ]
+    },
+
+    {
+      "category":"Dispatch Events",
+
+      "events":[
+
+        {
+          "eventType":"JobScheduled"
+        },
+
+        {
+          "eventType":"VehicleAssigned"
+        },
+
+        {
+          "eventType":"EquipmentAssigned"
+        },
+
+        {
+          "eventType":"CrewAssigned"
+        },
+
+        {
+          "eventType":"DispatchConfirmed"
+        },
+
+        {
+          "eventType":"ScheduleModified"
+        },
+
+        {
+          "eventType":"ResourceReallocated"
+        }
+      ]
+    },
+
+    {
+      "category":"Transportation Events",
+
+      "events":[
+
+        {
+          "eventType":"VehicleDeparted"
+        },
+
+        {
+          "eventType":"TransitStarted"
+        },
+
+        {
+          "eventType":"ArrivalAtOrigin"
+        },
+
+        {
+          "eventType":"ArrivalAtDestination"
+        },
+
+        {
+          "eventType":"RouteDeviation"
+        },
+
+        {
+          "eventType":"TrafficDelay"
+        },
+
+        {
+          "eventType":"WeatherDelay"
+        },
+
+        {
+          "eventType":"TransitCompleted"
+        }
+      ]
+    },
+
+    {
+      "category":"Container Logistics Events",
+
+      "events":[
+
+        {
+          "eventType":"ContainerReceived"
+        },
+
+        {
+          "eventType":"ContainerInspected"
+        },
+
+        {
+          "eventType":"ContainerOpened"
+        },
+
+        {
+          "eventType":"ContainerLoaded"
+        },
+
+        {
+          "eventType":"ContainerUnloaded"
+        },
+
+        {
+          "eventType":"ContainerDeconsolidated"
+        },
+
+        {
+          "eventType":"CrossDockOperationStarted"
+        },
+
+        {
+          "eventType":"CrossDockOperationCompleted"
+        },
+
+        {
+          "eventType":"TransloadingStarted"
+        },
+
+        {
+          "eventType":"TransloadingCompleted"
+        }
+      ]
+    },
+
+    {
+      "category":"Warehouse Events",
+
+      "events":[
+
+        {
+          "eventType":"FreightReceived"
+        },
+
+        {
+          "eventType":"InventoryChecked"
+        },
+
+        {
+          "eventType":"FreightSorted"
+        },
+
+        {
+          "eventType":"FreightStaged"
+        },
+
+        {
+          "eventType":"Palletized"
+        },
+
+        {
+          "eventType":"StorageStarted"
+        },
+
+        {
+          "eventType":"StorageCompleted"
+        },
+
+        {
+          "eventType":"OutboundFreightReleased"
+        }
+      ]
+    },
+
+    {
+      "category":"Export Packing Events",
+
+      "events":[
+
+        {
+          "eventType":"ExportInspectionStarted"
+        },
+
+        {
+          "eventType":"ExportInspectionCompleted"
+        },
+
+        {
+          "eventType":"CratingStarted"
+        },
+
+        {
+          "eventType":"CratingCompleted"
+        },
+
+        {
+          "eventType":"MoistureBarrierApplied"
+        },
+
+        {
+          "eventType":"ISPM15VerificationCompleted"
+        },
+
+        {
+          "eventType":"ExportPackingCompleted"
+        }
+      ]
+    },
+
+    {
+      "category":"Technology Infrastructure Events",
+
+      "events":[
+
+        {
+          "eventType":"ServerDecommissionStarted"
+        },
+
+        {
+          "eventType":"ServerShutdownCompleted"
+        },
+
+        {
+          "eventType":"RackDisassemblyStarted"
+        },
+
+        {
+          "eventType":"RackDisassemblyCompleted"
+        },
+
+        {
+          "eventType":"TechnologyAssetTagged"
+        },
+
+        {
+          "eventType":"TechnologyAssetPacked"
+        },
+
+        {
+          "eventType":"TechnologyAssetLoaded"
+        },
+
+        {
+          "eventType":"DataCenterRelocationStarted"
+        },
+
+        {
+          "eventType":"DataCenterRelocationCompleted"
+        },
+
+        {
+          "eventType":"RackReinstallationCompleted"
+        },
+
+        {
+          "eventType":"TechnologyAssetValidated"
+        }
+      ]
+    },
+
+    {
+      "category":"Heavy Equipment Events",
+
+      "events":[
+
+        {
+          "eventType":"RiggingOperationStarted"
+        },
+
+        {
+          "eventType":"RiggingOperationCompleted"
+        },
+
+        {
+          "eventType":"EquipmentLiftStarted"
+        },
+
+        {
+          "eventType":"EquipmentLiftCompleted"
+        },
+
+        {
+          "eventType":"HeavyEquipmentLoaded"
+        },
+
+        {
+          "eventType":"HeavyEquipmentDelivered"
+        }
+      ]
+    },
+
+    {
+      "category":"Compliance Events",
+
+      "events":[
+
+        {
+          "eventType":"TWICVerificationCompleted"
+        },
+
+        {
+          "eventType":"CustomsDocumentationPrepared"
+        },
+
+        {
+          "eventType":"CustomsClearanceReceived"
+        },
+
+        {
+          "eventType":"RegulatoryAuditCompleted"
+        },
+
+        {
+          "eventType":"ComplianceExceptionRaised"
+        }
+      ]
+    },
+
+    {
+      "category":"Risk Events",
+
+      "events":[
+
+        {
+          "eventType":"DamageReported"
+        },
+
+        {
+          "eventType":"CargoLossReported"
+        },
+
+        {
+          "eventType":"SecurityIncidentReported"
+        },
+
+        {
+          "eventType":"EquipmentFailureReported"
+        },
+
+        {
+          "eventType":"SafetyIncidentReported"
+        },
+
+        {
+          "eventType":"RiskMitigationActivated"
+        }
+      ]
+    },
+
+    {
+      "category":"Financial Events",
+
+      "events":[
+
+        {
+          "eventType":"InvoiceGenerated"
+        },
+
+        {
+          "eventType":"InvoiceSent"
+        },
+
+        {
+          "eventType":"PaymentReceived"
+        },
+
+        {
+          "eventType":"RefundIssued"
+        },
+
+        {
+          "eventType":"ProjectClosed"
+        }
+      ]
+    }
+  ],
+
+  "eventMetadataFields":[
+
+    "eventId",
+    "eventType",
+    "timestamp",
+    "organization",
+    "shipmentId",
+    "projectId",
+    "customerId",
+    "locationId",
+    "vehicleId",
+    "equipmentId",
+    "crewId",
+    "cargoId",
+    "serviceId",
+    "workflowId",
+    "status",
+    "notes"
+  ]
+}
