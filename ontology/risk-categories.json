@@ -1,0 +1,310 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+
+  "ontology":"Risk Categories",
+
+  "version":"1.0.0",
+
+  "description":"Canonical logistics risk ontology defining operational, transportation, cargo, infrastructure, compliance, technology, and supply chain risks associated with logistics operations.",
+
+  "riskCategories":[
+
+    {
+      "category":"Cargo Damage Risk",
+
+      "risks":[
+
+        {
+          "name":"Impact Damage",
+          "severity":"High",
+          "mitigation":[
+            "Crating",
+            "Padding",
+            "Shock Absorption"
+          ]
+        },
+
+        {
+          "name":"Vibration Damage",
+          "severity":"High",
+          "mitigation":[
+            "Air Ride Transportation",
+            "Shock Isolation"
+          ]
+        },
+
+        {
+          "name":"Compression Damage",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Forklift Damage",
+          "severity":"High"
+        },
+
+        {
+          "name":"Load Shift",
+          "severity":"High"
+        }
+      ]
+    },
+
+    {
+      "category":"Technology Infrastructure Risk",
+
+      "risks":[
+
+        {
+          "name":"Electrostatic Discharge",
+          "severity":"Critical",
+          "mitigation":[
+            "ESD Protection",
+            "Grounding Systems"
+          ]
+        },
+
+        {
+          "name":"Server Rack Instability",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Hardware Failure During Relocation",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Data Center Downtime Exposure",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Network Infrastructure Disruption",
+          "severity":"Critical"
+        }
+      ]
+    },
+
+    {
+      "category":"Container Logistics Risk",
+
+      "risks":[
+
+        {
+          "name":"Container Floor Collapse",
+          "severity":"High"
+        },
+
+        {
+          "name":"Improper Freight Segregation",
+          "severity":"High"
+        },
+
+        {
+          "name":"SKU Mixing",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Cross Dock Delay",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Transloading Error",
+          "severity":"High"
+        },
+
+        {
+          "name":"Freight Misrouting",
+          "severity":"High"
+        }
+      ]
+    },
+
+    {
+      "category":"Heavy Equipment Risk",
+
+      "risks":[
+
+        {
+          "name":"Center Of Gravity Shift",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Rigging Failure",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Overloading",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Structural Damage",
+          "severity":"High"
+        },
+
+        {
+          "name":"Crushing Hazard",
+          "severity":"Critical"
+        }
+      ]
+    },
+
+    {
+      "category":"Environmental Risk",
+
+      "risks":[
+
+        {
+          "name":"Moisture Exposure",
+          "severity":"High"
+        },
+
+        {
+          "name":"Humidity Exposure",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Corrosion",
+          "severity":"High"
+        },
+
+        {
+          "name":"Temperature Extremes",
+          "severity":"High"
+        },
+
+        {
+          "name":"Water Intrusion",
+          "severity":"Critical"
+        }
+      ]
+    },
+
+    {
+      "category":"Operational Risk",
+
+      "risks":[
+
+        {
+          "name":"Labor Shortage",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Equipment Failure",
+          "severity":"High"
+        },
+
+        {
+          "name":"Route Delay",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Traffic Disruption",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Weather Disruption",
+          "severity":"Medium"
+        }
+      ]
+    },
+
+    {
+      "category":"Compliance Risk",
+
+      "risks":[
+
+        {
+          "name":"ISPM15 Non Compliance",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"TWIC Access Restriction",
+          "severity":"High"
+        },
+
+        {
+          "name":"Export Documentation Failure",
+          "severity":"Critical"
+        },
+
+        {
+          "name":"Customs Hold",
+          "severity":"High"
+        },
+
+        {
+          "name":"Regulatory Violation",
+          "severity":"Critical"
+        }
+      ]
+    },
+
+    {
+      "category":"Security Risk",
+
+      "risks":[
+
+        {
+          "name":"Cargo Theft",
+          "severity":"High"
+        },
+
+        {
+          "name":"Unauthorized Access",
+          "severity":"High"
+        },
+
+        {
+          "name":"Inventory Loss",
+          "severity":"Medium"
+        },
+
+        {
+          "name":"Chain Of Custody Failure",
+          "severity":"High"
+        }
+      ]
+    }
+  ],
+
+  "riskEvaluationFactors":[
+
+    "Cargo Type",
+    "Weight",
+    "Value",
+    "Transportation Mode",
+    "Distance",
+    "Packaging Method",
+    "Environmental Conditions",
+    "Handling Frequency",
+    "Infrastructure Requirements",
+    "Security Requirements",
+    "Compliance Requirements"
+  ],
+
+  "riskMitigationServices":[
+
+    "Export Packing",
+    "Industrial Crating",
+    "Container Deconsolidation",
+    "Cross Docking",
+    "Transloading",
+    "Warehouse Labor",
+    "TWIC Certified Labor",
+    "Data Center Relocation",
+    "IT Equipment Moving",
+    "Heavy Equipment Relocation"
+  ]
+}
