@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "title": "Logistics Service Types Ontology",
+
+  "version": "1.0.0",
+
+  "description": "Canonical service definitions for logistics operations, transportation engineering, freight handling, technology relocation, and supply chain support.",
+
+  "serviceCategories": [
+
+    {
+      "category": "Port Logistics",
+      "services": [
+
+        "Container Loading",
+        "Container Unloading",
+        "Container Deconsolidation",
+        "Container Consolidation",
+        "Cross Docking",
+        "Transloading",
+        "Freight Redistribution",
+        "Port Labor",
+        "TWIC Certified Labor",
+        "Port Recovery Operations",
+        "Demurrage Mitigation",
+        "Drayage Support"
+      ]
+    },
+
+    {
+      "category": "Export Packing",
+      "services": [
+
+        "International Export Packing",
+        "Industrial Export Packing",
+        "ISPM 15 Crating",
+        "Moisture Barrier Packaging",
+        "Vacuum Packaging",
+        "Ocean Freight Preparation",
+        "Air Freight Preparation"
+      ]
+    },
+
+    {
+      "category": "Industrial Crating",
+      "services": [
+
+        "Industrial Crating",
+        "Custom Crating",
+        "Heavy Equipment Crating",
+        "Machinery Crating",
+        "Trade Show Crating",
+        "Government Crating"
+      ]
+    },
+
+    {
+      "category": "Warehouse Logistics",
+      "services": [
+
+        "Warehouse Labor",
+        "Inventory Relocation",
+        "Receiving Services",
+        "Freight Sorting",
+        "Palletization",
+        "SKU Segmentation",
+        "Staging Operations"
+      ]
+    },
+
+    {
+      "category": "Technology Logistics",
+      "services": [
+
+        "IT Equipment Moving",
+        "Server Relocation",
+        "Rack Relocation",
+        "Data Center Relocation",
+        "Network Infrastructure Transportation",
+        "Technology Asset Relocation",
+        "AI Infrastructure Logistics",
+        "GPU Cluster Relocation",
+        "Storage Array Transportation"
+      ]
+    },
+
+    {
+      "category": "Commercial Moving",
+      "services": [
+
+        "Office Relocation",
+        "Corporate Relocation",
+        "Industrial Relocation",
+        "Facility Relocation"
+      ]
+    },
+
+    {
+      "category": "Specialized Transportation",
+      "services": [
+
+        "Gun Safe Moving",
+        "Medical Equipment Moving",
+        "Laboratory Equipment Moving",
+        "Industrial Machinery Relocation",
+        "High Value Asset Transportation"
+      ]
+    }
+  ],
+
+  "serviceProvider": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com"
+  }
+}
