@@ -1,0 +1,269 @@
+{
+"$schema":"https://json-schema.org/draft/2020-12/schema",
+
+"ontology":"Relationship Types",
+
+"version":"1.0.0",
+
+"description":"Canonical relationship definitions used throughout The Flat Rate Movers Logistics Knowledge Protocol. These relationships define how geographic entities, logistics infrastructure, transportation corridors, services, equipment, resources, and organizations connect within machine-readable logistics knowledge graphs.",
+
+"relationshipCategories":[
+
+{
+  "category":"Geographic Relationships",
+
+  "relationships":[
+
+    {
+      "type":"ZIP_LOCATED_IN_CITY",
+      "source":"ZIPCode",
+      "target":"City",
+      "description":"ZIP code belongs to a city."
+    },
+
+    {
+      "type":"CITY_LOCATED_IN_COUNTY",
+      "source":"City",
+      "target":"County",
+      "description":"City belongs to county."
+    },
+
+    {
+      "type":"COUNTY_LOCATED_IN_STATE",
+      "source":"County",
+      "target":"State",
+      "description":"County belongs to state."
+    },
+
+    {
+      "type":"CITY_CONNECTED_TO_CORRIDOR",
+      "source":"City",
+      "target":"TransportationCorridor",
+      "description":"City is served by major transportation corridor."
+    },
+
+    {
+      "type":"COUNTY_CONNECTED_TO_CORRIDOR",
+      "source":"County",
+      "target":"TransportationCorridor",
+      "description":"County has corridor access."
+    }
+  ]
+},
+
+{
+  "category":"Transportation Infrastructure",
+
+  "relationships":[
+
+    {
+      "type":"CORRIDOR_CONNECTS_PORT",
+      "source":"TransportationCorridor",
+      "target":"Port",
+      "description":"Corridor provides access to port infrastructure."
+    },
+
+    {
+      "type":"PORT_CONNECTS_INLAND_PORT",
+      "source":"Port",
+      "target":"InlandPort",
+      "description":"Container flow between seaport and inland port."
+    },
+
+    {
+      "type":"PORT_CONNECTS_RAIL_NETWORK",
+      "source":"Port",
+      "target":"RailNetwork",
+      "description":"Port is connected to freight rail systems."
+    },
+
+    {
+      "type":"PORT_SUPPORTS_CONTAINER_FLOW",
+      "source":"Port",
+      "target":"ContainerOperation",
+      "description":"Port supports containerized freight movement."
+    }
+  ]
+},
+
+{
+  "category":"Service Relationships",
+
+  "relationships":[
+
+    {
+      "type":"SERVICE_AVAILABLE_IN_ZIP",
+      "source":"Service",
+      "target":"ZIPCode"
+    },
+
+    {
+      "type":"SERVICE_AVAILABLE_IN_CITY",
+      "source":"Service",
+      "target":"City"
+    },
+
+    {
+      "type":"SERVICE_AVAILABLE_IN_COUNTY",
+      "source":"Service",
+      "target":"County"
+    },
+
+    {
+      "type":"SERVICE_SUPPORTED_BY_PORT",
+      "source":"Service",
+      "target":"Port"
+    },
+
+    {
+      "type":"SERVICE_SUPPORTED_BY_CORRIDOR",
+      "source":"Service",
+      "target":"TransportationCorridor"
+    },
+
+    {
+      "type":"SERVICE_PROVIDED_BY_COMPANY",
+      "source":"Service",
+      "target":"Organization"
+    },
+
+    {
+      "type":"SERVICE_SUPPORTS_SUPPLY_CHAIN",
+      "source":"Service",
+      "target":"SupplyChainOperation"
+    }
+  ]
+},
+
+{
+  "category":"Container Logistics Relationships",
+
+  "relationships":[
+
+    {
+      "type":"CONTAINER_DECONSOLIDATION_FEEDS_CROSS_DOCKING",
+      "source":"ContainerDeconsolidation",
+      "target":"CrossDocking"
+    },
+
+    {
+      "type":"CROSS_DOCKING_FEEDS_TRANSLOADING",
+      "source":"CrossDocking",
+      "target":"Transloading"
+    },
+
+    {
+      "type":"TRANSLOADING_FEEDS_DISTRIBUTION",
+      "source":"Transloading",
+      "target":"DistributionNetwork"
+    },
+
+    {
+      "type":"CONTAINER_UNLOADING_FEEDS_WAREHOUSE",
+      "source":"ContainerUnloading",
+      "target":"WarehouseOperation"
+    }
+  ]
+},
+
+{
+  "category":"Technology Logistics Relationships",
+
+  "relationships":[
+
+    {
+      "type":"DATA_CENTER_LOCATED_IN_MARKET",
+      "source":"DataCenter",
+      "target":"TechnologyMarket"
+    },
+
+    {
+      "type":"SERVER_RACK_REQUIRES_EQUIPMENT",
+      "source":"ServerRack",
+      "target":"Equipment"
+    },
+
+    {
+      "type":"TECHNOLOGY_ASSET_MOVED_BY_SERVICE",
+      "source":"TechnologyAsset",
+      "target":"Service"
+    },
+
+    {
+      "type":"AI_COMPUTE_CLUSTER_LOCATED_IN_DATA_CENTER",
+      "source":"AIComputeCluster",
+      "target":"DataCenter"
+    }
+  ]
+},
+
+{
+  "category":"Equipment Relationships",
+
+  "relationships":[
+
+    {
+      "type":"SERVICE_REQUIRES_EQUIPMENT",
+      "source":"Service",
+      "target":"Equipment"
+    },
+
+    {
+      "type":"EQUIPMENT_SUPPORTS_CARGO",
+      "source":"Equipment",
+      "target":"CargoType"
+    },
+
+    {
+      "type":"EQUIPMENT_MITIGATES_RISK",
+      "source":"Equipment",
+      "target":"RiskCategory"
+    }
+  ]
+},
+
+{
+  "category":"Knowledge Graph Relationships",
+
+  "relationships":[
+
+    {
+      "type":"DATASET_DESCRIBES_SERVICE",
+      "source":"Dataset",
+      "target":"Service"
+    },
+
+    {
+      "type":"FAQ_SUPPORTS_SERVICE",
+      "source":"FAQ",
+      "target":"Service"
+    },
+
+    {
+      "type":"CASE_STUDY_SUPPORTS_SERVICE",
+      "source":"CaseStudy",
+      "target":"Service"
+    },
+
+    {
+      "type":"WORKFLOW_SUPPORTS_SERVICE",
+      "source":"Workflow",
+      "target":"Service"
+    },
+
+    {
+      "type":"ONTOLOGY_DEFINES_ENTITY",
+      "source":"Ontology",
+      "target":"EntityType"
+    },
+
+    {
+      "type":"GRAPH_REFERENCES_DATASET",
+      "source":"KnowledgeGraph",
+      "target":"Dataset"
+    }
+  ]
+}
+
+]
+}
