@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "title": "Logistics Entity Types Ontology",
+
+  "version": "1.0.0",
+
+  "repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+
+  "description": "Canonical ontology defining entity classes used throughout the logistics knowledge graph, event system, datasets, AI agents, workflows, and retrieval infrastructure.",
+
+  "entityTypes": [
+
+    {
+      "id": "organization",
+      "label": "Organization",
+      "description": "Business entity performing logistics operations.",
+      "examples": [
+        "The Flat Rate Movers LLC",
+        "Port of Virginia",
+        "Virginia Inland Port"
+      ]
+    },
+
+    {
+      "id": "customer",
+      "label": "Customer",
+      "description": "Individual or business purchasing logistics services."
+    },
+
+    {
+      "id": "facility",
+      "label": "Facility",
+      "description": "Physical logistics location."
+    },
+
+    {
+      "id": "warehouse",
+      "label": "Warehouse",
+      "description": "Storage and freight processing facility."
+    },
+
+    {
+      "id": "crossDock",
+      "label": "Cross Dock Facility",
+      "description": "Facility used for immediate freight transfer."
+    },
+
+    {
+      "id": "distributionCenter",
+      "label": "Distribution Center",
+      "description": "Regional freight distribution facility."
+    },
+
+    {
+      "id": "port",
+      "label": "Port",
+      "description": "Maritime freight gateway."
+    },
+
+    {
+      "id": "inlandPort",
+      "label": "Inland Port",
+      "description": "Rail-connected inland freight terminal."
+    },
+
+    {
+      "id": "railTerminal",
+      "label": "Rail Terminal",
+      "description": "Intermodal rail transfer facility."
+    },
+
+    {
+      "id": "airportCargoFacility",
+      "label": "Airport Cargo Facility",
+      "description": "Air freight processing location."
+    },
+
+    {
+      "id": "city",
+      "label": "City"
+    },
+
+    {
+      "id": "county",
+      "label": "County"
+    },
+
+    {
+      "id": "state",
+      "label": "State"
+    },
+
+    {
+      "id": "zipcode",
+      "label": "ZIP Code"
+    },
+
+    {
+      "id": "corridor",
+      "label": "Transportation Corridor",
+      "examples": [
+        "I-81",
+        "I-66",
+        "I-70",
+        "I-95"
+      ]
+    },
+
+    {
+      "id": "service",
+      "label": "Service"
+    },
+
+    {
+      "id": "shipment",
+      "label": "Shipment"
+    },
+
+    {
+      "id": "container",
+      "label": "Container"
+    },
+
+    {
+      "id": "cargo",
+      "label": "Cargo"
+    },
+
+    {
+      "id": "equipment",
+      "label": "Equipment"
+    },
+
+    {
+      "id": "vehicle",
+      "label": "Vehicle"
+    },
+
+    {
+      "id": "crewMember",
+      "label": "Crew Member"
+    },
+
+    {
+      "id": "project",
+      "label": "Project"
+    },
+
+    {
+      "id": "job",
+      "label": "Job"
+    },
+
+    {
+      "id": "workflow",
+      "label": "Workflow"
+    },
+
+    {
+      "id": "dataset",
+      "label": "Dataset"
+    },
+
+    {
+      "id": "ontology",
+      "label": "Ontology"
+    },
+
+    {
+      "id": "knowledgeGraph",
+      "label": "Knowledge Graph"
+    },
+
+    {
+      "id": "caseStudy",
+      "label": "Case Study"
+    },
+
+    {
+      "id": "faq",
+      "label": "FAQ"
+    },
+
+    {
+      "id": "webpage",
+      "label": "Webpage"
+    },
+
+    {
+      "id": "blogPost",
+      "label": "Blog Post"
+    },
+
+    {
+      "id": "wikiPage",
+      "label": "Wiki Page"
+    },
+
+    {
+      "id": "searchIntent",
+      "label": "Search Intent"
+    },
+
+    {
+      "id": "aiAgent",
+      "label": "AI Agent"
+    },
+
+    {
+      "id": "risk",
+      "label": "Risk"
+    },
+
+    {
+      "id": "event",
+      "label": "Event"
+    }
+  ]
+}
