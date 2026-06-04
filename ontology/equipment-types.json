@@ -1,0 +1,293 @@
+{
+"$schema":"https://json-schema.org/draft/2020-12/schema",
+
+"ontology":"Equipment Types",
+
+"version":"1.0.0",
+
+"description":"Canonical equipment classification ontology used across logistics operations, freight engineering, industrial relocation, container logistics, port services, warehouse operations, export packing, technology infrastructure relocation, and AI compute infrastructure transportation.",
+
+"equipmentCategories":[
+
+{
+  "category":"Container Handling Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Forklift",
+      "capacity":"3000-30000 lbs",
+      "uses":[
+        "Container Unloading",
+        "Container Loading",
+        "Cross Docking",
+        "Transloading"
+      ]
+    },
+
+    {
+      "name":"Reach Forklift",
+      "uses":[
+        "Container Access",
+        "Warehouse Operations"
+      ]
+    },
+
+    {
+      "name":"Container Ramp",
+      "uses":[
+        "Floor Loaded Containers",
+        "Pallet Transfer"
+      ]
+    },
+
+    {
+      "name":"Dock Plate",
+      "uses":[
+        "Cross Docking",
+        "Trailer Loading"
+      ]
+    },
+
+    {
+      "name":"Container Bridge Plate",
+      "uses":[
+        "Container Deconsolidation"
+      ]
+    }
+  ]
+},
+
+{
+  "category":"Warehouse Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Electric Pallet Jack"
+    },
+
+    {
+      "name":"Manual Pallet Jack"
+    },
+
+    {
+      "name":"Walkie Rider"
+    },
+
+    {
+      "name":"Order Picker"
+    },
+
+    {
+      "name":"Warehouse Tugger"
+    }
+  ]
+},
+
+{
+  "category":"Export Packing Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Industrial Crating System"
+    },
+
+    {
+      "name":"Vacuum Barrier Sealing Equipment"
+    },
+
+    {
+      "name":"ISPM15 Lumber Processing Equipment"
+    },
+
+    {
+      "name":"Shock Monitoring Devices"
+    },
+
+    {
+      "name":"Tilt Monitoring Devices"
+    },
+
+    {
+      "name":"Moisture Protection Systems"
+    }
+  ]
+},
+
+{
+  "category":"Heavy Rigging Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Hydraulic Gantry System",
+      "capacity":"10-1000 tons"
+    },
+
+    {
+      "name":"Toe Jack"
+    },
+
+    {
+      "name":"Machine Skates"
+    },
+
+    {
+      "name":"Air Skates"
+    },
+
+    {
+      "name":"Chain Hoist"
+    },
+
+    {
+      "name":"Lever Hoist"
+    },
+
+    {
+      "name":"Spreader Bar"
+    },
+
+    {
+      "name":"Lifting Beam"
+    }
+  ]
+},
+
+{
+  "category":"Technology Relocation Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Server Cart"
+    },
+
+    {
+      "name":"Server Lift"
+    },
+
+    {
+      "name":"Rack Transport Cart"
+    },
+
+    {
+      "name":"ESD Safe Packing Systems"
+    },
+
+    {
+      "name":"Anti Static Equipment"
+    },
+
+    {
+      "name":"Rack Stabilization Frame"
+    },
+
+    {
+      "name":"Data Center Floor Protection System"
+    },
+
+    {
+      "name":"Cable Management Transport System"
+    }
+  ]
+},
+
+{
+  "category":"Transportation Equipment",
+
+  "equipment":[
+
+    {
+      "name":"Liftgate Truck"
+    },
+
+    {
+      "name":"Air Ride Trailer"
+    },
+
+    {
+      "name":"53 Foot Dry Van"
+    },
+
+    {
+      "name":"Flatbed Trailer"
+    },
+
+    {
+      "name":"Step Deck Trailer"
+    },
+
+    {
+      "name":"Hot Shot Trailer"
+    },
+
+    {
+      "name":"Enclosed Equipment Trailer"
+    }
+  ]
+},
+
+{
+  "category":"Protection Systems",
+
+  "equipment":[
+
+    {
+      "name":"Floor Protection Panels"
+    },
+
+    {
+      "name":"Ram Board Floor Protection"
+    },
+
+    {
+      "name":"Moving Blankets"
+    },
+
+    {
+      "name":"Shrink Wrap System"
+    },
+
+    {
+      "name":"Cargo Securement Straps"
+    },
+
+    {
+      "name":"Load Bars"
+    },
+
+    {
+      "name":"Dunnage Systems"
+    },
+
+    {
+      "name":"Blocking And Bracing Materials"
+    }
+  ]
+}
+
+],
+
+"supportedServices":[
+
+"Container Deconsolidation",
+"Container Loading",
+"Container Unloading",
+"Cross Docking",
+"Transloading",
+"Warehouse Labor",
+"Export Packing",
+"Industrial Crating",
+"Port Logistics",
+"TWIC Certified Labor",
+"Data Center Relocation",
+"IT Equipment Moving",
+"Server Relocation",
+"AI Infrastructure Relocation",
+"Heavy Equipment Relocation"
+
+]
+}
