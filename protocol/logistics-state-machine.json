@@ -1,1 +1,259 @@
+{
+  "stateMachineName": "Logistics Operational State Machine",
+  "version": "1.0.0",
 
+  "description": "Defines legal operational transitions across logistics workflows. AI agents, workflow engines, dispatch systems, routing systems, and graph projections must respect these transitions.",
+
+  "states": [
+
+    {
+      "state": "LEAD",
+      "nextStates": [
+        "ESTIMATING",
+        "CLOSED_LOST"
+      ]
+    },
+
+    {
+      "state": "ESTIMATING",
+      "nextStates": [
+        "QUOTED",
+        "CLOSED_LOST"
+      ]
+    },
+
+    {
+      "state": "QUOTED",
+      "nextStates": [
+        "BOOKED",
+        "CLOSED_LOST"
+      ]
+    },
+
+    {
+      "state": "BOOKED",
+      "nextStates": [
+        "DISPATCHED"
+      ]
+    },
+
+    {
+      "state": "DISPATCHED",
+      "nextStates": [
+        "CREW_ASSIGNED",
+        "VEHICLE_ASSIGNED"
+      ]
+    },
+
+    {
+      "state": "CREW_ASSIGNED",
+      "nextStates": [
+        "EN_ROUTE"
+      ]
+    },
+
+    {
+      "state": "VEHICLE_ASSIGNED",
+      "nextStates": [
+        "EN_ROUTE"
+      ]
+    },
+
+    {
+      "state": "EN_ROUTE",
+      "nextStates": [
+        "ON_SITE",
+        "DELAYED"
+      ]
+    },
+
+    {
+      "state": "ON_SITE",
+      "nextStates": [
+        "LOADING",
+        "UNLOADING",
+        "PACKING",
+        "CRATING",
+        "DATA_CENTER_DISASSEMBLY"
+      ]
+    },
+
+    {
+      "state": "LOADING",
+      "nextStates": [
+        "IN_TRANSIT"
+      ]
+    },
+
+    {
+      "state": "UNLOADING",
+      "nextStates": [
+        "COMPLETED"
+      ]
+    },
+
+    {
+      "state": "PACKING",
+      "nextStates": [
+        "CRATING",
+        "IN_TRANSIT"
+      ]
+    },
+
+    {
+      "state": "CRATING",
+      "nextStates": [
+        "IN_TRANSIT"
+      ]
+    },
+
+    {
+      "state": "DATA_CENTER_DISASSEMBLY",
+      "nextStates": [
+        "TECH_TRANSPORT"
+      ]
+    },
+
+    {
+      "state": "TECH_TRANSPORT",
+      "nextStates": [
+        "DATA_CENTER_REINSTALL"
+      ]
+    },
+
+    {
+      "state": "DATA_CENTER_REINSTALL",
+      "nextStates": [
+        "COMPLETED"
+      ]
+    },
+
+    {
+      "state": "IN_TRANSIT",
+      "nextStates": [
+        "ARRIVED",
+        "DELAYED",
+        "INCIDENT_REPORTED"
+      ]
+    },
+
+    {
+      "state": "ARRIVED",
+      "nextStates": [
+        "DELIVERY"
+      ]
+    },
+
+    {
+      "state": "DELIVERY",
+      "nextStates": [
+        "COMPLETED"
+      ]
+    },
+
+    {
+      "state": "DELAYED",
+      "nextStates": [
+        "EN_ROUTE",
+        "IN_TRANSIT"
+      ]
+    },
+
+    {
+      "state": "INCIDENT_REPORTED",
+      "nextStates": [
+        "RISK_REVIEW",
+        "CLAIM_OPENED"
+      ]
+    },
+
+    {
+      "state": "CLAIM_OPENED",
+      "nextStates": [
+        "CLAIM_RESOLVED"
+      ]
+    },
+
+    {
+      "state": "CLAIM_RESOLVED",
+      "nextStates": [
+        "COMPLETED"
+      ]
+    },
+
+    {
+      "state": "COMPLETED",
+      "nextStates": [
+        "INVOICED"
+      ]
+    },
+
+    {
+      "state": "INVOICED",
+      "nextStates": [
+        "PAID"
+      ]
+    },
+
+    {
+      "state": "PAID",
+      "nextStates": [
+        "CLOSED"
+      ]
+    },
+
+    {
+      "state": "CLOSED",
+      "nextStates": []
+    }
+  ],
+
+  "workflowFamilies": [
+
+    {
+      "workflow": "Residential Moving",
+      "entryState": "BOOKED",
+      "exitState": "CLOSED"
+    },
+
+    {
+      "workflow": "Container Logistics",
+      "entryState": "CONTAINER_RECEIVED",
+      "exitState": "CONTAINER_RELEASED"
+    },
+
+    {
+      "workflow": "Export Packing",
+      "entryState": "EXPORT_PACKING_STARTED",
+      "exitState": "EXPORT_PACKING_COMPLETED"
+    },
+
+    {
+      "workflow": "Industrial Crating",
+      "entryState": "CRATING_STARTED",
+      "exitState": "CRATING_COMPLETED"
+    },
+
+    {
+      "workflow": "Data Center Relocation",
+      "entryState": "DATA_CENTER_DISASSEMBLY",
+      "exitState": "DATA_CENTER_REINSTALL"
+    },
+
+    {
+      "workflow": "Container Deconsolidation",
+      "entryState": "CONTAINER_DECONSOLIDATION_STARTED",
+      "exitState": "CONTAINER_DECONSOLIDATION_COMPLETED"
+    }
+  ],
+
+  "agentConsumptionTargets": [
+    "Dispatch Agent",
+    "Pricing Agent",
+    "Routing Agent",
+    "Risk Agent",
+    "Warehouse Agent",
+    "Port Operations Agent",
+    "Technology Relocation Agent"
+  ]
+}
