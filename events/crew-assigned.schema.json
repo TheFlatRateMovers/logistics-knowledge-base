@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/crew-assigned.schema.json",
+
+  "title": "CREW_ASSIGNED Event",
+
+  "description": "Event emitted when operational labor resources are assigned to a logistics workflow including moving, export packing, industrial crating, container operations, warehouse labor, port logistics, data center relocation, and technology asset transportation.",
+
+  "allOf": [
+    {
+      "$ref": "./logistics-event.schema.json"
+    },
+    {
+      "type": "object",
+
+      "properties": {
+
+        "eventType": {
+          "const": "CREW_ASSIGNED"
+        },
+
+        "stateTransition": {
+
+          "type": "object",
+
+          "properties": {
+
+            "previousState": {
+              "const": "VEHICLE_ASSIGNED"
+            },
+
+            "newState": {
+              "const": "CREW_ASSIGNED"
+            }
+
+          }
+
+        },
+
+        "payload": {
+
+          "type": "object",
+
+          "required": [
+            "jobNumber",
+            "crewManifest",
+            "laborPlan"
+          ],
+
+          "properties": {
+
+            "jobNumber": {
+              "type": "string"
+            },
+
+            "dispatchRegion": {
+
+              "type": "object",
+
+              "properties": {
+
+                "zipCode": {
+                  "type": "string"
+                },
+
+                "city": {
+                  "type": "string"
+                },
+
+                "county": {
+                  "type": "string"
+                },
+
+                "corridor": {
+                  "type": "string"
+                }
+
+              }
+
+            },
+
+            "crewManifest": {
+
+              "type": "array",
+
+              "items": {
+
+                "type": "object",
+
+                "properties": {
+
+                  "crewMemberId": {
+                    "type": "string"
+                  },
+
+                  "crewRole": {
+
+                    "type": "string",
+
+                    "enum": [
+
+                      "driver",
+                      "crew_leader",
+                      "mover",
+                      "warehouse_labor",
+                      "forklift_operator",
+                      "twic_labor",
+                      "rigging_specialist",
+                      "export_packing_specialist",
+                      "industrial_crating_specialist",
+                      "server_relocation_specialist",
+                      "data_center_specialist",
+                      "project_manager"
+
+                    ]
+
+                  },
+
+                  "certifications": {
+
+                    "type": "array",
+
+                    "items": {
+
+                      "type": "string",
+
+                      "enum": [
+
+                        "TWIC",
+                        "Forklift",
+                        "Rigging",
+                        "ISPM15",
+                        "Hazmat Awareness",
+                        "Server Relocation",
+                        "Data Center Operations",
+                        "Crane Spotter",
+                        "OSHA10",
+                        "OSHA30"
+
+                      ]
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            },
+
+            "laborPlan": {
+
+              "type": "object",
+
+              "properties": {
+
+                "crewSize": {
+                  "type": "integer"
+                },
+
+                "estimatedLaborHours": {
+                  "type": "number"
+                },
+
+                "estimatedManHours": {
+                  "type": "number"
+                },
+
+                "shiftType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "day",
+                    "night",
+                    "weekend",
+                    "holiday",
+                    "24_hour"
+
+                  ]
+
+                }
+
+              }
+
+            },
+
+            "serviceWorkflow": {
+
+              "type": "object",
+
+              "properties": {
+
+                "serviceType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "export_packing",
+                    "industrial_crating",
+                    "container_loading",
+                    "container_unloading",
+                    "container_deconsolidation",
+                    "cross_docking",
+                    "transloading",
+                    "warehouse_labor",
+                    "twic_labor",
+                    "data_center_relocation",
+                    "it_equipment_moving",
+                    "commercial_moving"
+
+                  ]
+
+                },
+
+                "workflowComplexity": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "standard",
+                    "specialized",
+                    "high_value",
+                    "critical_infrastructure"
+
+                  ]
+
+                }
+
+              }
+
+            },
+
+            "equipmentDependencies": {
+
+              "type": "array",
+
+              "items": {
+
+                "type": "string",
+
+                "enum": [
+
+                  "forklift",
+                  "container_ramp",
+                  "pallet_jack",
+                  "server_cart",
+                  "rack_lift",
+                  "gantry_system",
+                  "liftgate",
+                  "cargo_bars",
+                  "shock_monitor",
+                  "anti_static_packaging"
+
+                ]
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  ]
+
+}
