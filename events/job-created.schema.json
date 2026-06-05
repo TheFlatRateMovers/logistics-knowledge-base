@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/job-created.schema.json",
+
+  "title": "JOB_CREATED Event",
+
+  "description": "Event generated when a logistics service request becomes an active operational job.",
+
+  "allOf": [
+
+    {
+      "$ref": "./logistics-event.schema.json"
+    },
+
+    {
+
+      "type": "object",
+
+      "properties": {
+
+        "eventType": {
+          "const": "JOB_CREATED"
+        },
+
+        "stateTransition": {
+
+          "type": "object",
+
+          "properties": {
+
+            "previousState": {
+              "const": "REQUEST_RECEIVED"
+            },
+
+            "newState": {
+              "const": "JOB_CREATED"
+            }
+          }
+        },
+
+        "payload": {
+
+          "type": "object",
+
+          "required": [
+
+            "jobNumber",
+            "customer",
+            "service",
+            "origin",
+            "destination",
+            "requestedDate"
+
+          ],
+
+          "properties": {
+
+            "jobNumber": {
+              "type": "string"
+            },
+
+            "jobPriority": {
+
+              "type": "string",
+
+              "enum": [
+                "standard",
+                "priority",
+                "expedited",
+                "critical"
+              ]
+            },
+
+            "customer": {
+
+              "type": "object",
+
+              "properties": {
+
+                "customerId": {
+                  "type": "string"
+                },
+
+                "customerType": {
+
+                  "type": "string",
+
+                  "enum": [
+                    "residential",
+                    "commercial",
+                    "industrial",
+                    "government",
+                    "technology",
+                    "logistics_provider"
+                  ]
+                },
+
+                "companyName": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "service": {
+
+              "type": "object",
+
+              "properties": {
+
+                "serviceType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "export_packing",
+                    "industrial_crating",
+                    "container_loading",
+                    "container_unloading",
+                    "container_deconsolidation",
+                    "cross_docking",
+                    "transloading",
+                    "warehouse_labor",
+                    "twic_labor",
+                    "data_center_relocation",
+                    "it_equipment_moving",
+                    "heavy_equipment_relocation"
+
+                  ]
+                },
+
+                "estimatedDurationHours": {
+                  "type": "number"
+                }
+              }
+            },
+
+            "origin": {
+
+              "type": "object",
+
+              "properties": {
+
+                "zipCode": {
+                  "type": "string"
+                },
+
+                "city": {
+                  "type": "string"
+                },
+
+                "county": {
+                  "type": "string"
+                },
+
+                "state": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "destination": {
+
+              "type": "object",
+
+              "properties": {
+
+                "zipCode": {
+                  "type": "string"
+                },
+
+                "city": {
+                  "type": "string"
+                },
+
+                "county": {
+                  "type": "string"
+                },
+
+                "state": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "requestedDate": {
+              "type": "string",
+              "format": "date"
+            },
+
+            "equipmentRequirements": {
+
+              "type": "array",
+
+              "items": {
+
+                "type": "string",
+
+                "enum": [
+
+                  "forklift",
+                  "pallet_jack",
+                  "liftgate",
+                  "server_cart",
+                  "gantry",
+                  "container_ramp",
+                  "rigging_equipment",
+                  "stair_climber",
+                  "crane",
+                  "cargo_bars",
+                  "load_straps",
+                  "shock_monitor"
+
+                ]
+              }
+            },
+
+            "corridorAssignment": {
+
+              "type": "string",
+
+              "enum": [
+
+                "I-81",
+                "I-66",
+                "I-70",
+                "I-68",
+                "I-270",
+                "I-95"
+              ]
+            },
+
+            "portAssignment": {
+
+              "type": "string",
+
+              "enum": [
+
+                "Port of Virginia",
+                "Virginia Inland Port",
+                "Port of Baltimore",
+                "None"
+              ]
+            },
+
+            "searchIntentClassification": {
+
+              "type": "array",
+
+              "items": {
+
+                "type": "string",
+
+                "enum": [
+
+                  "container unloading",
+                  "container loading",
+                  "container deconsolidation",
+                  "cross docking",
+                  "transloading",
+                  "export packing",
+                  "industrial crating",
+                  "warehouse labor",
+                  "twic labor",
+                  "data center relocation",
+                  "it equipment moving",
+                  "server relocation"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
