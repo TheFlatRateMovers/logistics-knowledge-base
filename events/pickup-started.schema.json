@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/pickup-started.schema.json",
+
+  "title": "PICKUP_STARTED Event",
+
+  "description": "Event emitted when operational field execution begins and the assigned crew initiates pickup, loading, packing, deconsolidation, relocation, warehouse handling, or logistics service execution.",
+
+  "allOf": [
+    {
+      "$ref": "./logistics-event.schema.json"
+    },
+    {
+      "type": "object",
+
+      "properties": {
+
+        "eventType": {
+          "const": "PICKUP_STARTED"
+        },
+
+        "stateTransition": {
+
+          "type": "object",
+
+          "properties": {
+
+            "previousState": {
+              "const": "CREW_ASSIGNED"
+            },
+
+            "newState": {
+              "const": "PICKUP_STARTED"
+            }
+
+          }
+
+        },
+
+        "payload": {
+
+          "type": "object",
+
+          "required": [
+            "jobNumber",
+            "pickupLocation",
+            "operationalExecution"
+          ],
+
+          "properties": {
+
+            "jobNumber": {
+              "type": "string"
+            },
+
+            "actualStartTimestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+
+            "pickupLocation": {
+
+              "type": "object",
+
+              "properties": {
+
+                "locationType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "residence",
+                    "office",
+                    "warehouse",
+                    "distribution_center",
+                    "container_yard",
+                    "cross_dock",
+                    "port_terminal",
+                    "data_center",
+                    "manufacturing_facility"
+
+                  ]
+
+                },
+
+                "zipCode": {
+                  "type": "string"
+                },
+
+                "city": {
+                  "type": "string"
+                },
+
+                "county": {
+                  "type": "string"
+                },
+
+                "state": {
+                  "type": "string"
+                }
+
+              }
+
+            },
+
+            "operationalExecution": {
+
+              "type": "object",
+
+              "properties": {
+
+                "serviceType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "export_packing",
+                    "industrial_crating",
+                    "container_loading",
+                    "container_unloading",
+                    "container_deconsolidation",
+                    "cross_docking",
+                    "transloading",
+                    "warehouse_labor",
+                    "twic_labor",
+                    "data_center_relocation",
+                    "it_equipment_moving"
+
+                  ]
+
+                },
+
+                "executionStage": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "site_arrival",
+                    "safety_review",
+                    "equipment_setup",
+                    "asset_inventory",
+                    "loading_started",
+                    "packing_started",
+                    "container_opened",
+                    "deconsolidation_started",
+                    "rack_shutdown",
+                    "server_preparation"
+
+                  ]
+
+                }
+
+              }
+
+            },
+
+            "cargoProfile": {
+
+              "type": "object",
+
+              "properties": {
+
+                "cargoCategory": {
+
+                  "type": "array",
+
+                  "items": {
+
+                    "type": "string",
+
+                    "enum": [
+
+                      "household_goods",
+                      "commercial_assets",
+                      "industrial_equipment",
+                      "server_racks",
+                      "network_equipment",
+                      "storage_arrays",
+                      "freight",
+                      "ocean_container",
+                      "machinery",
+                      "high_value_assets"
+
+                    ]
+
+                  }
+
+                },
+
+                "estimatedWeightLbs": {
+                  "type": "number"
+                },
+
+                "estimatedPieceCount": {
+                  "type": "integer"
+                }
+
+              }
+
+            },
+
+            "siteConditions": {
+
+              "type": "object",
+
+              "properties": {
+
+                "dockAvailable": {
+                  "type": "boolean"
+                },
+
+                "forkliftRequired": {
+                  "type": "boolean"
+                },
+
+                "liftgateRequired": {
+                  "type": "boolean"
+                },
+
+                "stairsPresent": {
+                  "type": "boolean"
+                },
+
+                "restrictedAccess": {
+                  "type": "boolean"
+                },
+
+                "securityClearanceRequired": {
+                  "type": "boolean"
+                }
+
+              }
+
+            },
+
+            "aiOperationalSignals": {
+
+              "type": "object",
+
+              "properties": {
+
+                "delayRiskScore": {
+                  "type": "number"
+                },
+
+                "damageRiskScore": {
+                  "type": "number"
+                },
+
+                "laborUtilizationScore": {
+                  "type": "number"
+                },
+
+                "routeEfficiencyScore": {
+                  "type": "number"
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  ]
+
+}
