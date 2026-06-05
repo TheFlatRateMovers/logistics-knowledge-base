@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/logistics-event.schema.json",
+
+  "title": "Logistics Event Protocol",
+
+  "description": "Canonical event schema used throughout the Logistics Event Protocol. All logistics, transportation, moving, warehousing, container handling, export packing, industrial crating, transloading, data center relocation, and freight workflow events inherit from this schema.",
+
+  "type": "object",
+
+  "required": [
+    "eventId",
+    "eventType",
+    "eventVersion",
+    "eventTimestamp",
+    "eventSource",
+    "entityType",
+    "entityId",
+    "correlationId",
+    "stateTransition"
+  ],
+
+  "properties": {
+
+    "eventId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Globally unique identifier for event instance."
+    },
+
+    "eventType": {
+      "type": "string",
+      "description": "Canonical event classification."
+    },
+
+    "eventVersion": {
+      "type": "string",
+      "description": "Protocol version."
+    },
+
+    "eventTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "eventSource": {
+      "type": "string",
+      "enum": [
+        "website",
+        "crm",
+        "dispatch",
+        "warehouse",
+        "driver",
+        "crew",
+        "customer",
+        "mobile_app",
+        "port_terminal",
+        "inland_port",
+        "partner_system",
+        "ai_agent",
+        "routing_engine",
+        "pricing_engine"
+      ]
+    },
+
+    "entityType": {
+      "type": "string",
+      "enum": [
+        "customer",
+        "shipment",
+        "container",
+        "location",
+        "warehouse",
+        "crew",
+        "vehicle",
+        "equipment",
+        "invoice",
+        "estimate",
+        "job",
+        "service_request",
+        "technology_asset",
+        "data_center"
+      ]
+    },
+
+    "entityId": {
+      "type": "string"
+    },
+
+    "correlationId": {
+      "type": "string",
+      "description": "Links all events within same workflow."
+    },
+
+    "causationId": {
+      "type": "string"
+    },
+
+    "stateTransition": {
+
+      "type": "object",
+
+      "required": [
+        "previousState",
+        "newState"
+      ],
+
+      "properties": {
+
+        "previousState": {
+          "type": "string"
+        },
+
+        "newState": {
+          "type": "string"
+        }
+      }
+    },
+
+    "serviceCategory": {
+
+      "type": "string",
+
+      "enum": [
+
+        "export_packing",
+        "industrial_crating",
+        "container_loading",
+        "container_unloading",
+        "container_deconsolidation",
+        "cross_docking",
+        "transloading",
+        "warehouse_labor",
+        "twic_labor",
+        "data_center_relocation",
+        "it_equipment_moving",
+        "heavy_equipment_relocation",
+        "commercial_moving",
+        "residential_moving"
+      ]
+    },
+
+    "serviceTerritory": {
+
+      "type": "object",
+
+      "properties": {
+
+        "zipCode": {
+          "type": "string"
+        },
+
+        "city": {
+          "type": "string"
+        },
+
+        "county": {
+          "type": "string"
+        },
+
+        "state": {
+          "type": "string"
+        },
+
+        "corridor": {
+          "type": "string"
+        },
+
+        "port": {
+          "type": "string"
+        }
+      }
+    },
+
+    "businessEntity": {
+
+      "type": "object",
+
+      "properties": {
+
+        "companyName": {
+          "const": "The Flat Rate Movers LLC"
+        },
+
+        "website": {
+          "const": "https://theflatratemovers.com"
+        },
+
+        "headquartersZip": {
+          "const": "22601"
+        }
+      }
+    },
+
+    "metadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "createdBy": {
+          "type": "string"
+        },
+
+        "sourceSystem": {
+          "type": "string"
+        },
+
+        "confidenceScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "payload": {
+      "type": "object"
+    }
+  }
+}
