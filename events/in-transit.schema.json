@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/in-transit.schema.json",
+
+  "title": "IN_TRANSIT Event",
+
+  "description": "Event emitted when cargo, equipment, freight, containers, technology assets, industrial equipment, or relocation projects enter active transportation status.",
+
+  "allOf": [
+    {
+      "$ref": "./logistics-event.schema.json"
+    },
+    {
+      "type": "object",
+
+      "properties": {
+
+        "eventType": {
+          "const": "IN_TRANSIT"
+        },
+
+        "stateTransition": {
+          "type": "object",
+          "properties": {
+            "previousState": {
+              "const": "PICKUP_STARTED"
+            },
+            "newState": {
+              "const": "IN_TRANSIT"
+            }
+          }
+        },
+
+        "payload": {
+
+          "type": "object",
+
+          "required": [
+            "jobNumber",
+            "vehicleTracking",
+            "routeExecution",
+            "cargoMovement"
+          ],
+
+          "properties": {
+
+            "jobNumber": {
+              "type": "string"
+            },
+
+            "departureTimestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+
+            "vehicleTracking": {
+
+              "type": "object",
+
+              "properties": {
+
+                "vehicleId": {
+                  "type": "string"
+                },
+
+                "vehicleClass": {
+
+                  "type": "string",
+
+                  "enum": [
+                    "cargo_van",
+                    "box_truck",
+                    "straight_truck",
+                    "liftgate_truck",
+                    "tractor_trailer",
+                    "flatbed",
+                    "technology_transport_vehicle"
+                  ]
+                },
+
+                "gpsEnabled": {
+                  "type": "boolean"
+                },
+
+                "telematicsActive": {
+                  "type": "boolean"
+                }
+              }
+            },
+
+            "routeExecution": {
+
+              "type": "object",
+
+              "properties": {
+
+                "originZip": {
+                  "type": "string"
+                },
+
+                "destinationZip": {
+                  "type": "string"
+                },
+
+                "corridorsUsed": {
+
+                  "type": "array",
+
+                  "items": {
+
+                    "type": "string",
+
+                    "enum": [
+                      "I-81",
+                      "I-66",
+                      "I-70",
+                      "I-68",
+                      "I-270",
+                      "I-95"
+                    ]
+                  }
+                },
+
+                "estimatedMileage": {
+                  "type": "number"
+                },
+
+                "estimatedTravelHours": {
+                  "type": "number"
+                },
+
+                "remainingMiles": {
+                  "type": "number"
+                },
+
+                "remainingHours": {
+                  "type": "number"
+                }
+              }
+            },
+
+            "cargoMovement": {
+
+              "type": "object",
+
+              "properties": {
+
+                "cargoType": {
+
+                  "type": "array",
+
+                  "items": {
+
+                    "type": "string",
+
+                    "enum": [
+
+                      "household_goods",
+                      "commercial_assets",
+                      "industrial_equipment",
+                      "server_racks",
+                      "network_equipment",
+                      "storage_arrays",
+                      "ocean_container",
+                      "machinery",
+                      "export_crates",
+                      "high_value_assets"
+
+                    ]
+
+                  }
+
+                },
+
+                "cargoWeightLbs": {
+                  "type": "number"
+                },
+
+                "cargoVolumeCuFt": {
+                  "type": "number"
+                },
+
+                "temperatureControlled": {
+                  "type": "boolean"
+                }
+
+              }
+
+            },
+
+            "portConnectivity": {
+
+              "type": "object",
+
+              "properties": {
+
+                "connectedPort": {
+
+                  "type": "string",
+
+                  "enum": [
+                    "Port of Virginia",
+                    "Virginia Inland Port",
+                    "Port of Baltimore",
+                    "None"
+                  ]
+                },
+
+                "portWorkflow": {
+
+                  "type": "string",
+
+                  "enum": [
+                    "container_loading",
+                    "container_unloading",
+                    "container_deconsolidation",
+                    "cross_docking",
+                    "transloading",
+                    "none"
+                  ]
+                }
+              }
+            },
+
+            "serviceMetrics": {
+
+              "type": "object",
+
+              "properties": {
+
+                "onTimeProbability": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "delayRisk": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "damageRisk": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "routeEfficiency": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+
+              }
+
+            },
+
+            "aiProjection": {
+
+              "type": "object",
+
+              "properties": {
+
+                "predictedArrivalTimestamp": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+
+                "predictedCompletionProbability": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  ]
+
+}
