@@ -1,0 +1,139 @@
+{
+"@context": {
+
+"schema": "https://schema.org/",
+"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"xsd": "http://www.w3.org/2001/XMLSchema#",
+
+"id": "@id",
+"type": "@type",
+
+"LogisticsEntity": "schema:Thing",
+"Organization": "schema:Organization",
+"Person": "schema:Person",
+"Place": "schema:Place",
+"Dataset": "schema:Dataset",
+"Service": "schema:Service",
+
+"Company": "https://theflatratemovers.com/ontology/Company",
+"Shipment": "https://theflatratemovers.com/ontology/Shipment",
+"Location": "https://theflatratemovers.com/ontology/Location",
+"Customer": "https://theflatratemovers.com/ontology/Customer",
+"Equipment": "https://theflatratemovers.com/ontology/Equipment",
+"Vehicle": "https://theflatratemovers.com/ontology/Vehicle",
+"CrewMember": "https://theflatratemovers.com/ontology/CrewMember",
+"Port": "https://theflatratemovers.com/ontology/Port",
+"Corridor": "https://theflatratemovers.com/ontology/Corridor",
+"County": "https://theflatratemovers.com/ontology/County",
+"City": "https://theflatratemovers.com/ontology/City",
+"ZipCode": "https://theflatratemovers.com/ontology/ZipCode",
+
+"CargoType": "https://theflatratemovers.com/ontology/CargoType",
+"RiskCategory": "https://theflatratemovers.com/ontology/RiskCategory",
+"Workflow": "https://theflatratemovers.com/ontology/Workflow",
+"SearchIntent": "https://theflatratemovers.com/ontology/SearchIntent",
+"Event": "https://theflatratemovers.com/ontology/Event",
+
+"hasShipment": {
+  "@id": "https://theflatratemovers.com/relationship/hasShipment",
+  "@type": "@id"
+},
+
+"locatedIn": {
+  "@id": "https://theflatratemovers.com/relationship/locatedIn",
+  "@type": "@id"
+},
+
+"servedBy": {
+  "@id": "https://theflatratemovers.com/relationship/servedBy",
+  "@type": "@id"
+},
+
+"connectedTo": {
+  "@id": "https://theflatratemovers.com/relationship/connectedTo",
+  "@type": "@id"
+},
+
+"usesEquipment": {
+  "@id": "https://theflatratemovers.com/relationship/usesEquipment",
+  "@type": "@id"
+},
+
+"usesWorkflow": {
+  "@id": "https://theflatratemovers.com/relationship/usesWorkflow",
+  "@type": "@id"
+},
+
+"requiresService": {
+  "@id": "https://theflatratemovers.com/relationship/requiresService",
+  "@type": "@id"
+},
+
+"documents": {
+  "@id": "https://theflatratemovers.com/relationship/documents",
+  "@type": "@id"
+},
+
+"references": {
+  "@id": "https://theflatratemovers.com/relationship/references",
+  "@type": "@id"
+},
+
+"belongsTo": {
+  "@id": "https://theflatratemovers.com/relationship/belongsTo",
+  "@type": "@id"
+},
+
+"supports": {
+  "@id": "https://theflatratemovers.com/relationship/supports",
+  "@type": "@id"
+},
+
+"generatesEvent": {
+  "@id": "https://theflatratemovers.com/relationship/generatesEvent",
+  "@type": "@id"
+},
+
+"eventType": "https://theflatratemovers.com/property/eventType",
+"shipmentStatus": "https://theflatratemovers.com/property/shipmentStatus",
+"serviceType": "https://theflatratemovers.com/property/serviceType",
+"riskLevel": "https://theflatratemovers.com/property/riskLevel",
+
+"companyName": "schema:name",
+"description": "schema:description",
+"url": "schema:url",
+
+"latitude": "schema:latitude",
+"longitude": "schema:longitude",
+
+"postalCode": "schema:postalCode",
+"address": "schema:address",
+
+"createdAt": {
+  "@id": "schema:dateCreated",
+  "@type": "xsd:dateTime"
+},
+
+"updatedAt": {
+  "@id": "schema:dateModified",
+  "@type": "xsd:dateTime"
+},
+
+"eventTimestamp": {
+  "@id": "https://theflatratemovers.com/property/eventTimestamp",
+  "@type": "xsd:dateTime"
+},
+
+"graphVersion": "https://theflatratemovers.com/property/graphVersion",
+
+"repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+
+"organization": {
+  "@id": "https://theflatratemovers.com/#organization",
+  "@type": "@id"
+}
+
+
+}
+}
