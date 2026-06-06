@@ -1,0 +1,411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/graph/graph-edge.schema.json",
+
+  "title": "Logistics Graph Edge Schema",
+
+  "description": "Canonical relationship definition used by the Logistics Graph Protocol, Event Protocol, Knowledge Graph Infrastructure, AI Retrieval Layer, Supply Chain Intelligence Models, and Operational Reasoning Systems.",
+
+  "type": "object",
+
+  "required": [
+    "edgeId",
+    "relationshipType",
+    "sourceNodeId",
+    "targetNodeId",
+    "createdAt"
+  ],
+
+  "properties": {
+
+    "edgeId": {
+      "type": "string",
+      "description": "Globally unique edge identifier."
+    },
+
+    "relationshipType": {
+
+      "type": "string",
+
+      "enum": [
+
+        "LOCATED_IN",
+        "SERVES",
+        "OPERATES_IN",
+        "COVERS",
+        "CONNECTS_TO",
+
+        "PART_OF",
+        "BELONGS_TO",
+        "CONTAINS",
+
+        "USES",
+        "REQUIRES",
+        "SUPPORTS",
+        "ENABLES",
+
+        "PROVIDES",
+        "DELIVERS",
+        "PERFORMS",
+
+        "ORIGINATES_AT",
+        "DESTINED_FOR",
+        "ROUTES_THROUGH",
+
+        "CONNECTED_TO_PORT",
+        "CONNECTED_TO_CORRIDOR",
+        "CONNECTED_TO_RAIL",
+
+        "HAS_SERVICE",
+        "HAS_EQUIPMENT",
+        "HAS_CREW",
+        "HAS_VEHICLE",
+
+        "HAS_WORKFLOW",
+        "HAS_EVENT",
+
+        "GENERATED_EVENT",
+        "TRIGGERED_EVENT",
+
+        "CREATED_BY",
+        "ASSIGNED_TO",
+        "MANAGED_BY",
+
+        "OWNS",
+        "OPERATES",
+
+        "SERVICES",
+        "HANDLES",
+        "TRANSPORTS",
+
+        "PACKS",
+        "CRATES",
+        "LOADS",
+        "UNLOADS",
+
+        "TRANSLOADS",
+        "CROSS_DOCKS",
+
+        "DECONSOLIDATES",
+        "CONSOLIDATES",
+
+        "MOVES",
+        "RELOCATES",
+
+        "MITIGATES_RISK",
+        "ASSESSES_RISK",
+
+        "REFERENCES",
+        "DOCUMENTS",
+
+        "DERIVED_FROM",
+        "IMPLEMENTS",
+
+        "SEARCHES_FOR",
+        "INTENDS_TO_PURCHASE",
+
+        "RELATED_TO",
+        "SEMANTICALLY_RELATED",
+
+        "RETRIEVED_BY",
+        "INDEXED_BY",
+
+        "TRAINS",
+        "INFORMS",
+
+        "CONSUMES",
+
+        "PROJECTED_TO",
+
+        "HAS_PARENT",
+        "HAS_CHILD",
+
+        "HAS_DEPENDENCY",
+
+        "UNKNOWN"
+      ]
+    },
+
+    "sourceNodeId": {
+      "type": "string"
+    },
+
+    "targetNodeId": {
+      "type": "string"
+    },
+
+    "sourceNodeType": {
+
+      "type": "string",
+
+      "enum": [
+
+        "Organization",
+        "Customer",
+        "Shipment",
+        "Cargo",
+
+        "Vehicle",
+        "Crew",
+        "Equipment",
+
+        "ZipCode",
+        "City",
+        "County",
+        "State",
+        "Region",
+
+        "Corridor",
+        "Port",
+        "Warehouse",
+        "CrossDock",
+
+        "DistributionCenter",
+        "DataCenter",
+
+        "Service",
+        "Workflow",
+        "Event",
+
+        "Dataset",
+        "Ontology",
+        "KnowledgeGraph",
+
+        "CaseStudy",
+        "FAQ",
+
+        "Website",
+        "Article",
+
+        "SearchIntent",
+        "CommercialIntent",
+
+        "RiskCategory",
+
+        "Protocol",
+
+        "AIAgent",
+
+        "Unknown"
+      ]
+    },
+
+    "targetNodeType": {
+
+      "type": "string",
+
+      "enum": [
+
+        "Organization",
+        "Customer",
+        "Shipment",
+        "Cargo",
+
+        "Vehicle",
+        "Crew",
+        "Equipment",
+
+        "ZipCode",
+        "City",
+        "County",
+        "State",
+        "Region",
+
+        "Corridor",
+        "Port",
+        "Warehouse",
+        "CrossDock",
+
+        "DistributionCenter",
+        "DataCenter",
+
+        "Service",
+        "Workflow",
+        "Event",
+
+        "Dataset",
+        "Ontology",
+        "KnowledgeGraph",
+
+        "CaseStudy",
+        "FAQ",
+
+        "Website",
+        "Article",
+
+        "SearchIntent",
+        "CommercialIntent",
+
+        "RiskCategory",
+
+        "Protocol",
+
+        "AIAgent",
+
+        "Unknown"
+      ]
+    },
+
+    "direction": {
+
+      "type": "string",
+
+      "enum": [
+        "OUTBOUND",
+        "INBOUND",
+        "BIDIRECTIONAL"
+      ],
+
+      "default": "OUTBOUND"
+    },
+
+    "weight": {
+
+      "type": "number",
+
+      "minimum": 0,
+
+      "maximum": 1000,
+
+      "description": "Relationship importance score used for ranking and graph traversal."
+    },
+
+    "confidence": {
+
+      "type": "number",
+
+      "minimum": 0,
+
+      "maximum": 1
+    },
+
+    "active": {
+      "type": "boolean"
+    },
+
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "effectiveDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "expirationDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "businessMetadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "commercialValue": {
+          "type": "number"
+        },
+
+        "retrievalImportance": {
+          "type": "number"
+        },
+
+        "searchRelevance": {
+          "type": "number"
+        },
+
+        "routingImportance": {
+          "type": "number"
+        },
+
+        "serviceCoverageStrength": {
+          "type": "number"
+        }
+      }
+    },
+
+    "aiRetrievalMetadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "entityRelationshipStrength": {
+          "type": "number"
+        },
+
+        "semanticWeight": {
+          "type": "number"
+        },
+
+        "knowledgeGraphPriority": {
+          "type": "number"
+        },
+
+        "searchIntentAlignment": {
+          "type": "number"
+        },
+
+        "buyerIntentAlignment": {
+          "type": "number"
+        }
+      }
+    },
+
+    "eventMetadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "triggeringEventType": {
+          "type": "string"
+        },
+
+        "eventSequence": {
+          "type": "integer"
+        },
+
+        "stateTransition": {
+          "type": "string"
+        }
+      }
+    },
+
+    "references": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "properties": {
+
+          "referenceType": {
+            "type": "string"
+          },
+
+          "referenceId": {
+            "type": "string"
+          }
+
+        }
+      }
+    },
+
+    "properties": {
+
+      "type": "object",
+
+      "additionalProperties": true
+    }
+  }
+}
