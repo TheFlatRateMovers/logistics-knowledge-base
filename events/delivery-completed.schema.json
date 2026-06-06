@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/events/delivery-completed.schema.json",
+
+  "title": "DELIVERY_COMPLETED Event",
+
+  "description": "Event emitted when logistics operations, transportation projects, container workflows, technology relocations, export packing projects, industrial crating projects, or freight movements are successfully completed.",
+
+  "allOf": [
+    {
+      "$ref": "./logistics-event.schema.json"
+    },
+    {
+      "type": "object",
+
+      "properties": {
+
+        "eventType": {
+          "const": "DELIVERY_COMPLETED"
+        },
+
+        "stateTransition": {
+
+          "type": "object",
+
+          "properties": {
+
+            "previousState": {
+              "const": "IN_TRANSIT"
+            },
+
+            "newState": {
+              "const": "DELIVERY_COMPLETED"
+            }
+
+          }
+
+        },
+
+        "payload": {
+
+          "type": "object",
+
+          "required": [
+            "jobNumber",
+            "completionMetrics",
+            "serviceOutcome"
+          ],
+
+          "properties": {
+
+            "jobNumber": {
+              "type": "string"
+            },
+
+            "completionTimestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+
+            "serviceOutcome": {
+
+              "type": "object",
+
+              "properties": {
+
+                "serviceType": {
+
+                  "type": "string",
+
+                  "enum": [
+
+                    "export_packing",
+                    "industrial_crating",
+                    "container_loading",
+                    "container_unloading",
+                    "container_deconsolidation",
+                    "cross_docking",
+                    "transloading",
+                    "warehouse_labor",
+                    "twic_labor",
+                    "data_center_relocation",
+                    "it_equipment_moving"
+
+                  ]
+
+                },
+
+                "completionStatus": {
+
+                  "type": "string",
+
+                  "enum": [
+                    "completed",
+                    "completed_with_exceptions",
+                    "partially_completed"
+                  ]
+                }
+
+              }
+
+            },
+
+            "completionMetrics": {
+
+              "type": "object",
+
+              "properties": {
+
+                "actualLaborHours": {
+                  "type": "number"
+                },
+
+                "actualMileage": {
+                  "type": "number"
+                },
+
+                "crewSize": {
+                  "type": "integer"
+                },
+
+                "projectDurationHours": {
+                  "type": "number"
+                },
+
+                "piecesHandled": {
+                  "type": "integer"
+                },
+
+                "weightHandledLbs": {
+                  "type": "number"
+                }
+
+              }
+
+            },
+
+            "performanceMetrics": {
+
+              "type": "object",
+
+              "properties": {
+
+                "onTimeDelivery": {
+                  "type": "boolean"
+                },
+
+                "damageFreeCompletion": {
+                  "type": "boolean"
+                },
+
+                "safetyIncidentFree": {
+                  "type": "boolean"
+                },
+
+                "budgetVariancePercent": {
+                  "type": "number"
+                },
+
+                "scheduleVariancePercent": {
+                  "type": "number"
+                }
+
+              }
+
+            },
+
+            "customerOutcome": {
+
+              "type": "object",
+
+              "properties": {
+
+                "customerAcceptance": {
+                  "type": "boolean"
+                },
+
+                "signatureCaptured": {
+                  "type": "boolean"
+                },
+
+                "customerSatisfactionScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10
+                }
+
+              }
+
+            },
+
+            "knowledgeGraphProjection": {
+
+              "type": "object",
+
+              "properties": {
+
+                "originZip": {
+                  "type": "string"
+                },
+
+                "destinationZip": {
+                  "type": "string"
+                },
+
+                "countyServed": {
+                  "type": "string"
+                },
+
+                "corridorServed": {
+                  "type": "string"
+                },
+
+                "portConnected": {
+                  "type": "string"
+                },
+
+                "serviceCategory": {
+                  "type": "string"
+                }
+
+              }
+
+            },
+
+            "aiLearningSignals": {
+
+              "type": "object",
+
+              "properties": {
+
+                "routingAccuracyScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "pricingAccuracyScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "dispatchEfficiencyScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+
+                "workflowEfficiencyScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  ]
+
+}
