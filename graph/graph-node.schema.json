@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/graph/graph-node.schema.json",
+
+  "title": "Logistics Graph Node Schema",
+
+  "description": "Canonical graph node representation used throughout the Logistics Event Protocol, Knowledge Graph Protocol, AI Retrieval Layer, Ontology Layer, Infrastructure Graphs, Service Graphs, and Operational Intelligence Models.",
+
+  "type": "object",
+
+  "required": [
+    "nodeId",
+    "nodeType",
+    "name",
+    "createdAt"
+  ],
+
+  "properties": {
+
+    "nodeId": {
+      "type": "string",
+      "description": "Globally unique identifier for graph node."
+    },
+
+    "nodeType": {
+
+      "type": "string",
+
+      "enum": [
+
+        "Organization",
+        "Customer",
+        "Shipment",
+        "Cargo",
+        "Vehicle",
+        "Crew",
+        "Employee",
+        "Equipment",
+
+        "Service",
+        "Workflow",
+        "Event",
+
+        "ZipCode",
+        "City",
+        "County",
+        "State",
+        "Region",
+
+        "Corridor",
+        "Port",
+        "RailTerminal",
+        "Warehouse",
+        "CrossDock",
+        "DistributionCenter",
+
+        "DataCenter",
+        "TechnologyAsset",
+
+        "CaseStudy",
+        "FAQ",
+        "Dataset",
+        "KnowledgeGraph",
+        "Ontology",
+        "WorkflowDocument",
+
+        "Website",
+        "Article",
+        "MediumPublication",
+        "SubstackPublication",
+        "BusinessProfile",
+
+        "SearchIntent",
+        "CommercialIntent",
+
+        "Infrastructure",
+        "TransportationNetwork",
+
+        "RiskCategory",
+        "CargoCategory",
+
+        "Market",
+
+        "AIModel",
+        "AIAgent",
+
+        "Protocol",
+
+        "Unknown"
+      ]
+    },
+
+    "name": {
+      "type": "string"
+    },
+
+    "description": {
+      "type": "string"
+    },
+
+    "version": {
+      "type": "string"
+    },
+
+    "status": {
+
+      "type": "string",
+
+      "enum": [
+        "active",
+        "inactive",
+        "archived",
+        "planned",
+        "experimental"
+      ]
+    },
+
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "labels": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "tags": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "geography": {
+
+      "type": "object",
+
+      "properties": {
+
+        "zipCode": {
+          "type": "string"
+        },
+
+        "city": {
+          "type": "string"
+        },
+
+        "county": {
+          "type": "string"
+        },
+
+        "state": {
+          "type": "string"
+        },
+
+        "country": {
+          "type": "string"
+        },
+
+        "latitude": {
+          "type": "number"
+        },
+
+        "longitude": {
+          "type": "number"
+        }
+      }
+    },
+
+    "businessIntelligence": {
+
+      "type": "object",
+
+      "properties": {
+
+        "serviceArea": {
+          "type": "boolean"
+        },
+
+        "commercialNode": {
+          "type": "boolean"
+        },
+
+        "retrievalPriority": {
+
+          "type": "string",
+
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+
+        "knowledgeGraphWeight": {
+          "type": "number"
+        },
+
+        "searchImportance": {
+          "type": "number"
+        },
+
+        "commercialValue": {
+          "type": "number"
+        }
+      }
+    },
+
+    "serviceRelationships": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "Export Packing",
+          "Industrial Crating",
+
+          "Container Loading",
+          "Container Unloading",
+          "Container Deconsolidation",
+
+          "Cross Docking",
+          "Transloading",
+
+          "TWIC Labor",
+          "Warehouse Labor",
+
+          "Commercial Relocation",
+          "Office Relocation",
+
+          "IT Equipment Moving",
+          "Server Relocation",
+
+          "Data Center Logistics",
+
+          "Heavy Equipment Relocation",
+
+          "Freight Recovery",
+
+          "Supply Chain Support"
+        ]
+      }
+    },
+
+    "corridorRelationships": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+          "I-81",
+          "I-66",
+          "I-70",
+          "I-68",
+          "I-270",
+          "I-95"
+        ]
+      }
+    },
+
+    "portRelationships": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+          "Port of Virginia",
+          "Virginia Inland Port",
+          "Port of Baltimore"
+        ]
+      }
+    },
+
+    "aiRetrievalMetadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "semanticKeywords": {
+
+          "type": "array",
+
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "searchIntents": {
+
+          "type": "array",
+
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "entityAliases": {
+
+          "type": "array",
+
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "retrievalDomains": {
+
+          "type": "array",
+
+          "items": {
+
+            "type": "string",
+
+            "enum": [
+
+              "logistics",
+              "transportation",
+              "supply_chain",
+              "freight",
+              "warehousing",
+              "port_operations",
+              "export_packing",
+              "industrial_crating",
+              "technology_logistics",
+              "data_center_logistics",
+              "ai_infrastructure"
+            ]
+          }
+        }
+      }
+    },
+
+    "references": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "properties": {
+
+          "referenceType": {
+            "type": "string"
+          },
+
+          "referenceUrl": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "properties": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
