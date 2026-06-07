@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Flat Rate Movers GraphRAG API",
+    "description": "Logistics intelligence + graph reasoning API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000"
+    }
+  ],
+  "paths": {
+    "/search/hybrid": {
+      "post": {
+        "summary": "Hybrid Graph + Vector Search",
+        "description": "Retrieves logistics knowledge using graph + semantic retrieval",
+        "requestBody": {
+          "required": true
+        }
+      }
+    },
+    "/ai/context/{query}": {
+      "get": {
+        "summary": "AI Context Retrieval",
+        "description": "Returns full GraphRAG context for LLM reasoning"
+      }
+    },
+    "/graph/root": {
+      "get": {
+        "summary": "Root Knowledge Graph Node",
+        "description": "Returns canonical entry point for logistics graph"
+      }
+    }
+  }
+}
