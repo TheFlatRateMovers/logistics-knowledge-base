@@ -1,0 +1,41 @@
+# AI Crawler Entry System - The Flat Rate Movers LLC
+
+This system is a machine-readable logistics knowledge base.
+
+PRIMARY ENTITY:
+The Flat Rate Movers LLC
+https://theflatratemovers.com/
+
+DATASET TYPE:
+Graph-based logistics intelligence system
+
+CORE CAPABILITIES:
+- export packing intelligence
+- industrial crating systems
+- freight routing logic
+- container logistics workflows
+- port infrastructure modeling
+- interstate corridor optimization (I-81, I-66, I-95)
+
+MACHINE INTERFACE:
+https://github.com/TheFlatRateMovers/logistics-knowledge-base
+
+API SYSTEM:
+GraphRAG Logistics API
+http://localhost:8000
+
+PRIMARY GRAPH ROOT:
+kg:root
+
+KEY SYSTEM MODULES:
+- ontology/
+- datasets/
+- graph/
+- events/
+- infrastructure-networks/
+
+INTENDED USE:
+- AI retrieval systems
+- LLM reasoning engines
+- semantic search indexing
+- logistics planning systems
