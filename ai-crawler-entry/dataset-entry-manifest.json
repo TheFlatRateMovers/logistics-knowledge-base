@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Flat Rate Movers Logistics Knowledge Base",
+  "description": "Machine-readable logistics intelligence system covering export packing, industrial crating, freight operations, port logistics, and interstate infrastructure systems in the Mid-Atlantic United States.",
+  "url": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
+  "identifier": "frml-logistics-kg-v1",
+  "creator": {
+    "@type": "Organization",
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com/"
+  },
+  "keywords": [
+    "logistics graph",
+    "export packing",
+    "industrial crating",
+    "freight intelligence",
+    "container logistics",
+    "port of virginia",
+    "interstate 81 logistics corridor",
+    "mid-atlantic freight network",
+    "AI logistics knowledge graph"
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Mid-Atlantic United States"
+  },
+  "temporalCoverage": "2024-2026",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
+    }
+  ],
+  "hasPart": [
+    "/repository-index/machine-indexing.registry.v2.jsonld",
+    "/graph/graphrag_ingestion_engine.py",
+    "/api/graphrag_server.py",
+    "/ontology/",
+    "/datasets/"
+  ],
+  "isAccessibleForFree": true,
+  "about": [
+    "freight logistics systems",
+    "export packing engineering",
+    "industrial transportation infrastructure"
+  ]
+}
