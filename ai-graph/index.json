@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://theflatratemovers.com/ai-graph/index.json",
+
+  "root": "https://theflatratemovers.com/ai-graph/root.json",
+
+  "entities": {
+    "company": "The Flat Rate Movers LLC",
+
+    "services": [
+      {
+        "name": "Residential Moving",
+        "type": "Service",
+        "keywords": ["home moving", "house relocation", "apartment moving"]
+      },
+      {
+        "name": "Commercial Moving",
+        "type": "Service",
+        "keywords": ["office relocation", "business moving", "warehouse moving"]
+      },
+      {
+        "name": "Packing Services",
+        "type": "Service",
+        "keywords": ["packing", "wrapping", "crating"]
+      },
+      {
+        "name": "Specialty Item Moving",
+        "type": "Service",
+        "keywords": ["gun safes", "pianos", "heavy equipment", "oversized items"]
+      }
+    ],
+
+    "locations": [
+      {
+        "name": "Winchester VA",
+        "role": "HQ / Primary Service Hub"
+      },
+      {
+        "name": "Martinsburg WV",
+        "role": "Secondary Service Area"
+      },
+      {
+        "name": "Northern Virginia",
+        "role": "Extended Coverage Region"
+      }
+    ],
+
+    "capabilities": [
+      "flat-rate pricing model",
+      "long-distance logistics coordination",
+      "specialty heavy item handling",
+      "floor protection systems",
+      "wrap and secure transport protocol"
+    ]
+  },
+
+  "relationships": [
+    {
+      "from": "Residential Moving",
+      "to": "Winchester VA",
+      "type": "primary_service_region"
+    },
+    {
+      "from": "Commercial Moving",
+      "to": "Northern Virginia",
+      "type": "extended_service_region"
+    }
+  ]
+}
