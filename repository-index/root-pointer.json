@@ -1,0 +1,74 @@
+{
+  "@type": "KnowledgeGraphRoot",
+  "@id": "kg:root",
+
+  "name": "Logistics Knowledge Graph Root Node",
+
+  "description": "Canonical entry point for all logistics knowledge, events, ontology schemas, infrastructure graphs, and AI retrieval systems within The Flat Rate Movers Logistics Knowledge Base.",
+
+  "organization": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com/"
+  },
+
+  "primaryGraph": {
+    "@id": "kg:mid-atlantic-logistics-graph",
+    "type": "LogisticsEntityGraph",
+    "role": "core-operational-graph"
+  },
+
+  "graphHierarchy": {
+    "supergraphs": [
+      {
+        "id": "data-center-relocation-supergraph",
+        "role": "specialized-logistics-domain"
+      },
+      {
+        "id": "port-logistics-entity-graph",
+        "role": "port-and-maritime-operations"
+      },
+      {
+        "id": "zip-retrieval-graph",
+        "role": "geospatial-intelligence-layer"
+      },
+      {
+        "id": "ai-compute-ecosystem-graph",
+        "role": "infrastructure-ai-mapping-layer"
+      }
+    ]
+  },
+
+  "eventSystemRoot": {
+    "eventRouter": "/processors/event_router.py",
+    "stateEngine": "/state/current_state_store.py",
+    "stateModel": "event-sourced-logistics-state-machine"
+  },
+
+  "ontologyRoot": {
+    "schemaDirectory": "/ontology",
+    "entitySchemas": "/entities",
+    "workflowSchemas": "/workflow",
+    "protocolSchemas": "/protocol"
+  },
+
+  "dataSources": {
+    "datasets": "/datasets",
+    "geoSpatial": "/geojson",
+    "infrastructure": "/infrastructure",
+    "regionalEntities": "/regional-entities",
+    "zipIntelligence": "/zipcodes"
+  },
+
+  "AIIntegrationLayer": {
+    "GraphRAG": true,
+    "vectorRetrieval": true,
+    "semanticIndexing": true,
+    "eventDrivenReasoning": true
+  },
+
+  "entryPoints": {
+    "repositoryIndex": "/repository-index/logistics-knowledge-index.json",
+    "graphSpec": "/graph/graphrag-retrieval-spec.md",
+    "stateEngine": "/state/current_state_store.py"
+  }
+}
