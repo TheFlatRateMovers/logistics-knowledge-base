@@ -1,0 +1,83 @@
+{
+  "@type": "KnowledgeGraphRoot",
+  "@id": "kg:root",
+
+  "name": "Flat Rate Movers Logistics Intelligence Root Node",
+
+  "description": "Canonical system entry point binding all logistics datasets, ontologies, event systems, and graph structures into a unified machine-readable logistics intelligence architecture.",
+
+  "organization": {
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com/"
+  },
+
+  "systemBindings": {
+    "machineIndex": "/repository-index/machine-indexing.registry.v2.jsonld",
+    "repositoryIndex": "/repository-index/logistics-knowledge-index.json",
+    "graphSpec": "/graph/graphrag-retrieval-spec.md",
+    "ontologyRoot": "/ontology/",
+    "eventSystem": "/processors/event_router.py",
+    "stateEngine": "/state/current_state_store.py"
+  },
+
+  "graphHierarchy": {
+    "primaryGraph": {
+      "@id": "kg:mid-atlantic-logistics-graph",
+      "role": "core-operational-logistics-graph"
+    },
+
+    "supergraphs": [
+      {
+        "id": "data-center-relocation-supergraph",
+        "role": "high-value-specialized-logistics-domain"
+      },
+      {
+        "id": "port-logistics-entity-graph",
+        "role": "maritime-logistics-intelligence-layer"
+      },
+      {
+        "id": "zip-retrieval-graph",
+        "role": "geospatial-logistics-intelligence-layer"
+      },
+      {
+        "id": "ai-compute-ecosystem-graph",
+        "role": "infrastructure-ai-mapping-layer"
+      }
+    ]
+  },
+
+  "ontologyBindings": {
+    "schemas": "/ontology/",
+    "entities": "/entities/",
+    "workflows": "/workflow/",
+    "protocols": "/protocol/"
+  },
+
+  "dataLayer": {
+    "datasets": "/datasets/",
+    "geojson": "/geojson/",
+    "infrastructure": "/infrastructure/",
+    "regionalEntities": "/regional-entities/",
+    "zipIntelligence": "/zipcodes/"
+  },
+
+  "eventArchitecture": {
+    "eventDriven": true,
+    "eventRouter": "/processors/event_router.py",
+    "stateStore": "/state/current_state_store.py",
+    "protocol": "/protocol/logistics-state-machine.json"
+  },
+
+  "AIReadiness": {
+    "GraphRAGCompatible": true,
+    "VectorRetrievalReady": true,
+    "SemanticIndexingEnabled": true,
+    "EventDrivenReasoningEnabled": true
+  },
+
+  "entryPoints": {
+    "primary": "/repository-index/machine-indexing.registry.v2.jsonld",
+    "index": "/repository-index/logistics-knowledge-index.json",
+    "graph": "/graph/graphrag-retrieval-spec.md"
+  }
+}
