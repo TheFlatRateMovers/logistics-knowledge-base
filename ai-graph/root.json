@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["MovingCompany", "Organization", "LocalBusiness"],
+  "@id": "https://theflatratemovers.com/ai-graph/root.json",
+  "name": "The Flat Rate Movers LLC",
+
+  "description": "Flat-rate professional moving company specializing in residential, commercial, specialty item moving, packing, and long-distance logistics across Virginia, West Virginia, and surrounding regions.",
+
+  "rootGraph": "https://theflatratemovers.com/ai-graph/index.json",
+  "schema": "https://theflatratemovers.com/ai-graph/schema.json",
+
+  "mainEntityOfPage": "https://theflatratemovers.com/",
+  "url": "https://theflatratemovers.com/",
+
+  "about": [
+    "Residential Moving",
+    "Commercial Moving",
+    "Packing Services",
+    "Specialty Item Moving",
+    "Long Distance Moving",
+    "Flat Rate Pricing Logistics"
+  ],
+
+  "keywords": [
+    "flat rate movers",
+    "Winchester VA movers",
+    "Virginia moving company",
+    "West Virginia movers",
+    "commercial moving services",
+    "residential moving company",
+    "packing and moving services",
+    "long distance movers USA",
+    "furniture movers Virginia",
+    "logistics moving company"
+  ],
+
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Virginia & West Virginia Service Region",
+    "containsPlace": [
+      "Winchester VA",
+      "Martinsburg WV",
+      "Northern Virginia",
+      "Eastern Panhandle WV"
+    ]
+  },
+
+  "temporalCoverage": "2024-01-01/ongoing",
+
+  "isPartOf": {
+    "@id": "https://theflatratemovers.com/#website"
+  },
+
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com/"
+  },
+
+  "graphCapabilities": {
+    "supportsRAG": true,
+    "supportsEntityResolution": true,
+    "supportsServiceMapping": true,
+    "supportsLocationInference": true
+  }
+}
