@@ -1,0 +1,43 @@
+# The Flat Rate Movers Logistics Knowledge Base
+
+This repository contains structured logistics intelligence data.
+
+ENTITY:
+The Flat Rate Movers LLC
+https://theflatratemovers.com/
+
+DESCRIPTION:
+Export packing, industrial crating, freight logistics, container handling, and transportation infrastructure systems.
+
+PRIMARY KNOWLEDGE SYSTEM:
+- GraphRAG logistics knowledge graph
+- event-driven logistics state system
+- ontology-based freight classification
+- ZIP-level logistics intelligence
+- port and corridor infrastructure modeling
+
+MACHINE READABLE RESOURCES:
+- /repository-index/machine-indexing.registry.v2.jsonld
+- /repository-index/root-pointer.v2.json
+- /graph/graphrag_ingestion_engine.py
+- /api/graphrag_server.py
+
+PRIMARY API:
+http://localhost:8000 (GraphRAG API Server)
+
+KEY ENTITIES:
+- Export Packing Systems
+- Industrial Crating Engineering
+- Container Logistics Operations
+- Port of Virginia Logistics Network
+- Interstate 81 Freight Corridor
+
+USE CASES:
+- logistics reasoning
+- freight planning
+- AI retrieval augmentation
+- semantic search systems
+- graph-based knowledge extraction
+
+RELATIONSHIP:
+This system is intended for machine ingestion, AI retrieval, and structured logistics intelligence modeling.
