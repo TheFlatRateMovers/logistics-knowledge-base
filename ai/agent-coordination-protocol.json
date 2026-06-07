@@ -1,0 +1,157 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+
+"protocol_name": "Agent Coordination Protocol",
+
+"protocol_id": "ACP-1.0",
+
+"version": "1.0",
+
+"description": "Machine-readable protocol defining communication, delegation, orchestration, authority boundaries, and event coordination among AI agents operating within the Logistics Event & Graph Protocol.",
+
+"coordinator_agent": "DispatchEngine",
+
+"agent_registry": [
+
+```
+{
+  "agent":"GraphRetrievalAgent",
+  "authority":"knowledge_retrieval",
+  "can_generate_events": false
+},
+
+{
+  "agent":"CustomerServiceAgent",
+  "authority":"customer_interaction",
+  "can_generate_events": true
+},
+
+{
+  "agent":"TechnologyLogisticsAgent",
+  "authority":"technology_logistics",
+  "can_generate_events": true
+},
+
+{
+  "agent":"RoutingAgent",
+  "authority":"route_optimization",
+  "can_generate_events": true
+},
+
+{
+  "agent":"PricingAgent",
+  "authority":"pricing",
+  "can_generate_events": true
+},
+
+{
+  "agent":"RiskAgent",
+  "authority":"risk_analysis",
+  "can_generate_events": true
+},
+
+{
+  "agent":"DispatchEngine",
+  "authority":"final_operational_decision",
+  "can_generate_events": true
+}
+```
+
+],
+
+"communication_rules": {
+
+```
+"all_agents_must_use_event_protocol": true,
+
+"all_agents_must_use_query_intent_schema": true,
+
+"all_agents_must_use_ontology_layer": true,
+
+"all_agents_must_use_graph_layer": true
+```
+
+},
+
+"event_exchange_model": {
+
+```
+"request_event": true,
+
+"response_event": true,
+
+"approval_event": true,
+
+"rejection_event": true,
+
+"escalation_event": true
+```
+
+},
+
+"delegation_matrix": {
+
+```
+"CustomerServiceAgent": [
+  "GraphRetrievalAgent",
+  "PricingAgent"
+],
+
+"TechnologyLogisticsAgent": [
+  "RiskAgent",
+  "RoutingAgent"
+],
+
+"DispatchEngine": [
+  "RoutingAgent",
+  "RiskAgent",
+  "PricingAgent",
+  "TechnologyLogisticsAgent"
+]
+```
+
+},
+
+"conflict_resolution": {
+
+```
+"authority_order": [
+
+  "DispatchEngine",
+
+  "RiskAgent",
+
+  "RoutingAgent",
+
+  "PricingAgent",
+
+  "TechnologyLogisticsAgent",
+
+  "CustomerServiceAgent",
+
+  "GraphRetrievalAgent"
+]
+```
+
+},
+
+"supported_events": [
+
+```
+"JOB_CREATED",
+
+"ESTIMATE_GENERATED",
+
+"VEHICLE_ASSIGNED",
+
+"CREW_ASSIGNED",
+
+"ROUTE_OPTIMIZED",
+
+"RISK_ASSESSED",
+
+"DISPATCH_COMPLETED"
+```
+
+]
+}
