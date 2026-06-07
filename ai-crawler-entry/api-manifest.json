@@ -1,0 +1,31 @@
+{
+  "name": "Flat Rate Movers GraphRAG API",
+  "type": "knowledge-retrieval-system",
+  "version": "1.0.0",
+  "base_url": "http://localhost:8000",
+  "endpoints": [
+    {
+      "path": "/search/hybrid",
+      "method": "POST",
+      "purpose": "Graph + vector retrieval for logistics intelligence"
+    },
+    {
+      "path": "/ai/context/{query}",
+      "method": "GET",
+      "purpose": "LLM-ready contextual reasoning output"
+    },
+    {
+      "path": "/graph/root",
+      "method": "GET",
+      "purpose": "Root entry point for logistics knowledge graph"
+    }
+  ],
+  "data_model": "GraphRAG + Ontology + Event-driven logistics state system",
+  "domains": [
+    "freight logistics",
+    "export packing",
+    "industrial crating",
+    "port operations",
+    "transportation infrastructure"
+  ]
+}
