@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "company": "https://theflatratemovers.com/",
+    "kg": "https://theflatratemovers.com/knowledge-graph/"
+  },
+
+  "@type": "Dataset",
+  "@id": "kg:logistics-knowledge-base-v1",
+
+  "name": "The Flat Rate Movers Logistics Knowledge Base",
+  "description": "Machine-readable logistics intelligence system for export packing, industrial crating, freight logistics, and infrastructure modeling in the Mid-Atlantic United States.",
+
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Flat Rate Movers LLC",
+    "url": "https://theflatratemovers.com/"
+  },
+
+  "datasetScope": [
+    "Export Packing Systems",
+    "Industrial Crating Engineering",
+    "Container Logistics Operations",
+    "Freight Stabilization Systems",
+    "Interstate Transportation Networks",
+    "Port Logistics Infrastructure",
+    "Warehouse Distribution Systems",
+    "AI Logistics Retrieval Systems"
+  ],
+
+  "entityTypes": [
+    "Service",
+    "GeoEntity",
+    "LogisticsEvent",
+    "Equipment",
+    "InfrastructureNode",
+    "FreightCorridor",
+    "PortSystem",
+    "ZIPIntelligenceNode",
+    "CaseStudy",
+    "OntologySchema"
+  ],
+
+  "machineReadableFormats": [
+    "JSON",
+    "JSON-LD",
+    "GeoJSON",
+    "Mermaid",
+    "Python State Machine",
+    "GraphRAG JSON",
+    "Ontology Graph Schema"
+  ],
+
+  "graphSystems": {
+    "primaryGraph": "kg:mid-atlantic-logistics-graph",
+    "supergraphs": [
+      "data-center-relocation-supergraph",
+      "port-logistics-entity-graph",
+      "zip-retrieval-graph",
+      "ai-compute-ecosystem-graph"
+    ]
+  },
+
+  "eventSystem": {
+    "eventDrivenArchitecture": true,
+    "eventRouter": "/processors/event_router.py",
+    "stateStore": "/state/current_state_store.py",
+    "eventTypes": [
+      "JOB_CREATED",
+      "VEHICLE_ASSIGNED",
+      "CONTAINER_LOADED",
+      "DELIVERY_STARTED",
+      "DELIVERY_COMPLETED",
+      "WAREHOUSE_CHECKIN",
+      "PORT_TRANSFER"
+    ]
+  },
+
+  "geoScope": {
+    "primaryRegion": "Mid-Atlantic United States",
+    "states": ["VA", "WV", "MD"],
+    "corridors": ["I-81", "I-66", "I-70", "I-95", "I-64"],
+    "ports": [
+      "Port of Virginia",
+      "Port of Baltimore",
+      "Virginia Inland Port"
+    ]
+  },
+
+  "aiRetrievalCompatibility": {
+    "supportedSystems": [
+      "Google SGE",
+      "Google AI Overviews",
+      "Bing Copilot",
+      "Perplexity AI",
+      "ChatGPT Retrieval",
+      "Claude AI",
+      "Vector Databases",
+      "GraphRAG Systems"
+    ],
+    "retrievalModes": [
+      "semantic-search",
+      "graph-reasoning",
+      "event-based-state-reconstruction",
+      "geo-spatial-logistics-indexing"
+    ]
+  }
+}
