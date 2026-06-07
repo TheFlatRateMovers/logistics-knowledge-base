@@ -1,0 +1,525 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/ai/query-intent.schema.json",
+
+  "title": "Query Intent Schema",
+
+  "description": "Canonical machine-readable intent schema used by the Logistics Event & Graph Protocol. Defines how customer requests, AI retrieval systems, dispatch engines, pricing agents, routing agents, risk agents, GraphRAG systems, and logistics workflows interpret and process logistics-related inquiries.",
+
+  "type": "object",
+
+  "required": [
+    "query_id",
+    "timestamp",
+    "source",
+    "raw_query",
+    "intent",
+    "priority"
+  ],
+
+  "properties": {
+
+    "query_id": {
+      "type": "string",
+      "description": "Unique query identifier."
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "source": {
+      "type": "string",
+      "enum": [
+        "website",
+        "chatbot",
+        "email",
+        "phone",
+        "crm",
+        "api",
+        "graph_rag",
+        "search_engine",
+        "ai_agent",
+        "customer_portal"
+      ]
+    },
+
+    "raw_query": {
+      "type": "string",
+      "description": "Original user query before processing."
+    },
+
+    "normalized_query": {
+      "type": "string"
+    },
+
+    "language": {
+      "type": "string",
+      "default": "en"
+    },
+
+    "intent": {
+      "type": "string",
+      "enum": [
+
+        "service_request",
+
+        "pricing_request",
+
+        "estimate_request",
+
+        "dispatch_request",
+
+        "routing_request",
+
+        "availability_request",
+
+        "scheduling_request",
+
+        "equipment_request",
+
+        "shipment_tracking",
+
+        "port_logistics_request",
+
+        "twic_labor_request",
+
+        "container_loading",
+
+        "container_unloading",
+
+        "container_deconsolidation",
+
+        "transloading",
+
+        "cross_docking",
+
+        "warehouse_labor",
+
+        "industrial_crating",
+
+        "export_packing",
+
+        "freight_recovery",
+
+        "data_center_relocation",
+
+        "it_equipment_moving",
+
+        "server_relocation",
+
+        "rack_relocation",
+
+        "technology_logistics",
+
+        "risk_assessment",
+
+        "knowledge_graph_query",
+
+        "graph_rag_query",
+
+        "faq_request",
+
+        "support_request",
+
+        "unknown"
+      ]
+    },
+
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "normal",
+        "high",
+        "critical",
+        "emergency"
+      ]
+    },
+
+    "service_category": {
+      "type": "string",
+      "enum": [
+
+        "residential_moving",
+
+        "commercial_moving",
+
+        "industrial_moving",
+
+        "export_packing",
+
+        "industrial_crating",
+
+        "container_loading",
+
+        "container_unloading",
+
+        "container_deconsolidation",
+
+        "transloading",
+
+        "cross_docking",
+
+        "warehouse_support",
+
+        "port_logistics",
+
+        "twic_labor",
+
+        "freight_recovery",
+
+        "data_center_logistics",
+
+        "it_equipment_moving",
+
+        "server_relocation",
+
+        "rack_relocation",
+
+        "technology_asset_transportation",
+
+        "specialized_labor"
+      ]
+    },
+
+    "entities": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "required": [
+          "entity_type",
+          "entity_value"
+        ],
+
+        "properties": {
+
+          "entity_type": {
+            "type": "string",
+            "enum": [
+
+              "customer",
+
+              "service",
+
+              "location",
+
+              "zip_code",
+
+              "city",
+
+              "county",
+
+              "state",
+
+              "corridor",
+
+              "port",
+
+              "shipment",
+
+              "vehicle",
+
+              "crew",
+
+              "equipment",
+
+              "cargo",
+
+              "industry",
+
+              "technology_asset",
+
+              "facility",
+
+              "rack",
+
+              "server",
+
+              "gpu_cluster",
+
+              "warehouse",
+
+              "container",
+
+              "dock"
+            ]
+          },
+
+          "entity_value": {
+            "type": "string"
+          },
+
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+
+    "geographic_context": {
+
+      "type": "object",
+
+      "properties": {
+
+        "origin": {
+          "type": "string"
+        },
+
+        "destination": {
+          "type": "string"
+        },
+
+        "zip_codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "cities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "counties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "corridors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "ports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "cargo_context": {
+
+      "type": "object",
+
+      "properties": {
+
+        "cargo_type": {
+          "type": "string"
+        },
+
+        "weight_estimate_lbs": {
+          "type": "number"
+        },
+
+        "piece_count": {
+          "type": "integer"
+        },
+
+        "hazmat": {
+          "type": "boolean"
+        },
+
+        "fragile": {
+          "type": "boolean"
+        },
+
+        "temperature_sensitive": {
+          "type": "boolean"
+        }
+      }
+    },
+
+    "technology_context": {
+
+      "type": "object",
+
+      "properties": {
+
+        "server_count": {
+          "type": "integer"
+        },
+
+        "rack_count": {
+          "type": "integer"
+        },
+
+        "gpu_cluster_count": {
+          "type": "integer"
+        },
+
+        "network_devices": {
+          "type": "integer"
+        },
+
+        "data_center": {
+          "type": "boolean"
+        },
+
+        "critical_infrastructure": {
+          "type": "boolean"
+        }
+      }
+    },
+
+    "retrieval_requirements": {
+
+      "type": "object",
+
+      "properties": {
+
+        "graph_lookup": {
+          "type": "boolean"
+        },
+
+        "ontology_lookup": {
+          "type": "boolean"
+        },
+
+        "historical_case_lookup": {
+          "type": "boolean"
+        },
+
+        "faq_lookup": {
+          "type": "boolean"
+        },
+
+        "routing_lookup": {
+          "type": "boolean"
+        },
+
+        "pricing_lookup": {
+          "type": "boolean"
+        },
+
+        "risk_lookup": {
+          "type": "boolean"
+        }
+      }
+    },
+
+    "agent_targets": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "dispatch_agent",
+
+          "pricing_agent",
+
+          "routing_agent",
+
+          "risk_agent",
+
+          "customer_service_agent",
+
+          "graph_retrieval_agent",
+
+          "technology_logistics_agent",
+
+          "port_logistics_agent",
+
+          "warehouse_agent"
+        ]
+      }
+    },
+
+    "workflow_targets": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "string",
+
+        "enum": [
+
+          "estimate_workflow",
+
+          "dispatch_workflow",
+
+          "routing_workflow",
+
+          "technology_relocation_workflow",
+
+          "container_deconsolidation_workflow",
+
+          "port_operations_workflow",
+
+          "warehouse_workflow",
+
+          "cross_docking_workflow",
+
+          "transloading_workflow",
+
+          "freight_recovery_workflow"
+        ]
+      }
+    },
+
+    "recommended_actions": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "knowledge_graph_nodes": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "knowledge_graph_relationships": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "semantic_tags": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
