@@ -1,0 +1,201 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Performance Metrics",
+  "version": "1.0.0",
+  "classification": "Performance Measurement Framework",
+
+  "description": "Standardized metrics used to evaluate AI agents, workflows, decisions, graph reasoning quality, operational performance, and business outcomes.",
+
+  "globalMetrics": [
+
+    {
+      "metric": "decision_accuracy",
+      "formula": "correct_decisions / total_decisions"
+    },
+
+    {
+      "metric": "recommendation_acceptance_rate",
+      "formula": "accepted_recommendations / total_recommendations"
+    },
+
+    {
+      "metric": "execution_success_rate",
+      "formula": "successful_executions / total_executions"
+    },
+
+    {
+      "metric": "confidence_calibration",
+      "formula": "predicted_confidence vs actual_outcome"
+    }
+  ],
+
+  "dispatchMetrics": [
+
+    {
+      "metric": "crew_utilization"
+    },
+
+    {
+      "metric": "vehicle_utilization"
+    },
+
+    {
+      "metric": "dispatch_time"
+    },
+
+    {
+      "metric": "resource_assignment_accuracy"
+    }
+  ],
+
+  "routingMetrics": [
+
+    {
+      "metric": "route_efficiency"
+    },
+
+    {
+      "metric": "travel_time_accuracy"
+    },
+
+    {
+      "metric": "fuel_efficiency"
+    },
+
+    {
+      "metric": "corridor_selection_accuracy"
+    }
+  ],
+
+  "pricingMetrics": [
+
+    {
+      "metric": "estimate_accuracy"
+    },
+
+    {
+      "metric": "margin_accuracy"
+    },
+
+    {
+      "metric": "quote_conversion_rate"
+    },
+
+    {
+      "metric": "pricing_confidence_accuracy"
+    }
+  ],
+
+  "riskMetrics": [
+
+    {
+      "metric": "damage_prevention_rate"
+    },
+
+    {
+      "metric": "delay_prediction_accuracy"
+    },
+
+    {
+      "metric": "risk_detection_accuracy"
+    },
+
+    {
+      "metric": "mitigation_success_rate"
+    }
+  ],
+
+  "technologyLogisticsMetrics": [
+
+    {
+      "metric": "server_protection_success_rate"
+    },
+
+    {
+      "metric": "rack_relocation_accuracy"
+    },
+
+    {
+      "metric": "chain_of_custody_integrity"
+    },
+
+    {
+      "metric": "data_center_migration_success_rate"
+    }
+  ],
+
+  "graphMetrics": [
+
+    {
+      "metric": "graph_retrieval_accuracy"
+    },
+
+    {
+      "metric": "relationship_discovery_rate"
+    },
+
+    {
+      "metric": "graph_reasoning_quality"
+    },
+
+    {
+      "metric": "context_generation_quality"
+    }
+  ],
+
+  "learningMetrics": [
+
+    {
+      "metric": "memory_creation_rate"
+    },
+
+    {
+      "metric": "reasoning_improvement_rate"
+    },
+
+    {
+      "metric": "prediction_improvement_rate"
+    },
+
+    {
+      "metric": "autonomy_maturity_score"
+    }
+  ],
+
+  "enterpriseKPIs": [
+
+    {
+      "metric": "customer_satisfaction"
+    },
+
+    {
+      "metric": "profit_margin"
+    },
+
+    {
+      "metric": "operational_efficiency"
+    },
+
+    {
+      "metric": "resource_efficiency"
+    },
+
+    {
+      "metric": "safety_score"
+    },
+
+    {
+      "metric": "technology_asset_protection"
+    }
+  ],
+
+  "futureMetrics": [
+
+    "multi_agent_collaboration_score",
+    "autonomous_dispatch_success_rate",
+    "graph_rag_effectiveness",
+    "predictive_planning_accuracy",
+    "ai_infrastructure_logistics_score",
+    "knowledge_graph_growth_rate"
+  ]
+}
