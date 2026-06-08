@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://theflatratemovers.com/schemas/agent-decision-schema.json",
+
+  "title": "Agent Decision Schema",
+
+  "description": "Machine-readable decision object produced by logistics AI agents.",
+
+  "type": "object",
+
+  "required": [
+    "decisionId",
+    "timestamp",
+    "agentId",
+    "decisionType",
+    "confidenceScore",
+    "reasoning",
+    "recommendation"
+  ],
+
+  "properties": {
+
+    "decisionId": {
+      "type": "string"
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "agentId": {
+      "type": "string"
+    },
+
+    "decisionType": {
+      "type": "string",
+      "enum": [
+
+        "dispatch_decision",
+
+        "pricing_decision",
+
+        "routing_decision",
+
+        "risk_decision",
+
+        "graph_retrieval_decision",
+
+        "technology_logistics_decision"
+
+      ]
+    },
+
+    "confidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "jobId": {
+      "type": "string"
+    },
+
+    "reasoning": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "properties": {
+
+          "factor": {
+            "type": "string"
+          },
+
+          "weight": {
+            "type": "number"
+          },
+
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "recommendation": {
+
+      "type": "object",
+
+      "properties": {
+
+        "action": {
+          "type": "string"
+        },
+
+        "priority": {
+          "type": "string"
+        },
+
+        "estimatedImpact": {
+          "type": "string"
+        }
+      }
+    },
+
+    "relatedEntities": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    }
+
+  }
+}
