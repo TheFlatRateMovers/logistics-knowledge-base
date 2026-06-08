@@ -1,0 +1,139 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Planning Model",
+  "version": "1.0.0",
+  "classification": "Strategic Planning Framework",
+
+  "description": "Machine-readable planning framework used by logistics agents to transform goals into executable operational plans through graph reasoning, event analysis, state evaluation, and resource optimization.",
+
+  "planningLifecycle": [
+
+    {
+      "phase": 1,
+      "name": "Goal Identification",
+      "objective": "Determine desired operational outcome."
+    },
+
+    {
+      "phase": 2,
+      "name": "State Assessment",
+      "objective": "Evaluate current operational state."
+    },
+
+    {
+      "phase": 3,
+      "name": "Constraint Analysis",
+      "objective": "Identify operational limitations."
+    },
+
+    {
+      "phase": 4,
+      "name": "Resource Evaluation",
+      "objective": "Evaluate available assets."
+    },
+
+    {
+      "phase": 5,
+      "name": "Scenario Generation",
+      "objective": "Generate feasible plans."
+    },
+
+    {
+      "phase": 6,
+      "name": "Plan Selection",
+      "objective": "Choose highest scoring plan."
+    },
+
+    {
+      "phase": 7,
+      "name": "Execution",
+      "objective": "Emit operational events."
+    },
+
+    {
+      "phase": 8,
+      "name": "Outcome Evaluation",
+      "objective": "Measure performance."
+    }
+  ],
+
+  "planningInputs": [
+
+    "event_stream",
+    "current_state_store",
+    "knowledge_graph",
+    "resource_availability",
+    "equipment_inventory",
+    "customer_requirements",
+    "shipment_requirements",
+    "weather_conditions",
+    "traffic_conditions",
+    "risk_models"
+  ],
+
+  "planningOutputs": [
+
+    "dispatch_plan",
+    "crew_plan",
+    "vehicle_plan",
+    "equipment_plan",
+    "routing_plan",
+    "risk_mitigation_plan",
+    "customer_communication_plan"
+  ],
+
+  "planScoringDimensions": [
+
+    {
+      "dimension": "safety",
+      "weight": 0.30
+    },
+
+    {
+      "dimension": "customer_success",
+      "weight": 0.25
+    },
+
+    {
+      "dimension": "operational_efficiency",
+      "weight": 0.20
+    },
+
+    {
+      "dimension": "profitability",
+      "weight": 0.15
+    },
+
+    {
+      "dimension": "resource_utilization",
+      "weight": 0.10
+    }
+  ],
+
+  "supportedPlanningDomains": [
+
+    "household_moving",
+    "commercial_moving",
+    "industrial_relocation",
+    "container_loading",
+    "container_unloading",
+    "container_deconsolidation",
+    "cross_docking",
+    "transloading",
+    "warehouse_operations",
+    "port_logistics",
+    "technology_logistics",
+    "data_center_relocation",
+    "ai_infrastructure_logistics"
+  ],
+
+  "optimizationObjectives": [
+
+    "minimize_cost",
+    "minimize_time",
+    "maximize_safety",
+    "maximize_utilization",
+    "maximize_customer_satisfaction",
+    "maximize_reliability"
+  ]
+}
