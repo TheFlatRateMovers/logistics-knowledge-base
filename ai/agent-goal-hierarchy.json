@@ -1,0 +1,151 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Goal Hierarchy",
+  "version": "1.0.0",
+
+  "description": "Hierarchical goal structure that governs decision-making across logistics, transportation, relocation, technology infrastructure, and supply-chain agents.",
+
+  "rootGoal": {
+
+    "goalId": "G0",
+
+    "name": "Operational Success",
+
+    "description": "Deliver successful logistics outcomes while maximizing safety, efficiency, profitability, and customer success.",
+
+    "children": [
+
+      {
+        "goalId": "G1",
+        "name": "Protect People",
+        "priority": 1,
+
+        "subGoals": [
+
+          "crew_safety",
+          "public_safety",
+          "facility_safety",
+          "equipment_safety"
+        ]
+      },
+
+      {
+        "goalId": "G2",
+        "name": "Protect Cargo",
+        "priority": 2,
+
+        "subGoals": [
+
+          "damage_prevention",
+          "secure_transport",
+          "environmental_protection",
+          "technology_asset_protection"
+        ]
+      },
+
+      {
+        "goalId": "G3",
+        "name": "Meet Customer Requirements",
+        "priority": 3,
+
+        "subGoals": [
+
+          "on_time_completion",
+          "scope_compliance",
+          "communication",
+          "service_quality"
+        ]
+      },
+
+      {
+        "goalId": "G4",
+        "name": "Optimize Resources",
+        "priority": 4,
+
+        "subGoals": [
+
+          "crew_utilization",
+          "vehicle_utilization",
+          "equipment_utilization",
+          "facility_utilization"
+        ]
+      },
+
+      {
+        "goalId": "G5",
+        "name": "Maximize Profitability",
+        "priority": 5,
+
+        "subGoals": [
+
+          "cost_control",
+          "margin_protection",
+          "revenue_growth",
+          "asset_efficiency"
+        ]
+      },
+
+      {
+        "goalId": "G6",
+        "name": "Continuous Learning",
+        "priority": 6,
+
+        "subGoals": [
+
+          "outcome_analysis",
+          "memory_creation",
+          "reasoning_improvement",
+          "forecast_accuracy"
+        ]
+      }
+    ]
+  },
+
+  "domainSpecificGoals": [
+
+    {
+      "domain": "technology_logistics",
+
+      "goals": [
+
+        "protect_servers",
+
+        "protect_storage_arrays",
+
+        "protect_network_equipment",
+
+        "maintain_chain_of_custody",
+
+        "support_data_center_migration"
+      ]
+    },
+
+    {
+      "domain": "container_deconsolidation",
+
+      "goals": [
+
+        "reduce_dwell_time",
+
+        "accelerate_distribution",
+
+        "maximize_cross_dock_efficiency",
+
+        "reduce_demurrage_exposure"
+      ]
+    },
+
+    {
+      "domain": "port_logistics",
+
+      "goals": [
+
+        "reduce_detention",
+
+        "improve_terminal_turnaround",
+
+        "optimize_container_flow"
+      ]
+    }
+  ]
+}
