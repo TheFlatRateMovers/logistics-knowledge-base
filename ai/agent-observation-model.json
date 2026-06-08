@@ -1,0 +1,156 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Observation Model",
+  "version": "1.0.0",
+
+  "description": "Defines how logistics agents observe operational reality from events, graph relationships, state projections, and external infrastructure intelligence.",
+
+  "observationSources": [
+
+    {
+      "sourceType": "event_stream",
+      "examples": [
+        "JOB_CREATED",
+        "CREW_ASSIGNED",
+        "PICKUP_STARTED",
+        "DELIVERY_COMPLETED"
+      ]
+    },
+
+    {
+      "sourceType": "current_state",
+      "examples": [
+        "job_status",
+        "vehicle_status",
+        "crew_availability",
+        "shipment_progress"
+      ]
+    },
+
+    {
+      "sourceType": "knowledge_graph",
+      "examples": [
+        "entity_relationships",
+        "corridor_connectivity",
+        "service_dependencies"
+      ]
+    },
+
+    {
+      "sourceType": "geospatial",
+      "examples": [
+        "port_locations",
+        "warehouse_locations",
+        "data_center_corridors",
+        "distribution_networks"
+      ]
+    },
+
+    {
+      "sourceType": "external_signals",
+      "examples": [
+        "weather",
+        "traffic",
+        "infrastructure_disruptions",
+        "market_conditions"
+      ]
+    }
+  ],
+
+  "observationTypes": [
+
+    {
+      "type": "state_change",
+      "description": "Detects changes in operational state."
+    },
+
+    {
+      "type": "relationship_discovery",
+      "description": "Detects graph relationships and dependencies."
+    },
+
+    {
+      "type": "risk_signal",
+      "description": "Detects elevated operational risk."
+    },
+
+    {
+      "type": "resource_signal",
+      "description": "Detects resource utilization patterns."
+    },
+
+    {
+      "type": "performance_signal",
+      "description": "Detects operational efficiency trends."
+    }
+  ],
+
+  "observationDimensions": [
+
+    "time",
+    "location",
+    "resource",
+    "equipment",
+    "customer",
+    "shipment",
+    "risk",
+    "workflow",
+    "infrastructure",
+    "service"
+  ],
+
+  "observationOutputs": [
+
+    {
+      "output": "dispatch_context"
+    },
+
+    {
+      "output": "routing_context"
+    },
+
+    {
+      "output": "pricing_context"
+    },
+
+    {
+      "output": "risk_context"
+    },
+
+    {
+      "output": "technology_logistics_context"
+    },
+
+    {
+      "output": "graph_retrieval_context"
+    }
+  ],
+
+  "machineReasoningPriorities": [
+
+    {
+      "priority": 1,
+      "focus": "safety"
+    },
+
+    {
+      "priority": 2,
+      "focus": "customer_success"
+    },
+
+    {
+      "priority": 3,
+      "focus": "operational_efficiency"
+    },
+
+    {
+      "priority": 4,
+      "focus": "profitability"
+    },
+
+    {
+      "priority": 5,
+      "focus": "continuous_learning"
+    }
+  ]
+}
