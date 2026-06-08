@@ -1,0 +1,172 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+
+  "component": "Agent Learning Model",
+
+  "version": "1.0.0",
+
+  "description": "Framework for capturing outcomes, measuring performance, and improving future agent recommendations.",
+
+  "learningObjectives": [
+
+    {
+      "objective": "Improve Dispatch Efficiency",
+      "metrics": [
+        "crew_utilization",
+        "vehicle_utilization",
+        "job_completion_time"
+      ]
+    },
+
+    {
+      "objective": "Improve Pricing Accuracy",
+      "metrics": [
+        "estimate_accuracy",
+        "profit_margin_accuracy",
+        "quote_conversion_rate"
+      ]
+    },
+
+    {
+      "objective": "Improve Routing Performance",
+      "metrics": [
+        "distance_efficiency",
+        "travel_time_accuracy",
+        "fuel_efficiency"
+      ]
+    },
+
+    {
+      "objective": "Improve Risk Detection",
+      "metrics": [
+        "damage_prevention_rate",
+        "delay_prediction_accuracy",
+        "incident_reduction"
+      ]
+    },
+
+    {
+      "objective": "Improve Technology Logistics",
+      "metrics": [
+        "server_damage_rate",
+        "rack_migration_accuracy",
+        "critical_asset_protection"
+      ]
+    }
+
+  ],
+
+  "feedbackSources": [
+
+    "completed_jobs",
+
+    "customer_feedback",
+
+    "dispatch_reviews",
+
+    "damage_reports",
+
+    "delay_reports",
+
+    "pricing_outcomes",
+
+    "technology_project_outcomes"
+  ],
+
+  "learningCycle": {
+
+    "step1": "Collect Events",
+
+    "step2": "Build State",
+
+    "step3": "Generate Decision",
+
+    "step4": "Measure Outcome",
+
+    "step5": "Score Performance",
+
+    "step6": "Update Agent Confidence",
+
+    "step7": "Store Learning Record"
+  },
+
+  "outcomeScoring": {
+
+    "excellent": {
+      "minScore": 0.90,
+      "maxScore": 1.00
+    },
+
+    "good": {
+      "minScore": 0.75,
+      "maxScore": 0.89
+    },
+
+    "acceptable": {
+      "minScore": 0.60,
+      "maxScore": 0.74
+    },
+
+    "poor": {
+      "minScore": 0.00,
+      "maxScore": 0.59
+    }
+  },
+
+  "decisionMemory": {
+
+    "storeSuccessfulDecisions": true,
+
+    "storeFailedDecisions": true,
+
+    "retainReasoningChain": true,
+
+    "retainEntityRelationships": true,
+
+    "retainGraphContext": true
+  },
+
+  "futureCapabilities": [
+
+    "reinforcement_learning",
+
+    "graph_based_learning",
+
+    "agent_collaboration_learning",
+
+    "predictive_dispatching",
+
+    "autonomous_routing",
+
+    "dynamic_pricing",
+
+    "cargo_risk_prediction",
+
+    "technology_infrastructure_optimization"
+  ],
+
+  "supportedDomains": [
+
+    "household_moving",
+
+    "commercial_moving",
+
+    "container_logistics",
+
+    "container_deconsolidation",
+
+    "transloading",
+
+    "cross_docking",
+
+    "warehouse_operations",
+
+    "port_logistics",
+
+    "technology_logistics",
+
+    "data_center_relocation",
+
+    "ai_infrastructure_logistics"
+  ]
+}
