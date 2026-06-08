@@ -1,0 +1,123 @@
+{
+  "protocol": "Agent Message Protocol",
+  "version": "1.0.0",
+  "description": "Machine-readable communication standard for logistics AI agents.",
+
+  "messageSchema": {
+
+    "required": [
+
+      "messageId",
+      "timestamp",
+      "sourceAgent",
+      "targetAgent",
+      "messageType",
+      "priority",
+      "payload"
+    ]
+  },
+
+  "messageTypes": [
+
+    {
+      "name": "TASK_REQUEST",
+      "description": "Requests an agent to perform work."
+    },
+
+    {
+      "name": "TASK_RESPONSE",
+      "description": "Returns results from requested work."
+    },
+
+    {
+      "name": "GRAPH_QUERY",
+      "description": "Requests graph context."
+    },
+
+    {
+      "name": "GRAPH_RESPONSE",
+      "description": "Returns graph context."
+    },
+
+    {
+      "name": "RISK_ALERT",
+      "description": "Notifies risk conditions."
+    },
+
+    {
+      "name": "ROUTE_RECOMMENDATION",
+      "description": "Provides route intelligence."
+    },
+
+    {
+      "name": "DISPATCH_RECOMMENDATION",
+      "description": "Provides dispatch recommendation."
+    },
+
+    {
+      "name": "PRICING_RECOMMENDATION",
+      "description": "Provides pricing recommendation."
+    }
+  ],
+
+  "priorityLevels": [
+
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+
+  "sampleMessage": {
+
+    "messageId": "MSG-100001",
+
+    "timestamp": "2026-06-08T12:00:00Z",
+
+    "sourceAgent": "dispatch-agent",
+
+    "targetAgent": "risk-agent",
+
+    "messageType": "TASK_REQUEST",
+
+    "priority": "HIGH",
+
+    "correlationId": "JOB-90001",
+
+    "payload": {
+
+      "jobId": "JOB-90001",
+
+      "serviceType": "Container Deconsolidation",
+
+      "origin": "Port of Virginia",
+
+      "destination": "Winchester VA"
+    }
+  },
+
+  "supportedAgents": [
+
+    "dispatch-agent",
+    "pricing-agent",
+    "routing-agent",
+    "risk-agent",
+    "graph-retrieval-agent",
+    "technology-logistics-agent",
+    "customer-service-agent"
+  ],
+
+  "interoperabilityTargets": [
+
+    "Neo4j",
+    "Memgraph",
+    "GraphRAG",
+    "LangGraph",
+    "OpenAI Agents",
+    "MCP Frameworks",
+    "Vector Databases",
+    "Enterprise Knowledge Graphs",
+    "JSON-LD Pipelines",
+    "RDF Knowledge Systems"
+  ]
+}
