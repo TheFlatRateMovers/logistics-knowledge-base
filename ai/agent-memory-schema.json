@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://theflatratemovers.com/schemas/agent-memory-schema.json",
+  "title": "Agent Memory Schema",
+  "description": "Canonical schema for persistent and episodic memory used by logistics AI agents operating within the Logistics Event & Graph Protocol.",
+
+  "type": "object",
+
+  "required": [
+    "memoryId",
+    "memoryType",
+    "agentId",
+    "createdAt",
+    "importanceScore",
+    "content"
+  ],
+
+  "properties": {
+
+    "memoryId": {
+      "type": "string"
+    },
+
+    "agentId": {
+      "type": "string"
+    },
+
+    "memoryType": {
+      "type": "string",
+      "enum": [
+        "episodic",
+        "semantic",
+        "procedural",
+        "operational",
+        "graph_context",
+        "decision_history",
+        "customer_history",
+        "asset_history",
+        "risk_history"
+      ]
+    },
+
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "importanceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "confidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+
+    "retentionPolicy": {
+      "type": "string",
+      "enum": [
+        "short_term",
+        "medium_term",
+        "long_term",
+        "permanent"
+      ]
+    },
+
+    "domain": {
+      "type": "string",
+      "enum": [
+        "container_logistics",
+        "transloading",
+        "cross_docking",
+        "container_deconsolidation",
+        "port_logistics",
+        "technology_logistics",
+        "data_center_relocation",
+        "warehouse_operations",
+        "commercial_moving",
+        "residential_moving"
+      ]
+    },
+
+    "entitiesReferenced": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "relatedEvents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "graphReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "content": {
+
+      "type": "object",
+
+      "properties": {
+
+        "summary": {
+          "type": "string"
+        },
+
+        "observation": {
+          "type": "string"
+        },
+
+        "decision": {
+          "type": "string"
+        },
+
+        "outcome": {
+          "type": "string"
+        },
+
+        "lessonsLearned": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "embeddingMetadata": {
+
+      "type": "object",
+
+      "properties": {
+
+        "vectorized": {
+          "type": "boolean"
+        },
+
+        "embeddingModel": {
+          "type": "string"
+        },
+
+        "vectorStore": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
