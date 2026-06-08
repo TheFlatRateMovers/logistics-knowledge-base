@@ -1,0 +1,151 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Execution Model",
+  "version": "1.0.0",
+  "classification": "Operational Execution Framework",
+
+  "description": "Defines how AI agents transform approved plans and decisions into executable logistics operations through event emission, workflow orchestration, graph mutation, state transitions, and operational monitoring.",
+
+  "executionLifecycle": [
+
+    {
+      "phase": 1,
+      "name": "Execution Request",
+      "description": "Receive approved decision."
+    },
+
+    {
+      "phase": 2,
+      "name": "Pre-Execution Validation",
+      "description": "Verify permissions, resources, constraints, and safety requirements."
+    },
+
+    {
+      "phase": 3,
+      "name": "Event Generation",
+      "description": "Create operational events."
+    },
+
+    {
+      "phase": 4,
+      "name": "Workflow Activation",
+      "description": "Initiate workflow sequence."
+    },
+
+    {
+      "phase": 5,
+      "name": "State Projection",
+      "description": "Update operational state."
+    },
+
+    {
+      "phase": 6,
+      "name": "Graph Mutation",
+      "description": "Update graph relationships."
+    },
+
+    {
+      "phase": 7,
+      "name": "Execution Monitoring",
+      "description": "Track execution progress."
+    },
+
+    {
+      "phase": 8,
+      "name": "Outcome Recording",
+      "description": "Capture final results."
+    }
+  ],
+
+  "executionInputs": [
+
+    "agent_decisions",
+    "approved_plans",
+    "current_state",
+    "graph_context",
+    "resource_inventory",
+    "workflow_definitions",
+    "risk_assessments",
+    "customer_requirements"
+  ],
+
+  "executionOutputs": [
+
+    "events",
+    "workflow_actions",
+    "state_updates",
+    "graph_updates",
+    "audit_records",
+    "performance_records"
+  ],
+
+  "eventEmissionRules": [
+
+    {
+      "decisionType": "dispatch",
+      "events": [
+        "VEHICLE_ASSIGNED",
+        "CREW_ASSIGNED",
+        "DISPATCH_CONFIRMED"
+      ]
+    },
+
+    {
+      "decisionType": "routing",
+      "events": [
+        "ROUTE_SELECTED",
+        "ROUTE_UPDATED"
+      ]
+    },
+
+    {
+      "decisionType": "pricing",
+      "events": [
+        "ESTIMATE_GENERATED",
+        "PRICE_APPROVED"
+      ]
+    },
+
+    {
+      "decisionType": "risk",
+      "events": [
+        "RISK_DETECTED",
+        "MITIGATION_REQUIRED"
+      ]
+    }
+  ],
+
+  "executionStates": [
+
+    "pending",
+    "validated",
+    "scheduled",
+    "executing",
+    "paused",
+    "completed",
+    "failed",
+    "cancelled"
+  ],
+
+  "requiredAuditFields": [
+
+    "execution_id",
+    "agent_id",
+    "decision_id",
+    "timestamp",
+    "workflow_id",
+    "job_id",
+    "status"
+  ],
+
+  "supportedDomains": [
+
+    "commercial_moving",
+    "container_logistics",
+    "warehouse_operations",
+    "port_logistics",
+    "technology_logistics",
+    "data_center_relocation",
+    "ai_infrastructure_logistics"
+  ]
+}
