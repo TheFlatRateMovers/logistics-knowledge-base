@@ -1,0 +1,184 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Autonomy Framework",
+  "version": "1.0.0",
+
+  "description": "Defines autonomy levels, decision boundaries, approval requirements, escalation policies, and coordination rules for logistics AI agents.",
+
+  "autonomyLevels": [
+
+    {
+      "level": 0,
+      "name": "Observation Only",
+
+      "permissions": [
+
+        "observe",
+        "retrieve",
+        "report"
+      ],
+
+      "restrictions": [
+
+        "cannot_recommend",
+        "cannot_execute"
+      ]
+    },
+
+    {
+      "level": 1,
+      "name": "Recommendation",
+
+      "permissions": [
+
+        "observe",
+        "analyze",
+        "recommend"
+      ],
+
+      "restrictions": [
+
+        "cannot_execute"
+      ]
+    },
+
+    {
+      "level": 2,
+      "name": "Assisted Execution",
+
+      "permissions": [
+
+        "recommend",
+        "prepare_actions",
+        "generate_events"
+      ],
+
+      "requiresHumanApproval": true
+    },
+
+    {
+      "level": 3,
+      "name": "Controlled Automation",
+
+      "permissions": [
+
+        "dispatch_resources",
+        "assign_crews",
+        "assign_equipment",
+        "generate_workflows"
+      ],
+
+      "requiresAuditLogging": true
+    },
+
+    {
+      "level": 4,
+      "name": "Operational Automation",
+
+      "permissions": [
+
+        "dynamic_routing",
+        "resource_optimization",
+        "graph_updates",
+        "workflow_execution"
+      ],
+
+      "requiresContinuousMonitoring": true
+    },
+
+    {
+      "level": 5,
+      "name": "Autonomous Logistics Coordination",
+
+      "permissions": [
+
+        "multi_agent_decision_making",
+        "self_optimization",
+        "predictive_dispatching",
+        "adaptive_resource_allocation"
+      ],
+
+      "requiresGovernanceReview": true
+    }
+  ],
+
+  "escalationTriggers": [
+
+    {
+      "trigger": "high_risk_cargo",
+      "requiredLevel": 2
+    },
+
+    {
+      "trigger": "technology_asset_transport",
+      "requiredLevel": 3
+    },
+
+    {
+      "trigger": "data_center_migration",
+      "requiredLevel": 4
+    },
+
+    {
+      "trigger": "safety_incident",
+      "requiredLevel": 0
+    },
+
+    {
+      "trigger": "customer_complaint",
+      "requiredLevel": 1
+    }
+  ],
+
+  "decisionGovernance": {
+
+    "requireReasoningChain": true,
+
+    "requireGraphReferences": true,
+
+    "requireMemoryLogging": true,
+
+    "requireOutcomeTracking": true,
+
+    "requireAuditTrail": true
+  },
+
+  "coordinationRules": [
+
+    {
+      "agent": "dispatch-agent",
+      "collaboratesWith": [
+        "routing-agent",
+        "risk-agent"
+      ]
+    },
+
+    {
+      "agent": "pricing-agent",
+      "collaboratesWith": [
+        "dispatch-agent",
+        "graph-retrieval-agent"
+      ]
+    },
+
+    {
+      "agent": "technology-logistics-agent",
+      "collaboratesWith": [
+        "risk-agent",
+        "routing-agent",
+        "dispatch-agent"
+      ]
+    }
+  ],
+
+  "futureCapabilities": [
+
+    "autonomous_dispatching",
+    "autonomous_routing",
+    "predictive_workload_balancing",
+    "graph_driven_decisioning",
+    "reinforcement_learning",
+    "multi_agent_planning",
+    "ai_infrastructure_coordination"
+  ]
+}
