@@ -1,0 +1,182 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Registry",
+  "version": "1.0.0",
+  "lastUpdated": "2026-06-08",
+  "registryId": "logistics-agent-registry",
+
+  "organization": {
+    "name": "The Flat Rate Movers LLC",
+    "website": "https://theflatratemovers.com",
+    "repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base"
+  },
+
+  "agents": [
+
+    {
+      "agentId": "dispatch-agent",
+      "name": "Dispatch Agent",
+      "version": "1.0.0",
+      "category": "operations",
+      "entryPoint": "/ai/dispatch-agent.md",
+      "description": "Assigns crews, vehicles, equipment, and service resources to logistics jobs.",
+      "status": "active",
+      "capabilities": [
+        "job_assignment",
+        "crew_assignment",
+        "vehicle_assignment",
+        "equipment_assignment",
+        "resource_optimization"
+      ],
+      "consumes": [
+        "JOB_CREATED",
+        "ESTIMATE_GENERATED",
+        "VEHICLE_ASSIGNED",
+        "CREW_ASSIGNED"
+      ],
+      "produces": [
+        "DISPATCH_RECOMMENDATION",
+        "RESOURCE_ASSIGNMENT"
+      ]
+    },
+
+    {
+      "agentId": "pricing-agent",
+      "name": "Pricing Agent",
+      "version": "1.0.0",
+      "category": "commercial",
+      "entryPoint": "/ai/pricing-agent.md",
+      "description": "Generates pricing recommendations and quote calculations.",
+      "status": "active",
+      "capabilities": [
+        "estimate_generation",
+        "pricing_analysis",
+        "cost_modeling",
+        "margin_analysis"
+      ],
+      "consumes": [
+        "JOB_CREATED",
+        "CUSTOMER_REQUEST"
+      ],
+      "produces": [
+        "ESTIMATE_GENERATED",
+        "PRICING_RECOMMENDATION"
+      ]
+    },
+
+    {
+      "agentId": "routing-agent",
+      "name": "Routing Agent",
+      "version": "1.0.0",
+      "category": "transportation",
+      "entryPoint": "/ai/routing-agent.md",
+      "description": "Optimizes routes across logistics corridors and service regions.",
+      "status": "active",
+      "capabilities": [
+        "route_optimization",
+        "distance_analysis",
+        "travel_time_prediction",
+        "corridor_selection"
+      ],
+      "consumes": [
+        "JOB_CREATED",
+        "PICKUP_STARTED"
+      ],
+      "produces": [
+        "ROUTE_RECOMMENDATION"
+      ]
+    },
+
+    {
+      "agentId": "risk-agent",
+      "name": "Risk Agent",
+      "version": "1.0.0",
+      "category": "risk",
+      "entryPoint": "/ai/risk-agent.md",
+      "description": "Evaluates operational, cargo, transportation, and infrastructure risk.",
+      "status": "active",
+      "capabilities": [
+        "risk_scoring",
+        "cargo_risk_analysis",
+        "delay_prediction",
+        "damage_prediction"
+      ],
+      "consumes": [
+        "JOB_CREATED",
+        "ROUTE_RECOMMENDATION",
+        "DELAY_REPORTED"
+      ],
+      "produces": [
+        "RISK_ASSESSMENT"
+      ]
+    },
+
+    {
+      "agentId": "graph-retrieval-agent",
+      "name": "Graph Retrieval Agent",
+      "version": "1.0.0",
+      "category": "knowledge",
+      "entryPoint": "/ai/graph-retrieval-agent.md",
+      "description": "Retrieves logistics knowledge using graph traversal and GraphRAG patterns.",
+      "status": "active",
+      "capabilities": [
+        "graph_search",
+        "entity_resolution",
+        "relationship_expansion",
+        "semantic_retrieval"
+      ],
+      "consumes": [
+        "GRAPH_QUERY"
+      ],
+      "produces": [
+        "GRAPH_CONTEXT"
+      ]
+    },
+
+    {
+      "agentId": "technology-logistics-agent",
+      "name": "Technology Logistics Agent",
+      "version": "1.0.0",
+      "category": "technology",
+      "entryPoint": "/ai/technology-logistics-agent.md",
+      "description": "Specialized reasoning agent for data center, AI infrastructure, server relocation, and IT equipment logistics.",
+      "status": "active",
+      "capabilities": [
+        "server_relocation",
+        "data_center_logistics",
+        "rack_transportation",
+        "technology_asset_analysis",
+        "ai_infrastructure_support"
+      ],
+      "consumes": [
+        "JOB_CREATED",
+        "TECHNOLOGY_PROJECT_REQUEST"
+      ],
+      "produces": [
+        "TECHNOLOGY_LOGISTICS_PLAN"
+      ]
+    },
+
+    {
+      "agentId": "customer-service-agent",
+      "name": "Customer Service Agent",
+      "version": "1.0.0",
+      "category": "service",
+      "entryPoint": "/ai/customer-service-agent.md",
+      "description": "Handles customer inquiries, status requests, and service recommendations.",
+      "status": "active",
+      "capabilities": [
+        "customer_support",
+        "status_updates",
+        "service_guidance"
+      ],
+      "consumes": [
+        "CUSTOMER_QUERY"
+      ],
+      "produces": [
+        "CUSTOMER_RESPONSE"
+      ]
+    }
+
+  ]
+}
