@@ -1,0 +1,152 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Feedback Loop",
+  "version": "1.0.0",
+  "classification": "Continuous Improvement Framework",
+
+  "description": "Defines how outcomes are evaluated and transformed into learning signals for future decision optimization.",
+
+  "feedbackLifecycle": [
+
+    {
+      "phase": 1,
+      "name": "Execution Complete"
+    },
+
+    {
+      "phase": 2,
+      "name": "Outcome Collection"
+    },
+
+    {
+      "phase": 3,
+      "name": "Variance Analysis"
+    },
+
+    {
+      "phase": 4,
+      "name": "Performance Scoring"
+    },
+
+    {
+      "phase": 5,
+      "name": "Learning Extraction"
+    },
+
+    {
+      "phase": 6,
+      "name": "Memory Creation"
+    },
+
+    {
+      "phase": 7,
+      "name": "Reasoning Adjustment"
+    },
+
+    {
+      "phase": 8,
+      "name": "Future Optimization"
+    }
+  ],
+
+  "feedbackSources": [
+
+    "job_completion_data",
+    "customer_feedback",
+    "crew_feedback",
+    "dispatch_reviews",
+    "vehicle_telemetry",
+    "risk_reports",
+    "damage_reports",
+    "financial_results",
+    "graph_observations",
+    "workflow_metrics"
+  ],
+
+  "evaluationDimensions": [
+
+    {
+      "dimension": "safety",
+      "weight": 0.25
+    },
+
+    {
+      "dimension": "customer_success",
+      "weight": 0.20
+    },
+
+    {
+      "dimension": "operational_efficiency",
+      "weight": 0.20
+    },
+
+    {
+      "dimension": "cost_accuracy",
+      "weight": 0.15
+    },
+
+    {
+      "dimension": "schedule_accuracy",
+      "weight": 0.10
+    },
+
+    {
+      "dimension": "resource_utilization",
+      "weight": 0.10
+    }
+  ],
+
+  "feedbackSignals": [
+
+    {
+      "signal": "positive_outcome",
+      "action": "increase_confidence"
+    },
+
+    {
+      "signal": "negative_outcome",
+      "action": "decrease_confidence"
+    },
+
+    {
+      "signal": "unexpected_success",
+      "action": "store_best_practice"
+    },
+
+    {
+      "signal": "unexpected_failure",
+      "action": "trigger_root_cause_analysis"
+    }
+  ],
+
+  "memoryGenerationRules": [
+
+    {
+      "condition": "high_impact_decision",
+      "memoryType": "long_term"
+    },
+
+    {
+      "condition": "repeatable_success",
+      "memoryType": "procedural"
+    },
+
+    {
+      "condition": "significant_failure",
+      "memoryType": "risk_history"
+    }
+  ],
+
+  "graphLearning": {
+
+    "storeSuccessfulPaths": true,
+
+    "storeFailedPaths": true,
+
+    "storeResourceRelationships": true,
+
+    "storeCorridorPerformance": true,
+
+    "storeTechnologyInfrastructurePatterns": true
+  }
+}
