@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "protocol": "Logistics Event & Graph Protocol",
+
+  "component": "Agent Memory Model",
+
+  "version": "1.0.0",
+
+  "description": "Defines persistent and transient memory structures used by AI agents operating within the Logistics Operating System.",
+
+  "memoryArchitecture": {
+
+    "layers": [
+
+      {
+        "name": "Working Memory",
+        "description": "Current active reasoning context.",
+        "retention": "session",
+        "priority": "highest"
+      },
+
+      {
+        "name": "Short Term Memory",
+        "description": "Recent events, jobs, assignments, and interactions.",
+        "retention": "30_days",
+        "priority": "high"
+      },
+
+      {
+        "name": "Operational Memory",
+        "description": "Historical operational performance and dispatch intelligence.",
+        "retention": "5_years",
+        "priority": "high"
+      },
+
+      {
+        "name": "Graph Memory",
+        "description": "Knowledge graph relationships and entity connections.",
+        "retention": "indefinite",
+        "priority": "highest"
+      },
+
+      {
+        "name": "Strategic Memory",
+        "description": "Long-term business intelligence and optimization insights.",
+        "retention": "indefinite",
+        "priority": "medium"
+      }
+    ]
+  },
+
+  "agentMemoryProfiles": [
+
+    {
+      "agent": "DispatchAgent",
+
+      "memoryDomains": [
+
+        "crew_performance",
+        "vehicle_utilization",
+        "dispatch_history",
+        "service_area_patterns",
+        "equipment_requirements",
+        "job_completion_rates"
+      ]
+    },
+
+    {
+      "agent": "PricingAgent",
+
+      "memoryDomains": [
+
+        "historical_quotes",
+        "pricing_adjustments",
+        "market_conditions",
+        "service_complexity",
+        "risk_multipliers",
+        "equipment_cost_models"
+      ]
+    },
+
+    {
+      "agent": "RoutingAgent",
+
+      "memoryDomains": [
+
+        "travel_times",
+        "corridor_performance",
+        "traffic_patterns",
+        "delivery_success_rates",
+        "port_access_patterns",
+        "warehouse_access_constraints"
+      ]
+    },
+
+    {
+      "agent": "RiskAgent",
+
+      "memoryDomains": [
+
+        "damage_events",
+        "delay_events",
+        "weather_impacts",
+        "equipment_failures",
+        "cargo_risk_patterns",
+        "service_exceptions"
+      ]
+    },
+
+    {
+      "agent": "TechnologyLogisticsAgent",
+
+      "memoryDomains": [
+
+        "data_center_projects",
+        "server_relocations",
+        "technology_asset_risk",
+        "rack_transportation",
+        "enterprise_infrastructure",
+        "AI_compute_facilities"
+      ]
+    }
+  ],
+
+  "memoryEntities": [
+
+    "Customer",
+    "Job",
+    "Shipment",
+    "Location",
+    "Vehicle",
+    "Crew",
+    "Equipment",
+    "Service",
+    "Port",
+    "Corridor",
+    "Warehouse",
+    "DataCenter",
+    "TechnologyAsset",
+    "Container"
+  ],
+
+  "memoryRelationships": [
+
+    "ASSIGNED_TO",
+    "LOCATED_AT",
+    "USES",
+    "CONNECTED_TO",
+    "ORIGINATES_FROM",
+    "DELIVERED_TO",
+    "SERVICED_BY",
+    "ROUTED_THROUGH",
+    "SUPPORTED_BY",
+    "RELATED_TO"
+  ],
+
+  "retrievalPriority": {
+
+    "graph_relationships": 100,
+
+    "active_jobs": 95,
+
+    "active_shipments": 95,
+
+    "active_customers": 90,
+
+    "historical_performance": 85,
+
+    "service_patterns": 80,
+
+    "market_intelligence": 75
+  },
+
+  "supportedStorageTargets": [
+
+    "Neo4j",
+    "Memgraph",
+    "GraphRAG",
+    "VectorDatabase",
+    "JSONStore",
+    "Redis",
+    "PostgreSQL"
+  ]
+}
