@@ -1,0 +1,142 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Task Ontology",
+  "version": "1.0.0",
+  "ontologyType": "Task Classification System",
+
+  "description": "Canonical task ontology for logistics agents, dispatch systems, pricing systems, routing systems, graph retrieval systems, risk systems, technology logistics systems, and future AI orchestration platforms.",
+
+  "taskCategories": [
+
+    {
+      "categoryId": "dispatch",
+      "name": "Dispatch Operations",
+      "description": "Assigning operational resources to jobs.",
+      "tasks": [
+        "assign_vehicle",
+        "assign_crew",
+        "assign_equipment",
+        "reassign_resource",
+        "dispatch_confirmation"
+      ]
+    },
+
+    {
+      "categoryId": "pricing",
+      "name": "Pricing Operations",
+      "description": "Generation and evaluation of estimates and pricing.",
+      "tasks": [
+        "generate_estimate",
+        "calculate_labor_cost",
+        "calculate_equipment_cost",
+        "calculate_distance_cost",
+        "evaluate_profitability"
+      ]
+    },
+
+    {
+      "categoryId": "routing",
+      "name": "Transportation Routing",
+      "description": "Optimization of transportation routes and logistics corridors.",
+      "tasks": [
+        "route_optimization",
+        "corridor_selection",
+        "distance_analysis",
+        "travel_time_prediction",
+        "route_risk_assessment"
+      ]
+    },
+
+    {
+      "categoryId": "risk",
+      "name": "Risk Management",
+      "description": "Operational and cargo risk evaluation.",
+      "tasks": [
+        "risk_scoring",
+        "damage_risk_analysis",
+        "weather_risk_analysis",
+        "delay_prediction",
+        "cargo_sensitivity_evaluation"
+      ]
+    },
+
+    {
+      "categoryId": "graph_retrieval",
+      "name": "Graph Retrieval",
+      "description": "Knowledge graph reasoning and retrieval.",
+      "tasks": [
+        "entity_lookup",
+        "relationship_expansion",
+        "graph_traversal",
+        "semantic_retrieval",
+        "context_generation"
+      ]
+    },
+
+    {
+      "categoryId": "technology_logistics",
+      "name": "Technology Logistics",
+      "description": "Data center and IT infrastructure logistics operations.",
+      "tasks": [
+        "server_relocation",
+        "rack_relocation",
+        "gpu_cluster_transport",
+        "network_equipment_transport",
+        "data_center_migration"
+      ]
+    },
+
+    {
+      "categoryId": "container_logistics",
+      "name": "Container Logistics",
+      "description": "Port, warehouse, transloading, and deconsolidation operations.",
+      "tasks": [
+        "container_unloading",
+        "container_loading",
+        "container_deconsolidation",
+        "cross_docking",
+        "transloading",
+        "freight_redistribution"
+      ]
+    }
+
+  ],
+
+  "taskDependencies": [
+
+    {
+      "task": "assign_vehicle",
+      "requires": [
+        "generate_estimate",
+        "route_optimization"
+      ]
+    },
+
+    {
+      "task": "route_optimization",
+      "requires": [
+        "distance_analysis"
+      ]
+    },
+
+    {
+      "task": "data_center_migration",
+      "requires": [
+        "risk_scoring",
+        "assign_vehicle",
+        "assign_equipment"
+      ]
+    }
+
+  ],
+
+  "supportedAgents": [
+    "dispatch-agent",
+    "pricing-agent",
+    "routing-agent",
+    "risk-agent",
+    "graph-retrieval-agent",
+    "technology-logistics-agent",
+    "customer-service-agent"
+  ]
+}
