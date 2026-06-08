@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+
+  "$id": "https://theflatratemovers.com/schemas/agent-reasoning-chain-schema.json",
+
+  "title": "Agent Reasoning Chain Schema",
+
+  "description": "Machine-readable schema describing how logistics agents transform observations into decisions, recommendations, actions, learning records, and memory artifacts.",
+
+  "type": "object",
+
+  "required": [
+    "reasoningChainId",
+    "agentId",
+    "startedAt",
+    "observation",
+    "reasoningSteps",
+    "decision"
+  ],
+
+  "properties": {
+
+    "reasoningChainId": {
+      "type": "string"
+    },
+
+    "agentId": {
+      "type": "string"
+    },
+
+    "jobId": {
+      "type": "string"
+    },
+
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "observation": {
+
+      "type": "object",
+
+      "properties": {
+
+        "source": {
+          "type": "string"
+        },
+
+        "summary": {
+          "type": "string"
+        },
+
+        "entities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
+    "reasoningSteps": {
+
+      "type": "array",
+
+      "items": {
+
+        "type": "object",
+
+        "properties": {
+
+          "stepNumber": {
+            "type": "integer"
+          },
+
+          "stepType": {
+            "type": "string",
+            "enum": [
+              "observe",
+              "retrieve",
+              "analyze",
+              "compare",
+              "score",
+              "predict",
+              "recommend",
+              "validate"
+            ]
+          },
+
+          "description": {
+            "type": "string"
+          },
+
+          "confidence": {
+            "type": "number"
+          }
+        }
+      }
+    },
+
+    "decision": {
+
+      "type": "object",
+
+      "properties": {
+
+        "decisionType": {
+          "type": "string"
+        },
+
+        "recommendation": {
+          "type": "string"
+        },
+
+        "confidenceScore": {
+          "type": "number"
+        },
+
+        "expectedOutcome": {
+          "type": "string"
+        }
+      }
+    },
+
+    "outcomeEvaluation": {
+
+      "type": "object",
+
+      "properties": {
+
+        "actualOutcome": {
+          "type": "string"
+        },
+
+        "successScore": {
+          "type": "number"
+        },
+
+        "variance": {
+          "type": "number"
+        }
+      }
+    },
+
+    "memoryCreation": {
+
+      "type": "object",
+
+      "properties": {
+
+        "memoryGenerated": {
+          "type": "boolean"
+        },
+
+        "memoryId": {
+          "type": "string"
+        }
+      }
+    },
+
+    "graphReferences": {
+
+      "type": "array",
+
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
