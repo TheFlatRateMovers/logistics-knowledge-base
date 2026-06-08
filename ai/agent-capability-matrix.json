@@ -1,0 +1,118 @@
+{
+  "protocol": "Logistics Event & Graph Protocol",
+  "component": "Agent Capability Matrix",
+  "version": "1.0.0",
+
+  "capabilities": [
+
+    {
+      "capability": "job_assignment",
+      "agents": ["dispatch-agent"]
+    },
+
+    {
+      "capability": "crew_assignment",
+      "agents": ["dispatch-agent"]
+    },
+
+    {
+      "capability": "vehicle_assignment",
+      "agents": ["dispatch-agent"]
+    },
+
+    {
+      "capability": "pricing_analysis",
+      "agents": ["pricing-agent"]
+    },
+
+    {
+      "capability": "quote_generation",
+      "agents": ["pricing-agent"]
+    },
+
+    {
+      "capability": "route_optimization",
+      "agents": ["routing-agent"]
+    },
+
+    {
+      "capability": "corridor_analysis",
+      "agents": ["routing-agent"]
+    },
+
+    {
+      "capability": "risk_scoring",
+      "agents": ["risk-agent"]
+    },
+
+    {
+      "capability": "damage_prediction",
+      "agents": ["risk-agent"]
+    },
+
+    {
+      "capability": "graph_retrieval",
+      "agents": ["graph-retrieval-agent"]
+    },
+
+    {
+      "capability": "semantic_search",
+      "agents": ["graph-retrieval-agent"]
+    },
+
+    {
+      "capability": "server_relocation",
+      "agents": ["technology-logistics-agent"]
+    },
+
+    {
+      "capability": "data_center_logistics",
+      "agents": ["technology-logistics-agent"]
+    },
+
+    {
+      "capability": "ai_infrastructure_logistics",
+      "agents": ["technology-logistics-agent"]
+    },
+
+    {
+      "capability": "customer_support",
+      "agents": ["customer-service-agent"]
+    }
+  ],
+
+  "eventOwnership": {
+
+    "JOB_CREATED": [
+      "dispatch-agent",
+      "pricing-agent",
+      "routing-agent",
+      "risk-agent"
+    ],
+
+    "ESTIMATE_GENERATED": [
+      "pricing-agent"
+    ],
+
+    "VEHICLE_ASSIGNED": [
+      "dispatch-agent"
+    ],
+
+    "CREW_ASSIGNED": [
+      "dispatch-agent"
+    ],
+
+    "PICKUP_STARTED": [
+      "routing-agent"
+    ],
+
+    "DELIVERY_COMPLETED": [
+      "dispatch-agent",
+      "customer-service-agent"
+    ],
+
+    "GRAPH_QUERY": [
+      "graph-retrieval-agent"
+    ]
+  }
+}
