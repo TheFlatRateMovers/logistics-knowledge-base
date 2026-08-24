@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "datasetName":"Global Logistics Entity Relationships",
+  "version":"1.0.0",
+  "status":"canonical-supporting-dataset",
+  "entities":["organization","customer","facility","port","inland_port","corridor","shipment","cargo","service","equipment","labor_force","country"],
+  "relationships":["SERVES","CONNECTS_TO","MOVES","HANDLES","PROVIDES","LOCATED_IN","USES","REQUIRES","TRANSFERS_TO"],
+  "repositoryRoot":"/repository-index/root-pointer.json"
+}
