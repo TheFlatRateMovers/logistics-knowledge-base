@@ -1,325 +1,85 @@
 #!/usr/bin/env python3
-
-"""
-The Flat Rate Movers LLC
-Logistics Event & Graph Protocol
-
-event_router.py
-
-Purpose:
-
-Central routing engine
-for all logistics events.
-
-Pipeline:
-
-Event
- ↓
-Validation
- ↓
-Projection
- ↓
-Graph Sync
- ↓
-Future AI Agents
-
-Version:
-1.0
-"""
+"""Canonical logistics event router."""
 
 import json
-
 from pathlib import Path
 
-from schema_validator import (
-    validate_event
-)
+try:
+    from processors.schema_validator import validate_event
+except ModuleNotFoundError:
+    from schema_validator import validate_event
 
-ROOT = Path(".")
+ROOT = Path(__file__).resolve().parents[1]
+EVENT_QUEUE = ROOT / "event-stream"
+PROCESSED = ROOT / "processed-events"
 
-EVENT_QUEUE = (
-    ROOT /
-    "event-stream"
-)
-
-PROCESSED = (
-    ROOT /
-    "processed-events"
-)
-
-PROCESSED.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-
-# =====================================================
-# HANDLER REGISTRY
-# =====================================================
 
 class EventRouter:
+    """Routes only validated canonical event types to implemented handlers."""
 
     def __init__(self):
-
         self.handlers = {
-
-            "JOB_CREATED":
-            self.job_created,
-
-            "ESTIMATE_GENERATED":
-            self.estimate_generated,
-
-            "VEHICLE_ASSIGNED":
-            self.vehicle_assigned,
-
-            "CREW_ASSIGNED":
-            self.crew_assigned,
-
-            "PICKUP_STARTED":
-            self.pickup_started,
-
-            "IN_TRANSIT":
-            self.in_transit,
-
-            "DELIVERY_COMPLETED":
-            self.delivery_completed
+            "JOB_CREATED": self.job_created,
+            "ESTIMATE_GENERATED": self.estimate_generated,
+            "VEHICLE_ASSIGNED": self.vehicle_assigned,
+            "CREW_ASSIGNED": self.crew_assigned,
+            "PICKUP_STARTED": self.pickup_started,
+            "IN_TRANSIT": self.in_transit,
+            "DELIVERY_COMPLETED": self.delivery_completed,
         }
 
-    # ==========================================
-    # ROUTING
-    # ==========================================
-
-    def route(
-        self,
-        event
-    ):
-
-        validate_event(
-            event
-        )
-
-        event_type = event[
-            "eventType"
-        ]
-
-        handler = self.handlers.get(
-            event_type
-        )
-
+    def route(self, event):
+        validate_event(event)
+        event_type = event["eventType"]
+        handler = self.handlers.get(event_type)
         if not handler:
+            raise ValueError(f"Event {event_type} is protocol-defined but has no router implementation")
+        return handler(event)
 
-            raise Exception(
-                f"No handler for "
-                f"{event_type}"
-            )
+    def _processed(self, event):
+        return {"status": "processed", "eventType": event["eventType"], "eventId": event["eventId"]}
 
-        return handler(
-            event
-        )
+    def job_created(self, event):
+        return self._processed(event)
 
-    # ==========================================
-    # EVENT HANDLERS
-    # ==========================================
+    def estimate_generated(self, event):
+        return self._processed(event)
 
-    def job_created(
-        self,
-        event
-    ):
+    def vehicle_assigned(self, event):
+        return self._processed(event)
 
-        print(
-            f"[JOB CREATED] "
-            f"{event['jobId']}"
-        )
+    def crew_assigned(self, event):
+        return self._processed(event)
 
-        return {
+    def pickup_started(self, event):
+        return self._processed(event)
 
-            "status":
-            "processed",
+    def in_transit(self, event):
+        return self._processed(event)
 
-            "eventType":
-            "JOB_CREATED"
-        }
-
-    def estimate_generated(
-        self,
-        event
-    ):
-
-        print(
-            f"[ESTIMATE]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "ESTIMATE_GENERATED"
-        }
-
-    def vehicle_assigned(
-        self,
-        event
-    ):
-
-        print(
-            f"[VEHICLE]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "VEHICLE_ASSIGNED"
-        }
-
-    def crew_assigned(
-        self,
-        event
-    ):
-
-        print(
-            f"[CREW]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "CREW_ASSIGNED"
-        }
-
-    def pickup_started(
-        self,
-        event
-    ):
-
-        print(
-            f"[PICKUP]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "PICKUP_STARTED"
-        }
-
-    def in_transit(
-        self,
-        event
-    ):
-
-        print(
-            f"[TRANSIT]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "IN_TRANSIT"
-        }
-
-    def delivery_completed(
-        self,
-        event
-    ):
-
-        print(
-            f"[DELIVERED]"
-        )
-
-        return {
-
-            "status":
-            "processed",
-
-            "eventType":
-            "DELIVERY_COMPLETED"
-        }
+    def delivery_completed(self, event):
+        return self._processed(event)
 
 
-# =====================================================
-# FILE INGESTION
-# =====================================================
-
-def process_file(
-    filepath,
-    router
-):
-
-    with open(
-        filepath,
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        event = json.load(f)
-
-    result = router.route(
-        event
-    )
-
-    destination = (
-        PROCESSED /
-        filepath.name
-    )
-
-    filepath.rename(
-        destination
-    )
-
+def process_file(filepath: Path, router: EventRouter):
+    with filepath.open("r", encoding="utf-8") as handle:
+        event = json.load(handle)
+    result = router.route(event)
+    destination = PROCESSED / filepath.name
+    PROCESSED.mkdir(parents=True, exist_ok=True)
+    filepath.rename(destination)
     return result
 
 
-# =====================================================
-# EVENT STREAM LOOP
-# =====================================================
-
 def run_event_stream():
-
+    EVENT_QUEUE.mkdir(parents=True, exist_ok=True)
     router = EventRouter()
-
-    files = list(
-
-        EVENT_QUEUE.glob(
-            "*.json"
-        )
-    )
-
-    for file in files:
-
+    for file in sorted(EVENT_QUEUE.glob("*.json")):
         try:
+            process_file(file, router)
+        except Exception as exc:
+            print(f"ERROR {file.name}: {exc}")
 
-            process_file(
-                file,
-                router
-            )
-
-        except Exception as e:
-
-            print(
-
-                f"ERROR "
-                f"{file.name}: {e}"
-
-            )
-
-
-# =====================================================
-# MAIN
-# =====================================================
 
 if __name__ == "__main__":
-
     run_event_stream()
