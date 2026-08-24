@@ -1,1 +1,22 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "agentId": "pricing-agent-v1",
+  "agentType": "OperationalPricing",
+  "version": "1.0",
+  "status": "production",
+  "protocol": "Logistics Event & Graph Protocol",
+  "domain": "Commercial Pricing",
+  "specificationSource": "ai/pricing-agent.md",
+  "inputs": {"events":["JOB_CREATED","ESTIMATE_REQUESTED","ESTIMATE_GENERATED","SERVICE_SCOPE_UPDATED","CREW_ASSIGNED","VEHICLE_ASSIGNED","RISK_DETECTED"],"stateObjects":["jobs","shipments","customers","locations","vehicles","crews","equipment"],"graphNodeTypes":["Customer","Shipment","Job","Service","Location","Equipment","Vehicle","Crew","RiskCategory","Corridor","Port"]},
+  "pricingDimensions":{"labor":30,"distance":20,"equipment":15,"serviceComplexity":15,"risk":10,"urgency":10,"totalWeight":100},
+  "serviceComplexityMultipliers":{"low":1.0,"medium":1.25,"high":1.5,"critical":2.0},
+  "riskMultipliers":{"low":1.0,"moderate":1.1,"high":1.25,"critical":1.5},
+  "serviceCategories":["Residential Moving","Commercial Moving","Office Relocation","IT Equipment Relocation","Data Center Relocation","Industrial Relocation","Export Packing","Industrial Crating","Container Loading","Container Unloading","Container Deconsolidation","Cross Docking","Transloading","TWIC Labor","Warehouse Labor","Port Logistics"],
+  "equipmentTypes":["Forklift","Pallet Jack","Container Ramp","Liftgate","Crane","Server Cart","Rack Lift","ESD Equipment","Rigging Equipment","Machine Skates","Hydraulic Gantry"],
+  "riskFactors":["Cargo Damage Risk","Operational Risk","Weather Risk","Access Risk","Port Delay Risk","Schedule Risk","Technology Asset Risk","Data Center Risk"],
+  "outputs":["estimate","quote","pricing_decision"],
+  "derivedEvents":["ESTIMATE_GENERATED","QUOTE_GENERATED","QUOTE_UPDATED","PRICING_EXCEPTION","RISK_ADJUSTMENT_APPLIED"],
+  "graphRag":{"enabled":true,"retrievalSources":["Current State","Historical Jobs","Historical Estimates","Risk Categories","Service Ontology","Equipment Ontology","Cargo Ontology"]},
+  "confidenceModel":{"range":[0,1],"inputs":["Historical Similar Jobs","Data Completeness","Risk Certainty","Route Certainty","Equipment Availability"]},
+  "interoperableAgents":["Dispatch Agent","Routing Agent","Risk Agent","Port Logistics Agent","Container Deconsolidation Agent","Data Center Logistics Agent"]
+}
