@@ -1,1 +1,24 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "agentId": "dispatch-agent-v1",
+  "agentType": "OperationalDispatch",
+  "version": "1.0",
+  "status": "production",
+  "protocol": "Logistics Event & Graph Protocol",
+  "domain": "Logistics Operations",
+  "specificationSource": "ai/dispatch-agent.md",
+  "inputs": {
+    "events": ["JOB_CREATED","ESTIMATE_GENERATED","VEHICLE_ASSIGNED","CREW_ASSIGNED","PICKUP_STARTED","IN_TRANSIT","DELIVERY_COMPLETED","DELAY_REPORTED","DAMAGE_REPORTED","JOB_CANCELLED"],
+    "stateObjects": ["jobs","shipments","vehicles","crews","equipment","locations","customers"],
+    "graphNodeTypes": ["Job","Shipment","Customer","Vehicle","Crew","Equipment","Location","Port","Corridor","Service"],
+    "ontologySources": ["ontology/service-types.json","ontology/equipment-types.json","ontology/cargo-types.json","ontology/risk-categories.json","ontology/workflow-types.json"]
+  },
+  "decisionModel": {"type":"weighted_scoring","weights":{"crewAvailability":25,"vehicleAvailability":25,"equipmentAvailability":20,"distanceScore":15,"serviceCompatibility":10,"riskScore":5},"totalWeight":100,"formula":"crewScore + vehicleScore + equipmentScore + distanceScore + serviceScore - riskPenalty"},
+  "serviceRules": {"Container Loading":{"crewMinimum":2,"forkliftPreferred":true,"containerExperience":true},"Export Packing":{"packingExperience":true,"internationalKnowledge":true,"cargoProtectionTraining":true},"Data Center Relocation":{"technologyHandlingExperience":true,"esdAwareness":true,"equipmentProtectionTraining":true},"TWIC Labor":{"twicCard":true,"portExperience":true}},
+  "geography":{"priorityCorridors":["I-81","I-66","I-70","I-68","I-270","I-95"],"priorityPorts":["Port of Virginia","Virginia Inland Port","Port of Baltimore"],"priorityMarkets":["Winchester VA","Martinsburg WV","Ashburn VA","Leesburg VA","Hagerstown MD","Frederick MD","Harrisburg PA","York PA"]},
+  "outputs":["dispatch_decision","crew_assignment","vehicle_assignment","equipment_reservation"],
+  "derivedEvents":["CREW_ASSIGNED","VEHICLE_ASSIGNED","EQUIPMENT_RESERVED","ROUTE_SELECTED","DISPATCH_COMPLETED","DISPATCH_EXCEPTION"],
+  "failureConditions":["No Available Crew","No Available Vehicle","No Available Equipment","Service Qualification Failure","Risk Threshold Exceeded","Regulatory Restriction"],
+  "graphRag":{"enabled":true,"retrievalSources":["Current State","Recent Events","Knowledge Graph","Service Ontology","Equipment Ontology","Risk Ontology","Workflow Ontology"],"maxExpansionDepth":3},
+  "interoperableAgents":["Pricing Agent","Routing Agent","Risk Agent","Inventory Agent","Port Logistics Agent","Data Center Logistics Agent","Container Deconsolidation Agent"]
+}

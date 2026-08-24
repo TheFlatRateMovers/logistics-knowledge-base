@@ -1,1 +1,21 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "agentId": "routing-agent-v1",
+  "agentType": "TransportationRouting",
+  "version": "1.0",
+  "status": "production",
+  "protocol": "Logistics Event & Graph Protocol",
+  "domain": "Transportation Optimization",
+  "specificationSource": "ai/routing-agent.md",
+  "inputs":{"events":["JOB_CREATED","ESTIMATE_GENERATED","VEHICLE_ASSIGNED","CREW_ASSIGNED","PICKUP_STARTED","IN_TRANSIT","DELAY_REPORTED","DELIVERY_COMPLETED","PORT_APPOINTMENT_SCHEDULED","ROUTE_RECALCULATION_REQUESTED"],"stateObjects":["jobs","shipments","vehicles","crews","equipment","locations","corridors","ports"],"graphNodeTypes":["Job","Shipment","Customer","Vehicle","Crew","Location","Port","Corridor","County","ZIPCode","Service"]},
+  "routingWeights":{"distance":25,"travelTime":25,"vehicleCompatibility":15,"corridorEfficiency":15,"riskScore":10,"fuelEfficiency":5,"portAccessibility":5,"totalWeight":100},
+  "corridors":[{"name":"I-81","type":"Freight Corridor"},{"name":"I-66","type":"Freight Corridor"},{"name":"I-70","type":"Freight Corridor"},{"name":"I-68","type":"Freight Corridor"},{"name":"I-270","type":"Freight Corridor"},{"name":"I-95","type":"Freight Corridor"}],
+  "ports":[{"name":"Port of Virginia","type":"Container Port"},{"name":"Virginia Inland Port","type":"Inland Port"},{"name":"Port of Baltimore","type":"Container Port"}],
+  "priorityMarkets":["Winchester VA","Martinsburg WV","Hagerstown MD","Frederick MD","Leesburg VA","Ashburn VA","Sterling VA","Front Royal VA","Harrisburg PA","York PA","Carlisle PA","Chambersburg PA"],
+  "vehicleConstraints":[{"vehicleType":"26ft Box Truck","maxWeight":10000},{"vehicleType":"53ft Trailer","maxWeight":45000},{"vehicleType":"Liftgate Truck","specialized":true}],
+  "cargoCompatibility":["Container Freight","Export Crates","Industrial Machinery","Technology Assets","Server Racks","AI Infrastructure Equipment","Warehouse Inventory","Consumer Goods"],
+  "riskCategories":["Weather Risk","Traffic Risk","Port Congestion","Bridge Restrictions","Weight Restrictions","Hazmat Restrictions","Urban Access Restrictions"],
+  "outputs":["route_plan","route_score","risk_analysis","routing_decision"],
+  "derivedEvents":["ROUTE_SELECTED","ROUTE_RECALCULATED","ROUTE_EXCEPTION","TRAFFIC_RISK_DETECTED","PORT_DELAY_DETECTED","ROUTE_COMPLETED"],
+  "graphRag":{"enabled":true,"maxExpansionDepth":4,"retrievalSources":["Current State","Historical Routes","Corridor Graph","Port Graph","County Graph","ZIP Intelligence Dataset","Infrastructure Ontology","Risk Ontology"]},
+  "interoperableAgents":["Pricing Agent","Dispatch Agent","Risk Agent","Port Logistics Agent","Container Deconsolidation Agent","Data Center Logistics Agent"]}
