@@ -1,0 +1,37 @@
+name: Repository Integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository integrity
+        run: python tools/repository_integrity_audit.py
+
+      - name: Validate JSON documents
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          bad = []
+          for path in Path('.').rglob('*.json'):
+              if '.git' in path.parts:
+                  continue
+              try:
+                  json.loads(path.read_text(encoding='utf-8'))
+              except Exception as exc:
+                  bad.append(f'{path}: {exc}')
+          if bad:
+              print('\n'.join(bad))
+              raise SystemExit(1)
+          print('All JSON documents parsed successfully.')
+          PY

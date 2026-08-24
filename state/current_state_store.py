@@ -1,551 +1,130 @@
 #!/usr/bin/env python3
-
-"""
-The Flat Rate Movers LLC
-Logistics Event & Graph Protocol
-
-current_state_store.py
-
-Purpose
-
-Authoritative operational state store.
-
-Converts immutable event history into
-current operational reality.
-
-This file acts as:
-
-- Dispatch state engine
-- Operational snapshot
-- AI retrieval source
-- Graph synchronization source
-- Dashboard source
-
-Core Principle
-
-Events = History
-
-State = Current Truth
-
-Version:
-1.0
-"""
+"""Authoritative projection of canonical logistics events into current state."""
 
 import json
-
+from datetime import datetime, timezone
 from pathlib import Path
 
-from datetime import datetime
-
-STATE_DIR = Path("generated")
-
-STATE_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
+ROOT = Path(__file__).resolve().parents[1]
+STATE_DIR = ROOT / "generated"
+STATE_DIR.mkdir(parents=True, exist_ok=True)
+STATE_MACHINE_FILE = ROOT / "protocol" / "logistics-state-machine.json"
 
 
 class CurrentStateStore:
-
-    """
-    Master state projection store.
-    """
+    """Current operational truth derived from immutable canonical events."""
 
     def __init__(self):
-
         self.jobs = {}
-
         self.customers = {}
-
         self.shipments = {}
-
         self.vehicles = {}
-
         self.crews = {}
-
         self.locations = {}
-
         self.equipment = {}
+        self.state_graph = self._load_state_graph()
 
-    # ==================================================
-    # JOBS
-    # ==================================================
-
-    def upsert_job(
-        self,
-        job_id,
-        data
-    ):
-
-        current = self.jobs.get(
-            job_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.jobs[
-            job_id
-        ] = current
-
-    def get_job(
-        self,
-        job_id
-    ):
-
-        return self.jobs.get(
-            job_id
-        )
-
-    # ==================================================
-    # CUSTOMERS
-    # ==================================================
-
-    def upsert_customer(
-        self,
-        customer_id,
-        data
-    ):
-
-        current = self.customers.get(
-            customer_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.customers[
-            customer_id
-        ] = current
-
-    # ==================================================
-    # SHIPMENTS
-    # ==================================================
-
-    def upsert_shipment(
-        self,
-        shipment_id,
-        data
-    ):
-
-        current = self.shipments.get(
-            shipment_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.shipments[
-            shipment_id
-        ] = current
-
-    # ==================================================
-    # VEHICLES
-    # ==================================================
-
-    def upsert_vehicle(
-        self,
-        vehicle_id,
-        data
-    ):
-
-        current = self.vehicles.get(
-            vehicle_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.vehicles[
-            vehicle_id
-        ] = current
-
-    # ==================================================
-    # CREWS
-    # ==================================================
-
-    def upsert_crew(
-        self,
-        crew_id,
-        data
-    ):
-
-        current = self.crews.get(
-            crew_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.crews[
-            crew_id
-        ] = current
-
-    # ==================================================
-    # EQUIPMENT
-    # ==================================================
-
-    def upsert_equipment(
-        self,
-        equipment_id,
-        data
-    ):
-
-        current = self.equipment.get(
-            equipment_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.equipment[
-            equipment_id
-        ] = current
-
-    # ==================================================
-    # LOCATIONS
-    # ==================================================
-
-    def upsert_location(
-        self,
-        location_id,
-        data
-    ):
-
-        current = self.locations.get(
-            location_id,
-            {}
-        )
-
-        current.update(data)
-
-        current[
-            "lastUpdated"
-        ] = datetime.utcnow().isoformat()
-
-        self.locations[
-            location_id
-        ] = current
-
-    # ==================================================
-    # EVENT APPLICATION
-    # ==================================================
-
-    def apply_event(
-        self,
-        event
-    ):
-
-        event_type = event.get(
-            "eventType"
-        )
-
-        handlers = {
-
-            "JOB_CREATED":
-            self.handle_job_created,
-
-            "ESTIMATE_GENERATED":
-            self.handle_estimate_generated,
-
-            "VEHICLE_ASSIGNED":
-            self.handle_vehicle_assigned,
-
-            "CREW_ASSIGNED":
-            self.handle_crew_assigned,
-
-            "PICKUP_STARTED":
-            self.handle_pickup_started,
-
-            "DELIVERY_COMPLETED":
-            self.handle_delivery_completed
+    @staticmethod
+    def _load_state_graph():
+        with STATE_MACHINE_FILE.open("r", encoding="utf-8") as handle:
+            machine = json.load(handle)
+        return {
+            item["state"]: set(item.get("nextStates", []))
+            for item in machine["states"]
         }
 
-        handler = handlers.get(
-            event_type
-        )
+    @staticmethod
+    def _now():
+        return datetime.now(timezone.utc).isoformat()
 
-        if handler:
+    def upsert(self, store, entity_id, data):
+        current = store.setdefault(entity_id, {})
+        current.update(data)
+        current["lastUpdated"] = self._now()
+        return current
 
-            handler(event)
+    def get_job(self, job_id):
+        return self.jobs.get(job_id)
 
-    # ==================================================
-    # EVENT HANDLERS
-    # ==================================================
+    def apply_event(self, event):
+        event_type = event.get("eventType")
+        entity_id = event.get("entityId")
+        entity_type = event.get("entityType")
+        transition = event.get("stateTransition", {})
+        previous = transition.get("previousState")
+        new = transition.get("newState")
 
-    def handle_job_created(
-        self,
-        event
-    ):
+        if not event_type or not entity_id or not entity_type:
+            raise ValueError("eventType, entityId, and entityType are required")
 
-        self.upsert_job(
+        if previous and new and previous != new and new not in self.state_graph.get(previous, set()):
+            raise ValueError(f"Illegal state transition: {previous} -> {new} for {event_type}")
 
-            event["jobId"],
+        payload = event.get("payload", {})
+        projection = {
+            "entityType": entity_type,
+            "status": new or payload.get("status"),
+            "lastEventType": event_type,
+            "lastEventId": event.get("eventId"),
+            "lastEventTimestamp": event.get("eventTimestamp"),
+            "correlationId": event.get("correlationId"),
+        }
+        projection.update(payload)
 
-            {
-                "status":
-                "CREATED",
+        stores = {
+            "job": self.jobs,
+            "customer": self.customers,
+            "shipment": self.shipments,
+            "vehicle": self.vehicles,
+            "crew_member": self.crews,
+            "location": self.locations,
+            "equipment": self.equipment,
+        }
+        store = stores.get(entity_type, self.jobs if entity_type == "job" else None)
+        if store is not None:
+            self.upsert(store, entity_id, projection)
 
-                "customerId":
-                event.get(
-                    "customerId"
-                ),
+        # Relationship projections carried by assignment events.
+        if event_type == "VEHICLE_ASSIGNED" and entity_type == "job":
+            vehicle_id = payload.get("vehicleId") or payload.get("vehicle_id")
+            if vehicle_id:
+                self.jobs[entity_id].setdefault("vehicleIds", [])
+                if vehicle_id not in self.jobs[entity_id]["vehicleIds"]:
+                    self.jobs[entity_id]["vehicleIds"].append(vehicle_id)
 
-                "serviceType":
-                event.get(
-                    "serviceType"
-                ),
+        if event_type == "CREW_ASSIGNED" and entity_type == "job":
+            crew_id = payload.get("crewId") or payload.get("crew_id")
+            if crew_id:
+                self.jobs[entity_id].setdefault("crewIds", [])
+                if crew_id not in self.jobs[entity_id]["crewIds"]:
+                    self.jobs[entity_id]["crewIds"].append(crew_id)
 
-                "createdAt":
-                event.get(
-                    "eventTimestamp"
-                )
-            }
-        )
-
-    def handle_estimate_generated(
-        self,
-        event
-    ):
-
-        self.upsert_job(
-
-            event["jobId"],
-
-            {
-                "estimateId":
-                event.get(
-                    "estimateId"
-                ),
-
-                "estimatedPrice":
-                event.get(
-                    "estimatedPrice"
-                )
-            }
-        )
-
-    def handle_vehicle_assigned(
-        self,
-        event
-    ):
-
-        job = self.jobs.get(
-            event["jobId"],
-            {}
-        )
-
-        vehicle_ids = job.get(
-            "vehicleIds",
-            []
-        )
-
-        vehicle_ids.append(
-            event[
-                "vehicleId"
-            ]
-        )
-
-        self.upsert_job(
-
-            event["jobId"],
-
-            {
-                "vehicleIds":
-                list(
-                    set(vehicle_ids)
-                ),
-
-                "status":
-                "VEHICLE_ASSIGNED"
-            }
-        )
-
-    def handle_crew_assigned(
-        self,
-        event
-    ):
-
-        job = self.jobs.get(
-            event["jobId"],
-            {}
-        )
-
-        crew_ids = job.get(
-            "crewIds",
-            []
-        )
-
-        crew_ids.append(
-            event[
-                "crewId"
-            ]
-        )
-
-        self.upsert_job(
-
-            event["jobId"],
-
-            {
-                "crewIds":
-                list(
-                    set(crew_ids)
-                ),
-
-                "status":
-                "CREW_ASSIGNED"
-            }
-        )
-
-    def handle_pickup_started(
-        self,
-        event
-    ):
-
-        self.upsert_job(
-
-            event["jobId"],
-
-            {
-                "status":
-                "IN_TRANSIT",
-
-                "pickupStarted":
-                event.get(
-                    "eventTimestamp"
-                )
-            }
-        )
-
-    def handle_delivery_completed(
-        self,
-        event
-    ):
-
-        self.upsert_job(
-
-            event["jobId"],
-
-            {
-                "status":
-                "COMPLETED",
-
-                "completedAt":
-                event.get(
-                    "eventTimestamp"
-                )
-            }
-        )
-
-    # ==================================================
-    # EXPORTS
-    # ==================================================
+        return self.jobs.get(entity_id) if entity_type == "job" else projection
 
     def save_state(self):
-
         exports = {
-
-            "job-state.json":
-            self.jobs,
-
-            "customer-state.json":
-            self.customers,
-
-            "shipment-state.json":
-            self.shipments,
-
-            "vehicle-state.json":
-            self.vehicles,
-
-            "crew-state.json":
-            self.crews,
-
-            "equipment-state.json":
-            self.equipment,
-
-            "location-state.json":
-            self.locations
+            "job-state.json": self.jobs,
+            "customer-state.json": self.customers,
+            "shipment-state.json": self.shipments,
+            "vehicle-state.json": self.vehicles,
+            "crew-state.json": self.crews,
+            "equipment-state.json": self.equipment,
+            "location-state.json": self.locations,
         }
-
         for filename, data in exports.items():
-
-            with open(
-
-                STATE_DIR / filename,
-
-                "w",
-
-                encoding="utf-8"
-
-            ) as f:
-
-                json.dump(
-
-                    data,
-
-                    f,
-
-                    indent=2,
-
-                    ensure_ascii=False
-
-                )
-
-    # ==================================================
-    # SNAPSHOT
-    # ==================================================
+            with (STATE_DIR / filename).open("w", encoding="utf-8") as handle:
+                json.dump(data, handle, indent=2, ensure_ascii=False)
 
     def system_snapshot(self):
-
         return {
-
-            "jobs":
-            len(self.jobs),
-
-            "customers":
-            len(self.customers),
-
-            "shipments":
-            len(self.shipments),
-
-            "vehicles":
-            len(self.vehicles),
-
-            "crews":
-            len(self.crews),
-
-            "equipment":
-            len(self.equipment),
-
-            "locations":
-            len(self.locations),
-
-            "generated":
-            datetime.utcnow().isoformat()
+            "jobs": len(self.jobs),
+            "customers": len(self.customers),
+            "shipments": len(self.shipments),
+            "vehicles": len(self.vehicles),
+            "crews": len(self.crews),
+            "equipment": len(self.equipment),
+            "locations": len(self.locations),
+            "generated": self._now(),
         }
 
 
