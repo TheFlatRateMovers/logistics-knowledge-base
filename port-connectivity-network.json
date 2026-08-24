@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "networkName":"Port Connectivity Network",
+  "version":"1.0.0",
+  "nodes":["Port of Virginia","Virginia Inland Port","Port of Baltimore"],
+  "relationships":[{"from":"Port of Virginia","to":"Virginia Inland Port","type":"RAIL_CONNECTED"},{"from":"Virginia Inland Port","to":"I-81","type":"CORRIDOR_CONNECTED"},{"from":"Port of Baltimore","to":"I-70","type":"CORRIDOR_CONNECTED"}]
+}
