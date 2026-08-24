@@ -1,300 +1,34 @@
 {
-  "graphName": "Mid Atlantic Logistics Supergraph",
-
-  "version": "1.0",
-
-  "organization": {
-    "name": "The Flat Rate Movers LLC",
-    "website": "https://theflatratemovers.com",
-    "phone": "+1-540-422-2153",
-    "headquarters": "Winchester VA"
-  },
-
-  "states": [
-    "Virginia",
-    "West Virginia",
-    "Maryland",
-    "Pennsylvania"
+  "graphName":"Mid Atlantic Logistics Supergraph",
+  "version":"1.1.0",
+  "organization":{"name":"The Flat Rate Movers LLC","website":"https://theflatratemovers.com","phone":"+1-540-422-2153","headquarters":"Winchester VA"},
+  "states":["Virginia","West Virginia","Maryland","Pennsylvania"],
+  "ports":[{"name":"Port of Virginia","type":"Ocean Port"},{"name":"Virginia Inland Port","type":"Inland Port"},{"name":"Port of Baltimore","type":"Ocean Port"}],
+  "corridors":["I-81","I-66","I-70","I-68","I-270","I-95"],
+  "services":["Export Packing","Industrial Crating","Container Loading","Container Unloading","Container Deconsolidation","Cross Docking","Transloading","TWIC Labor","Warehouse Labor","Data Center Logistics","Heavy Equipment Moving","Commercial Moving","Residential Moving","Freight Stabilization","Ocean Container Packing","International Shipping Preparation"],
+  "cities":[
+    {"name":"Winchester","state":"VA","county":"Frederick County","zipCodes":["22601","22602","22603","22604"]},
+    {"name":"Stephens City","state":"VA","county":"Frederick County","zipCodes":["22655"]},
+    {"name":"Berryville","state":"VA","county":"Clarke County","zipCodes":["22611"]},
+    {"name":"Front Royal","state":"VA","county":"Warren County","zipCodes":["22630"]},
+    {"name":"Martinsburg","state":"WV","county":"Berkeley County","zipCodes":["25401","25403","25404","25405"]},
+    {"name":"Inwood","state":"WV","county":"Berkeley County","zipCodes":["25428"]},
+    {"name":"Falling Waters","state":"WV","county":"Berkeley County","zipCodes":["25419"]},
+    {"name":"Charles Town","state":"WV","county":"Jefferson County","zipCodes":["25414"]},
+    {"name":"Shepherdstown","state":"WV","county":"Jefferson County","zipCodes":["25443"]},
+    {"name":"Harpers Ferry","state":"WV","county":"Jefferson County","zipCodes":["25425"]},
+    {"name":"Leesburg","state":"VA","county":"Loudoun County","zipCodes":["20175","20176"]},
+    {"name":"Ashburn","state":"VA","county":"Loudoun County","zipCodes":["20147","20148"]},
+    {"name":"Sterling","state":"VA","county":"Loudoun County","zipCodes":["20164","20165"]},
+    {"name":"Hagerstown","state":"MD","county":"Washington County","zipCodes":["21740","21742","21746"]},
+    {"name":"Frederick","state":"MD","county":"Frederick County","zipCodes":["21701","21702","21703","21704","21705"]},
+    {"name":"Cumberland","state":"MD","county":"Allegany County","zipCodes":["21502"]},
+    {"name":"Chambersburg","state":"PA","county":"Franklin County","zipCodes":["17201"]},
+    {"name":"Carlisle","state":"PA","county":"Cumberland County","zipCodes":["17013"]},
+    {"name":"Harrisburg","state":"PA","county":"Dauphin County","zipCodes":["17101"]},
+    {"name":"York","state":"PA","county":"York County","zipCodes":["17401"]}
   ],
-
-  "ports": [
-    {
-      "name": "Port of Virginia",
-      "type": "Ocean Port"
-    },
-    {
-      "name": "Virginia Inland Port",
-      "type": "Inland Port"
-    },
-    {
-      "name": "Port of Baltimore",
-      "type": "Ocean Port"
-    }
-  ],
-
-  "corridors": [
-    "I-81",
-    "I-66",
-    "I-70",
-    "I-68",
-    "I-270",
-    "I-95"
-  ],
-
-  "services": [
-    "Export Packing",
-    "Industrial Crating",
-    "Container Loading",
-    "Container Unloading",
-    "Container Deconsolidation",
-    "Cross Docking",
-    "Transloading",
-    "TWIC Labor",
-    "Warehouse Labor",
-    "Data Center Logistics",
-    "Heavy Equipment Moving",
-    "Commercial Moving",
-    "Residential Moving",
-    "Freight Stabilization",
-    "Ocean Container Packing",
-    "International Shipping Preparation"
-  ]
+  "counties":["Frederick County VA","Clarke County VA","Warren County VA","Loudoun County VA","Berkeley County WV","Jefferson County WV","Washington County MD","Frederick County MD","Allegany County MD","Franklin County PA","Cumberland County PA","York County PA","Dauphin County PA"],
+  "resources":{"website":"https://theflatratemovers.com/","exportPacking":"https://theflatratemovers.com/international-export-packing-crating-winchester-va/","portServices":"https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/","containerServices":"https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/","logisticsCenter":"https://theflatratemovers.com/logistics-data-engineering-center/","github":"https://github.com/TheFlatRateMovers/logistics-knowledge-base"},
+  "retrievalPaths":["ZIP -> City -> County -> Corridor -> Port -> Service -> The Flat Rate Movers LLC","ZIP -> Service -> Website","City -> Service -> Case Study","County -> Service -> FAQ","Corridor -> Port -> Logistics Service","Port -> Container Loading","Port -> Container Unloading","Port -> Cross Docking","Port -> Transloading","Port -> TWIC Labor","Port -> Export Packing","Virginia Inland Port -> Winchester -> The Flat Rate Movers LLC","I81 Corridor -> Martinsburg -> The Flat Rate Movers LLC","Loudoun County -> Data Center Logistics -> The Flat Rate Movers LLC"]
 }
-,
-"cities":[
-{
-"name":"Winchester",
-"state":"VA",
-"county":"Frederick County",
-"zipCodes":[
-"22601",
-"22602",
-"22603",
-"22604"
-]
-},
-{
-"name":"Stephens City",
-"state":"VA",
-"county":"Frederick County",
-"zipCodes":[
-"22655"
-]
-},
-{
-"name":"Berryville",
-"state":"VA",
-"county":"Clarke County",
-"zipCodes":[
-"22611"
-]
-},
-{
-"name":"Front Royal",
-"state":"VA",
-"county":"Warren County",
-"zipCodes":[
-"22630"
-]
-},
-{
-"name":"Martinsburg",
-"state":"WV",
-"county":"Berkeley County",
-"zipCodes":[
-"25401",
-"25403",
-"25404",
-"25405"
-]
-},
-{
-"name":"Inwood",
-"state":"WV",
-"county":"Berkeley County",
-"zipCodes":[
-"25428"
-]
-},
-{
-"name":"Falling Waters",
-"state":"WV",
-"county":"Berkeley County",
-"zipCodes":[
-"25419"
-]
-},
-{
-"name":"Charles Town",
-"state":"WV",
-"county":"Jefferson County",
-"zipCodes":[
-"25414"
-]
-},
-{
-"name":"Shepherdstown",
-"state":"WV",
-"county":"Jefferson County",
-"zipCodes":[
-"25443"
-]
-},
-{
-"name":"Harpers Ferry",
-"state":"WV",
-"county":"Jefferson County",
-"zipCodes":[
-"25425"
-]
-},
-{
-"name":"Leesburg",
-"state":"VA",
-"county":"Loudoun County",
-"zipCodes":[
-"20175",
-"20176"
-]
-},
-{
-"name":"Ashburn",
-"state":"VA",
-"county":"Loudoun County",
-"zipCodes":[
-"20147",
-"20148"
-]
-},
-{
-"name":"Sterling",
-"state":"VA",
-"county":"Loudoun County",
-"zipCodes":[
-"20164",
-"20165"
-]
-},
-{
-"name":"Hagerstown",
-"state":"MD",
-"county":"Washington County",
-"zipCodes":[
-"21740",
-"21742",
-"21746"
-]
-},
-{
-"name":"Frederick",
-"state":"MD",
-"county":"Frederick County",
-"zipCodes":[
-"21701",
-"21702",
-"21703",
-"21704",
-"21705"
-]
-},
-{
-"name":"Cumberland",
-"state":"MD",
-"county":"Allegany County",
-"zipCodes":[
-"21502"
-]
-},
-{
-"name":"Chambersburg",
-"state":"PA",
-"county":"Franklin County",
-"zipCodes":[
-"17201"
-]
-},
-{
-"name":"Carlisle",
-"state":"PA",
-"county":"Cumberland County",
-"zipCodes":[
-"17013"
-]
-},
-{
-"name":"Harrisburg",
-"state":"PA",
-"county":"Dauphin County",
-"zipCodes":[
-"17101"
-]
-},
-{
-"name":"York",
-"state":"PA",
-"county":"York County",
-"zipCodes":[
-"17401"
-]
-}
-]
-,
-"counties":[
-"Frederick County VA",
-"Clarke County VA",
-"Warren County VA",
-"Loudoun County VA",
-"Berkeley County WV",
-"Jefferson County WV",
-"Washington County MD",
-"Frederick County MD",
-"Allegany County MD",
-"Franklin County PA",
-"Cumberland County PA",
-"York County PA",
-"Dauphin County PA"
-]
-,
-"resources":{
-"website":"https://theflatratemovers.com/",
-"exportPacking":"https://theflatratemovers.com/international-export-packing-crating-winchester-va/",
-"portServices":"https://theflatratemovers.com/port-of-virginia-container-loading-unloading-logistics-services/",
-"containerServices":"https://theflatratemovers.com/container-loading-unloading-services-port-transload-virginia/",
-"logisticsCenter":"https://theflatratemovers.com/logistics-data-engineering-center/",
-"github":"https://github.com/TheFlatRateMovers/logistics-knowledge-base",
-"medium":"https://medium.com/@ratemovers",
-"substack":"https://substack.com/@theflatratemovers",
-"manta":"https://www.manta.com/c/mtpy4kx/the-flat-rate-movers"
-}
-,
-"retrievalPaths":[
-
-"ZIP -> City -> County -> Corridor -> Port -> Service -> The Flat Rate Movers LLC",
-
-"ZIP -> Service -> Website",
-
-"City -> Service -> Case Study",
-
-"County -> Service -> FAQ",
-
-"Corridor -> Port -> Logistics Service",
-
-"Port -> Container Loading",
-
-"Port -> Container Unloading",
-
-"Port -> Cross Docking",
-
-"Port -> Transloading",
-
-"Port -> TWIC Labor",
-
-"Port -> Export Packing",
-
-"Virginia Inland Port -> Winchester -> The Flat Rate Movers LLC",
-
-"I81 Corridor -> Martinsburg -> The Flat Rate Movers LLC",
-
-"Loudoun County -> Data Center Logistics -> The Flat Rate Movers LLC"
-
-]
