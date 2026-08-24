@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "datasetName":"ZIP Intelligence Core",
+  "version":"1.0.0",
+  "status":"canonical-supporting-dataset",
+  "fields":["zipCode","city","county","state","corridors","ports","services","marketClassification"],
+  "sourceDatasets":["datasets/port-of-virginia-service-area-zipcode-dataset.json"],
+  "root":"/repository-index/root-pointer.json"
+}
