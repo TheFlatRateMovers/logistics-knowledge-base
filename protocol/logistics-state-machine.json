@@ -1,6 +1,6 @@
 {
   "stateMachineName": "Logistics Operational State Machine",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "status": "canonical",
   "eventProtocol": "/protocol/logistics-event-protocol-v1.json",
   "description": "Defines legal operational states and transitions. Workflow event entry/exit identifiers are kept separate from operational state names.",
@@ -42,7 +42,7 @@
     {"workflow":"Container Logistics","entryEvent":"CONTAINER_RECEIVED","entryState":"ON_SITE","exitEvent":"CONTAINER_RELEASED","exitState":"COMPLETED"},
     {"workflow":"Export Packing","entryEvent":"EXPORT_PACKING_STARTED","entryState":"PACKING","exitEvent":"EXPORT_PACKING_COMPLETED","exitState":"COMPLETED"},
     {"workflow":"Industrial Crating","entryEvent":"CRATING_STARTED","entryState":"CRATING","exitEvent":"CRATING_COMPLETED","exitState":"COMPLETED"},
-    {"workflow":"Data Center Relocation","entryEvent":"DATA_CENTER_RELOCATION_STARTED","entryState":"DATA_CENTER_DISASSEMBLY","exitEvent":"DATA_CENTER_MIGRATION_COMPLETED","exitState":"COMPLETED"},
+    {"workflow":"Data Center Relocation","entryEvent":"SERVER_DECOMMISSIONED","entryState":"DATA_CENTER_DISASSEMBLY","exitEvent":"DATA_CENTER_MIGRATION_COMPLETED","exitState":"COMPLETED"},
     {"workflow":"Container Deconsolidation","entryEvent":"CONTAINER_DECONSOLIDATION_STARTED","entryState":"ON_SITE","exitEvent":"CONTAINER_DECONSOLIDATION_COMPLETED","exitState":"COMPLETED"}
   ],
   "agentConsumptionTargets": ["Dispatch Agent","Pricing Agent","Routing Agent","Risk Agent","Warehouse Agent","Port Operations Agent","Technology Relocation Agent"]
