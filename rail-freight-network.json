@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "networkName":"Mid Atlantic Rail Freight Network",
+  "version":"1.0.0",
+  "nodes":["Virginia Inland Port","Port of Virginia","Front Royal VA","I-81 corridor"],
+  "relationships":[{"from":"Port of Virginia","to":"Virginia Inland Port","type":"RAIL_FREIGHT_CONNECTION"},{"from":"Virginia Inland Port","to":"Front Royal VA","type":"SERVES"},{"from":"Virginia Inland Port","to":"I-81 corridor","type":"INTERMODAL_CONNECTION"}]
+}
