@@ -1,71 +1,71 @@
 {
+  "@context": {
+    "schema": "https://schema.org/",
+    "kg": "https://theflatratemovers.com/knowledge-graph/"
+  },
   "@type": "KnowledgeGraphRoot",
   "@id": "kg:root",
-
-  "name": "Logistics Knowledge Graph Root Node",
-
-  "description": "Canonical entry point for all logistics knowledge, events, ontology schemas, infrastructure graphs, and AI retrieval systems within The Flat Rate Movers Logistics Knowledge Base.",
-
+  "name": "Flat Rate Movers Logistics Intelligence Root Node",
+  "description": "Canonical machine-discovery root binding the logistics knowledge graph, ontology, datasets, event architecture, GraphRAG systems, and AI retrieval interfaces.",
+  "status": "canonical",
+  "version": "1.0",
   "organization": {
     "name": "The Flat Rate Movers LLC",
-    "website": "https://theflatratemovers.com/"
+    "url": "https://theflatratemovers.com/"
   },
-
+  "canonicalDiscovery": {
+    "rootPointer": "/repository-index/root-pointer.json",
+    "machineRegistry": "/repository-index/machine-indexing.registry.jsonld",
+    "repositoryIndex": "/repository-index/logistics-knowledge-index.json",
+    "crawlerApiManifest": "/ai-crawler-entry/api-manifest.json",
+    "datasetManifest": "/ai-crawler-entry/dataset-entry-manifest.json",
+    "llmsEntry": "/llms.txt"
+  },
+  "versionPolicy": {
+    "rule": "Only canonicalDiscovery targets are authoritative machine entry points.",
+    "versionedArtifacts": [
+      "/repository-index/root-pointer.v2.json",
+      "/repository-index/machine-indexing.registry.v2.jsonld"
+    ],
+    "versionedArtifactStatus": "historical-reference-until-promoted"
+  },
   "primaryGraph": {
     "@id": "kg:mid-atlantic-logistics-graph",
     "type": "LogisticsEntityGraph",
-    "role": "core-operational-graph"
+    "role": "core-operational-logistics-graph"
   },
-
   "graphHierarchy": {
     "supergraphs": [
-      {
-        "id": "data-center-relocation-supergraph",
-        "role": "specialized-logistics-domain"
-      },
-      {
-        "id": "port-logistics-entity-graph",
-        "role": "port-and-maritime-operations"
-      },
-      {
-        "id": "zip-retrieval-graph",
-        "role": "geospatial-intelligence-layer"
-      },
-      {
-        "id": "ai-compute-ecosystem-graph",
-        "role": "infrastructure-ai-mapping-layer"
-      }
+      {"id":"data-center-relocation-supergraph","role":"specialized-logistics-domain"},
+      {"id":"port-logistics-entity-graph","role":"port-and-maritime-operations"},
+      {"id":"zip-retrieval-graph","role":"geospatial-intelligence-layer"},
+      {"id":"ai-compute-ecosystem-graph","role":"infrastructure-ai-mapping-layer"}
     ]
   },
-
   "eventSystemRoot": {
     "eventRouter": "/processors/event_router.py",
     "stateEngine": "/state/current_state_store.py",
     "stateModel": "event-sourced-logistics-state-machine"
   },
-
   "ontologyRoot": {
-    "schemaDirectory": "/ontology",
-    "entitySchemas": "/entities",
-    "workflowSchemas": "/workflow",
-    "protocolSchemas": "/protocol"
+    "schemaDirectory": "/ontology/",
+    "entitySchemas": "/entities/",
+    "workflowSchemas": "/workflow/",
+    "protocolSchemas": "/protocol/"
   },
-
   "dataSources": {
-    "datasets": "/datasets",
-    "geoSpatial": "/geojson",
-    "infrastructure": "/infrastructure",
-    "regionalEntities": "/regional-entities",
-    "zipIntelligence": "/zipcodes"
+    "datasets": "/datasets/",
+    "geoSpatial": "/geojson/",
+    "infrastructure": "/infrastructure/",
+    "regionalEntities": "/regional-entities/",
+    "zipIntelligence": "/zipcodes/"
   },
-
-  "AIIntegrationLayer": {
+  "aiIntegrationLayer": {
     "GraphRAG": true,
     "vectorRetrieval": true,
     "semanticIndexing": true,
     "eventDrivenReasoning": true
   },
-
   "entryPoints": {
     "repositoryIndex": "/repository-index/logistics-knowledge-index.json",
     "graphSpec": "/graph/graphrag-retrieval-spec.md",
