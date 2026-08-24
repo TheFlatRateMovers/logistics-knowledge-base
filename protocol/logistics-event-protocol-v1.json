@@ -1,216 +1,33 @@
 {
   "protocolName": "Logistics Event Protocol",
   "protocolVersion": "1.0.0",
+  "status": "canonical",
   "repository": "https://github.com/TheFlatRateMovers/logistics-knowledge-base",
-  "description": "Machine-readable logistics event protocol defining operational state changes across transportation, warehouse operations, container logistics, export packing, industrial crating, technology relocation, port logistics, and freight distribution systems.",
-
+  "eventNaming": "UPPER_SNAKE_CASE",
+  "entityNaming": "lower_snake_case",
+  "description": "Canonical machine-readable logistics event protocol defining operational state changes across transportation, warehouse operations, container logistics, export packing, industrial crating, technology relocation, port logistics, and freight distribution systems.",
   "eventCategories": [
-
-    {
-      "category": "Sales",
-      "events": [
-        "LEAD_CREATED",
-        "INQUIRY_RECEIVED",
-        "SERVICE_REQUESTED",
-        "ESTIMATE_REQUESTED",
-        "ESTIMATE_GENERATED",
-        "ESTIMATE_ACCEPTED",
-        "ESTIMATE_DECLINED",
-        "JOB_BOOKED"
-      ]
-    },
-
-    {
-      "category": "Dispatch",
-      "events": [
-        "JOB_CREATED",
-        "CREW_ASSIGNED",
-        "CREW_REASSIGNED",
-        "VEHICLE_ASSIGNED",
-        "VEHICLE_REASSIGNED",
-        "EQUIPMENT_ASSIGNED",
-        "ROUTE_GENERATED",
-        "ROUTE_UPDATED"
-      ]
-    },
-
-    {
-      "category": "Pickup Operations",
-      "events": [
-        "CREW_EN_ROUTE",
-        "ARRIVED_AT_PICKUP",
-        "PICKUP_STARTED",
-        "PICKUP_DELAY_REPORTED",
-        "PICKUP_COMPLETED"
-      ]
-    },
-
-    {
-      "category": "Transportation",
-      "events": [
-        "IN_TRANSIT",
-        "TRANSIT_DELAY_REPORTED",
-        "WEATHER_DELAY_REPORTED",
-        "TRAFFIC_DELAY_REPORTED",
-        "VEHICLE_BREAKDOWN_REPORTED",
-        "ROUTE_DEVIATION_REPORTED",
-        "CHECKPOINT_REACHED"
-      ]
-    },
-
-    {
-      "category": "Container Logistics",
-      "events": [
-        "CONTAINER_RECEIVED",
-        "CONTAINER_INSPECTED",
-        "CONTAINER_LOADING_STARTED",
-        "CONTAINER_LOADING_COMPLETED",
-        "CONTAINER_UNLOADING_STARTED",
-        "CONTAINER_UNLOADING_COMPLETED",
-        "CONTAINER_DECONSOLIDATION_STARTED",
-        "CONTAINER_DECONSOLIDATION_COMPLETED",
-        "CONTAINER_RELOADED",
-        "CONTAINER_RELEASED"
-      ]
-    },
-
-    {
-      "category": "Cross Docking",
-      "events": [
-        "CROSS_DOCK_RECEIVED",
-        "CROSS_DOCK_SORTING_STARTED",
-        "CROSS_DOCK_SORTING_COMPLETED",
-        "CROSS_DOCK_TRANSFER_STARTED",
-        "CROSS_DOCK_TRANSFER_COMPLETED"
-      ]
-    },
-
-    {
-      "category": "Transloading",
-      "events": [
-        "TRANSLOAD_STARTED",
-        "TRANSLOAD_COMPLETED",
-        "PALLETIZATION_STARTED",
-        "PALLETIZATION_COMPLETED",
-        "FREIGHT_RECONFIGURED"
-      ]
-    },
-
-    {
-      "category": "Warehouse Operations",
-      "events": [
-        "WAREHOUSE_RECEIVED",
-        "WAREHOUSE_STAGED",
-        "WAREHOUSE_SORTED",
-        "WAREHOUSE_STORED",
-        "WAREHOUSE_RELEASED"
-      ]
-    },
-
-    {
-      "category": "Export Packing",
-      "events": [
-        "EXPORT_PACKING_STARTED",
-        "EXPORT_PACKING_COMPLETED",
-        "ISPM15_VERIFIED",
-        "MOISTURE_BARRIER_APPLIED",
-        "CRATE_CONSTRUCTED",
-        "CRATE_INSPECTED"
-      ]
-    },
-
-    {
-      "category": "Industrial Crating",
-      "events": [
-        "CRATING_STARTED",
-        "CRATING_COMPLETED",
-        "LOAD_STABILIZATION_COMPLETED",
-        "SHOCK_PROTECTION_INSTALLED",
-        "VIBRATION_CONTROL_INSTALLED"
-      ]
-    },
-
-    {
-      "category": "Technology Relocation",
-      "events": [
-        "SERVER_DECOMMISSIONED",
-        "SERVER_RACK_DISCONNECTED",
-        "RACK_REMOVED",
-        "TECH_ASSET_INVENTORIED",
-        "TECH_ASSET_TRANSPORT_STARTED",
-        "TECH_ASSET_TRANSPORT_COMPLETED",
-        "SERVER_RACK_REINSTALLED",
-        "NETWORK_RECONNECTED",
-        "DATA_CENTER_MIGRATION_COMPLETED"
-      ]
-    },
-
-    {
-      "category": "Risk Management",
-      "events": [
-        "DAMAGE_REPORTED",
-        "CLAIM_OPENED",
-        "CLAIM_RESOLVED",
-        "SAFETY_INCIDENT_REPORTED",
-        "COMPLIANCE_EXCEPTION_REPORTED",
-        "SECURITY_INCIDENT_REPORTED"
-      ]
-    },
-
-    {
-      "category": "Delivery",
-      "events": [
-        "ARRIVED_AT_DESTINATION",
-        "DELIVERY_STARTED",
-        "DELIVERY_COMPLETED",
-        "CUSTOMER_SIGNOFF_RECEIVED",
-        "PROJECT_COMPLETED"
-      ]
-    },
-
-    {
-      "category": "Finance",
-      "events": [
-        "INVOICE_CREATED",
-        "INVOICE_SENT",
-        "PAYMENT_RECEIVED",
-        "PAYMENT_CONFIRMED",
-        "JOB_CLOSED"
-      ]
-    }
+    {"category":"Sales","events":["LEAD_CREATED","INQUIRY_RECEIVED","SERVICE_REQUESTED","ESTIMATE_REQUESTED","ESTIMATE_GENERATED","ESTIMATE_ACCEPTED","ESTIMATE_DECLINED","JOB_BOOKED"]},
+    {"category":"Dispatch","events":["JOB_CREATED","CREW_ASSIGNED","CREW_REASSIGNED","VEHICLE_ASSIGNED","VEHICLE_REASSIGNED","EQUIPMENT_ASSIGNED","ROUTE_GENERATED","ROUTE_UPDATED"]},
+    {"category":"Pickup Operations","events":["CREW_EN_ROUTE","ARRIVED_AT_PICKUP","PICKUP_STARTED","PICKUP_DELAY_REPORTED","PICKUP_COMPLETED"]},
+    {"category":"Transportation","events":["IN_TRANSIT","TRANSIT_DELAY_REPORTED","WEATHER_DELAY_REPORTED","TRAFFIC_DELAY_REPORTED","VEHICLE_BREAKDOWN_REPORTED","ROUTE_DEVIATION_REPORTED","CHECKPOINT_REACHED"]},
+    {"category":"Container Logistics","events":["CONTAINER_RECEIVED","CONTAINER_INSPECTED","CONTAINER_LOADING_STARTED","CONTAINER_LOADING_COMPLETED","CONTAINER_UNLOADING_STARTED","CONTAINER_UNLOADING_COMPLETED","CONTAINER_DECONSOLIDATION_STARTED","CONTAINER_DECONSOLIDATION_COMPLETED","CONTAINER_RELOADED","CONTAINER_RELEASED"]},
+    {"category":"Cross Docking","events":["CROSS_DOCK_RECEIVED","CROSS_DOCK_SORTING_STARTED","CROSS_DOCK_SORTING_COMPLETED","CROSS_DOCK_TRANSFER_STARTED","CROSS_DOCK_TRANSFER_COMPLETED"]},
+    {"category":"Transloading","events":["TRANSLOAD_STARTED","TRANSLOAD_COMPLETED","PALLETIZATION_STARTED","PALLETIZATION_COMPLETED","FREIGHT_RECONFIGURED"]},
+    {"category":"Warehouse Operations","events":["WAREHOUSE_RECEIVED","WAREHOUSE_STAGED","WAREHOUSE_SORTED","WAREHOUSE_STORED","WAREHOUSE_RELEASED"]},
+    {"category":"Export Packing","events":["EXPORT_PACKING_STARTED","EXPORT_PACKING_COMPLETED","ISPM15_VERIFIED","MOISTURE_BARRIER_APPLIED","CRATE_CONSTRUCTED","CRATE_INSPECTED"]},
+    {"category":"Industrial Crating","events":["CRATING_STARTED","CRATING_COMPLETED","LOAD_STABILIZATION_COMPLETED","SHOCK_PROTECTION_INSTALLED","VIBRATION_CONTROL_INSTALLED"]},
+    {"category":"Technology Relocation","events":["SERVER_DECOMMISSIONED","SERVER_RACK_DISCONNECTED","RACK_REMOVED","TECH_ASSET_INVENTORIED","TECH_ASSET_TRANSPORT_STARTED","TECH_ASSET_TRANSPORT_COMPLETED","SERVER_RACK_REINSTALLED","NETWORK_RECONNECTED","DATA_CENTER_MIGRATION_COMPLETED"]},
+    {"category":"Risk Management","events":["DAMAGE_REPORTED","CLAIM_OPENED","CLAIM_RESOLVED","SAFETY_INCIDENT_REPORTED","COMPLIANCE_EXCEPTION_REPORTED","SECURITY_INCIDENT_REPORTED"]},
+    {"category":"Delivery","events":["ARRIVED_AT_DESTINATION","DELIVERY_STARTED","DELIVERY_COMPLETED","CUSTOMER_SIGNOFF_RECEIVED","PROJECT_COMPLETED"]},
+    {"category":"Finance","events":["INVOICE_CREATED","INVOICE_SENT","PAYMENT_RECEIVED","PAYMENT_CONFIRMED","JOB_CLOSED"]}
   ],
-
   "eventStructure": {
-    "requiredFields": [
-      "eventId",
-      "eventType",
-      "eventTimestamp",
-      "entityId",
-      "entityType"
-    ]
+    "schema": "/events/logistics-event.schema.json",
+    "requiredFields": ["eventId","eventType","eventVersion","eventTimestamp","eventSource","entityType","entityId","correlationId","stateTransition"]
   },
-
   "supportedEntities": [
-    "Customer",
-    "Shipment",
-    "Location",
-    "Equipment",
-    "Vehicle",
-    "Crew",
-    "Container",
-    "Port",
-    "Warehouse",
-    "Service",
-    "Invoice"
+    "organization","customer","facility","warehouse","cross_dock","distribution_center","port","inland_port","rail_terminal","airport_cargo_facility","city","county","state","zipcode","corridor","service","shipment","container","cargo","equipment","vehicle","crew_member","project","job","workflow","dataset","ontology","knowledge_graph","case_study","faq","webpage","blog_post","wiki_page","search_intent","ai_agent","risk","event","invoice","estimate","service_request","technology_asset","data_center"
   ],
-
-  "graphProjectionPurpose": [
-    "Knowledge Graph Updates",
-    "Neo4j Projection",
-    "AI Agent Consumption",
-    "Workflow Automation",
-    "Routing Decisions",
-    "Pricing Decisions",
-    "Risk Analysis"
-  ]
+  "graphProjectionPurpose": ["Knowledge Graph Updates","Neo4j Projection","AI Agent Consumption","Workflow Automation","Routing Decisions","Pricing Decisions","Risk Analysis"]
 }
