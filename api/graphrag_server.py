@@ -8,12 +8,13 @@ from graph.graphrag_ingestion_engine import GraphRAGIngestionEngine
 from graph.vector_graph_rag_pipeline import VectorGraphRAGPipeline
 from processors.live_event_graph_updater import LiveEventGraphUpdater
 from processors.schema_validator import validate_event
+from state.current_state_store import STATE_STORE
 
 
 app = FastAPI(
     title="Flat Rate Movers GraphRAG API",
     description="AI retrieval + logistics graph reasoning system",
-    version="1.1.0"
+    version="1.1.1"
 )
 
 GRAPH_STATE: Dict[str, Any] = {"nodes": [], "edges": []}
@@ -40,6 +41,7 @@ class EventRequest(BaseModel):
     payload: Dict[str, Any] = Field(default_factory=dict)
     serviceCategory: Optional[str] = None
     serviceTerritory: Optional[Dict[str, Any]] = None
+    businessEntity: Optional[Dict[str, Any]] = None
     metadata: Optional[Dict[str, Any]] = None
 
 
@@ -48,8 +50,7 @@ class NodeRequest(BaseModel):
 
 
 def build_graph():
-    engine = GraphRAGIngestionEngine(".")
-    return engine.run()
+    return GraphRAGIngestionEngine(".").run()
 
 
 @app.on_event("startup")
@@ -78,13 +79,7 @@ def get_node(req: NodeRequest):
 
 @app.get("/graph/edges/{node_id}")
 def get_edges(node_id: str):
-    return {
-        "node": node_id,
-        "edges": [
-            edge for edge in GRAPH_STATE["edges"]
-            if edge["source"] == node_id or edge["target"] == node_id
-        ]
-    }
+    return {"node": node_id, "edges": [edge for edge in GRAPH_STATE["edges"] if edge["source"] == node_id or edge["target"] == node_id]}
 
 
 @app.post("/search/semantic")
@@ -98,28 +93,31 @@ def hybrid_search(req: SearchRequest):
     graph_results = []
     for item in semantic_results:
         node_id = item["id"]
-        connected = [
-            edge for edge in GRAPH_STATE["edges"]
-            if edge["source"] == node_id or edge["target"] == node_id
-        ]
-        graph_results.append({
-            "node_id": node_id,
-            "text": item["text"],
-            "connections": connected
-        })
+        connected = [edge for edge in GRAPH_STATE["edges"] if edge["source"] == node_id or edge["target"] == node_id]
+        graph_results.append({"node_id": node_id, "text": item["text"], "connections": connected})
     return {"query": req.query, "semantic": semantic_results, "graph_context": graph_results}
 
 
 @app.post("/event/ingest")
 def ingest_event(req: EventRequest):
-    event = req.model_dump(mode="json")
+    event = req.model_dump(mode="json") if hasattr(req, "model_dump") else req.dict()
     try:
         validate_event(event)
+        state = STATE_STORE.apply_event(event)
     except Exception as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
-    result = event_engine.process_event(event)
-    return {"status": "processed", "event": event, "projection": result}
+    projection = event_engine.process_event(event)
+    STATE_STORE.save_state()
+    return {"status": "processed", "event": event, "state": state, "projection": projection}
+
+
+@app.get("/state/{entity_id}")
+def get_state(entity_id: str):
+    state = STATE_STORE.get_job(entity_id)
+    if state is None:
+        raise HTTPException(status_code=404, detail="Job state not found")
+    return state
 
 
 @app.get("/ai/context/{query}")
@@ -128,23 +126,14 @@ def ai_context(query: str):
     context_nodes = []
     for item in semantic:
         node_id = item["id"]
-        related_edges = [
-            edge for edge in GRAPH_STATE["edges"]
-            if edge["source"] == node_id or edge["target"] == node_id
-        ]
+        related_edges = [edge for edge in GRAPH_STATE["edges"] if edge["source"] == node_id or edge["target"] == node_id]
         context_nodes.append({"node": item, "graph_links": related_edges})
     return {"query": query, "context": context_nodes, "system": "GraphRAG Logistics Intelligence Engine"}
 
 
 @app.get("/health")
 def health():
-    return {
-        "status": "active",
-        "nodes": len(GRAPH_STATE["nodes"]),
-        "edges": len(GRAPH_STATE["edges"]),
-        "system": "Flat Rate Movers GraphRAG API",
-        "canonicalRoot": "/repository-index/root-pointer.json"
-    }
+    return {"status": "active", "nodes": len(GRAPH_STATE["nodes"]), "edges": len(GRAPH_STATE["edges"]), "system": "Flat Rate Movers GraphRAG API", "canonicalRoot": "/repository-index/root-pointer.json"}
 
 
 if __name__ == "__main__":
