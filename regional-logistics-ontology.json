@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "ontologyName":"Regional Logistics Ontology",
+  "version":"1.0.0",
+  "status":"canonical-supporting-ontology",
+  "entityTypes":["county","city","zipcode","corridor","port","inland_port","service","organization","facility"],
+  "relationshipTypes":["SERVES","CONNECTS_TO","LOCATED_IN","PROVIDES","USES","SUPPORTS"],
+  "root":"/repository-index/root-pointer.json"
+}
