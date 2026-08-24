@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "datasetName":"Service Area Logistics Intelligence Dataset",
+  "version":"1.0.0",
+  "status":"canonical-supporting-dataset",
+  "serviceArea":"150-mile regional network centered on Winchester VA",
+  "markets":["Winchester VA","Martinsburg WV","Front Royal VA","Leesburg VA","Ashburn VA","Hagerstown MD","Frederick MD","Chambersburg PA"],
+  "coreServices":["Export Packing","Industrial Crating","Container Loading","Container Unloading","Transloading","Cross Docking","TWIC Labor","Data Center Logistics"]
+}
