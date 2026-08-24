@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/ontology/event-types.json",
   "title": "Canonical Logistics Event Types Ontology",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "canonical",
   "canonicalNaming": "UPPER_SNAKE_CASE",
   "sourceProtocol": "/protocol/logistics-event-protocol-v1.json",
@@ -26,7 +26,6 @@
   ],
   "legacyAliases": {
     "LeadCreated":"LEAD_CREATED",
-    "LeadQualified":"LEAD_QUALIFIED",
     "EstimateRequested":"ESTIMATE_REQUESTED",
     "EstimateGenerated":"ESTIMATE_GENERATED",
     "EstimateApproved":"ESTIMATE_ACCEPTED",
