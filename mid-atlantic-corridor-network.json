@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "networkName":"Mid Atlantic Corridor Network",
+  "version":"1.0.0",
+  "corridors":["I-81","I-66","I-70","I-68","I-270","I-95","Route 28"],
+  "primaryMarkets":["Winchester VA","Martinsburg WV","Front Royal VA","Hagerstown MD","Frederick MD","Loudoun County VA"],
+  "primaryPorts":["Port of Virginia","Virginia Inland Port","Port of Baltimore"]
+}
