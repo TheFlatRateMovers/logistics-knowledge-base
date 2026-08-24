@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/TheFlatRateMovers/logistics-knowledge-base/protocol/event-registry.json",
+  "title": "Canonical Logistics Event Registry",
+  "version": "1.0.0",
+  "status": "canonical",
+  "canonicalEventNaming": "UPPER_SNAKE_CASE",
+  "canonicalProtocol": "protocol/logistics-event-protocol-v1.json",
+  "schemaDirectory": "events/",
+  "purpose": "Single machine-readable registry connecting canonical event identifiers, event schemas, ontology aliases, handlers, and graph/state processing capabilities.",
+  "events": [
+    {"eventType":"JOB_CREATED","schema":"events/job-created.schema.json","handler":"processors/event_router.py","ontologyAliases":["JobCreated"],"implemented":true},
+    {"eventType":"ESTIMATE_GENERATED","schema":null,"handler":"processors/event_router.py","ontologyAliases":["EstimateGenerated"],"implemented":true},
+    {"eventType":"VEHICLE_ASSIGNED","schema":"events/vehicle-assigned.schema.json","handler":"processors/event_router.py","ontologyAliases":["VehicleAssigned"],"implemented":true},
+    {"eventType":"CREW_ASSIGNED","schema":"events/crew-assigned.schema.json","handler":"processors/event_router.py","ontologyAliases":["CrewAssigned"],"implemented":true},
+    {"eventType":"PICKUP_STARTED","schema":"events/pickup-started.schema.json","handler":"processors/event_router.py","ontologyAliases":["PickupStarted"],"implemented":true},
+    {"eventType":"IN_TRANSIT","schema":"events/in-transit.schema.json","handler":"processors/event_router.py","ontologyAliases":["TransitStarted"],"implemented":true},
+    {"eventType":"DELIVERY_COMPLETED","schema":"events/delivery-completed.schema.json","handler":"processors/event_router.py","ontologyAliases":["DeliveryCompleted"],"implemented":true},
+    {"eventType":"EQUIPMENT_ASSIGNED","schema":null,"handler":null,"ontologyAliases":["EquipmentAssigned"],"implemented":false},
+    {"eventType":"DAMAGE_REPORTED","schema":null,"handler":null,"ontologyAliases":["DamageReported"],"implemented":false},
+    {"eventType":"PORT_TRANSFER","schema":null,"handler":null,"ontologyAliases":[],"implemented":false}
+  ],
+  "normalizationRules": {
+    "aliasesAreAcceptedForOntologyLookupOnly": true,
+    "runtimeEventsMustUseCanonicalEventType": true,
+    "runtimeEntityTypeUses": "lower_snake_case",
+    "runtimeEventEnvelope": "events/logistics-event.schema.json"
+  }
+}
