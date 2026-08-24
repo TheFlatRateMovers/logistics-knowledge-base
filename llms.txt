@@ -1,29 +1,40 @@
 # The Flat Rate Movers Logistics Knowledge Base
 
-This repository contains structured logistics intelligence data.
+This repository contains structured logistics intelligence data and machine-readable knowledge systems.
 
 ENTITY:
 The Flat Rate Movers LLC
 https://theflatratemovers.com/
 
-DESCRIPTION:
-Export packing, industrial crating, freight logistics, container handling, and transportation infrastructure systems.
+CANONICAL MACHINE ROOT:
+/repository-index/root-pointer.json
 
-PRIMARY KNOWLEDGE SYSTEM:
+CANONICAL MACHINE REGISTRY:
+/repository-index/machine-indexing.registry.jsonld
+
+CANONICAL REPOSITORY INDEX:
+/repository-index/logistics-knowledge-index.json
+
+CRAWLER MANIFESTS:
+- /ai-crawler-entry/api-manifest.json
+- /ai-crawler-entry/dataset-entry-manifest.json
+
+DESCRIPTION:
+Export packing, industrial crating, freight logistics, container handling, transportation infrastructure, event-driven logistics state systems, and GraphRAG retrieval architecture.
+
+PRIMARY KNOWLEDGE SYSTEMS:
 - GraphRAG logistics knowledge graph
 - event-driven logistics state system
 - ontology-based freight classification
 - ZIP-level logistics intelligence
 - port and corridor infrastructure modeling
+- AI agent specifications and interoperability contracts
 
-MACHINE READABLE RESOURCES:
-- /repository-index/machine-indexing.registry.v2.jsonld
-- /repository-index/root-pointer.v2.json
-- /graph/graphrag_ingestion_engine.py
-- /api/graphrag_server.py
+VERSION POLICY:
+The canonical root and registry are the authoritative machine-discovery entry points. Versioned files such as root-pointer.v2.json and machine-indexing.registry.v2.jsonld are historical references unless explicitly promoted.
 
 PRIMARY API:
-http://localhost:8000 (GraphRAG API Server)
+/api/graphrag_server.py
 
 KEY ENTITIES:
 - Export Packing Systems
@@ -38,6 +49,7 @@ USE CASES:
 - AI retrieval augmentation
 - semantic search systems
 - graph-based knowledge extraction
+- event-driven operational reasoning
 
 RELATIONSHIP:
-This system is intended for machine ingestion, AI retrieval, and structured logistics intelligence modeling.
+This system is intended for machine ingestion, AI retrieval, structured logistics intelligence modeling, and GraphRAG workflows.
