@@ -1,0 +1,10 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "graphName":"Regional Logistics Master Graph",
+  "version":"1.0.0",
+  "status":"canonical-supporting-graph",
+  "region":"Mid Atlantic United States",
+  "nodes":["Winchester VA","Martinsburg WV","Front Royal VA","Ashburn VA","Leesburg VA","Port of Virginia","Virginia Inland Port","Port of Baltimore","I-81","I-66","I-70","I-95"],
+  "edges":["PORT_CONNECTED_TO_INLAND_PORT","CORRIDOR_SERVES_MARKET","PORT_SUPPORTS_SERVICE","MARKET_SUPPORTS_SERVICE"],
+  "repositoryRoot":"/repository-index/root-pointer.json"
+}
